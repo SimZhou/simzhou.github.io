@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/cat/newnew_c/</loc>
+    <lastmod>2020-06-15T03:21:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/cat/new_c/</loc>
+    <lastmod>2020-06-15T03:19:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/root/</loc>
+    <lastmod>2020-06-15T03:19:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2020-06-15T03:19:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/yaml/</loc>
+    <lastmod>2020-06-15T03:19:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/cat/</loc>
+    <lastmod>2020-06-15T02:27:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2020-06-15T02:27:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/b/</loc>
+    <lastmod>2020-06-15T01:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/moods/happy/</loc>
+    <lastmod>2020-06-15T01:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/moods/</loc>
+    <lastmod>2020-06-15T01:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/a/</loc>
+    <lastmod>2020-06-15T01:26:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/toml/</loc>
+    <lastmod>2020-06-15T01:26:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/c/</loc>
+    <lastmod>2020-06-15T01:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/no_title/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/category/</loc>
+  </url>
+  
+</urlset>

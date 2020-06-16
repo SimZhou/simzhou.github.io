@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Test Site</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on Test Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jun 2020 03:19:40 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>root</title>
+      <link>http://example.org/tags/root/</link>
+      <pubDate>Mon, 15 Jun 2020 03:19:40 +0800</pubDate>
+      
+      <guid>http://example.org/tags/root/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yaml</title>
+      <link>http://example.org/tags/yaml/</link>
+      <pubDate>Mon, 15 Jun 2020 03:19:40 +0800</pubDate>
+      
+      <guid>http://example.org/tags/yaml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toml</title>
+      <link>http://example.org/tags/toml/</link>
+      <pubDate>Mon, 15 Jun 2020 01:26:56 +0800</pubDate>
+      
+      <guid>http://example.org/tags/toml/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
