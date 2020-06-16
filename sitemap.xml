@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://example.org/%E7%94%B5%E7%A3%81%E7%82%AE%E7%9C%9F%E6%98%AF%E5%A4%AA%E5%8F%AF%E7%88%B1%E4%BA%86/</loc>
+    <lastmod>2020-06-17T02:14:23+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/cat/newnew_c/</loc>
     <lastmod>2020-06-15T03:21:01+08:00</lastmod>
   </url>
