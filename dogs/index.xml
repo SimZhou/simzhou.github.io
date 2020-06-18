@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cats on Test Site</title>
+    <link>http://simzhou.com/dogs/</link>
+    <description>Recent content in Cats on Test Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jun 2020 02:27:47 +0800</lastBuildDate>
+    
+	<atom:link href="http://simzhou.com/dogs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>电磁炮真是太可爱了！</title>
+      <link>http://simzhou.com/dogs/%E7%94%B5%E7%A3%81%E7%82%AE%E7%9C%9F%E6%98%AF%E5%A4%AA%E5%8F%AF%E7%88%B1%E4%BA%86/</link>
+      <pubDate>Wed, 17 Jun 2020 02:14:23 +0800</pubDate>
+      
+      <guid>http://simzhou.com/dogs/%E7%94%B5%E7%A3%81%E7%82%AE%E7%9C%9F%E6%98%AF%E5%A4%AA%E5%8F%AF%E7%88%B1%E4%BA%86/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>Newnew_c</title>
+      <link>http://simzhou.com/dogs/newnew_c/</link>
+      <pubDate>Mon, 15 Jun 2020 03:21:01 +0800</pubDate>
+      
+      <guid>http://simzhou.com/dogs/newnew_c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>New_c</title>
+      <link>http://simzhou.com/dogs/new_c/</link>
+      <pubDate>Mon, 15 Jun 2020 03:19:40 +0800</pubDate>
+      
+      <guid>http://simzhou.com/dogs/new_c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>B-yaml</title>
+      <link>http://simzhou.com/dogs/b/</link>
+      <pubDate>Mon, 15 Jun 2020 01:27:00 +0800</pubDate>
+      
+      <guid>http://simzhou.com/dogs/b/</guid>
+      <description>b-yaml
+I ❤️ hugo</description>
+    </item>
+    
+    <item>
+      <title>A-toml</title>
+      <link>http://simzhou.com/dogs/a/</link>
+      <pubDate>Mon, 15 Jun 2020 01:26:56 +0800</pubDate>
+      
+      <guid>http://simzhou.com/dogs/a/</guid>
+      <description>var dom = document.getElementById(&#34;container&#34;);var myChart = echarts.init(dom);var app = {};option = null;function getVirtulData(year) {year = year || &#39;2017&#39;;var date = +echarts.number.parseDate(year + &#39;-01-01&#39;);var end = +echarts.number.parseDate((+year + 1) + &#39;-01-01&#39;);var dayTime = 3600 * 24 * 1000;var data = [];for (var time = date; time  a-toml</description>
+    </item>
+    
+    <item>
+      <title>C-Json</title>
+      <link>http://simzhou.com/dogs/c/</link>
+      <pubDate>Mon, 15 Jun 2020 01:00:00 +0800</pubDate>
+      
+      <guid>http://simzhou.com/dogs/c/</guid>
+      <description>c-json</description>
+    </item>
+    
+  </channel>
+</rss>

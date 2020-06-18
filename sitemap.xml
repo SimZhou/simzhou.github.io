@@ -3,82 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/%E7%94%B5%E7%A3%81%E7%82%AE%E7%9C%9F%E6%98%AF%E5%A4%AA%E5%8F%AF%E7%88%B1%E4%BA%86/</loc>
+    <loc>http://simzhou.com/dogs/%E7%94%B5%E7%A3%81%E7%82%AE%E7%9C%9F%E6%98%AF%E5%A4%AA%E5%8F%AF%E7%88%B1%E4%BA%86/</loc>
     <lastmod>2020-06-17T02:14:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/cat/newnew_c/</loc>
+    <loc>http://simzhou.com/dogs/newnew_c/</loc>
     <lastmod>2020-06-15T03:21:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/cat/new_c/</loc>
+    <loc>http://simzhou.com/dogs/new_c/</loc>
     <lastmod>2020-06-15T03:19:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/root/</loc>
+    <loc>http://simzhou.com/tags/root/</loc>
     <lastmod>2020-06-15T03:19:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://simzhou.com/tags/</loc>
     <lastmod>2020-06-15T03:19:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/yaml/</loc>
+    <loc>http://simzhou.com/tags/yaml/</loc>
     <lastmod>2020-06-15T03:19:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/cat/</loc>
+    <loc>http://simzhou.com/dogs/</loc>
     <lastmod>2020-06-15T02:27:47+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://simzhou.com/</loc>
     <lastmod>2020-06-15T02:27:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/b/</loc>
+    <loc>http://simzhou.com/dogs/b/</loc>
     <lastmod>2020-06-15T01:27:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/moods/happy/</loc>
+    <loc>http://simzhou.com/moods/happy/</loc>
     <lastmod>2020-06-15T01:27:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/moods/</loc>
+    <loc>http://simzhou.com/moods/</loc>
     <lastmod>2020-06-15T01:27:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/a/</loc>
+    <loc>http://simzhou.com/dogs/a/</loc>
     <lastmod>2020-06-15T01:26:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/toml/</loc>
+    <loc>http://simzhou.com/tags/toml/</loc>
     <lastmod>2020-06-15T01:26:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/c/</loc>
+    <loc>http://simzhou.com/dogs/c/</loc>
     <lastmod>2020-06-15T01:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/no_title/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/category/</loc>
+    <loc>http://simzhou.com/category/</loc>
   </url>
   
 </urlset>
