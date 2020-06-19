@@ -1,0 +1,11 @@
+baseURL      = "http://simzhou.com/"
+languageCode = "en-us"
+theme        = "ananke"
+title        = "Test Site"
+enableEmoji  = true
+SectionPagesMenu = "main"
+
+[taxonomies]
+    tag = "tags"
+    category = "category"
+    mood = "moods"
