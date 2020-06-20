@@ -5,3 +5,6 @@
 	path = public
 	url = git@github.com:SimZhou/simzhou.github.io.git
 	branch = master
+[submodule "themes/loveit"]
+	path = themes/loveit
+	url = https://github.com/dillonzq/LoveIt.git
