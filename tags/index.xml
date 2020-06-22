@@ -1,7 +1,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - 标签 - SimZhou的个人主页</title>
+        <title>Tags - 标签 - 测试页</title>
         <link>http://simzhou.com/tags/</link>
-        <description>Tags - 标签 - SimZhou的个人主页</description>
+        <description>Tags - 标签 - 测试页</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="http://simzhou.com/tags/" rel="self" type="application/rss+xml" /></channel>
 </rss>

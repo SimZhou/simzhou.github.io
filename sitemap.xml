@@ -1,9 +1,16 @@
-<urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    ><url>
-            <loc>http://simzhou.com/posts/first_post/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/posts/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/categories/</loc></url><url>
-            <loc>http://simzhou.com/tags/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>http://simzhou.com/zh-cn/sitemap.xml</loc>
+		
+	   	<lastmod>2020-06-22T12:24:33+08:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>http://simzhou.com/en/sitemap.xml</loc>
+		
+	</sitemap>
+	
+</sitemapindex>
