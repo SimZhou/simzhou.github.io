@@ -1,0 +1,288 @@
+baseURL = "http://simzhou.com/"
+# 网站标题
+title = "SimZhou的个人主页"
+# [en, zh-cn, fr, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
+
+theme = "loveit"
+
+[params]
+  # LoveIt 主题版本
+  version = "0.2.X"
+  [params.social]
+    bilibili = "338402"
+    email = "yihua.zhou@outlook.com"
+    github = "SimZhou"
+  [params.search]
+    enable = true
+    # 搜索引擎的类型 ("lunr", "algolia")
+    type = "lunr"
+    # 文章内容最长索引长度
+    contentLength = 4000
+    # 搜索框的占位提示语
+    placeholder = ""
+    # LoveIt 新增 | 0.2.1 最大结果数目
+    maxResultLength = 10
+    # LoveIt 新增 | 0.2.3 结果内容片段长度
+    snippetLength = 50
+    # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
+    highlightTag = "em"
+    # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
+    absoluteURL = false
+    [params.search.algolia]
+      index = ""
+      appID = ""
+      searchKey = ""
+    [params.math]
+      enable = true
+    [params.page]
+      fontawesome = true
+      [params.page.toc]
+        auto = false
+        keepStatic = false
+      [params.page.seo]
+        # image URL
+        # 图片 URL
+        images = []
+        # Publisher info
+        # 出版者信息
+        [params.page.seo.publisher]
+          name = "xxxx"
+          logoUrl = "/images/avatar.png"
+
+# Markup related configuration in Hugo
+# Hugo 解析文档的配置
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    hl_Lines = ""
+    lineNoStart = 1
+    style = "monokai"
+    tabWidth = 4
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      # 是否在文档中直接使用 HTML 标签
+      unsafe = true
+  # Table Of Contents settings
+  # 目录设置
+  [markup.tableOfContents]
+    ordered = false
+    startLevel = 1
+    endLevel = 3
+
+# [taxonomies]
+#     tag = "tags"
+#     category = "category"
+#     mood = "moods"
+
+[outputs]
+  home = ["HTML", "CSS", "JSON"]
+
+
+[languages]
+  [languages.zh-cn]
+    weight = 1
+    title = "Simon的梦境空间"
+    # 网站语言, 仅在这里 CN 大写
+    languageCode = "zh-CN"
+    languageName = "中文"
+    # 是否包括中日韩文字
+    hasCJKLanguage = true
+    [languages.zh-cn.menu]
+      [[languages.zh-cn.menu.main]]
+        identifier = "posts"
+        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+        pre = "<i class='fa fa-heart'></i>"
+        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+        post = ""
+        name = "文章"
+        url = "/posts/"
+        # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+        title = ""
+        weight = 1
+      # [[languages.zh-cn.menu.main]]
+      #   identifier = "tags"
+      #   pre = ""
+      #   post = ""
+      #   name = "标签"
+      #   url = "/tags/"
+      #   title = ""
+      #   weight = 2
+      [[languages.zh-cn.menu.main]]
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "分类"
+        url = "/categories/"
+        title = ""
+        weight = 2
+      [[languages.zh-cn.menu.main]]
+        identifier = "gallery"
+        pre = ""
+        name = "相册"
+        url = "/gallery"
+        weight = 3
+      [[languages.zh-cn.menu.main]]
+        name = "笔记本"
+        pre = "<i class='fas fa-book-open'></i>"
+        post = ""
+        url = "https://www.baidu.com"
+        weight = 4
+      [[languages.zh-cn.menu.main]]
+        identifier = "about"
+        name = "关于我"
+        url = "/about/"
+        weight = 100
+    [languages.zh-cn.params]
+      [languages.zh-cn.params.search]
+        enable = true
+        # 搜索引擎的类型 ("lunr", "algolia")
+        type = "lunr"
+        # 文章内容最长索引长度
+        contentLength = 4000
+        # 搜索框的占位提示语
+        placeholder = ""
+        # 最大结果数目
+        maxResultLength = 10
+        # 结果内容片段长度
+        snippetLength = 50
+        # 搜索结果中高亮部分的 HTML 标签
+        highlightTag = "em"
+        # 是否在搜索索引中使用基于 baseURL 的绝对路径
+        absoluteURL = false
+      [languages.zh-cn.params.home]
+        # RSS 文章数目
+        rss = 10
+        # 主页个人信息
+        [languages.zh-cn.params.home.profile]
+          enable = true
+          # Gravatar 邮箱，用于优先在主页显示的头像
+          gravatarEmail = ""
+          # 主页显示头像的 URL
+          avatarURL = "/images/earth.jpg"
+          # 主页显示的网站标题 (支持 HTML 格式)
+          title = ""
+          # 主页显示的网站副标题
+          subtitle = "你定义你自己"
+          subtitle2 = "ddd"
+          # 是否为副标题显示打字机动画
+          typeit = true
+          # 是否显示社交账号
+          social = true
+          # 免责声明 (支持 HTML 格式)
+          disclaimer = ""
+        # 主页文章列表
+        [languages.zh-cn.params.home.posts]
+          enable = true
+          # 主页每页显示文章数量
+          paginate = 6
+
+  [languages.en]
+    weight = 2
+    title = "Simon's Dream Space"
+    languageCode = "en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    # [[languages.en.menu.main]]
+    #   identifier = "tags"
+    #   pre = ""
+    #   post = ""
+    #   name = "Tags"
+    #   url = "/tags/"
+    #   title = ""
+    #   weight = 2
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "gallery"
+      pre = ""
+      name = "Gallery"
+      url = "/gallery"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "Notebook"
+      pre = "<i class='fas fa-book-open'></i>"
+      post = ""
+      url = "https://www.baidu.com"
+      weight = 3
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About Me"
+      url = "/about/"
+      weight = 100
+    [languages.en.params]
+      [languages.en.params.search]
+        enable = true
+        # 搜索引擎的类型 ("lunr", "algolia")
+        type = "lunr"
+        # 文章内容最长索引长度
+        contentLength = 4000
+        # 搜索框的占位提示语
+        placeholder = ""
+        # 最大结果数目
+        maxResultLength = 10
+        # 结果内容片段长度
+        snippetLength = 50
+        # 搜索结果中高亮部分的 HTML 标签
+        highlightTag = "em"
+        # 是否在搜索索引中使用基于 baseURL 的绝对路径
+        absoluteURL = false
+      [languages.en.params.home]
+        # RSS 文章数目
+        rss = 10
+        # 主页个人信息
+        [languages.en.params.home.profile]
+          enable = true
+          # Gravatar 邮箱，用于优先在主页显示的头像
+          gravatarEmail = ""
+          # 主页显示头像的 URL
+          avatarURL = "/images/earth.jpg"
+          # 主页显示的网站标题 (支持 HTML 格式)
+          title = ""
+          # 主页显示的网站副标题
+          subtitle = "Learn, Perceive, and Explain"
+          # 是否为副标题显示打字机动画
+          typeit = true
+          # 是否显示社交账号
+          social = true
+          # 免责声明 (支持 HTML 格式)
+          disclaimer = ""
+        # 主页文章列表
+        [languages.en.params.home.posts]
+          enable = true
+          # 主页每页显示文章数量
+          paginate = 6
+
+
