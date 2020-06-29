@@ -2,8 +2,18 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://simzhou.com/posts/</loc><lastmod>2020-06-26T14:10:42&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/</loc><lastmod>2020-06-26T14:10:42&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/about/</loc><lastmod>2020-06-28T11:06:43&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://simzhou.com/en/about/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://simzhou.com/about/"
+                    /></url><url>
+            <loc>http://simzhou.com/posts/first_post/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/posts/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://simzhou.com/en/"
@@ -12,9 +22,7 @@
                     hreflang="zh-cn"
                     href="http://simzhou.com/"
                     /></url><url>
-            <loc>http://simzhou.com/posts/%E7%94%B5%E7%A3%81%E7%82%AE%E7%9C%9F%E6%98%AF%E5%A4%AA%E5%8F%AF%E7%88%B1%E4%BA%86/</loc><lastmod>2020-06-26T14:10:42&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/posts/post1/</loc><lastmod>2020-06-25T15:36:04&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/categories/</loc><lastmod>2020-06-22T12:24:33&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/categories/</loc><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://simzhou.com/en/categories/"
@@ -23,9 +31,7 @@
                     hreflang="zh-cn"
                     href="http://simzhou.com/categories/"
                     /></url><url>
-            <loc>http://simzhou.com/posts/test/</loc><lastmod>2020-06-22T12:24:33&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/categories/%E4%BA%BA%E7%94%9F/</loc><lastmod>2020-06-22T12:24:33&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/tags/</loc><lastmod>2020-06-21T01:26:00&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/tags/</loc><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://simzhou.com/en/tags/"
@@ -33,8 +39,4 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="http://simzhou.com/tags/"
-                    /></url><url>
-            <loc>http://simzhou.com/posts/%E4%BB%8A%E5%A4%A9%E5%A4%A9%E6%B0%94%E5%88%9A%E5%88%9A%E5%A5%BD%E5%95%8A/%E5%A4%A9%E6%B0%94%E5%88%9A%E5%88%9A%E5%A5%BD/</loc><lastmod>2020-06-21T01:26:00&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/tags/%E6%9D%82%E6%8A%80/</loc><lastmod>2020-06-21T01:26:00&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/categories/%E7%99%BE%E4%B8%87/</loc><lastmod>2020-06-21T01:26:00&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/posts/first_post/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url></urlset>
+                    /></url></urlset>
