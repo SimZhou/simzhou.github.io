@@ -41,8 +41,9 @@
                 {{- end -}}
                 {{- if .Site.IsMultiLingual -}}
                     <a href="javascript:void(0);" class="menu-item language" title="{{ T "selectLanguage" }}">
-                        {{- .Language.LanguageName -}}
-                        <i class="fas fa-chevron-right fa-fw"></i>
+                        <!-- {{- .Language.LanguageName -}} -->
+                        <i class="fas fa-language"></i>
+                        <!-- <i class="fas fa-chevron-right fa-fw"></i> -->
                         <select class="language-select" id="language-select-desktop" onchange="location = this.value;">
                             {{- if eq .Kind "404" -}}
                                 {{- /* https://github.com/dillonzq/LoveIt/issues/378 */ -}}

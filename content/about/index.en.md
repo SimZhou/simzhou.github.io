@@ -23,3 +23,12 @@ license: ""
 ---
 
 <!--more-->
+
+I am ...
+
+- Tech Lover
+- Game Enthusiast
+
+### My Projects
+
+None so far. 

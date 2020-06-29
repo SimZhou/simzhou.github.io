@@ -10,9 +10,10 @@ theme = "loveit"
   # LoveIt 主题版本
   version = "0.2.X"
   [params.social]
-    bilibili = "338402"
     email = "yihua.zhou@outlook.com"
     github = "SimZhou"
+    # bilibili = "338402"
+    # Steam = "astro2boy"
   [params.search]
     enable = true
     # 搜索引擎的类型 ("lunr", "algolia")
@@ -29,7 +30,7 @@ theme = "loveit"
     highlightTag = "em"
     # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
     absoluteURL = false
-    [params.search.algolia]
+    [search.algolia]
       index = ""
       appID = ""
       searchKey = ""
@@ -49,6 +50,31 @@ theme = "loveit"
         [params.page.seo.publisher]
           name = "xxxx"
           logoUrl = "/images/avatar.png"
+    # Footer config
+    # 页面底部信息配置
+    [params.footer]
+      enable = true
+      # Custom content (HTML format is supported)
+      # 自定义内容 (支持 HTML 格式)
+      custom = ''
+      # whether to show Hugo and theme info
+      # 是否显示 Hugo 和主题信息
+      hugo = true
+      # whether to show copyright info
+      # 是否显示版权信息
+      copyright = true
+      # whether to show the author
+      # 是否显示作者
+      author = true
+      # site creation time
+      # 网站创立年份
+      since = 2020
+      # ICP info only in China (HTML format is supported)
+      # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
+      icp = ""
+      # license info (HTML format is supported)
+      # 许可协议信息 (支持 HTML 格式)
+      
 
 # Markup related configuration in Hugo
 # Hugo 解析文档的配置
@@ -107,6 +133,8 @@ theme = "loveit"
     languageName = "中文"
     # 是否包括中日韩文字
     hasCJKLanguage = true
+    # 版权描述，仅仅用于 SEO
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     [languages.zh-cn.menu]
       [[languages.zh-cn.menu.main]]
         identifier = "posts"
@@ -129,7 +157,7 @@ theme = "loveit"
       #   weight = 2
       [[languages.zh-cn.menu.main]]
         identifier = "categories"
-        pre = ""
+        pre = "<i class='fas fa-th-list'></i>"
         post = ""
         name = "分类"
         url = "/categories/"
@@ -137,18 +165,19 @@ theme = "loveit"
         weight = 2
       [[languages.zh-cn.menu.main]]
         identifier = "gallery"
-        pre = ""
+        pre = "<i class='fas fa-images'></i>"
         name = "相册"
         url = "/gallery"
         weight = 3
       [[languages.zh-cn.menu.main]]
         name = "笔记本"
-        pre = "<i class='fas fa-book-open'></i>"
+        pre = "<i class='fas fa-book'></i>"
         post = ""
         url = "https://www.baidu.com"
         weight = 4
       [[languages.zh-cn.menu.main]]
         identifier = "about"
+        pre = "<i class='fas fa-question-circle'></i>"
         name = "关于我"
         url = "/about/"
         weight = 100
@@ -195,15 +224,19 @@ theme = "loveit"
           enable = true
           # 主页每页显示文章数量
           paginate = 6
+      [languages.zh-cn.params.footer]
+        license= '如无特殊说明，本站内容遵循<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>创作共享协议'
 
   [languages.en]
     weight = 2
     title = "Simon's Dream Space"
     languageCode = "en"
     languageName = "English"
+    # copyright description used only for seo schema
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     [[languages.en.menu.main]]
       identifier = "posts"
-      pre = ""
+      pre = "<i class='fa fa-heart'></i>"
       post = ""
       name = "Posts"
       url = "/posts/"
@@ -219,7 +252,7 @@ theme = "loveit"
     #   weight = 2
     [[languages.en.menu.main]]
       identifier = "categories"
-      pre = ""
+      pre = "<i class='fas fa-th-list'></i>"
       post = ""
       name = "Categories"
       url = "/categories/"
@@ -227,18 +260,19 @@ theme = "loveit"
       weight = 2
     [[languages.en.menu.main]]
       identifier = "gallery"
-      pre = ""
+      pre = "<i class='fas fa-images'></i>"
       name = "Gallery"
       url = "/gallery"
       weight = 3
     [[languages.en.menu.main]]
       name = "Notebook"
-      pre = "<i class='fas fa-book-open'></i>"
+      pre = "<i class='fas fa-book'></i>"
       post = ""
       url = "https://www.baidu.com"
       weight = 3
     [[languages.en.menu.main]]
       identifier = "about"
+      pre = "<i class='fas fa-question-circle'></i>"
       name = "About Me"
       url = "/about/"
       weight = 100
@@ -284,5 +318,8 @@ theme = "loveit"
           enable = true
           # 主页每页显示文章数量
           paginate = 6
+      [languages.en.params.footer]
+        license= 'All Contents are Licensed by<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>if not Specified'
+
 
 
