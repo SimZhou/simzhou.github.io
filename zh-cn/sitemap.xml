@@ -11,8 +11,6 @@
                     hreflang="zh-cn"
                     href="http://simzhou.com/about/"
                     /></url><url>
-            <loc>http://simzhou.com/posts/first_post/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/posts/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -22,6 +20,8 @@
                     hreflang="zh-cn"
                     href="http://simzhou.com/"
                     /></url><url>
+            <loc>http://simzhou.com/posts/first_post/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/posts/</loc><lastmod>2020-06-21T01:24:03&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/categories/</loc><xhtml:link
                         rel="alternate"
                         hreflang="en"

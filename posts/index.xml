@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - Simon的梦境空间</title>
+        <title>所有文章 - </title>
         <link>http://simzhou.com/posts/</link>
-        <description>所有文章 | Simon的梦境空间</description>
+        <description>所有文章 | </description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 21 Jun 2020 01:24:03 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/posts/" rel="self" type="application/rss+xml" /><item>
     <title>first_post</title>
     <link>http://simzhou.com/posts/first_post/</link>
