@@ -1,10 +1,11 @@
 baseURL = "http://simzhou.com/"
 # 网站标题
-title = "SimZhou的个人主页"
+# title = "SimZhou的个人主页"      # title在下面分语言指定
 # [en, zh-cn, fr, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
 
 theme = "loveit"
+enableEmoji = true
 
 [params]
   # LoveIt 主题版本
@@ -50,6 +51,10 @@ theme = "loveit"
         [params.page.seo.publisher]
           name = "xxxx"
           logoUrl = "/images/avatar.png"
+    # Header config
+    # 页面头部导航栏配置
+    [params.header]
+        
     # Footer config
     # 页面底部信息配置
     [params.footer]
@@ -126,8 +131,9 @@ theme = "loveit"
 
 [languages]
   [languages.zh-cn]
+
     weight = 1
-    title = "Simon的梦境空间"
+    # title = "Simon的梦宇宙"
     # 网站语言, 仅在这里 CN 大写
     languageCode = "zh-CN"
     languageName = "中文"
@@ -182,6 +188,11 @@ theme = "loveit"
         url = "/about/"
         weight = 100
     [languages.zh-cn.params]
+        [languages.zh-cn.params.header.title]
+          name = "Simon的梦宇宙"
+          # you can add extra information before the name (HTML format is supported), such as icons
+          # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+          pre = "<i class='fas fa-user-astronaut'></i> "
       [languages.zh-cn.params.search]
         enable = true
         # 搜索引擎的类型 ("lunr", "algolia")
@@ -229,7 +240,7 @@ theme = "loveit"
 
   [languages.en]
     weight = 2
-    title = "Simon's Dream Space"
+    title = "Simon's Dream Universe"
     languageCode = "en"
     languageName = "English"
     # copyright description used only for seo schema
@@ -277,6 +288,11 @@ theme = "loveit"
       url = "/about/"
       weight = 100
     [languages.en.params]
+        [languages.en.params.header.title]
+          name = "Simon's Dream Universe"
+          # you can add extra information before the name (HTML format is supported), such as icons
+          # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+          pre = "<i class='fas fa-user-astronaut'></i> "
       [languages.en.params.search]
         enable = true
         # 搜索引擎的类型 ("lunr", "algolia")
@@ -319,7 +335,7 @@ theme = "loveit"
           # 主页每页显示文章数量
           paginate = 6
       [languages.en.params.footer]
-        license= 'All Contents are Licensed by<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>if not Specified'
+        license= 'This blog is Licensed by<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>if not specified'
 
 
 

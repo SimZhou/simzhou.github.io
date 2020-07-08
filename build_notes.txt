@@ -1,0 +1,16 @@
+**Build:**
+
+hugo 
+
+hugo -D
+
+
+
+**Dev:**
+
+hugo server
+
+hugo server -D
+
+hugo server -D --disableFastRender
+
