@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "C:/Users/yihua/My Programs/Hugo/simzhou.com",
+	"sourceRoot": "C:/Users/yihua/My Programs/simzhou.com",
 	"sources": [
 		"themes/loveit/assets/css/style.scss",
 		"themes/loveit/assets/css/_variables.scss",

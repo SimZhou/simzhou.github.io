@@ -236,7 +236,7 @@ enableEmoji = true
           # 主页每页显示文章数量
           paginate = 6
       [languages.zh-cn.params.footer]
-        license= '如无特殊说明，本站内容遵循<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>创作共享协议'
+        license= '如无特殊说明，本站内容遵循<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>创作共享协议，转载请注明出处'
 
   [languages.en]
     weight = 2
