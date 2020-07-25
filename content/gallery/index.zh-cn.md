@@ -1,9 +1,7 @@
 ---
-title: "Index"
+title: "我的相册"
 subtitle: ""
-date: 2020-06-28T15:33:43+08:00
-lastmod: 2020-06-28T15:33:43+08:00
-draft: true
+draft: false
 author: ""
 authorLink: ""
 description: ""
