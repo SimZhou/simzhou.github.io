@@ -4,10 +4,14 @@
 	<sitemap>
 	   	<loc>http://simzhou.com/zh-cn/sitemap.xml</loc>
 		
+	   	<lastmod>2020-07-24T18:36:17+08:00</lastmod>
+		
 	</sitemap>
 	
 	<sitemap>
 	   	<loc>http://simzhou.com/en/sitemap.xml</loc>
+		
+	   	<lastmod>2020-07-24T18:36:17+08:00</lastmod>
 		
 	</sitemap>
 	
