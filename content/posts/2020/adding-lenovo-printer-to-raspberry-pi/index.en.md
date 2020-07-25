@@ -47,17 +47,17 @@ Once downloaded the driver package (which is an ISO file) from Lenovo [Driver Pa
 
 ![image-20200725212618877](image-20200725212618877.png "The Driver Page")
 
-{{< image src="image-20200725213307035.png" caption="The 'driver' folder after extraction" width="55%">}}
+{{< image src="image-20200725213307035.png" caption="The '/install' folder after extraction" width="55%">}}
 
 Going into that you'll see a file `/install/M7605D/chneng/Brinst_Lang.ini` which specifies the folder for the Post-Script driver for the model: 
 
-{{< image src="image-20200725214711228.png" caption="The location of driver file" width="55%">}}
+{{< image src="image-20200725214711228.png" caption="The location of PostScript driver" width="55%">}}
 
-And that's what we want
+Going into that dir you'll see some `.pp_` files, and that's what we want
 
-{{< image src="image-20200725215405411.png" caption="Driver found! It seems my model m7605d is using the same driver as m7675dxf/m7615dna" width="25%">}}
+{{< image src="image-20200725215405411.png" caption="Driver found! It seems my model m7605d is using the same driver as m7675dxf/m7615dna" width="28%">}}
 
-## Uncompressing the PPD file
+## Uncompressing the .pp_ file
 
 It turns out that the ppd file provided by Lenovo, which has 'pp_' as suffix, is compressed. (originally I thought it is encrypted when I saw those gibberish in the file but it is actually not)
 
@@ -70,3 +70,5 @@ Having a quick search on Google makes me aware of that this format could be unco
 {{<image src="image-20200725221752876.png" caption="It turns out that the file could be directly uncompressed by 7-ZIP, or in a more geek's way, using windows 'EXPAND' command" width="80%">}}
 
 In the end, the .ppd file is nicely extracted. 
+
+{{<image src="image-20200726001822968.png" caption="Done!" width="90%">}}
