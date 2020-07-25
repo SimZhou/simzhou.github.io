@@ -14,6 +14,7 @@ import brain from human
 while True:
     knowledge = study.fetch_knowledge()
     brain.understande(knowledge)
+    brain.forget(knowledge)
 ```
 
 

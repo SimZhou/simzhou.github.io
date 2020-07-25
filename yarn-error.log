@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js info
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js pushsite
 
 PATH: 
-  C:\Users\yihua\My Softwares\cmder\bin;C:\Users\yihua\My Softwares\cmder\vendor\bin;C:\Users\yihua\Miniconda3\condabin;C:\Users\yihua\My Softwares\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\yihua\My Softwares\cmder\vendor\conemu-maximus5;C:\Users\yihua\My Softwares\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;C:\Program Files (x86)\NetSarang\Xmanager 6\;C:\Program Files (x86)\NetSarang\Xftp 6\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Users\yihua\My Softwares\cmder;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.4.0\;C:\Users\yihua\Go\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\yihua\Miniconda3;C:\Users\yihua\Miniconda3\Scripts;C:\Users\yihua\Miniconda3\Library\bin;C:\Users\yihua\go\bin;C:\Users\yihua\AppData\Local\Programs\Fiddler;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx64\x64;C:\Users\yihua\AppData\Local\Microsoft\WindowsApps;C:\Users\yihua\AppData\Local\Yarn\bin;C:\Users\yihua\AppData\Roaming\npm;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin
+  C:\Users\yihua\Miniconda3;C:\Users\yihua\Miniconda3\Library\mingw-w64\bin;C:\Users\yihua\Miniconda3\Library\usr\bin;C:\Users\yihua\Miniconda3\Library\bin;C:\Users\yihua\Miniconda3\Scripts;C:\Users\yihua\Miniconda3\bin;C:\Users\yihua\Miniconda3\condabin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;C:\Program Files (x86)\NetSarang\Xmanager 6;C:\Program Files (x86)\NetSarang\Xftp 6;C:\Program Files (x86)\NetSarang\Xshell 6;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Users\yihua\My Softwares\cmder;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.4.0;C:\Users\yihua\Go\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Program Files\node-deno;C:\Users\yihua\Miniconda3;C:\Users\yihua\Miniconda3\Scripts;C:\Users\yihua\Miniconda3\Library\bin;C:\Users\yihua\go\bin;C:\Users\yihua\AppData\Local\Programs\Fiddler;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\Hostx64\x64;C:\Users\yihua\AppData\Local\Microsoft\WindowsApps;C:\Users\yihua\AppData\Local\Yarn\bin;C:\Users\yihua\AppData\Roaming\npm
 
 Yarn version: 
   1.22.4
@@ -14,22 +14,33 @@ Platform:
   win32 x64
 
 Trace: 
-  TypeError: Cannot read property '1' of null
-      at parsePackageName (C:\Program Files (x86)\Yarn\lib\cli.js:97057:29)
-      at Object.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:84712:90)
-      at Generator.next (<anonymous>)
-      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+  TypeError [ERR_INVALID_ARG_VALUE]: The argument 'file' cannot be empty. Received ''
+      at normalizeSpawnArguments (child_process.js:409:11)
+      at Object.spawn (child_process.js:542:16)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:25829:24
+      at new Promise (<anonymous>)
+      at new F (C:\Program Files (x86)\Yarn\lib\cli.js:5301:28)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:25828:12
+      at run (C:\Program Files (x86)\Yarn\lib\cli.js:43132:7)
+      at BlockingQueue.maybePushConcurrencyQueue (C:\Program Files (x86)\Yarn\lib\cli.js:43147:7)
+      at BlockingQueue.shift (C:\Program Files (x86)\Yarn\lib\cli.js:43142:10)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:43086:15
 
 npm manifest: 
   {
     "scripts": {
-      "dev": "vuepress dev docs",   
-      "build": "vuepress build docs"  
+      "dev0": "hugo server --disableFastRender",
+      "dev": "vuepress dev notebook.simzhou.com --temp .vuepress_temp --port 1314",
+      "build0": "hugo",
+      "build": "vuepress build notebook.simzhou.com",
+      "pushsite": "rmdir /s /q public",
+      "prepushsite": "",
+      "commit src": "",
+      "push src": ""
     },
     "devDependencies": {
       "vuepress": "^1.5.2",
-      "watchpack": "1.6.1"
+      "watchpack": "^1.7.2"
     }
   }
 
@@ -1022,7 +1033,7 @@ Lockfile:
   
   "@vuepress/core@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/core/download/@vuepress/core-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fcore%2Fdownload%2F%40vuepress%2Fcore-1.5.2.tgz#bac96e8c64dd5b769dc22715abfe8b357b50fe49"
+    resolved "https://registry.npm.taobao.org/@vuepress/core/download/@vuepress/core-1.5.2.tgz#bac96e8c64dd5b769dc22715abfe8b357b50fe49"
     integrity sha1-uslujGTdW3adwicVq/6LNXtQ/kk=
     dependencies:
       "@babel/core" "^7.8.4"
@@ -1066,7 +1077,7 @@ Lockfile:
   
   "@vuepress/markdown-loader@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/markdown-loader/download/@vuepress/markdown-loader-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fmarkdown-loader%2Fdownload%2F%40vuepress%2Fmarkdown-loader-1.5.2.tgz#18ef5055d94da9b70bd127e924d19bc1954cd933"
+    resolved "https://registry.npm.taobao.org/@vuepress/markdown-loader/download/@vuepress/markdown-loader-1.5.2.tgz#18ef5055d94da9b70bd127e924d19bc1954cd933"
     integrity sha1-GO9QVdlNqbcL0SfpJNGbwZVM2TM=
     dependencies:
       "@vuepress/markdown" "1.5.2"
@@ -1075,7 +1086,7 @@ Lockfile:
   
   "@vuepress/markdown@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/markdown/download/@vuepress/markdown-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fmarkdown%2Fdownload%2F%40vuepress%2Fmarkdown-1.5.2.tgz#3bea068fa69cbeeff66c20fbe0feabd61f36dce1"
+    resolved "https://registry.npm.taobao.org/@vuepress/markdown/download/@vuepress/markdown-1.5.2.tgz#3bea068fa69cbeeff66c20fbe0feabd61f36dce1"
     integrity sha1-O+oGj6acvu/2bCD74P6r1h823OE=
     dependencies:
       "@vuepress/shared-utils" "1.5.2"
@@ -1088,40 +1099,40 @@ Lockfile:
   
   "@vuepress/plugin-active-header-links@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fplugin-active-header-links%2Fdownload%2F%40vuepress%2Fplugin-active-header-links-1.5.2.tgz#5408d2ac5aa31d9b1ff581464f7ae0e462c1aa37"
+    resolved "https://registry.npm.taobao.org/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.5.2.tgz#5408d2ac5aa31d9b1ff581464f7ae0e462c1aa37"
     integrity sha1-VAjSrFqjHZsf9YFGT3rg5GLBqjc=
     dependencies:
       lodash.debounce "^4.0.8"
   
   "@vuepress/plugin-last-updated@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/plugin-last-updated/download/@vuepress/plugin-last-updated-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fplugin-last-updated%2Fdownload%2F%40vuepress%2Fplugin-last-updated-1.5.2.tgz#daa2250edb40700e1fa0942561057b6aa00e4103"
+    resolved "https://registry.npm.taobao.org/@vuepress/plugin-last-updated/download/@vuepress/plugin-last-updated-1.5.2.tgz#daa2250edb40700e1fa0942561057b6aa00e4103"
     integrity sha1-2qIlDttAcA4foJQlYQV7aqAOQQM=
     dependencies:
       cross-spawn "^6.0.5"
   
   "@vuepress/plugin-nprogress@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fplugin-nprogress%2Fdownload%2F%40vuepress%2Fplugin-nprogress-1.5.2.tgz#3be249ee070380d0aca2bd2fb62eab6b4e284d1b"
+    resolved "https://registry.npm.taobao.org/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-1.5.2.tgz#3be249ee070380d0aca2bd2fb62eab6b4e284d1b"
     integrity sha1-O+JJ7gcDgNCsor0vti6ra04oTRs=
     dependencies:
       nprogress "^0.2.0"
   
   "@vuepress/plugin-register-components@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/plugin-register-components/download/@vuepress/plugin-register-components-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fplugin-register-components%2Fdownload%2F%40vuepress%2Fplugin-register-components-1.5.2.tgz#36a6807e523c17057bc3e9c0722bd26558f4dd1a"
+    resolved "https://registry.npm.taobao.org/@vuepress/plugin-register-components/download/@vuepress/plugin-register-components-1.5.2.tgz#36a6807e523c17057bc3e9c0722bd26558f4dd1a"
     integrity sha1-NqaAflI8FwV7w+nAcivSZVj03Ro=
     dependencies:
       "@vuepress/shared-utils" "1.5.2"
   
   "@vuepress/plugin-search@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/plugin-search/download/@vuepress/plugin-search-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fplugin-search%2Fdownload%2F%40vuepress%2Fplugin-search-1.5.2.tgz#b8d77b4300b2e84f3c9c0d94f0a98638245196c2"
+    resolved "https://registry.npm.taobao.org/@vuepress/plugin-search/download/@vuepress/plugin-search-1.5.2.tgz#b8d77b4300b2e84f3c9c0d94f0a98638245196c2"
     integrity sha1-uNd7QwCy6E88nA2U8KmGOCRRlsI=
   
   "@vuepress/shared-utils@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/shared-utils/download/@vuepress/shared-utils-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fshared-utils%2Fdownload%2F%40vuepress%2Fshared-utils-1.5.2.tgz#5f5bcd2365baa3f80feecd10c4920a4e1463df73"
+    resolved "https://registry.npm.taobao.org/@vuepress/shared-utils/download/@vuepress/shared-utils-1.5.2.tgz#5f5bcd2365baa3f80feecd10c4920a4e1463df73"
     integrity sha1-X1vNI2W6o/gP7s0QxJIKThRj33M=
     dependencies:
       chalk "^2.3.2"
@@ -1136,7 +1147,7 @@ Lockfile:
   
   "@vuepress/theme-default@1.5.2":
     version "1.5.2"
-    resolved "https://registry.npm.taobao.org/@vuepress/theme-default/download/@vuepress/theme-default-1.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Ftheme-default%2Fdownload%2F%40vuepress%2Ftheme-default-1.5.2.tgz#4384efdad9aeb0030432fad4300e615d540708b8"
+    resolved "https://registry.npm.taobao.org/@vuepress/theme-default/download/@vuepress/theme-default-1.5.2.tgz#4384efdad9aeb0030432fad4300e615d540708b8"
     integrity sha1-Q4Tv2tmusAMEMvrUMA5hXVQHCLg=
     dependencies:
       "@vuepress/plugin-active-header-links" "1.5.2"
@@ -7510,16 +7521,7 @@ Lockfile:
     dependencies:
       chokidar "^2.1.8"
   
-  watchpack@1.6.1:
-    version "1.6.1"
-    resolved "https://registry.npm.taobao.org/watchpack/download/watchpack-1.6.1.tgz#280da0a8718592174010c078c7585a74cd8cd0e2"
-    integrity sha1-KA2gqHGFkhdAEMB4x1hadM2M0OI=
-    dependencies:
-      chokidar "^2.1.8"
-      graceful-fs "^4.1.2"
-      neo-async "^2.5.0"
-  
-  watchpack@^1.6.1:
+  watchpack@^1.6.1, watchpack@^1.7.2:
     version "1.7.2"
     resolved "https://registry.npm.taobao.org/watchpack/download/watchpack-1.7.2.tgz#c02e4d4d49913c3e7e122c3325365af9d331e9aa"
     integrity sha1-wC5NTUmRPD5+EiwzJTZa+dMx6ao=

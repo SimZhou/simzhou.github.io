@@ -24,16 +24,27 @@ module.exports = {
 		nav: [
 			{ text: '导航', link: '/guide/' },
 			{ text: '资源', link: '/resource/'}, 
-			{ text: '前端', link: '/frontend/'}, 
+			{ text: '前端', 
+			  link: '/frontend/',
+		  	  items: [
+		  	  	  { text: 'Vue踩坑记录', link: '/frontend/bugfix-record/'}
+		  	  ]
+			}, 
+			{ text: '算法', link: '/algo/',
+			  items: [
+				  { text: '算法与数据结构', link: '/algo/data-structure-and-algo/' },
+				  { text: '机器学习', link: '/algo/machine-learning/' }
+			  ]
+			},
 			{ text: '计算机基础', 
-				ariaLabel: 'comp', // 用于识别的label
-				items: [
-					{ text: '1',  link: '/cs/1/' },
-					{ text: '2', link: '/cs/2/' }
-				]
+			  ariaLabel: '/cs-basics/', // 用于识别的label
+			  items: [
+				  { text: '计算机网络',  link: '/cs-basics/network/' },
+				//   { text: '2', link: '/cs-basics/2/' }
+			  ]
 			},
 			{ text: '阅读', link: '/reading/' }, 
-			// { text: '主页', link: 'https://simzhou.com/' },
+			// { text: '主页', link: 'https://simzhou.com/' }, 
 		],
         // sidebar: {
         //     '/guide/':[
