@@ -1,0 +1,42 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Simon&#39;s Dream Universe</title>
+        <link>http://simzhou.com/en/tags/</link>
+        <description>Tags - Tag - Simon&#39;s Dream Universe</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/en/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Printer</title>
+    <link>http://simzhou.com/en/tags/printer/</link>
+    <pubDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/tags/printer/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Raspberry Pi</title>
+    <link>http://simzhou.com/en/tags/raspberry-pi/</link>
+    <pubDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/tags/raspberry-pi/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Computer</title>
+    <link>http://simzhou.com/en/tags/computer/</link>
+    <pubDate>Fri, 24 Jul 2020 18:36:17 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/tags/computer/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Life</title>
+    <link>http://simzhou.com/en/tags/life/</link>
+    <pubDate>Fri, 24 Jul 2020 18:36:17 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/tags/life/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Noise</title>
+    <link>http://simzhou.com/en/tags/noise/</link>
+    <pubDate>Fri, 24 Jul 2020 18:36:17 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/tags/noise/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers) - Simon&#39;s Dream Universe</title><meta name="Description" content="I figured out how to extract the PPD file from Lenovo printer driver and connect it to my Raspberry Pi. "><meta property="og:title" content="Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)" />
+<meta property="og:description" content="I figured out how to extract the PPD file from Lenovo printer driver and connect it to my Raspberry Pi. " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/" />
+<meta property="article:published_time" content="2020-07-25T19:07:25+08:00" />
+<meta property="article:modified_time" content="2020-07-25T19:07:25+08:00" /><meta property="og:site_name" content="Simon&#39;s Dream Universe" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)"/>
+<meta name="twitter:description" content="I figured out how to extract the PPD file from Lenovo printer driver and connect it to my Raspberry Pi. "/>
+<meta name="application-name" content="Simon&#39;s Dream Universe">
+<meta name="apple-mobile-web-app-title" content="Simon&#39;s Dream Universe"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/" /><link rel="prev" href="http://simzhou.com/en/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/simzhou.com\/en\/posts\/2020\/adding-lenovo-printer-to-raspberry-pi\/"
+        },"genre": "posts","keywords": "Raspberry Pi, Printer","wordcount":  478 ,
+        "url": "http:\/\/simzhou.com\/en\/posts\/2020\/adding-lenovo-printer-to-raspberry-pi\/","datePublished": "2020-07-25T19:07:25+08:00","dateModified": "2020-07-25T19:07:25+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "http:\/\/simzhou.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Simon"
+            },"description": "I figured out how to extract the PPD file from Lenovo printer driver and connect it to my Raspberry Pi. "
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/en/" title="Simon&#39;s Dream Universe"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simon&#39;s Dream Universe</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/en/posts/"><i class='fa fa-heart'></i> Posts </a><a class="menu-item" href="/en/categories/"><i class='fas fa-th-list'></i> Categories </a><a class="menu-item" href="/en/gallery/"><i class='fas fa-images'></i> Gallery </a><a class="menu-item" href="https://simzhou.com/notebook" rel="noopener noreffer" target="_blank"><i class='fas fa-book'></i> Notebook </a><a class="menu-item" href="/en/about/"><i class='fas fa-question-circle'></i> About Me </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">
+                        
+                        <i class="fas fa-language"></i>
+                        
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/2020/adding-lenovo-printer-to-raspberry-pi/">中文</option><option value="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/en/" title="Simon&#39;s Dream Universe"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simon&#39;s Dream Universe</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/en/posts/" title=""><i class='fa fa-heart'></i>Posts</a><a class="menu-item" href="/en/categories/" title=""><i class='fas fa-th-list'></i>Categories</a><a class="menu-item" href="/en/gallery/" title=""><i class='fas fa-images'></i>Gallery</a><a class="menu-item" href="https://simzhou.com/notebook" title="" rel="noopener noreffer" target="_blank"><i class='fas fa-book'></i>Notebook</a><a class="menu-item" href="/en/about/" title=""><i class='fas fa-question-circle'></i>About Me</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/2020/adding-lenovo-printer-to-raspberry-pi/">中文</option><option value="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/en/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Simon</a></span>&nbsp;<span class="post-category">included in <a href="/en/categories/life-moments/"><i class="far fa-folder fa-fw"></i>Life Moments</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-25">2020-07-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;478 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="IMG_5161-min.JPG"
+        data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/IMG_5161-min.JPG, IMG_5161-min.JPG 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/IMG_5161-min.JPG 2x"
+        data-sizes="auto"
+        alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/IMG_5161-min.JPG"
+        title="I figured out how to extract the PPD file from Lenovo printer driver and connect it to my Raspberry Pi. " /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#postscript-printer-description-ppd-file">PostScript Printer Description (PPD) File</a></li>
+        <li><a href="#locating-the-ppd-file">Locating the PPD file</a></li>
+        <li><a href="#uncompressing-the-pp_-file">Uncompressing the .pp_ file</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>One of the main benefits of connecting the printer to Raspberry Pi is to enable remote printing service, even if the printer is a cabled one.</p>
+<p>There are already a lot of posts on the internet discussing how you can set up your Raspberry Pi and connect it with your printer (with <a href="https://www.cups.org/" target="_blank" rel="noopener noreffer">CUPS</a>), like <a href="https://www.howtogeek.com/169679/how-to-add-a-printer-to-your-raspberry-pi-or-other-linux-computer/" target="_blank" rel="noopener noreffer"><em>How to add a printer to your raspberry pi or other Linux Computer</em></a>. So this is not the main focus of this post.</p>
+<p>The focus of this post is on <strong>how to extract a PPD file from the original printer driver package</strong> provided by the manufacturer, which is needed by the Linux system (and of course, Raspberry Pi), when CUPS doesn&rsquo;t have native support on it.</p>
+<p>Specifically, I am using my <strong>Lenovo M7605D</strong> as an example.</p>
+<h2 id="postscript-printer-description-ppd-file">PostScript Printer Description (PPD) File <a href="#postscript-printer-description-ppd-file">¶</a></h2><p>Developed by Adobe, the PPD file (<a href="https://en.wikipedia.org/wiki/PostScript_Printer_Description" target="_blank" rel="noopener noreffer">Wikipedia</a>) is a piece of information that describes the entire set of features and capabilities available for <a href="https://en.wikipedia.org/wiki/PostScript" target="_blank" rel="noopener noreffer">PostScript</a> printer. Basically it describes how the printer should organize and print the contents when documents are sent to the system printing service.</p>
+<h2 id="locating-the-ppd-file">Locating the PPD file <a href="#locating-the-ppd-file">¶</a></h2><p>Once downloaded the driver package (which is an ISO file) from Lenovo <a href="https://newsupport.lenovo.com.cn/driveList.html?fromsource=driveList&amp;selname=m7605d" target="_blank" rel="noopener noreffer">Driver Page</a>, extract it and open the folder <code>/install</code>, you&rsquo;ll see a lot of model folders.</p>
+<p><figure><a class="lightgallery" href="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725212618877.png" title="image-20200725212618877" data-thumbnail="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725212618877.png" data-sub-html="<h2>The Driver Page</h2><p>image-20200725212618877</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="image-20200725212618877.png"
+            data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725212618877.png, image-20200725212618877.png 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725212618877.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725212618877.png" />
+    </a><figcaption class="image-caption">The Driver Page</figcaption>
+    </figure></p>
+<figure><a class="lightgallery" href="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725213307035.png" title="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725213307035.png" data-thumbnail="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725213307035.png" data-sub-html="<h2>The &lsquo;/install&rsquo; folder after extraction</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="image-20200725213307035.png"
+            data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725213307035.png, image-20200725213307035.png 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725213307035.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725213307035.png" width="55%" />
+    </a><figcaption class="image-caption">The &lsquo;/install&rsquo; folder after extraction</figcaption>
+    </figure>
+<p>Going into that you&rsquo;ll see a file <code>/install/M7605D/chneng/Brinst_Lang.ini</code> which specifies the folder for the Post-Script driver for the model:</p>
+<figure><a class="lightgallery" href="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725214711228.png" title="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725214711228.png" data-thumbnail="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725214711228.png" data-sub-html="<h2>The location of PostScript driver</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="image-20200725214711228.png"
+            data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725214711228.png, image-20200725214711228.png 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725214711228.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725214711228.png" width="55%" />
+    </a><figcaption class="image-caption">The location of PostScript driver</figcaption>
+    </figure>
+<p>Going into that dir you&rsquo;ll see some <code>.pp_</code> files, and that&rsquo;s what we want</p>
+<figure><a class="lightgallery" href="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725215405411.png" title="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725215405411.png" data-thumbnail="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725215405411.png" data-sub-html="<h2>Driver found! It seems my model m7605d is using the same driver as m7675dxf/m7615dna</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="image-20200725215405411.png"
+            data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725215405411.png, image-20200725215405411.png 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725215405411.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725215405411.png" width="28%" />
+    </a><figcaption class="image-caption">Driver found! It seems my model m7605d is using the same driver as m7675dxf/m7615dna</figcaption>
+    </figure>
+<h2 id="uncompressing-the-pp_-file">Uncompressing the .pp_ file <a href="#uncompressing-the-pp_-file">¶</a></h2><p>It turns out that the ppd file provided by Lenovo, which has &lsquo;pp_&rsquo; as suffix, is compressed. (originally I thought it is encrypted when I saw those gibberish in the file but it is actually not)</p>
+<figure><a class="lightgallery" href="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725220428041.png" title="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725220428041.png" data-thumbnail="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725220428041.png" data-sub-html="<h2>The file head &lsquo;SZDD&rsquo; in the beginning shows that it is an old compressed format, which is rare to see now</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="image-20200725220428041.png"
+            data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725220428041.png, image-20200725220428041.png 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725220428041.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725220428041.png" width="90%" />
+    </a><figcaption class="image-caption">The file head &lsquo;SZDD&rsquo; in the beginning shows that it is an old compressed format, which is rare to see now</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221019932.png" title="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221019932.png" data-thumbnail="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221019932.png" data-sub-html="<h2>SZDD file info on Wikipedia</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="image-20200725221019932.png"
+            data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221019932.png, image-20200725221019932.png 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221019932.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221019932.png" width="80%" />
+    </a><figcaption class="image-caption">SZDD file info on <a href="http://fileformats.archiveteam.org/wiki/MS-DOS_installation_compression" target="_blank" rel="noopener noreffer">Wikipedia</a></figcaption>
+    </figure>
+<p>Having a quick search on Google makes me aware of that this format could be uncompressed by MS-DOS EXPAND.EXE program. And surprisingly also, it could be directly uncompressed by 7-ZIP.</p>
+<figure><a class="lightgallery" href="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221752876.png" title="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221752876.png" data-thumbnail="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221752876.png" data-sub-html="<h2>It turns out that the file could be directly uncompressed by 7-ZIP, or in a more geek&rsquo;s way, using windows &lsquo;EXPAND&rsquo; command</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="image-20200725221752876.png"
+            data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221752876.png, image-20200725221752876.png 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221752876.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200725221752876.png" width="80%" />
+    </a><figcaption class="image-caption">It turns out that the file could be directly uncompressed by 7-ZIP, or in a more geek&rsquo;s way, using windows &lsquo;EXPAND&rsquo; command</figcaption>
+    </figure>
+<p>In the end, the .ppd file is nicely extracted.</p>
+<figure><a class="lightgallery" href="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200726001822968.png" title="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200726001822968.png" data-thumbnail="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200726001822968.png" data-sub-html="<h2>Done!</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="image-20200726001822968.png"
+            data-srcset="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200726001822968.png, image-20200726001822968.png 1.5x, /en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200726001822968.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/image-20200726001822968.png" width="90%" />
+    </a><figcaption class="image-caption">Done!</figcaption>
+    </figure></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-07-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/en/tags/raspberry-pi/">Raspberry Pi</a>,&nbsp;<a href="/en/tags/printer/">Printer</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/en/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/en/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/" class="prev" rel="prev" title="How to Noise-Free your HDD from an Old Computer?"><i class="fas fa-angle-left fa-fw"></i>How to Noise-Free your HDD from an Old Computer?</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.72.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/en/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license">This blog is Licensed by<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>if not specified</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"highlightTag":"em","lunrIndexURL":"/en/index.json","lunrLanguageCode":"en","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

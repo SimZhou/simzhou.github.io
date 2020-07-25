@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Simon&#39;s Dream Universe</title>
+        <link>http://simzhou.com/en/categories/</link>
+        <description>Categories - Category - Simon&#39;s Dream Universe</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/en/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Life Moments</title>
+    <link>http://simzhou.com/en/categories/life-moments/</link>
+    <pubDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/categories/life-moments/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>
