@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>打印机 - 标签 - </title>
+        <link>http://simzhou.com/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</link>
+        <description>打印机 - 标签 - </description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>将联想M7605D打印机连接树莓派</title>
+    <link>http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/</link>
+    <pubDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/IMG_5161-min.JPG" referrerpolicy="no-referrer">
+            </div>本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。]]></description>
+</item></channel>
+</rss>

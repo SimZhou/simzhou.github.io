@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://simzhou.com/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://simzhou.com/en/"
@@ -11,7 +11,7 @@
                     hreflang="zh-cn"
                     href="http://simzhou.com/"
                     /></url><url>
-            <loc>http://simzhou.com/categories/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/categories/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://simzhou.com/en/categories/"
@@ -20,7 +20,7 @@
                     hreflang="zh-cn"
                     href="http://simzhou.com/categories/"
                     /></url><url>
-            <loc>http://simzhou.com/posts/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/posts/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://simzhou.com/en/posts/"
@@ -29,7 +29,7 @@
                     hreflang="zh-cn"
                     href="http://simzhou.com/posts/"
                     /></url><url>
-            <loc>http://simzhou.com/tags/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/tags/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://simzhou.com/en/tags/"
@@ -38,6 +38,18 @@
                     hreflang="zh-cn"
                     href="http://simzhou.com/tags/"
                     /></url><url>
+            <loc>http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/"
+                    /></url><url>
+            <loc>http://simzhou.com/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/categories/%E7%94%9F%E6%B4%BB%E7%82%B9%E6%BB%B4/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/tags/%E5%99%AA%E9%9F%B3/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
@@ -49,7 +61,6 @@
                     href="http://simzhou.com/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/"
                     /></url><url>
             <loc>http://simzhou.com/tags/%E7%94%9F%E6%B4%BB/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/categories/%E7%94%9F%E6%B4%BB%E7%82%B9%E6%BB%B4/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/tags/%E7%94%B5%E8%84%91/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/about/</loc><lastmod>2020-06-28T11:06:43&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
@@ -59,4 +70,13 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="http://simzhou.com/about/"
+                    /></url><url>
+            <loc>http://simzhou.com/gallery/</loc><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://simzhou.com/en/gallery/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://simzhou.com/gallery/"
                     /></url></urlset>
