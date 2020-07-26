@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>用树莓派连接联想M7605D打印机 - Simon的梦宇宙</title><meta name="Description" content="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。"><meta property="og:title" content="用树莓派连接联想M7605D打印机" />
+        <title>用树莓派把联想M7605D打印机变成网络打印机 - Simon的梦宇宙</title><meta name="Description" content="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。"><meta property="og:title" content="用树莓派把联想M7605D打印机变成网络打印机" />
 <meta property="og:description" content="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" />
 <meta property="article:published_time" content="2020-07-25T19:07:25+08:00" />
 <meta property="article:modified_time" content="2020-07-25T19:07:25+08:00" /><meta property="og:site_name" content="Simon的梦宇宙" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="用树莓派连接联想M7605D打印机"/>
+<meta name="twitter:title" content="用树莓派把联想M7605D打印机变成网络打印机"/>
 <meta name="twitter:description" content="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。"/>
 <meta name="application-name" content="Simon的梦宇宙">
 <meta name="apple-mobile-web-app-title" content="Simon的梦宇宙"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -21,7 +21,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "用树莓派连接联想M7605D打印机",
+        "headline": "用树莓派把联想M7605D打印机变成网络打印机",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -118,10 +118,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">用树莓派连接联想M7605D打印机</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">用树莓派把联想M7605D打印机变成网络打印机</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Simon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%94%9F%E6%B4%BB%E7%82%B9%E6%BB%B4/"><i class="far fa-folder fa-fw"></i>生活点滴</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-25">2020-07-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1001 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/2020/adding-lenovo-printer-to-raspberry-pi/" class="leancloud_visitors" data-flag-title="用树莓派连接联想M7605D打印机">
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/2020/adding-lenovo-printer-to-raspberry-pi/" class="leancloud_visitors" data-flag-title="用树莓派把联想M7605D打印机变成网络打印机">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -147,7 +147,7 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>最近把家里的有线打印机，通过树莓派变成了无线打印机，可以在家里不同设备上远程打印，十分方便。</p>
+            </div><div class="content" id="content"><p>最近把家里的有线打印机，通过树莓派变成了网络打印机，可以在家里不同设备上远程打印，十分方便。</p>
 <p>关于如何用树莓派连接打印机，网上资料一搜一大堆，例如：<a href="https://sspai.com/post/40997" target="_blank" rel="noopener noreffer">如何正确地用树莓派共享打印机</a>，<a href="https://www.jianshu.com/p/d3752c584e01" target="_blank" rel="noopener noreffer">使用树莓派搭建无线打印机</a>，<a href="https://www.howtogeek.com/169679/how-to-add-a-printer-to-your-raspberry-pi-or-other-linux-computer/" target="_blank" rel="noopener noreffer"><em>How to add a printer to your raspberry pi or other Linux Computer</em></a>，所以这不是这篇文章主要想讲的内容。</p>
 <p>由于在Linux上使用CUPS安装打印机时，需要用到打印机的PPD驱动文件，而CUPS自带的驱动列表里完全没有联想的打印机，所以这篇文章主要想讲一讲<strong>如何从联想M7605D的官方驱动中提取所需的PPD文件</strong>，其它型号的打印机或许也可以使用这个方法。</p>
 <h2 id="ppd文件">PPD文件 <a href="#ppd%e6%96%87%e4%bb%b6">¶</a></h2><p>PostScript Printer Description (PPD) 文件是由Adobe公司开发的一种用来描述打印机所有支持的功能和特性的文件，它可以让系统知道如何处理和操作打印机。(<a href="https://en.wikipedia.org/wiki/PostScript_Printer_Description" target="_blank" rel="noopener noreffer">Wikipedia</a>)</p>
