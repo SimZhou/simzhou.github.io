@@ -3,7 +3,8 @@
     "dev0": "hugo server --disableFastRender",
     "dev": "vuepress dev notebook.simzhou.com --temp .vuepress_temp --port 1314",
     "build0": "hugo",
-    "build": "vuepress build notebook.simzhou.com"
+    "prebuild0": "rimraf public/*", 
+    "postbuild0": "vuepress build notebook.simzhou.com"
   },
   "devDependencies": {
     "vuepress": "^1.5.2",

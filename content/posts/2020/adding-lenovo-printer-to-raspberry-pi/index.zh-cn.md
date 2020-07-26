@@ -1,5 +1,5 @@
 ---
-title: "用树莓派连接联想M7605D打印机"
+title: "用树莓派把联想M7605D打印机变成网络打印机"
 subtitle: ""
 date: 2020-07-25T19:07:25+08:00
 lastmod: 2020-07-25T19:07:25+08:00
@@ -27,7 +27,7 @@ license: ""
 
 <!--more-->
 
-最近把家里的有线打印机，通过树莓派变成了无线打印机，可以在家里不同设备上远程打印，十分方便。
+最近把家里的有线打印机，通过树莓派变成了网络打印机，可以在家里不同设备上远程打印，十分方便。
 
 关于如何用树莓派连接打印机，网上资料一搜一大堆，例如：[如何正确地用树莓派共享打印机](https://sspai.com/post/40997)，[使用树莓派搭建无线打印机](https://www.jianshu.com/p/d3752c584e01)，[*How to add a printer to your raspberry pi or other Linux Computer*](https://www.howtogeek.com/169679/how-to-add-a-printer-to-your-raspberry-pi-or-other-linux-computer/)，所以这不是这篇文章主要想讲的内容。
 
