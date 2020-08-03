@@ -15,7 +15,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 
 featuredImage: "case-side.JPG"
-featuredImagePreview: "case-side.JPG"
+featuredImagePreview: "case-side.webp"
 
 toc:
   enable: true

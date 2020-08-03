@@ -15,7 +15,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 
 featuredImage: "Self-motivation.jpg"
-featuredImagePreview: "Self-motivation.jpg"
+featuredImagePreview: "Self-motivation.webp"
 
 toc:
   enable: true

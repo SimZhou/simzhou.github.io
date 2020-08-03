@@ -15,7 +15,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 
 featuredImage: "IMG_5161-min.JPG"
-featuredImagePreview: "IMG_5161-min.JPG"
+featuredImagePreview: "IMG_5161-min.webp"
 
 toc:
   enable: true
