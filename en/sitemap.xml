@@ -2,6 +2,54 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>http://simzhou.com/en/categories/</loc><lastmod>2020-08-03T21:09:26&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/categories/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/categories/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/posts/2020/how-to-retrieve-motivation/</loc><lastmod>2020-08-03T21:09:26&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/posts/2020/how-to-retrieve-motivation/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/posts/2020/how-to-retrieve-motivation/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/tags/motivation/</loc><lastmod>2020-08-03T21:09:26&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/en/posts/</loc><lastmod>2020-08-03T21:09:26&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/posts/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/posts/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/tags/psycho/</loc><lastmod>2020-08-03T21:09:26&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/en/categories/psycho/</loc><lastmod>2020-08-03T21:09:26&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/en/</loc><lastmod>2020-08-03T21:09:26&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/tags/</loc><lastmod>2020-08-03T21:09:26&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/tags/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/tags/"
+                    /></url><url>
             <loc>http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -11,45 +59,9 @@
                     hreflang="en"
                     href="http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/"
                     /></url><url>
-            <loc>http://simzhou.com/en/categories/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://simzhou.com/categories/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://simzhou.com/en/categories/"
-                    /></url><url>
             <loc>http://simzhou.com/en/categories/life-moments/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/en/posts/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://simzhou.com/posts/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://simzhou.com/en/posts/"
-                    /></url><url>
             <loc>http://simzhou.com/en/tags/printer/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/en/tags/raspberry-pi/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/en/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://simzhou.com/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://simzhou.com/en/"
-                    /></url><url>
-            <loc>http://simzhou.com/en/tags/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://simzhou.com/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://simzhou.com/en/tags/"
-                    /></url><url>
             <loc>http://simzhou.com/en/tags/computer/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/en/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
