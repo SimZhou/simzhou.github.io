@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "dev0": "hugo server --disableFastRender",
-    "dev": "vuepress dev notebook.simzhou.com --temp .vuepress_temp --port 1314",
-    "build0": "hugo",
-    "prebuild0": "rimraf public/*", 
-    "postbuild0": "vuepress build notebook.simzhou.com"
+    "dev": "hugo server --disableFastRender",
+    "dev-D": "hugo server --disableFastRender -D",
+    "devNotebook": "vuepress dev notebook.simzhou.com --temp .vuepress_temp --port 1314",
+    "build": "hugo",
+    "prebuild": "rimraf public/*", 
+    "postbuild": "vuepress build notebook.simzhou.com"
   },
   "devDependencies": {
     "vuepress": "^1.5.2",

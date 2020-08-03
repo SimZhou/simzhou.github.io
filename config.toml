@@ -49,8 +49,8 @@ enableEmoji = true
         # Publisher info
         # 出版者信息
         [params.page.seo.publisher]
-          name = "xxxx"
-          logoUrl = "/images/avatar.png"
+          name = "Simon Zhou"
+          logoUrl = "/images/earth.jpg"
         # Valine 评论系统设置
       # LoveIt 更改 | 0.2.0 评论系统设置
       [params.page.comment]
@@ -251,7 +251,6 @@ enableEmoji = true
           title = ""
           # 主页显示的网站副标题
           subtitle = "你定义你自己"
-          subtitle2 = "ddd"
           # 是否为副标题显示打字机动画
           typeit = true
           # 是否显示社交账号

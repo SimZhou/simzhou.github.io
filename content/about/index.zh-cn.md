@@ -31,7 +31,7 @@ license: ""
 - 一个梦想家
 - 非计算机出身，但热爱计算机的技术宅
 - 爱钻研，一种由`希望从更深层次理解事物的心理`所驱动的行为，简单来讲，好奇心比较强，不过，偶尔也容易钻牛角尖
-- 不喜欢咬文嚼字，比起事物的名称更喜欢理解其本质，然后用浅显易懂的语言表达出来；[费曼学习法](https://baike.baidu.com/item/费曼学习法/50895393?fr=aladdin)的推崇者
+- 不喜欢咬文嚼字，比起事物的名称更喜欢理解其本质，然后用浅显易懂的语言表达出来；喜欢[费曼学习法](https://baike.baidu.com/item/费曼学习法/50895393?fr=aladdin)
 - 爱好音乐，游戏，跑步
 - 不肥，很瘦
 
@@ -51,5 +51,6 @@ license: ""
 
 ### 价值观
 
+[Names Don't Constitute Knowledge](https://youtu.be/lFIYKmos3-s)
 [Learn by playing - the Super Mario Effect](https://youtu.be/9vJRopau0g0)
 
