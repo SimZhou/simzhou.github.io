@@ -48,9 +48,9 @@ license: ""
 建设中……
 
 
-
 ### 价值观
 
-[Names Don't Constitute Knowledge](https://youtu.be/lFIYKmos3-s)
+[Names Don't Constitute Knowledge - Rechard Feymann](https://youtu.be/lFIYKmos3-s)
+
 [Learn by playing - the Super Mario Effect](https://youtu.be/9vJRopau0g0)
 
