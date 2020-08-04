@@ -15,7 +15,7 @@ hiddenFromHomePage: false
 hiddenFromSearch: false
 
 featuredImage: "Self-motivation.jpg"
-featuredImagePreview: "Self-motivation.webp"
+featuredImagePreview: "/posts/2020/how-to-retrieve-motivation/Self-motivation.webp"
 
 toc:
   enable: true

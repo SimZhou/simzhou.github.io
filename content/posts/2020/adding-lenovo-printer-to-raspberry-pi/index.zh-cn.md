@@ -14,8 +14,8 @@ categories: ["生活点滴"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-featuredImage: "IMG_5161-min.JPG"
-featuredImagePreview: "IMG_5161-min.webp"
+featuredImage: "IMG_5161-s.jpg"
+featuredImagePreview: "IMG_5161-s.webp"
 
 toc:
   enable: true

@@ -13,11 +13,11 @@ enableEmoji = true
   # 网站描述, 是SEO的一部分，参考：https://developer.baidu.com/resources/online/doc/seo/search-engine-optimization-guide.html
   description = "这是周易华的个人博客。在这里，科技，数学，机器学习，心理，什么都有。"
   # 网站关键词
-  keywords = ["机器学习", "Machine Learning", "人工智能", "AI", "博客", "BlogS"]
+  keywords = ["机器学习", "Machine Learning", "人工智能", "AI", "博客", "Blog"]
   # 网站默认主题样式 ("light", "dark", "auto")
-  defaultTheme = "auto"
+  defaultTheme = "light"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = ""
+  # gitRepo = ""
   # LoveIt 新增 | 0.1.1 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
