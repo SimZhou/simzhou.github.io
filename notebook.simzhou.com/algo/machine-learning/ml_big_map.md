@@ -1,16 +1,18 @@
+# 机器学习概览
+
 学习的本质都是最优化问题
 
-# 学习目标
+## 学习目标
 
 分类
 
 回归
 
-# 模型
+## 模型
 
-## SVM
+### SVM
 
-## 树模型
+### 树模型
 
 ID3
 
@@ -24,7 +26,7 @@ LightGBM
 
 CATBoost
 
-## 神经网络
+### 神经网络
 
 Dense (Fully Connected)
 
@@ -32,9 +34,9 @@ CNN
 
 RNN
 
-# 激活函数
+### 激活函数
 
-将线性函数转化为非线性函数
+将线性函数转化为非线性函数，激活函数一般来讲也是模型的一部分
 
 sigmoid
 
@@ -46,9 +48,9 @@ relu
 
 leakyRelu
 
-# 目标函数
+## 目标函数
 
-## 损失函数
+### 损失函数
 
 最小二乘
 
@@ -62,13 +64,13 @@ Focal Loss
 
 
 
-## 正则化项
+### 正则化项
 
 L1
 
 L2
 
-# 优化算法
+## 优化算法
 
 梯度下降 ([可视化](https://towardsdatascience.com/a-visual-explanation-of-gradient-descent-methods-momentum-adagrad-rmsprop-adam-f898b102325c))
 
@@ -92,7 +94,7 @@ https://zhuanlan.zhihu.com/p/37524275
 
 http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
 
-# 评价指标
+## 评价指标
 
 Accuracy, Precision, Recall
 

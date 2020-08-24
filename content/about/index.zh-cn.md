@@ -24,7 +24,10 @@ license: ""
 
 <!--more-->    
 
-​    
+
+你好呀，茫茫人海之中你能看到我的博客，这是一种多么的幸运！
+
+我叫周易华，是一个技术爱好者，希望我的博客能对你有所帮助。
 
 ### 我是...
 
@@ -42,15 +45,38 @@ license: ""
 - [x] 展示自己
 - [x] 2020年，互联网信息过载的年代，我选择为信息的爆炸出一份力（开个玩笑）
 
-
 ### 我的项目
 
-建设中……
+1. **一个基于检索式的业务聊天机器人**：
+
+   使用的是一个银行业务系统的数据集，同时包含有业务引导功能和闲聊功能。
+
+{{<image src="/images/chatbot_demo.png" width="100%">}}
+
+2. **多维度情感分析系统：**
+
+   可以在20个维度上对餐厅评价进行信息提取，数据集来自AI Challenger 2018。
+
+   Demo地址：<a href="/sentimentsystem" target="_blank">simzhou.com/sentimentsystem</a>
+
+   {{<image src="/images/sentiment_demo.png" width="100%">}}
+
+   
+
+   
 
 
-### 价值观
+### 联系我
 
-[Names Don't Constitute Knowledge - Rechard Feymann](https://youtu.be/lFIYKmos3-s)
+邮箱：{{<link "mailto:yihua.zhou@outlook.com" "yihua.zhou@outlook.com">}}
 
-[Learn by playing - the Super Mario Effect](https://youtu.be/9vJRopau0g0)
+WeChat: astro1boy
+
+Github: [@SimZhou](https://github.com/simzhou)
+
+Twitter: @zhouyh0102
+
+*(P.S. Twitter 很少用，微信或邮件可以确保联系到我，加我记得备注来由)*
+
+​    
 

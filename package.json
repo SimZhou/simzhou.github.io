@@ -4,11 +4,11 @@
     "dev-D": "hugo server --disableFastRender -D",
     "devNotebook": "vuepress dev notebook.simzhou.com --temp .vuepress_temp --port 1314",
     "build": "hugo",
-    "prebuild": "rimraf public/*", 
+    "prebuild": "rimraf public/*",
     "postbuild": "vuepress build notebook.simzhou.com"
   },
   "devDependencies": {
-    "vuepress": "^1.5.2",
+    "vuepress": "^1.5.3",
     "watchpack": "^1.7.2"
   }
 }
