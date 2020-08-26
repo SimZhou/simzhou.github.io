@@ -62,7 +62,7 @@ I am Simon, a tech lover, hopefully my blog could be of some help to you!
 
    The system can retrieve information from a piece of comment with 20 dimensions, the data of the model comes from AI Challenger 2018. 
 
-   Demo: <a href="http://simzhou.f3322.net:7007" target="_blank">SentimentSystem</a> [<a href="http://sentiment.simzhou.com:7007" target="_blank">Alternative Link</a>]
+   Demo: <a href="http://sentiment.simzhou.com:7007" target="_blank">Sentiment System</a> [<a href="http://simzhou.f3322.net:7007" target="_blank">Alternative Link</a>]
 
    {{<image src="/images/sentiment_demo.png" width="100%">}}
 

@@ -58,7 +58,7 @@ license: ""
 
    可以在20个维度上对餐厅评价进行信息提取，数据集来自AI Challenger 2018。
 
-   Demo地址：<a href="http://simzhou.f3322.net:7007" target="_blank">SentimentSystem</a> [<a href="http://sentiment.simzhou.com:7007" target="_blank">备用地址</a>]
+   Demo地址：<a href="http://sentiment.simzhou.com:7007" target="_blank">Sentiment System</a> [<a href="http://simzhou.f3322.net:7007" target="_blank">备用链接</a>]
 
    {{<image src="/images/sentiment_demo.png" width="100%">}}
 
