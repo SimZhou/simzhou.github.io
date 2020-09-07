@@ -8,6 +8,10 @@
 
 —— 《沉思录》卷四，第41条
 
+> 不谋全局者,不足以谋一域;不谋万世者,不足以谋一时
+
+——《寤言二迁都建藩议》，清 | 陈澹然
+
 > Can you live without answers? All of you, ask that of yourself. Can you live without answers? Because if you cannot, then most assuredly you will invent your own answers and they will comfort you. And all those who do not share your view will by their very existence strike fear and hatred into your heart.
 
 —— Toll the Hounds: Book Eight of The Malazan Book of the Fallen
@@ -15,6 +19,10 @@
 > 如果不管别人心灵里进行着的是什么事，一个人便很难得不快乐；但是如果步密切注意自己心灵的活动，则必定是不快乐的。
 
 —— 《沉思录》卷二，第8条
+
+> Pain and suffering are always inevitable for a large intelligence and a deep heart. The really great men must, I think, have great sadness on earth.
+
+—— *Crime and Punishment*, by *Fyodor Dostoyevsky*
 
 > 向里面看，不要忽略任何一件东西的特质或价值。
 
