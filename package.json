@@ -8,7 +8,9 @@
     "postbuild": "vuepress build notebook.simzhou.com"
   },
   "devDependencies": {
-    "vuepress": "^1.5.3",
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-mathjax": "^1.2.8",
     "watchpack": "^1.7.2"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,3 +1,7 @@
+---
+mathjax:
+  presets: '\def\lr#1#2#3{\left#1#2\right#3}'
+---
 本内容按照吴恩达公开课《Machine Learning》的 Lecture Slides 进行分类，每一个H1标题对应一个Lecture Slide，每一个H2标题对应Lecture Slide中的一个小章节。
 
 本内容是课程的简化总结，适合已经了解机器学习基本概念的人进行回顾以及查漏补缺。
@@ -33,9 +37,7 @@ $h_\theta{(x)}\\=\theta_0+\theta_1{x_1}+\theta_2{x_2}+\theta_3{x_3}+\theta_4{x_4
 ## 4.6 标准方程
 
 在**均方误差损失函数**下，通过**二次方程求根公式**，$\theta$参数的解可以用标准方程得到：
-$$
-\theta=(X^TX)^{-1}X^Ty
-$$
+$$\theta=(X^TX)^{-1}X^Ty$$
 例如，当有m个样本，n个特征时：$X$的维度为$m\times{n}$，$Y$的维度为$m\times{1}$，最终输出维度为$n\times{1}$。
 
 以下是**梯度下降法和标准方程的对比**：

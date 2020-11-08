@@ -1,3 +1,7 @@
+---
+mathjax:
+  presets: '\def\lr#1#2#3{\left#1#2\right#3}'
+---
 本内容按照吴恩达公开课《Machine Learning》的 Lecture Slides 进行分类，每一个H1标题对应一个Lecture Slide，每一个H2标题对应Lecture Slide中的一个小章节。
 
 本内容是课程的简化总结，适合已经了解机器学习基本概念的人进行回顾以及查漏补缺。
@@ -78,7 +82,7 @@ $J(\theta)=-\frac{1}{m}[\sum_{i=1}^{m}y^{(i)}\log{h_\theta{(x^{(i)})}}+(1-y^{(i)
 
 **逻辑回归的梯度下降**：
 
-对$J(\theta)$求导，可得：$\frac{\part}{\part\theta_j}J(\theta)=\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}({x^{(i)})}-y^{(i)})\cdot{x_{j}^{(i)}}$
+对$J(\theta)$求导，可得：$\frac{\partial}{\partial\theta_j}J(\theta)=\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}({x^{(i)})}-y^{(i)})\cdot{x_{j}^{(i)}}$
 
 因此如果要最小化 $J(\theta)$，算法为：
 

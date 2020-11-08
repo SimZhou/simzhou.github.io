@@ -1,3 +1,7 @@
+---
+mathjax:
+  presets: '\def\lr#1#2#3{\left#1#2\right#3}'
+---
 本内容按照吴恩达公开课《Machine Learning》的 Lecture Slides 进行分类，每一个H1标题对应一个Lecture Slide，每一个H2标题对应Lecture Slide中的一个小章节。
 
 本内容是课程的简化总结，适合已经了解机器学习基本概念的人进行回顾以及查漏补缺。
@@ -30,9 +34,7 @@
 ## 7.2 带正则化项的损失函数
 
 带L2正则化项的损失函数为：
-$$
-J(\theta)=\frac{1}{2m}[\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^2+\lambda\sum_{j=1}^{n}\theta_j^2]
-$$
+$$J(\theta)=\frac{1}{2m}[\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^2+\lambda\sum_{j=1}^{n}\theta_j^2]$$
 
 其中的正则化项 $\lambda\sum_{j=1}^{n}\theta_j^2$ 限制了 $\theta$ 的增长，$\lambda$ 为正则化系数。
 
@@ -44,9 +46,9 @@ $$
 
 此时的梯度要同时考虑正则化项
 
-$\frac{\part}{\part\theta_0}J(\theta)=\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}({x^{(i)})}-y^{(i)})\cdot{x_0^{(i)}}$
+$\frac{\partial}{\partial\theta_0}J(\theta)=\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}({x^{(i)})}-y^{(i)})\cdot{x_0^{(i)}}$
 
-$\frac{\part}{\part\theta_j}J(\theta)=\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}({x^{(i)})}-y^{(i)})\cdot{x_j^{(i)}}+\frac{\lambda}{m}\theta_j$
+$\frac{\partial}{\partial\theta_j}J(\theta)=\frac{1}{m}\sum_{i=1}^{m}(h_{\theta}({x^{(i)})}-y^{(i)})\cdot{x_j^{(i)}}+\frac{\lambda}{m}\theta_j$
 
 梯度更新方程对于 $\theta_0$ 是不变的，对于 $\theta_j$ 就变成了：
 
@@ -58,7 +60,7 @@ $\theta_j:=\theta_j(1-\alpha\frac{\lambda}{m})-\frac{1}{m}\sum_{i=1}^{m}(h_{\the
 
 带正则化的标准方程为：
 
-$\theta=(X^TX+\lambda\begin{bmatrix}0&0&0&...&0\\0&1&0&...&0\\0&0&1&...&0\\\vdots&\vdots&\vdots&\ddots&\vdots\\0&0&0&...&1\end{bmatrix})^{-1}X^Ty$
+![normal_equation_regularized](./normal_equation_regularized.png)
 
 这个里面的矩阵是一个左上角元素为0的单位矩阵，维度为 (n+1)x(n+1)，n为特征个数
 

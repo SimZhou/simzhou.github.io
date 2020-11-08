@@ -191,5 +191,16 @@ module.exports = {
 	// 默认值是 true 。设置为 false 来禁用所有页面的 上一篇 链接
 	prevLinks: true,
 	// 页面滚动 Not sure what it is
-	smoothScroll: true
+	smoothScroll: true,
+	plugins: [
+		[
+		  'vuepress-plugin-mathjax',
+		  {
+			target: 'svg',
+			macros: {
+			  '*': '\\times',
+			},
+		  },
+		],
+	  ],
 }
