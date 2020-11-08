@@ -1,5 +1,5 @@
 ---
-dsidebar: auto
+sidebar: auto
 ---
 
 # Dijkstras Algorithm
@@ -51,30 +51,30 @@ graph = {
     "L": {"C": 2, "I": 4, "J": 4}
 }
 ```
-然后我们求解从 S 到 E 的 Dijkstra最短路径：
+然后我们求解从 S 到 所有点 的 Dijkstra最短路径：
 ```python
-def dijkstra(start, end, graph):
-    '''
-    Find the shortest path from 'start' to 'end' in graph
-    '''
-    # 定义一个优先队列
-    undone = []
-    done = {}
+import heapq
 
-    # 开始时把起始点放进PriorityQueue
-    undone.append([start, start, 0])
+def dijkstra(Graph, start):
+    '''准备3样东西：pq, distance, visited；如果需要打印路径则还需一个path'''
+    pq = []
+    heapq.heappush(pq, (0, start))
+    distance = {k: float('inf') for k in Graph}
+    distance[start] = 0
+    visited = set()
+    path = {k:[start] for k in Graph}
 
-    while undone:
-        _from, _to, _val = undone.pop(0)
-        done.update({f"{_from}->{_to}": _val})
-        for adj_point in graph[_to]:
-            # 如果该点是回路
-            if 
-            if graph[_to] not in 
-            undone.append([
-                graph[_to]
-                ])
-    
-    
-
+    while pq:
+        dis, node = heapq.heappop(pq)
+        if node in visited: continue
+        visited.add(node)
+        for adjnode in Graph[node]:
+            new_dis = distance[node] + Graph[node][adjnode]
+            if new_dis < distance[adjnode] and adjnode not in visited:
+                distance[adjnode] = new_dis
+                heapq.heappush(pq, (new_dis, adjnode))
+                path[adjnode] = path[node] + [adjnode]
+    return distance, path
 ```
+
+最终，我们可以得到，S 到 E 的最短路径为7，路径为 ['S', 'B', 'H', 'G', 'E']
