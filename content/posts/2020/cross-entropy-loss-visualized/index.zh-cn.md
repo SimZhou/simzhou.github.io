@@ -1,5 +1,5 @@
 ---
-title: "Beautiful Regularized Cross Entropy Loss Visualized"
+title: "Cross Entropy Loss Visualized"
 subtitle: "The Beauty of Mathematics"
 date: 2021-04-11T12:27:46+08:00
 lastmod: 2021-04-11T12:27:46+08:00
@@ -20,17 +20,13 @@ featuredImagePreview: ""
 toc:
   enable: true
 math:
-  enable: true
+  enable: false
 lightgallery: false
 license: ""
 ---
-This article visualizes Cross Entropy Loss, along with Regularization 
+
 <!--more-->
 
-# 1. Cross Entropy Loss
-
-The fomula:
-$$L=$$
 
 {{< echarts2 height="400" >}}
 {
