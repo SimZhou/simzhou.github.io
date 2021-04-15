@@ -3,7 +3,7 @@ title: "How to Retrieve Motivation"
 subtitle: ""
 date: 2020-08-03T21:09:26+08:00
 lastmod: 2020-08-03T21:09:26+08:00
-draft: false
+draft: true
 author: "Simon"
 authorLink: ""
 description: "Today I watched a video by a psychotherapist on how to overcome the negative emotions like depression, discouragement while chasing your goals, which I found very helpful."
