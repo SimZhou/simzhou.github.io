@@ -8,8 +8,8 @@ author: "Simon"
 authorLink: ""
 description: ""
 
-tags: []
-categories: []
+tags: ["Machine Learning", "Deep Learning", "Visualization", "Regularization"]
+categories: ["Machine Learning"]
 
 hiddenFromHomePage: false
 hiddenFromSearch: false

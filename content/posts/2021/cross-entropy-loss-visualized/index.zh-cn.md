@@ -8,8 +8,8 @@ author: "Simon"
 authorLink: ""
 description: ""
 
-tags: []
-categories: []
+tags: ["机器学习", "深度学习", "可视化", "正则化"]
+categories: ["机器学习"]
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
