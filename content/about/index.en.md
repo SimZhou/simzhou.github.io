@@ -34,6 +34,7 @@ I am Simon, a tech lover, hopefully my blog could be of some help to you!
 ### Who am I ...
 
 - A dreamer
+- An NLPer
 - An enthusiast of computer, music, games
 - A proponent and practitioner of [Feynman Technique](https://golden.com/wiki/Feynman_Technique)
 - A boy who wants to understand everything in deep
@@ -50,7 +51,7 @@ I am Simon, a tech lover, hopefully my blog could be of some help to you!
 
   (or probably, contributing to it:upside_down_face:)
 
-### My Projects
+<!-- ### My Projects
 
 1. **ChatBox (based on Searching Method)**: 
 
@@ -64,7 +65,7 @@ I am Simon, a tech lover, hopefully my blog could be of some help to you!
 
    Demo: <a href="http://sentiment.simzhou.com:7007" target="_blank">Sentiment System</a> [<a href="http://simzhou.f3322.net:7007" target="_blank">Alternative Link</a>]
 
-   {{<image src="/images/sentiment_demo.png" width="100%">}}
+   {{<image src="/images/sentiment_demo.png" width="100%">}} -->
 
 
 
