@@ -3,15 +3,16 @@
         <title>所有文章 - Simon的梦宇宙</title>
         <link>http://simzhou.com/posts/</link>
         <description>所有文章 | Simon的梦宇宙</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 03 Aug 2020 21:09:26 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>How to Retrieve Motivation</title>
-    <link>http://simzhou.com/posts/2020/how-to-retrieve-motivation/</link>
-    <pubDate>Mon, 03 Aug 2020 21:09:26 &#43;0800</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>L1 &amp; L2 正则化是长什么样子的？</title>
+    <link>http://simzhou.com/posts/2021/cross-entropy-loss-visualized/</link>
+    <pubDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://simzhou.com/posts/2020/how-to-retrieve-motivation/</guid>
+    <guid>http://simzhou.com/posts/2021/cross-entropy-loss-visualized/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/Self-motivation.jpg" referrerpolicy="no-referrer">
-            </div>Today I watched a video by a psychotherapist on how to overcome the negative emotions like depression, discouragement while chasing your goals, which I found very helpful.]]></description>
+                <img src="/cover.png" referrerpolicy="no-referrer">
+            </div><p>这篇文章想写很久了，最近终于解决了在博客中插入Echarts的问题，于是终于把它写完了。这篇文章主要是尝试对L1和L2正则化做了可视化，使用交叉熵损失函数使用基础损失函数。由于在其它地方也没有看到过类似的东西，所以觉得写一篇出来还是有点意义的。
+3D可视化的图像可以帮助对损失函数，正则化的理解。并且也能直观地解释一些问题，比如为什么L1正则化会导致稀疏模型，会产生特征选择的效果。</p>]]></description>
 </item><item>
     <title>用树莓派把联想M7605D打印机变成网络打印机</title>
     <link>http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/</link>

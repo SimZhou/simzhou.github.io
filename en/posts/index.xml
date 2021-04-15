@@ -3,15 +3,16 @@
         <title>All Posts - Simon&#39;s Dream Universe</title>
         <link>http://simzhou.com/en/posts/</link>
         <description>All Posts | Simon&#39;s Dream Universe</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 03 Aug 2020 21:09:26 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/en/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>How to Retrieve Motivation</title>
-    <link>http://simzhou.com/en/posts/2020/how-to-retrieve-motivation/</link>
-    <pubDate>Mon, 03 Aug 2020 21:09:26 &#43;0800</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/en/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>What does L1 &amp; L2 Regularization Look Like?</title>
+    <link>http://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</link>
+    <pubDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://simzhou.com/en/posts/2020/how-to-retrieve-motivation/</guid>
+    <guid>http://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/Self-motivation.jpg" referrerpolicy="no-referrer">
-            </div>Today I watched a video by a psychotherapist on how to overcome the negative emotions like depression, discouragement while chasing your goals, which I found very helpful.]]></description>
+                <img src="/cover.png" referrerpolicy="no-referrer">
+            </div><p>This article visualizes L1 &amp; L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 &amp; L2 Regularization could affect the original surface of cross entropy loss. 
+Although the concept is not difficult, the visualization do make understanding of L1 &amp; L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful.</p>]]></description>
 </item><item>
     <title>Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)</title>
     <link>http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/</link>
