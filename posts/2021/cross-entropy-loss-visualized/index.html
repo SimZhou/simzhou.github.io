@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/simzhou.com\/posts\/2021\/cross-entropy-loss-visualized\/"
-        },"genre": "posts","wordcount":  3549 ,
+        },"genre": "posts","wordcount":  3568 ,
         "url": "http:\/\/simzhou.com\/posts\/2021\/cross-entropy-loss-visualized\/","datePublished": "2021-04-15T15:07:46+08:00","dateModified": "2021-04-15T15:07:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Simon Zhou","logo": {
@@ -129,7 +129,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">L1 &amp; L2 正则化是长什么样子的？</h1><h2 class="single-subtitle">The Beauty of Mathematics</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Simon</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-15">2021-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3549 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-15">2021-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3568 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/posts/2021/cross-entropy-loss-visualized/" class="leancloud_visitors" data-flag-title="L1 &amp; L2 正则化是长什么样子的？">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -184,7 +184,8 @@ $$=&hellip;$$
 $$=-p\log{e^{\beta_1x}}-(1-p)log{e^{\beta_2x}}+log(e^{\beta_1x}+e^{\beta_2x})$$
 $$=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})$$
 这里，$p$代表真实值，$z_1$ 和 $1-p$ 代表 $z_2$ 的真实标签, $\beta_1$ 和 $\beta_2$ 是模型参数, $x$ 代表模型输入，是一个标量（只有一个x）.</p>
-<p>然后，根据此公式，交叉熵损失函数就可以被可视化为：
+<p>然后，根据此公式，交叉熵损失函数就可以被可视化为：</p>
+<p>（以下所有3D图均可拖动、放大、缩小）
 <div id="echarts400" style="width: 100%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
