@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Machine Learning - Tag - Simon&#39;s Dream Universe</title>
+        <link>http://simzhou.com/en/tags/machine-learning/</link>
+        <description>Machine Learning - Tag - Simon&#39;s Dream Universe</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/en/tags/machine-learning/" rel="self" type="application/rss+xml" /><item>
+    <title>What does L1 &amp; L2 Regularization Look Like?</title>
+    <link>http://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</link>
+    <pubDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/cover.png" referrerpolicy="no-referrer">
+            </div><p>This article visualizes L1 &amp; L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 &amp; L2 Regularization could affect the original surface of cross entropy loss. 
+Although the concept is not difficult, the visualization do make understanding of L1 &amp; L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful.</p>]]></description>
+</item></channel>
+</rss>
