@@ -1,0 +1,37 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - Simon&#39;s Dream Universe</title>
+        <link>http://simzhou.com/en/posts/</link>
+        <description>All Posts | Simon&#39;s Dream Universe</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/en/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>What does L1 &amp; L2 Regularization Look Like?</title>
+    <link>http://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</link>
+    <pubDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/cover.png" referrerpolicy="no-referrer">
+            </div><p>This article visualizes L1 &amp; L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 &amp; L2 Regularization could affect the original surface of cross entropy loss.
+Although the concept is not difficult, the visualization do make understanding of L1 &amp; L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful.</p>]]></description>
+</item><item>
+    <title>Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)</title>
+    <link>http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/</link>
+    <pubDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/IMG_5161-s.jpg" referrerpolicy="no-referrer">
+            </div>One of the main benefits of connecting the printer to Raspberry Pi is to enable remote printing service, even if the printer is a cabled one.
+There are already a lot of posts on the internet discussing how you can set up your Raspberry Pi and connect it with your printer (with CUPS), like How to add a printer to your raspberry pi or other Linux Computer. So this is not the main focus of this post.]]></description>
+</item><item>
+    <title>How to Noise-Free your HDD from an Old Computer?</title>
+    <link>http://simzhou.com/en/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</link>
+    <pubDate>Fri, 24 Jul 2020 18:36:17 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://simzhou.com/en/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/case-side.JPG" referrerpolicy="no-referrer">
+            </div>Apart from fans, the HDD could be another main source of unpleasant noise in a old PC. Normally if your computer case is advanced enough, it would prepare you anti-vibration nail rubbers to remove the noise from HDD. However as an old computer which don&rsquo;t have the condition, what can we do?
+A Basic Idea ¶Before coming up with the new idea, I firstly thought of removing the conduction of vibration between HDD and the case with rubber bands, which the result turns out to be quite good.]]></description>
+</item></channel>
+</rss>
