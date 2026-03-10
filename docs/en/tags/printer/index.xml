@@ -7,11 +7,11 @@
     <title>Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)</title>
     <link>http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/</link>
     <pubDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</pubDate>
-    <author>Author</author>
+    <author>xxxx</author>
     <guid>http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/IMG_5161-s.jpg" referrerpolicy="no-referrer">
-            </div>One of the main benefits of connecting the printer to Raspberry Pi is to enable remote printing service, even if the printer is a cabled one.
-There are already a lot of posts on the internet discussing how you can set up your Raspberry Pi and connect it with your printer (with CUPS), like How to add a printer to your raspberry pi or other Linux Computer. So this is not the main focus of this post.]]></description>
-</item></channel>
+            </div>I figured out how to extract the PPD file from Lenovo printer driver and connect it to my Raspberry Pi. ]]></description>
+</item>
+</channel>
 </rss>

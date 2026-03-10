@@ -7,21 +7,21 @@
     <title>Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)</title>
     <link>http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/</link>
     <pubDate>Sat, 25 Jul 2020 19:07:25 &#43;0800</pubDate>
-    <author>Author</author>
+    <author>xxxx</author>
     <guid>http://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/IMG_5161-s.jpg" referrerpolicy="no-referrer">
-            </div>One of the main benefits of connecting the printer to Raspberry Pi is to enable remote printing service, even if the printer is a cabled one.
-There are already a lot of posts on the internet discussing how you can set up your Raspberry Pi and connect it with your printer (with CUPS), like How to add a printer to your raspberry pi or other Linux Computer. So this is not the main focus of this post.]]></description>
-</item><item>
+            </div>I figured out how to extract the PPD file from Lenovo printer driver and connect it to my Raspberry Pi. ]]></description>
+</item>
+<item>
     <title>How to Noise-Free your HDD from an Old Computer?</title>
     <link>http://simzhou.com/en/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</link>
     <pubDate>Fri, 24 Jul 2020 18:36:17 &#43;0800</pubDate>
-    <author>Author</author>
+    <author>xxxx</author>
     <guid>http://simzhou.com/en/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/case-side.JPG" referrerpolicy="no-referrer">
-            </div>Apart from fans, the HDD could be another main source of unpleasant noise in a old PC. Normally if your computer case is advanced enough, it would prepare you anti-vibration nail rubbers to remove the noise from HDD. However as an old computer which don&rsquo;t have the condition, what can we do?
-A Basic Idea ¶Before coming up with the new idea, I firstly thought of removing the conduction of vibration between HDD and the case with rubber bands, which the result turns out to be quite good.]]></description>
-</item></channel>
+            </div>Recently, I came up with a brilliant idea to remove the noise from the HDD in my old PC. ]]></description>
+</item>
+</channel>
 </rss>
