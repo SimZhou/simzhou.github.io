@@ -6,6 +6,7 @@ defaultContentLanguage = "zh-cn"
 
 theme = "loveit"
 enableEmoji = true
+publishDir = "docs"
 
 [params]
   # LoveIt 主题版本
@@ -383,6 +384,5 @@ enableEmoji = true
           paginate = 6
       [languages.en.params.footer]
         license= 'This blog is Licensed by<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>if not specified'
-
 
 

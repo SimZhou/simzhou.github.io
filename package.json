@@ -3,9 +3,9 @@
     "dev": "hugo server --disableFastRender",
     "dev-D": "hugo server --disableFastRender -D",
     "devNotebook": "vuepress dev notebook.simzhou.com --temp .vuepress_temp --port 1314",
-    "devStatic": "python -m http.server --directory public",
+    "devStatic": "python -m http.server --directory docs",
     "build": "hugo",
-    "prebuild": "rimraf public/*",
+    "prebuild": "rimraf docs/*",
     "postbuild": "vuepress build notebook.simzhou.com",
     "pushSite": ""
   },
