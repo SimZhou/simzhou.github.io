@@ -3,9 +3,10 @@ home: true
 heroImage: /doraemon_winter.png
 heroText: Simon的笔记本
 tagline: 好记性不如烂键盘
-actionText: 翻看笔记本 →
-actionLink: /guide/
+actions:
+  - text: 翻看笔记本
+    link: /guide/
+    type: primary
 
 # footer: MIT Licensed | Copyright © 2020-present Simon Zhou
 ---
-
