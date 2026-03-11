@@ -5,6 +5,7 @@ draft: false
 author: ""
 authorLink: ""
 description: ""
+layout: "gallery"
 
 tags: []
 categories: []
@@ -23,6 +24,4 @@ lightgallery: true
 license: ""
 ---
 
-<!--more-->    
-
-这里展示 `assets/album/` 目录中的照片。
+<!--more-->

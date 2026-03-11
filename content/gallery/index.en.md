@@ -5,6 +5,7 @@ draft: false
 author: ""
 authorLink: ""
 description: ""
+layout: "gallery"
 
 tags: []
 categories: []
@@ -23,6 +24,4 @@ lightgallery: true
 license: ""
 ---
 
-<!--more-->    
-
-Photos placed in `assets/album/` are displayed here.
+<!--more-->
