@@ -42,6 +42,15 @@
 - 模板、主题、页面框架类改动，不能只看构建成功，必须验证线上渲染
 - 本地覆盖模板如果与主题接口冲突，优先对齐主题当前实现，而不是继续保留旧写法
 
+## LoveIt 维护要点
+
+- LoveIt 页面参数通常按 `.Params | merge .Site.Params.page` 合并；页面 front matter 会覆盖站点级默认值
+- 常见页面参数包括：`subtitle`、`featuredImage`、`featuredImagePreview`、`lightgallery`、`comment`、`toc`、`code`、`share`、`math`
+- 评论、CDN、`fingerprint` 在非 `production` 环境下可能被主题主动禁用；本地 `hugo server` 与线上表现可能不同
+- 多语言页面使用 `index.zh-cn.md`、`index.en.md` 这类语言后缀文件；菜单和页面翻译不应假设自动 fallback
+- 涉及 header、fixed buttons、主题初始化、data attributes、partial 结构等改动时，应优先查看当前主题源码实现，再决定是否保留本地 override
+- 如果某个 override 只是复制旧版主题模板，升级后应优先删减或对齐，而不是继续累积兼容补丁
+
 ## 当前相册实现
 
 - 相册页默认读取 `assets/album/`
