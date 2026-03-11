@@ -1,62 +1,64 @@
-# 项目概述
+# AI Agent Notes
 
-这个仓库是一个个人网站项目，用于构建静态站点并发布到 GitHub Pages。
+## 项目类型
 
-# 项目用途
-
-该项目作为个人网站的源码仓库维护，同时也跟踪构建后的静态产物。仓库主要用于本地编辑、本地预览、静态构建，以及基于 `docs/` 目录的直接发布。
-
-# 框架与技术栈
-
-- 静态站点生成器：Hugo
+- 个人网站源码仓库
+- 静态站点生成器：Hugo extended
 - 主题：LoveIt
-- 辅助文档/笔记站点工具：VuePress 1
-- 前端资源：主题自带 SCSS、JavaScript，以及 Hugo Pipes 生成资源
-- 部署目标：GitHub Pages
+- 辅助站点工具：VuePress 1
+- 发布方式：GitHub Pages，发布目录为 `docs/`
 
-# 参考资料与检索
+## 关键目录
 
-在进行开发、排错、升级或模板适配时，如有必要，可优先查阅以下资料：
+- `content/`：主站内容
+- `content/posts/`：文章
+- `content/gallery/`：相册页元信息
+- `layouts/`：本地模板覆盖
+- `assets/`：样式、图片、相册源文件
+- `assets/album/`：相册图片源目录
+- `static/`：原样复制到输出目录
+- `themes/loveit/`：LoveIt 子模块
+- `docs/`：最终发布产物
+- `resources/_gen/`：Hugo 资源缓存
+- `notebook.simzhou.com/`：VuePress 内容
 
-- Hugo 框架 GitHub 地址：<https://github.com/gohugoio/hugo>
-- Hugo 文档仓库地址：<https://github.com/gohugoio/hugoDocs>
-- LoveIt 主题 GitHub 地址：<https://github.com/dillonzq/loveit>
-- LoveIt 主题文档地址：<https://hugoloveit.com/>
+## 构建命令
 
-补充说明：
+- 构建：`hugo --destination docs`
+- 本地预览：`hugo server`
+- 需要 `Hugo extended`
+- VuePress 相关命令见 `package.json`
 
-- 上述 Hugo 和 LoveIt 相关项目在 Context7 中可以检索到。
-- 如果本地经验不足以确认某个 Hugo API、LoveIt 模板接口或配置项用法，应优先查官方仓库、官方文档，或通过 Context7 MCP 检索。
-- 涉及主题升级、模板覆盖兼容、Hugo 新版本行为变化时，不应只凭记忆修改，应先检索再改动。
+## 发布约定
 
-# 仓库结构
+- 开发主分支：`main`
+- GitHub Pages 使用仓库内 `docs/`
+- 发布前必须重新生成 `docs/`
 
-- `content/`：Hugo 主站内容
-- `layouts/`：本地模板覆盖和自定义模板
-- `assets/`：自定义样式和图片资源
-- `static/`：原样复制到输出目录的静态文件
-- `themes/loveit/`：以 git submodule 方式引入的 LoveIt 主题
-- `docs/`：GitHub Pages 使用的构建产物输出目录
-- `resources/_gen/`：由 Hugo 生成并在仓库中跟踪的资源缓存
-- `notebook.simzhou.com/`：构建流程中使用的 VuePress 内容目录
+## 维护规则
 
-# 构建与预览
+- 优先保持 `layouts/` 与当前 LoveIt 接口兼容
+- 升级 Hugo 或 LoveIt 后，必须重新构建并检查实际页面表现
+- 模板、主题、页面框架类改动，不能只看构建成功，必须验证线上渲染
+- 本地覆盖模板如果与主题接口冲突，优先对齐主题当前实现，而不是继续保留旧写法
 
-- 主站构建：
-  - `hugo --destination docs`
-- 主站本地预览：
-  - `hugo server`
-- 本地环境要求：
-  - 需要使用 Hugo extended 版本
-- VuePress 相关命令定义在 `package.json` 中
+## 当前相册实现
 
-# 部署方式
+- 相册页默认读取 `assets/album/`
+- 构建时会生成缩略图和放大图到 `docs/album/`
+- `content/gallery/index.zh-cn.md` 与 `content/gallery/index.en.md` 主要用于标题和基础元信息
 
-- 仓库设计为通过 `docs/` 目录发布 GitHub Pages。
-- 当前约定使用本地 `main` 分支进行开发，实际发布分支以 GitHub Pages 配置为准。
+## 检索入口
 
-# 维护说明
+必要时查官方资料或用 Context7 MCP：
 
-- `layouts/` 中的本地模板覆盖需要与当前 LoveIt 主题接口保持兼容。
-- 升级 Hugo 或 LoveIt 后，应始终重新生成 `docs/`，并在合并前验证 GitHub Pages 的实际渲染结果。
-- 涉及主题结构、模板接口或页面框架的改动，不能只依赖本地构建成功，还需要验证最终 Pages 页面表现。
+- Hugo: <https://github.com/gohugoio/hugo>
+- Hugo Docs: <https://github.com/gohugoio/hugoDocs>
+- LoveIt: <https://github.com/dillonzq/loveit>
+- LoveIt Docs: <https://hugoloveit.com/>
+
+## 操作偏好
+
+- `AGENTS.md` 面向 AI；`Instructions.md` 面向人
+- 说明类内容放 `Instructions.md`
+- 决策约束、目录约定、构建规则放 `AGENTS.md`

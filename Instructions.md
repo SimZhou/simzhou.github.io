@@ -8,19 +8,10 @@
 
 当前网站的主要组成如下：
 
-- 主站框架：[Hugo](https://github.com/gohugoio/hugo)
-- 主题：[LoveIt](https://github.com/dillonzq/loveit)
+- 主站框架：[Hugo](https://github.com/gohugoio/hugo) [[文档](https://gohugo.io/)]
+- 主题：[LoveIt](https://github.com/dillonzq/loveit) [[文档](https://hugoloveit.com/)]
 - 辅助内容站点：VuePress 1
 - GitHub Pages 发布目录：`docs/`
-
-相关参考资料：
-
-- Hugo GitHub 地址：<https://github.com/gohugoio/hugo>
-- Hugo 文档仓库地址：<https://github.com/gohugoio/hugoDocs>
-- LoveIt 主题 GitHub 地址：<https://github.com/dillonzq/loveit>
-- LoveIt 主题文档地址：<https://hugoloveit.com/>
-
-如果在维护、升级、调样式、改模板或排查构建问题时遇到不确定的地方，可以按需去以上地址搜索说明，也可以使用 Context7 MCP 检索 Hugo 与 LoveIt 相关内容。
 
 常用目录说明：
 
