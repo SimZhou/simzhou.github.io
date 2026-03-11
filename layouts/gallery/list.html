@@ -2,7 +2,8 @@
 
 {{- define "content" -}}
     {{- $params := .Scratch.Get "params" -}}
-    <div class="page single special">
+    {{- $images := resources.Match "album/*" -}}
+    <div class="page single special gallery-page">
         <h1 class="single-title animate__animated animate__pulse animate__faster">
             {{- .Title -}}
         </h1>
@@ -17,11 +18,14 @@
             </div>
         {{- end -}}
 
-        {{- $pages := .RegularPages.ByDate.Reverse -}}
-        {{- with $pages -}}
-            <div class="post-summary-group">
+        {{- with $images -}}
+            <div class="album-grid" id="content">
                 {{- range . -}}
-                    {{- partial "summary.html" . -}}
+                    {{- $thumb := .Fill "640x480 smart q85" -}}
+                    {{- $large := .Resize "1800x q90" -}}
+                    <a class="album-photo lightgallery" href="{{ $large.RelPermalink }}" data-thumbnail="{{ $thumb.RelPermalink }}" title="{{ .Name }}">
+                        <img src="{{ $thumb.RelPermalink }}" alt="{{ .Name }}" loading="lazy">
+                    </a>
                 {{- end -}}
             </div>
         {{- end -}}

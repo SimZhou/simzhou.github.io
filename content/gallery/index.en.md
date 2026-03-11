@@ -19,10 +19,10 @@ toc:
   enable: true
 math:
   enable: false
-lightgallery: false
+lightgallery: true
 license: ""
 ---
 
 <!--more-->    
 
-Constructing...
+Photos placed in `assets/album/` are displayed here.

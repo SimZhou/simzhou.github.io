@@ -19,10 +19,10 @@ toc:
   enable: true
 math:
   enable: false
-lightgallery: false
+lightgallery: true
 license: ""
 ---
 
 <!--more-->    
 
-建设中...
+这里展示 `assets/album/` 目录中的照片。
