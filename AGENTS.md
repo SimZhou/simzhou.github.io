@@ -57,6 +57,14 @@
 - 构建时会生成缩略图和放大图到 `docs/album/`
 - `content/gallery/index.zh-cn.md` 与 `content/gallery/index.en.md` 主要用于标题和基础元信息
 
+## 已知 override 风险点
+
+- `layouts/_default/baseof.html`：曾因旧版属性名与新版 LoveIt 的 `data-*` 约定不一致，导致 fixed header 顶部间距异常
+- `layouts/partials/header.html`：曾使用旧 Hugo/LoveIt 接口，升级后需要对齐当前主题实现
+- `layouts/_default/gallery.html`：当前为本地自定义实现，不是主题原生模板；改动时要确认 `assets/album/` 读取、图片处理和 lightgallery 仍可用
+- `content/gallery/index.zh-cn.md` 与 `content/gallery/index.en.md`：当前依赖 `layout: "gallery"`；如果移除或改名，`/gallery/` 可能退回普通页面渲染
+- 任何直接复制自旧版 LoveIt 的 override 文件，升级主题后都应优先与主题当前同名模板逐项比对
+
 ## 检索入口
 
 必要时查官方资料或用 Context7 MCP：
