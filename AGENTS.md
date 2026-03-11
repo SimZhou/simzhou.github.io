@@ -14,6 +14,21 @@
 - 前端资源：主题自带 SCSS、JavaScript，以及 Hugo Pipes 生成资源
 - 部署目标：GitHub Pages
 
+# 参考资料与检索
+
+在进行开发、排错、升级或模板适配时，如有必要，可优先查阅以下资料：
+
+- Hugo 框架 GitHub 地址：<https://github.com/gohugoio/hugo>
+- Hugo 文档仓库地址：<https://github.com/gohugoio/hugoDocs>
+- LoveIt 主题 GitHub 地址：<https://github.com/dillonzq/loveit>
+- LoveIt 主题文档地址：<https://hugoloveit.com/>
+
+补充说明：
+
+- 上述 Hugo 和 LoveIt 相关项目在 Context7 中可以检索到。
+- 如果本地经验不足以确认某个 Hugo API、LoveIt 模板接口或配置项用法，应优先查官方仓库、官方文档，或通过 Context7 MCP 检索。
+- 涉及主题升级、模板覆盖兼容、Hugo 新版本行为变化时，不应只凭记忆修改，应先检索再改动。
+
 # 仓库结构
 
 - `content/`：Hugo 主站内容

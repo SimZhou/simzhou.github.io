@@ -8,10 +8,19 @@
 
 当前网站的主要组成如下：
 
-- 主站框架：Hugo
-- 主题：LoveIt
+- 主站框架：[Hugo](https://github.com/gohugoio/hugo)
+- 主题：[LoveIt](https://github.com/dillonzq/loveit)
 - 辅助内容站点：VuePress 1
 - GitHub Pages 发布目录：`docs/`
+
+相关参考资料：
+
+- Hugo GitHub 地址：<https://github.com/gohugoio/hugo>
+- Hugo 文档仓库地址：<https://github.com/gohugoio/hugoDocs>
+- LoveIt 主题 GitHub 地址：<https://github.com/dillonzq/loveit>
+- LoveIt 主题文档地址：<https://hugoloveit.com/>
+
+如果在维护、升级、调样式、改模板或排查构建问题时遇到不确定的地方，可以按需去以上地址搜索说明，也可以使用 Context7 MCP 检索 Hugo 与 LoveIt 相关内容。
 
 常用目录说明：
 
@@ -182,24 +191,48 @@ content/posts/2026/my-new-post/
 
 # 七、如何新增相册内容
 
-相册内容位于：
+当前相册照片主要放在：
 
 ```text
-content/gallery/
+assets/album/
 ```
 
-目前相册页本质上也是 Hugo 内容页。常见方式有两种：
+当前相册页会自动读取 `assets/album/` 中的图片，并生成缩略图和点击放大预览。
 
-## 1. 修改相册首页说明文字
+常见维护方式如下：
+
+## 1. 新增或替换相册照片
+
+直接把照片放入：
+
+```text
+assets/album/
+```
+
+然后执行：
+
+```bash
+hugo --destination docs
+```
+
+构建后，相册页会自动更新。
+
+建议：
+
+- 尽量使用常见图片格式，例如 `.jpg`、`.jpeg`、`.png`
+- 文件名尽量避免过于混乱，方便后续排序或整理
+- 如果一次新增较多照片，建议构建后在线检查缩略图和放大效果
+
+## 2. 修改相册首页标题或基础信息
 
 直接编辑：
 
 - `content/gallery/index.zh-cn.md`
 - `content/gallery/index.en.md`
 
-适用于修改相册首页标题、简介、说明文字等。
+适用于修改相册页标题、subtitle、多语言内容等。
 
-## 2. 新增相册子页面
+## 3. 如有需要，再扩展为独立相册子页面
 
 可以在 `content/gallery/` 下新增一个独立内容页，例如：
 
@@ -211,9 +244,7 @@ content/gallery/my-album/
 └── image2.jpg
 ```
 
-然后在正文中引用这些图片。
-
-如果只是增加少量展示内容，也可以先新增一个 `.md` 内容页，再逐步扩展。
+这种方式适合未来做“分专题相册”或“独立相册文章”，但当前默认展示方式仍然是 `assets/album/` 自动相册网格。
 
 # 八、如何修改现有页面内容
 
