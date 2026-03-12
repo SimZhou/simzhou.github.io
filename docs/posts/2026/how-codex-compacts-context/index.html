@@ -8,7 +8,8 @@
         <title>[译文] 探究 Codex 中上下文压缩的工作方式 - Simon的梦宇宙</title><meta name="Description" content="这是周易华的个人博客。在这里，科技，数学，机器学习，心理，什么都有。"><meta property="og:url" content="http://simzhou.com/posts/2026/how-codex-compacts-context/">
   <meta property="og:site_name" content="Simon的梦宇宙">
   <meta property="og:title" content="[译文] 探究 Codex 中上下文压缩的工作方式">
-  <meta property="og:description" content="原作者：Kangwook Lee 原文链接：https://x.com/Kangwook_Lee/article/2028955292025962534">
+  <meta property="og:description" content="原作者：Kangwook Lee
+原文链接：https://x.com/Kangwook_Lee/article/2028955292025962534">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -22,7 +23,8 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="[译文] 探究 Codex 中上下文压缩的工作方式">
-  <meta name="twitter:description" content="原作者：Kangwook Lee 原文链接：https://x.com/Kangwook_Lee/article/2028955292025962534">
+  <meta name="twitter:description" content="原作者：Kangwook Lee
+原文链接：https://x.com/Kangwook_Lee/article/2028955292025962534">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -178,8 +180,8 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>原作者：Kangwook Lee
-原文链接：<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
+            </div><div class="content" id="content"><p>原作者：Kangwook Lee</p>
+<p>原文链接：<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
 <p>对于非 codex 模型，开源 Codex CLI 会在本地压缩上下文：由一个 LLM 使用一个<a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">压缩提示词</a>对对话进行总结。当后续使用压缩后的上下文时，<code>responses.create()</code> 会连同一个用于界定该摘要的交接提示词一起接收它。这两个提示词都可以在源代码中看到。</p>
 <p>对于 codex 模型，CLI 则改为调用 <code>compact()</code> API，该 API 返回一个<strong>加密的 blob</strong>。我们并不知道其内部是否使用了 LLM、使用了什么提示词，或者是根本不存在交接提示词。</p>
 <p>下面我将展示：一个简单的提示词注入实验（2 次 API 调用，35 行 Python 代码）如何揭示 API 压缩路径确实使用了 LLM 来总结上下文，并且它具有自己的压缩提示词，以及一个附加在摘要前的交接提示词。这些提示词与开源版本几乎完全一致。</p>

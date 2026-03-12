@@ -1,6 +1,6 @@
 ---
 title: "[译文] 探究 Codex 中上下文压缩的工作方式"
-subtitle: ""
+subtitle: "转载自 Kangwook Lee 发布在 X 的文章"
 date: 2026-03-12T12:05:06+08:00
 lastmod: 2026-03-12T12:05:06+08:00
 draft: false
