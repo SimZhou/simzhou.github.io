@@ -4,14 +4,16 @@
         <link>http://simzhou.com/en/tags/agent/</link>
         <description>Agent - Tag - Simon&#39;s Dream Universe</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Mar 2026 12:05:06 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/en/tags/agent/" rel="self" type="application/rss+xml" /><item>
-    <title>Investigating how Codex context compaction works</title>
+    <title>[Repost] Investigating how Codex context compaction works</title>
     <link>http://simzhou.com/en/posts/2026/how-codex-compacts-context/</link>
     <pubDate>Thu, 12 Mar 2026 12:05:06 &#43;0800</pubDate>
     <author>xxxx</author>
     <guid>http://simzhou.com/en/posts/2026/how-codex-compacts-context/</guid>
-    <description><![CDATA[<p>Original author: Kangwook Lee<br>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/0HChK-6VawAIhJ8h.jpeg" referrerpolicy="no-referrer">
+            </div><p>Original author: Kangwook Lee
 Original article: <a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
-<p>This page is a repost-style version prepared from my locally saved <code>article.html</code>. The screenshots / diagrams from the X article are omitted here for now, while the structure and prose are preserved as closely as possible.</p>]]></description>
+<p>For non-codex models, the open-source Codex CLI compacts context locally: an LLM summarizes the conversation using a <a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">compaction prompt</a>. When the compacted context is later used, <code>responses.create()</code> receives it with a handoff prompt that frames the summary. Both prompts are visible in the source code.</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -2,6 +2,15 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>http://simzhou.com/en/posts/2026/how-codex-compacts-context/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/posts/2026/how-codex-compacts-context/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/posts/2026/how-codex-compacts-context/"
+                    /></url><url>
             <loc>http://simzhou.com/en/tags/agent/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -55,15 +64,6 @@
                     rel="alternate"
                     hreflang="en"
                     href="http://simzhou.com/en/tags/context-engineering/"
-                    /></url><url>
-            <loc>http://simzhou.com/en/posts/2026/how-codex-compacts-context/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://simzhou.com/posts/2026/how-codex-compacts-context/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://simzhou.com/en/posts/2026/how-codex-compacts-context/"
                     /></url><url>
             <loc>http://simzhou.com/en/tags/llm/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
