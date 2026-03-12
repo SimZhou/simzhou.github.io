@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>AI - 分类 - Simon的梦宇宙</title>
+        <link>http://simzhou.com/categories/ai/</link>
+        <description>AI - 分类 - Simon的梦宇宙</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Mar 2026 12:05:06 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/categories/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>Codex 是如何在长任务里保持连续性的？</title>
+    <link>http://simzhou.com/posts/2026/how-codex-compacts-context/</link>
+    <pubDate>Thu, 12 Mar 2026 12:05:06 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://simzhou.com/posts/2026/how-codex-compacts-context/</guid>
+    <description><![CDATA[<p>原始链接是 Kangwook Lee 发布在 X 上的一篇文章：<br>
+<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
+<p>我这里先做一个中文整理版。由于 X 的 article 页面当前不太好直接抓取全文，下面的内容是根据原始链接及公开转述整理出来的核心要点，重点讨论 Codex 在长上下文任务里是如何保持连续性的。</p>]]></description>
+</item>
+</channel>
+</rss>

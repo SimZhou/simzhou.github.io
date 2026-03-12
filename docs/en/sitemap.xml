@@ -2,7 +2,34 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://simzhou.com/en/categories/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/en/tags/agent/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/tags/agent/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/tags/agent/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/categories/ai/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/categories/ai/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/categories/ai/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/tags/ai/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/tags/ai/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/tags/ai/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/categories/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://simzhou.com/categories/"
@@ -11,10 +38,43 @@
                     hreflang="en"
                     href="http://simzhou.com/en/categories/"
                     /></url><url>
-            <loc>http://simzhou.com/en/tags/deep-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/en/categories/machine-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/en/tags/machine-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/en/posts/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/en/tags/codex/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/tags/codex/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/tags/codex/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/tags/context-engineering/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/tags/context-engineering/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/tags/context-engineering/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/posts/2026/how-codex-compacts-context/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/posts/2026/how-codex-compacts-context/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/posts/2026/how-codex-compacts-context/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/tags/llm/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://simzhou.com/tags/llm/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://simzhou.com/en/tags/llm/"
+                    /></url><url>
+            <loc>http://simzhou.com/en/posts/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://simzhou.com/posts/"
@@ -23,8 +83,7 @@
                     hreflang="en"
                     href="http://simzhou.com/en/posts/"
                     /></url><url>
-            <loc>http://simzhou.com/en/tags/regularization/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
-            <loc>http://simzhou.com/en/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/en/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://simzhou.com/"
@@ -33,7 +92,7 @@
                     hreflang="en"
                     href="http://simzhou.com/en/"
                     /></url><url>
-            <loc>http://simzhou.com/en/tags/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><xhtml:link
+            <loc>http://simzhou.com/en/tags/</loc><lastmod>2026-03-12T12:05:06&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://simzhou.com/tags/"
@@ -42,6 +101,10 @@
                     hreflang="en"
                     href="http://simzhou.com/en/tags/"
                     /></url><url>
+            <loc>http://simzhou.com/en/tags/deep-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/en/categories/machine-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/en/tags/machine-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
+            <loc>http://simzhou.com/en/tags/regularization/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/en/tags/visualization/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod></url><url>
             <loc>http://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><xhtml:link
                         rel="alternate"

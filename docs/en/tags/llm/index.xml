@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>LLM - Tag - Simon&#39;s Dream Universe</title>
+        <link>http://simzhou.com/en/tags/llm/</link>
+        <description>LLM - Tag - Simon&#39;s Dream Universe</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Mar 2026 12:05:06 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/en/tags/llm/" rel="self" type="application/rss+xml" /><item>
+    <title>How Codex Stays Coherent on Long Tasks</title>
+    <link>http://simzhou.com/en/posts/2026/how-codex-compacts-context/</link>
+    <pubDate>Thu, 12 Mar 2026 12:05:06 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://simzhou.com/en/posts/2026/how-codex-compacts-context/</guid>
+    <description><![CDATA[<p>Original article link:<br>
+<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
+<p>This is an English repost-style note based on the original X article and the publicly quoted descriptions of it. The main idea is simple: Codex does not merely drop old history when a task gets long. Instead, it appears to perform a controlled handoff.</p>]]></description>
+</item>
+</channel>
+</rss>
