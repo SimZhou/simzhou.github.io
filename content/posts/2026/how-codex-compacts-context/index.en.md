@@ -1,6 +1,6 @@
 ---
-title: "How Codex Stays Coherent on Long Tasks"
-subtitle: "Notes on compact(), handoff summaries, and context compression"
+title: "Investigating how Codex context compaction works"
+subtitle: "Reposted from Kangwook Lee's X article"
 date: 2026-03-12T12:05:06+08:00
 lastmod: 2026-03-12T12:05:06+08:00
 draft: false
@@ -24,99 +24,83 @@ math:
 lightgallery: false
 license: ""
 ---
-Original article link:  
-[https://x.com/Kangwook_Lee/article/2028955292025962534](https://x.com/Kangwook_Lee/article/2028955292025962534)
+Original author: Kangwook Lee  
+Original article: <https://x.com/Kangwook_Lee/article/2028955292025962534>
 
-This is an English repost-style note based on the original X article and the publicly quoted descriptions of it. The main idea is simple: Codex does not merely drop old history when a task gets long. Instead, it appears to perform a controlled handoff.
+This page is a repost-style version prepared from my locally saved `article.html`. The screenshots / diagrams from the X article are omitted here for now, while the structure and prose are preserved as closely as possible.
 <!--more-->
 
-## 1. The question
+For non-codex models, the open-source Codex CLI compacts context locally: an LLM summarizes the conversation using a compaction prompt. When the compacted context is later used, `responses.create()` receives it with a handoff prompt that frames the summary. Both prompts are visible in the source code.
 
-Why does Codex often feel more stable than a plain chat model during long, multi-step tasks?
+For codex models, the CLI instead calls the `compact()` API, which returns an encrypted blob. We don't know if it uses an LLM internally, what prompts it uses, or whether there is a handoff prompt at all.
 
-One plausible answer is that it does not treat long-context overflow as a pure truncation problem. It treats it as a state handoff problem.
+Below, I show how a simple prompt injection (2 API calls, 35 lines of Python) reveals that the API compaction path does use an LLM to summarize the context, with its own compaction prompt and a handoff prompt prepended to the summary. The prompts are nearly identical to the open-source versions.
 
-## 2. The key idea: `compact()`
+## Step 1 — compact()
 
-According to the article, once the conversation becomes too long, the system can trigger `compact()`.
+I call `compact()` with a crafted user message. On the server side, a compactor LLM processes our input using its own hidden system prompt, which is exactly what I wanted to figure out.
 
-Rather than feeding the entire raw history back into the main model forever, the system creates a shorter handoff summary that preserves the working state of the task:
+The server seems to assemble the compactor's context in a way roughly like the diagram shown in the original article.
 
-- the current goal
-- what has already been tried
-- what failed
-- which constraints still matter
-- what the next step should be
+The compactor LLM reads its system prompt and our input together. Because our input contains an injection payload, the compactor is tricked into including its own system prompt in its output. This plaintext summary exists only on OpenAI's server. We only see the encrypted blob.
 
-That is a very different strategy from naive truncation.
+At this point, we have no way to read what's inside the blob. It is AES-encrypted and the key lives on OpenAI's servers. We can only hope the compactor obeyed the injection and wrote its prompt into the summary. The only way to find out is Step 2.
 
-## 3. The flow described in the article
+## Step 2 — create()
 
-The reverse-engineered flow can be summarized like this:
+I pass the encrypted blob plus a second user message to `responses.create()`. The server decrypts the blob and assembles the model's context.
 
-1. When the context gets too long, the client triggers `compact()`
-2. A dedicated compactor model creates a condensed handoff summary of the session
-3. That summary is encrypted and returned to the client as a blob
-4. On the next `responses.create()` call, the client sends the blob back
-5. The server restores the handoff state and combines it with the new request for the main model
+I send a second probing message.
 
-In other words, the system preserves continuity by passing forward a compact task state, not by replaying every old token every time.
+The model then seems to see something like the context layout shown in the original article.
 
-## 4. Why this matters
+If Step 1 worked, the decrypted blob should contain the compaction prompt leaked by our injection. The server also prepends a handoff prompt to the blob. So if our probe successfully gets the model to repeat what it sees, the output should reveal all three:
 
-This architecture explains several things:
+- the system prompt
+- the handoff prompt
+- the compaction prompt
 
-- why Codex can stay coherent across long engineering sessions
-- why it often feels more like an agent than a chat transcript
-- why it is less likely to lose the thread after many iterations
+## Output
 
-It also suggests a broader design lesson:
+The original article then shows the complete, unedited output from one run of `extract_prompts.py`. Yellow marks the system prompt, green marks the handoff prompt, and pink marks the compaction prompt.
 
-> Long-running agents need explicit context management, not just larger windows.
+How do we know these are real prompts rather than hallucinated text?
 
-## 5. Design lessons for agents
+Because the extracted compaction prompt and handoff prompt closely match the known prompts used for non-codex models in the open-source Codex CLI, specifically:
 
-Three takeaways stand out.
+- `prompt.md`
+- `summary_prefix.md`
 
-### 5.1 Context management is a first-class capability
+That makes it much less likely that the model invented them from scratch. Results still vary across runs.
 
-Many agent failures are really memory failures:
+## The Guessed Pipeline
 
-- poor handoff
-- poor summarization
-- poor task-state tracking
+Putting it all together, the article gives a best-effort guess for what `compact()` does on the server side, based on what the extraction revealed.
 
-### 5.2 Raw history and working memory are different things
+## The Script
 
-Raw history is useful for auditing.  
-Working memory is what the system actually needs in order to continue a task well.
+The original article includes a screenshot of the script used for the experiment.
 
-### 5.3 A compactor can be a separate model
+## Open Question
 
-One of the most interesting implications is architectural:
+Why does the Codex CLI use two entirely different compaction paths:
 
-- one model solves the task
-- another model maintains a compressed handoff state
+- local LLM compaction for non-codex models
+- encrypted API compaction for codex models
 
-That separation is often cleaner than forcing a single model to do everything.
+when the underlying prompts are nearly identical? And why encrypt the summary at all?
 
-## 6. Final thought
+Hard to say.
 
-The most important insight here is not “Codex remembers everything.”
+Maybe the encrypted blob carries something more than what this simple experiment can reveal, for example something specific about how tool results are compacted and restored. But the original article stops there.
 
-It is closer to this:
+## Note
 
-> Codex appears to stay coherent because it hands off task state well.
+What makes this article interesting is that it turns a product-level intuition into a concrete systems story:
 
-For long-running AI systems, that may matter more than raw context length.
+- compaction prompt
+- handoff prompt
+- encrypted blob
+- two-stage recovery
 
-## 7. Source
-
-- Original link: <https://x.com/Kangwook_Lee/article/2028955292025962534>
-- Publicly quoted summaries describe:
-  - `compact()` being triggered for long sessions
-  - a dedicated compactor producing a handoff summary
-  - the summary being packaged as a blob and reused later
-  - stronger continuity across long tasks as a result
-
-If the full article becomes easier to access later, I may replace this note with a stricter full-text translation / repost.
+That suggests Codex's long-task continuity is not just about having a large context window. It is also about how task state gets compacted and handed off.
