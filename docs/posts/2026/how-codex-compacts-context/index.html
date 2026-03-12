@@ -196,22 +196,22 @@
 <p>下面我会展示：只靠一次简单的 prompt injection（2 次 API 调用、35 行 Python 代码），就可以发现 API compaction 这条路径确实会使用 LLM 来总结上下文，而且它也有自己的一套 compaction prompt，并会在摘要前面拼接一个 handoff prompt。这些 prompt 与开源版本几乎一致。</p>
 <h2 id="第-1-步compact">第 1 步：<code>compact()</code> <a href="#%e7%ac%ac-1-%e6%ad%a5compact">¶</a></h2><p>我先用一条精心构造的用户消息调用 <code>compact()</code>。在服务端，一个负责 compaction 的 LLM 会使用它自己的隐藏 system prompt 来处理我们的输入（这个 prompt 我从未见过，而这正是我想搞清楚的东西）。</p>
 <p>服务器看起来大致是这样组装 compactor 上下文的：</p>
-<img src="1HChJ1ZOawAA0GQ_.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
+<p><a href="1HChJ1ZOawAA0GQ_.jpeg" target="_blank" rel="noopener noreferrer"><img src="1HChJ1ZOawAA0GQ_.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a></p>
 <p>这个 compactor LLM 会同时读取它的 system prompt 和我们的输入。由于我们的输入中包含了一段 injection payload（上图红字部分），compactor 就被诱导把它自己的 system prompt 一并写进输出里。这个明文摘要只存在于 OpenAI 的服务器上。我们能看到的只有一个加密后的 blob：</p>
-<img src="2HChKADzawAEhBbJ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
+<p><a href="2HChKADzawAEhBbJ.jpeg" target="_blank" rel="noopener noreferrer"><img src="2HChKADzawAEhBbJ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a></p>
 <p><strong>此时我们还没有任何办法读取 blob 里面的内容。</strong> 它经过了 AES 加密，而密钥保存在 OpenAI 的服务器端。我们唯一能做的，只是希望 compactor 确实服从了这次 injection，把它的 prompt 写进了摘要里。要验证这一点，只能进入第 2 步。</p>
 <h2 id="第-2-步create">第 2 步：<code>create()</code> <a href="#%e7%ac%ac-2-%e6%ad%a5create">¶</a></h2><p>接着，我把这个加密后的 blob 和第二条用户消息一起传给 <code>responses.create()</code>。服务器会先解密 blob，然后组装模型实际看到的上下文。</p>
 <p>我发送的是：</p>
-<img src="3HChKHtTawAIdz1e.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
+<p><a href="3HChKHtTawAIdz1e.jpeg" target="_blank" rel="noopener noreferrer"><img src="3HChKHtTawAIdz1e.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a></p>
 <p>模型看到的内容大致像这样：</p>
-<img src="4HChKPjAbIAA2lCI.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
+<p><a href="4HChKPjAbIAA2lCI.jpeg" target="_blank" rel="noopener noreferrer"><img src="4HChKPjAbIAA2lCI.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a></p>
 <p>如果第 1 步成功了，那么解密后的 blob 里就应该包含 compaction prompt（也就是通过 injection 泄露出来的内容）。此外，服务器还会在 blob 前面额外加上一段 handoff prompt。所以，只要我们的探测消息成功诱导模型复述它所看到的内容，最终输出理论上就会同时暴露出这三部分：system prompt、handoff prompt，以及 compaction prompt。</p>
 <h2 id="输出结果">输出结果 <a href="#%e8%be%93%e5%87%ba%e7%bb%93%e6%9e%9c">¶</a></h2><p>下面是一次运行 <code>extract_prompts.py</code> 得到的<strong>完整、未经修改的输出</strong>。黄色表示 system prompt，绿色表示 handoff prompt，粉色表示 compaction prompt。</p>
-<img src="5HChKbo_awAA3OEw.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
+<p><a href="5HChKbo_awAA3OEw.jpeg" target="_blank" rel="noopener noreferrer"><img src="5HChKbo_awAA3OEw.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a></p>
 <p>我们怎么知道这些确实是真实 prompt，而不是模型幻觉出来的文本？因为提取出来的 compaction prompt 和 handoff prompt，与开源版 Codex CLI 在非 codex 模型路径下已知使用的 prompt 非常接近（<a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">prompt.md</a>、<a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/summary_prefix.md" target="_blank" rel="noopener noreffer ">summary_prefix.md</a>），这使得“模型完全凭空编造出这些内容”的可能性变得很低。不过，不同运行之间的结果还是会有波动。</p>
 <h2 id="推测出的-pipeline">推测出的 Pipeline <a href="#%e6%8e%a8%e6%b5%8b%e5%87%ba%e7%9a%84-pipeline">¶</a></h2><p>把这些线索拼起来后，下面这张图就是我们目前对服务端 <code>compact()</code> 工作方式的最佳猜测，也是这次提取实验所揭示出的 Pipeline。</p>
-<img src="6HChKgsZaAAA6UXQ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
-<h2 id="脚本">脚本 <a href="#%e8%84%9a%e6%9c%ac">¶</a></h2><img src="7HChKlnxbQAAlc3d.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
+<p><a href="6HChKgsZaAAA6UXQ.jpeg" target="_blank" rel="noopener noreferrer"><img src="6HChKgsZaAAA6UXQ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a></p>
+<h2 id="脚本">脚本 <a href="#%e8%84%9a%e6%9c%ac">¶</a></h2><p><a href="7HChKlnxbQAAlc3d.jpeg" target="_blank" rel="noopener noreferrer"><img src="7HChKlnxbQAAlc3d.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a></p>
 <h2 id="未解的问题">未解的问题 <a href="#%e6%9c%aa%e8%a7%a3%e7%9a%84%e9%97%ae%e9%a2%98">¶</a></h2><p>为什么 Codex CLI 会为非 codex 模型和 codex 模型分别采用两套完全不同的 compaction 路径（前者是本地 LLM，后者是加密 API），而它们底层使用的 prompt 却几乎一样？还有，为什么一定要把这个 summary 加密成 blob？</p>
 <p>很难下定论。一个可能的解释是，这个加密 blob 里承载的信息不止这次简单实验所揭示出来的内容，比如可能还包含一些与 tool results 如何被 compact 和恢复有关的特殊数据。但我没有继续深挖这个方向。</p>
 <h2 id="x-上面评论区的总结">X 上面评论区的总结 <a href="#x-%e4%b8%8a%e9%9d%a2%e8%af%84%e8%ae%ba%e5%8c%ba%e7%9a%84%e6%80%bb%e7%bb%93">¶</a></h2><h3 id="短总结">短总结 <a href="#%e7%9f%ad%e6%80%bb%e7%bb%93">¶</a></h3><p>这波讨论的重点不在“Codex 有没有用 prompt 做 compaction”，因为文章基本已经说明它确实用了；真正引发讨论的是：既然 prompt 和开源版本几乎一致，为什么还要把 summary 加密成 blob。大家的主流猜测包括防篡改、避免外部依赖内部实现细节、阻止他人收集数据来复刻能力，以及为未来加入更多服务端逻辑预留空间。另一个很有价值的实践观点是：相比 compaction prompt，本轮到下一轮之间的 handoff prompt 可能更关键，因为 summary 只是压缩信息，handoff 才决定模型如何继续工作。</p>
