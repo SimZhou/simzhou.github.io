@@ -249,6 +249,12 @@ content/posts/2026/my-new-post/
 {{< image src="example.jpg" width="60%" >}}
 ```
 
+- 如果希望点击图片时使用 LoveIt 原生图片浏览器，而不是普通跳转，记得在该文章页面的 front matter 中启用：
+
+```toml
+lightgallery: true
+```
+
 # 八、如何新增相册内容
 
 当前相册照片主要放在：

@@ -60,6 +60,7 @@
   - 主题特有 shortcode 以及与主题样式/JS耦合的能力，优先查 LoveIt 文档和当前主题源码
   - `highlight` 在 Hugo 和 LoveIt 中都存在；涉及渲染差异时，以当前主题实际输出为准
   - `image` 是当前站点最推荐的图片 shortcode，支持宽度、caption、链接等主题集成功能
+  - 若希望 `image` 使用 LoveIt 原生图片浏览器，页面 front matter 需启用 `lightgallery: true`
 
 ## 当前相册实现
 
