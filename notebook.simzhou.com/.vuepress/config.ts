@@ -1,7 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
+import { katex } from '@mdit/plugin-katex'
 import { defineUserConfig } from 'vuepress'
-import markdownItKatex from 'markdown-it-katex'
 
 const andrewNgNotes = [
   { text: '1. 机器学习简介', link: '/algo/machine-learning/Machine-Learning-Andrew-Ng/Notes-01.html' },
@@ -39,7 +39,7 @@ export default defineUserConfig({
   ],
   bundler: viteBundler(),
   extendsMarkdown: (md) => {
-    md.use(markdownItKatex)
+    md.use(katex)
   },
   theme: defaultTheme({
     logo: '/doraemon_winter_circle.png',

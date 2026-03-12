@@ -11,10 +11,10 @@
     "pushSite": ""
   },
   "devDependencies": {
+    "@mdit/plugin-katex": "^0.25.1",
     "@vuepress/bundler-vite": "next",
     "@vuepress/theme-default": "next",
     "katex": "^0.16.38",
-    "markdown-it-katex": "^2.0.3",
     "sass-embedded": "^1.98.0",
     "vue": "^3.5.13",
     "vuepress": "next",

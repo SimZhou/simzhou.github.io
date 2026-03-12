@@ -134,11 +134,11 @@ $$
 蒙特卡洛是用随机模拟的方式，来估算每一个状态的V值的方法。
 
 $$
-S_0 \xrightarrow[r]{a_0} S_1 \xrightarrow[r]{a_1} S_2 \xrightarrow[r]{a_2} \cdots \xrightarrow[r]{a_{t-1}} S_T \; ①
+S_0 \xrightarrow[r]{a_0} S_1 \xrightarrow[r]{a_1} S_2 \xrightarrow[r]{a_2} \cdots \xrightarrow[r]{a_{t-1}} S_T \; \text{(1)}
 $$
 
 $$
-S_0' \xrightarrow[r]{a_0} S_1' \xrightarrow[r]{a_1} S_2' \xrightarrow[r]{a_2} \cdots \xrightarrow[r]{a_{t-1}} S_T' \; ②
+S_0' \xrightarrow[r]{a_0} S_1' \xrightarrow[r]{a_1} S_2' \xrightarrow[r]{a_2} \cdots \xrightarrow[r]{a_{t-1}} S_T' \; \text{(2)}
 $$
 
 …… 
