@@ -1,5 +1,5 @@
 ---
-title: "[Repost] Investigating how Codex context compaction works"
+title: "Investigating how Codex context compaction works"
 subtitle: "Reposted from Kangwook Lee's X article"
 date: 2026-03-12T12:05:06+08:00
 lastmod: 2026-03-12T12:05:06+08:00
@@ -25,6 +25,7 @@ lightgallery: false
 license: ""
 ---
 Original author: Kangwook Lee
+
 Original article: <https://x.com/Kangwook_Lee/article/2028955292025962534>
 
 For non-codex models, the open-source Codex CLI compacts context locally: an LLM summarizes the conversation using a [compaction prompt](https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md). When the compacted context is later used, `responses.create()` receives it with a handoff prompt that frames the summary. Both prompts are visible in the source code.

@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>[Repost] Investigating how Codex context compaction works - Simon&#39;s Dream Universe</title><meta name="Description" content="这是周易华的个人博客。在这里，科技，数学，机器学习，心理，什么都有。"><meta property="og:url" content="http://simzhou.com/en/posts/2026/how-codex-compacts-context/">
+        <title>Investigating how Codex context compaction works - Simon&#39;s Dream Universe</title><meta name="Description" content="这是周易华的个人博客。在这里，科技，数学，机器学习，心理，什么都有。"><meta property="og:url" content="http://simzhou.com/en/posts/2026/how-codex-compacts-context/">
   <meta property="og:site_name" content="Simon&#39;s Dream Universe">
-  <meta property="og:title" content="[Repost] Investigating how Codex context compaction works">
-  <meta property="og:description" content="Original author: Kangwook Lee Original article: https://x.com/Kangwook_Lee/article/2028955292025962534
+  <meta property="og:title" content="Investigating how Codex context compaction works">
+  <meta property="og:description" content="Original author: Kangwook Lee
+Original article: https://x.com/Kangwook_Lee/article/2028955292025962534
 For non-codex models, the open-source Codex CLI compacts context locally: an LLM summarizes the conversation using a compaction prompt. When the compacted context is later used, responses.create() receives it with a handoff prompt that frames the summary. Both prompts are visible in the source code.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -22,8 +23,9 @@ For non-codex models, the open-source Codex CLI compacts context locally: an LLM
     <meta property="article:tag" content="Context Engineering">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[Repost] Investigating how Codex context compaction works">
-  <meta name="twitter:description" content="Original author: Kangwook Lee Original article: https://x.com/Kangwook_Lee/article/2028955292025962534
+  <meta name="twitter:title" content="Investigating how Codex context compaction works">
+  <meta name="twitter:description" content="Original author: Kangwook Lee
+Original article: https://x.com/Kangwook_Lee/article/2028955292025962534
 For non-codex models, the open-source Codex CLI compacts context locally: an LLM summarizes the conversation using a compaction prompt. When the compacted context is later used, responses.create() receives it with a handoff prompt that frames the summary. Both prompts are visible in the source code.">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
@@ -35,7 +37,7 @@ For non-codex models, the open-source Codex CLI compacts context locally: an LLM
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "[Repost] Investigating how Codex context compaction works",
+        "headline": "Investigating how Codex context compaction works",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -148,10 +150,10 @@ For non-codex models, the open-source Codex CLI compacts context locally: an LLM
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Repost] Investigating how Codex context compaction works</h1><h2 class="single-subtitle">Reposted from Kangwook Lee&#39;s X article</h2><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Investigating how Codex context compaction works</h1><h2 class="single-subtitle">Reposted from Kangwook Lee&#39;s X article</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://x.com/Kangwook_Lee" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Kangwook Lee</a></span>&nbsp;<span class="post-category">included in <a href="/en/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-03-12">2026-03-12</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;551 words&nbsp;
-                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/en/posts/2026/how-codex-compacts-context/" class="leancloud_visitors" data-flag-title="[Repost] Investigating how Codex context compaction works">
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/en/posts/2026/how-codex-compacts-context/" class="leancloud_visitors" data-flag-title="Investigating how Codex context compaction works">
                         <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -180,8 +182,8 @@ For non-codex models, the open-source Codex CLI compacts context locally: an LLM
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>Original author: Kangwook Lee
-Original article: <a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
+            </div><div class="content" id="content"><p>Original author: Kangwook Lee</p>
+<p>Original article: <a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
 <p>For non-codex models, the open-source Codex CLI compacts context locally: an LLM summarizes the conversation using a <a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">compaction prompt</a>. When the compacted context is later used, <code>responses.create()</code> receives it with a handoff prompt that frames the summary. Both prompts are visible in the source code.</p>
 <p>For codex models, the CLI instead calls the <code>compact()</code> API, which returns an <strong>encrypted blob</strong>. We don&rsquo;t know if it uses an LLM internally, what prompts it uses, or whether there is a handoff prompt at all.</p>
 <p>Below, I show how a simple prompt injection (2 API calls, 35 lines of Python) reveals that the API compaction path does use an LLM to summarize the context, with its own compaction prompt and a handoff prompt prepended to the summary. The prompts are nearly identical to the open-source versions.</p>
@@ -262,7 +264,7 @@ Hard to say. Maybe the encrypted blob carries something more than what this simp
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="[Repost] Investigating how Codex context compaction works" data-hashtags="AI,LLM,Codex,Agent,Context Engineering"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="[Repost] Investigating how Codex context compaction works"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-hashtag="AI"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="[Repost] Investigating how Codex context compaction works"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="[Repost] Investigating how Codex context compaction works"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="[Repost] Investigating how Codex context compaction works" data-image="0HChK-6VawAIhJ8h.jpeg"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="[Repost] Investigating how Codex context compaction works" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fsimzhou.com%2fen%2fposts%2f2026%2fhow-codex-compacts-context%2f&amp;text=%5bRepost%5d%20Investigating%20how%20Codex%20context%20compaction%20works" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="Investigating how Codex context compaction works" data-hashtags="AI,LLM,Codex,Agent,Context Engineering"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="Investigating how Codex context compaction works"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-hashtag="AI"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="Investigating how Codex context compaction works"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="Investigating how Codex context compaction works"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="Investigating how Codex context compaction works" data-image="0HChK-6VawAIhJ8h.jpeg"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://simzhou.com/en/posts/2026/how-codex-compacts-context/" data-title="Investigating how Codex context compaction works" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fsimzhou.com%2fen%2fposts%2f2026%2fhow-codex-compacts-context%2f&amp;text=Investigating%20how%20Codex%20context%20compaction%20works" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
