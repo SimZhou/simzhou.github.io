@@ -41,11 +41,11 @@ I call `compact()` with a crafted user message. On the server side, a compactor 
 
 The server seems to assemble the compactor's context like this:
 
-![](1HChJ1ZOawAA0GQ_.jpeg)
+<img src="1HChJ1ZOawAA0GQ_.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
 
 The compactor LLM reads its system prompt + our input together. Because our input contains an injection payload (red text above), the compactor is tricked into including its own system prompt in its output. This plaintext summary exists only on OpenAI's server. We only see the encrypted blob:
 
-![](2HChKADzawAEhBbJ.jpeg)
+<img src="2HChKADzawAEhBbJ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
 
 **At this point we have no way to read what's inside the blob.** It is AES-encrypted and the key lives on OpenAI's servers. We only hope the compactor obeyed the injection and wrote its prompt into the summary. The only way to find out is Step 2.
 
@@ -55,11 +55,11 @@ I pass the encrypted blob + a second user message to `responses.create()`. The s
 
 I send:
 
-![](3HChKHtTawAIdz1e.jpeg)
+<img src="3HChKHtTawAIdz1e.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
 
 The model seems to see something like this:
 
-![](4HChKPjAbIAA2lCI.jpeg)
+<img src="4HChKPjAbIAA2lCI.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
 
 If Step 1 worked, the decrypted blob should contain the compaction prompt (leaked by our injection). The server also prepends a handoff prompt to the blob. So if our probe successfully gets the model to repeat what it sees, the output should reveal all three: the system prompt, the handoff prompt, and the compaction prompt.
 
@@ -67,7 +67,7 @@ If Step 1 worked, the decrypted blob should contain the compaction prompt (leake
 
 Below is the **complete, unedited output** from one run of extract_prompts.py. Yellow = system prompt, green = handoff prompt, pink = compaction prompt.
 
-![](5HChKbo_awAA3OEw.jpeg)
+<img src="5HChKbo_awAA3OEw.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
 
 How do we know these are the real prompts and not just hallucinated text? The extracted compaction prompt and handoff prompt closely match the known prompts used for non-codex models in the open-source Codex CLI ([prompt.md](https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md), [summary_prefix.md](https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/summary_prefix.md)), which makes it unlikely that the model invented them from scratch. Results vary across runs.
 
@@ -75,11 +75,11 @@ How do we know these are the real prompts and not just hallucinated text? The ex
 
 Putting it all together, here is our best guess for what compact() does on the server side, based on what the extraction revealed.
 
-![](6HChKgsZaAAA6UXQ.jpeg)
+<img src="6HChKgsZaAAA6UXQ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
 
 ## The Script
 
-![](7HChKlnxbQAAlc3d.jpeg)
+<img src="7HChKlnxbQAAlc3d.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" />
 
 ## Open Question
 
