@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500">
+  <rect width="920" height="500" fill="#eef4f2"/>
+  <text x="50" y="70" font-size="30" font-family="Georgia, serif" fill="#24313a">Kernel Trick</text>
+  <rect x="70" y="120" width="300" height="260" rx="18" fill="#ffffff" stroke="#d96c4f" stroke-width="3"/>
+  <circle cx="170" cy="250" r="9" fill="#2f7a65"/><circle cx="210" cy="220" r="9" fill="#2f7a65"/><circle cx="245" cy="255" r="9" fill="#2f7a65"/>
+  <circle cx="250" cy="180" r="9" fill="#d96c4f"/><circle cx="145" cy="180" r="9" fill="#d96c4f"/><circle cx="290" cy="300" r="9" fill="#d96c4f"/><circle cx="120" cy="305" r="9" fill="#d96c4f"/>
+  <text x="110" y="345" font-size="18" font-family="Arial, sans-serif" fill="#59666e">原始空间：线性不可分</text>
+  <text x="415" y="255" font-size="54" font-family="Arial, sans-serif" fill="#6c7a82">→</text>
+  <rect x="520" y="120" width="320" height="260" rx="18" fill="#ffffff" stroke="#2f7a65" stroke-width="3"/>
+  <ellipse cx="680" cy="250" rx="95" ry="75" fill="none" stroke="#2f7a65" stroke-width="6"/>
+  <circle cx="650" cy="245" r="9" fill="#2f7a65"/><circle cx="705" cy="220" r="9" fill="#2f7a65"/><circle cx="725" cy="270" r="9" fill="#2f7a65"/>
+  <circle cx="590" cy="180" r="9" fill="#d96c4f"/><circle cx="780" cy="180" r="9" fill="#d96c4f"/><circle cx="590" cy="320" r="9" fill="#d96c4f"/><circle cx="780" cy="320" r="9" fill="#d96c4f"/>
+  <text x="585" y="345" font-size="18" font-family="Arial, sans-serif" fill="#59666e">映射后：使用核函数得到可分边界</text>
+</svg>

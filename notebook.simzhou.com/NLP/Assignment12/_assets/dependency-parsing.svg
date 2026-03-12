@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+  <rect width="920" height="360" fill="#eef4f2"/>
+  <text x="50" y="68" font-size="30" font-family="Georgia, serif" fill="#24313a">Dependency Parsing</text>
+  <text x="50" y="104" font-size="20" font-family="Arial, sans-serif" fill="#59666e">依存关系示意：用弧线连接中心词与其依赖项。</text>
+  <text x="120" y="260" font-size="28" font-family="Georgia, serif" fill="#24313a">小明</text>
+  <text x="300" y="260" font-size="28" font-family="Georgia, serif" fill="#24313a">昨天</text>
+  <text x="480" y="260" font-size="28" font-family="Georgia, serif" fill="#24313a">说</text>
+  <text x="620" y="260" font-size="28" font-family="Georgia, serif" fill="#24313a">天气</text>
+  <text x="770" y="260" font-size="28" font-family="Georgia, serif" fill="#24313a">很好</text>
+  <path d="M120 210 Q300 120 480 210" fill="none" stroke="#2f7a65" stroke-width="4"/>
+  <path d="M300 210 Q390 150 480 210" fill="none" stroke="#d96c4f" stroke-width="4"/>
+  <path d="M480 210 Q625 95 770 210" fill="none" stroke="#2f7a65" stroke-width="4"/>
+  <path d="M620 210 Q695 165 770 210" fill="none" stroke="#d96c4f" stroke-width="4"/>
+  <text x="255" y="120" font-size="18" font-family="Arial, sans-serif" fill="#2f7a65">nsubj</text>
+  <text x="375" y="145" font-size="18" font-family="Arial, sans-serif" fill="#d96c4f">advmod</text>
+  <text x="615" y="92" font-size="18" font-family="Arial, sans-serif" fill="#2f7a65">ccomp</text>
+  <text x="685" y="160" font-size="18" font-family="Arial, sans-serif" fill="#d96c4f">amod</text>
+</svg>

@@ -6,7 +6,7 @@
 
 > 基于语法树的短句生成器基本思路是通过预先构建的语法树，以及词库，对一个固定语法不断递归查找最终生成一句符合该语法的短句
 
-  ![语法树例子](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571823712&di=a36fecb9108f453546fb3aca53cd450c&imgtype=jpg&er=1&src=http%3A%2F%2Fimg3.coin163.com%2F50%2F84%2FJfInei.gif) 
+  ![语法树例子](./_assets/syntax-tree-example.svg) 
 
 
 

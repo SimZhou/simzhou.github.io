@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <rect width="920" height="420" fill="#f6f3eb"/>
+  <text x="50" y="68" font-size="30" font-family="Georgia, serif" fill="#24313a">Policy Iteration</text>
+  <text x="50" y="104" font-size="20" font-family="Arial, sans-serif" fill="#59666e">策略评估与策略改进交替进行，直到策略稳定。</text>
+  <rect x="150" y="150" width="250" height="120" rx="18" fill="#ffffff" stroke="#2f7a65" stroke-width="4"/>
+  <rect x="520" y="150" width="250" height="120" rx="18" fill="#ffffff" stroke="#d96c4f" stroke-width="4"/>
+  <text x="210" y="205" font-size="24" font-family="Arial, sans-serif" fill="#2f7a65">Policy Evaluation</text>
+  <text x="565" y="205" font-size="24" font-family="Arial, sans-serif" fill="#d96c4f">Policy Improvement</text>
+  <g stroke="#6c7a82" stroke-width="4" marker-end="url(#b)"><defs><marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6c7a82"/></marker></defs><line x1="400" y1="210" x2="520" y2="210"/><line x1="645" y1="270" x2="645" y2="340"/><line x1="645" y1="340" x2="275" y2="340"/><line x1="275" y1="340" x2="275" y2="270"/></g>
+</svg>

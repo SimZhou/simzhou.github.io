@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+  <rect width="920" height="360" fill="#f7f5ee"/>
+  <text x="50" y="68" font-size="30" font-family="Georgia, serif" fill="#24313a">Value Function</text>
+  <text x="50" y="104" font-size="20" font-family="Arial, sans-serif" fill="#59666e">状态价值示意：从当前状态出发，累计未来折扣奖励。</text>
+  <circle cx="150" cy="200" r="36" fill="#ffffff" stroke="#2f7a65" stroke-width="4"/><circle cx="330" cy="200" r="36" fill="#ffffff" stroke="#2f7a65" stroke-width="4"/><circle cx="510" cy="200" r="36" fill="#ffffff" stroke="#2f7a65" stroke-width="4"/><circle cx="690" cy="200" r="36" fill="#ffffff" stroke="#d96c4f" stroke-width="4"/>
+  <g stroke="#6c7a82" stroke-width="4" marker-end="url(#a)"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6c7a82"/></marker></defs><line x1="186" y1="200" x2="294" y2="200"/><line x1="366" y1="200" x2="474" y2="200"/><line x1="546" y1="200" x2="654" y2="200"/></g>
+  <text x="125" y="255" font-size="18" font-family="Arial, sans-serif" fill="#59666e">Sₜ</text><text x="305" y="255" font-size="18" font-family="Arial, sans-serif" fill="#59666e">Sₜ₊₁</text><text x="485" y="255" font-size="18" font-family="Arial, sans-serif" fill="#59666e">Sₜ₊₂</text><text x="665" y="255" font-size="18" font-family="Arial, sans-serif" fill="#59666e">Terminal</text>
+  <text x="220" y="180" font-size="18" font-family="Arial, sans-serif" fill="#d96c4f">r₁</text><text x="400" y="180" font-size="18" font-family="Arial, sans-serif" fill="#d96c4f">γr₂</text><text x="570" y="180" font-size="18" font-family="Arial, sans-serif" fill="#d96c4f">γ²r₃</text>
+</svg>

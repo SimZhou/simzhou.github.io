@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="480" viewBox="0 0 920 480">
+  <rect width="920" height="480" fill="#f6f3eb"/>
+  <text x="50" y="70" font-size="30" font-family="Georgia, serif" fill="#24313a">Naive Bayes 文档分类</text>
+  <rect x="70" y="120" width="220" height="250" rx="18" fill="#ffffff" stroke="#62727a" stroke-width="3"/>
+  <text x="110" y="165" font-size="20" font-family="Arial, sans-serif" fill="#59666e">文档</text>
+  <text x="105" y="205" font-size="18" font-family="Arial, sans-serif" fill="#2f7a65">cheap</text>
+  <text x="185" y="205" font-size="18" font-family="Arial, sans-serif" fill="#d96c4f">offer</text>
+  <text x="115" y="245" font-size="18" font-family="Arial, sans-serif" fill="#2f7a65">meeting</text>
+  <text x="195" y="245" font-size="18" font-family="Arial, sans-serif" fill="#d96c4f">free</text>
+  <text x="105" y="285" font-size="18" font-family="Arial, sans-serif" fill="#2f7a65">project</text>
+  <text x="190" y="285" font-size="18" font-family="Arial, sans-serif" fill="#d96c4f">win</text>
+  <text x="350" y="245" font-size="54" font-family="Arial, sans-serif" fill="#6c7a82">→</text>
+  <rect x="470" y="120" width="360" height="250" rx="18" fill="#ffffff" stroke="#2f7a65" stroke-width="3"/>
+  <text x="510" y="165" font-size="20" font-family="Arial, sans-serif" fill="#59666e">Posterior 比较</text>
+  <text x="510" y="220" font-size="18" font-family="Arial, sans-serif" fill="#59666e">P(spam | words) ∝ P(words | spam) P(spam)</text>
+  <text x="510" y="270" font-size="18" font-family="Arial, sans-serif" fill="#59666e">P(ham | words) ∝ P(words | ham) P(ham)</text>
+  <text x="510" y="330" font-size="22" font-family="Arial, sans-serif" fill="#2f7a65">选择后验概率更大的类别</text>
+</svg>

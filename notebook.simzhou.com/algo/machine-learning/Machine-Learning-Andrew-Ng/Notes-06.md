@@ -54,7 +54,7 @@ $g(z)=\frac{1}{1+e^{-z}}$
 
 当输入g(z)的**函数为非线性函数**时，**决策边界就可以是非线性**的。例如，当输入函数为$z{(x)}=\theta_0+\theta_1{x_1}+\theta_2{x_2}+\theta_3{x_1^2}+\theta_4{x_2^2}$ 时，函数为抛物面，
 
-![img](https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2532408450,1088232931&fm=26&gp=0.jpg)
+![非线性决策边界示意](./_assets/decision-boundary-nonlinear.svg)
 
 此时的**决策边界**就可以是一个**圆/椭圆**：
 

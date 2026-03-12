@@ -8,13 +8,13 @@
 
  在进行这两个算法之前的第一步，就是先把图通过无循环遍历转换成树的形式：
 
-![GraphToTree](https://chuantu.xyz/t6/702/1572356286x1033347913.png)
+![GraphToTree](./_assets/graph-to-tree.svg)
 
 #### 1.1 BFS(Breadth-First Search)
 
 广度优先算法，通常使用**队列**的数据结构实现。从第一层开始，以广度优先的方式，遍历它的下一层所有子节点。
 
-![](https://chuantu.xyz/t6/702/1572372528x1031866013.png)
+![](./_assets/bfs.svg)
 
 **复杂度**：$b^0+b^1+b^2+b^3+\dots+b^d=\frac{1-b^{d+1}}{1-b}\stackrel{b,d\to\infty}{\approx}O(b^d)$，其中 b 为宽度，d 为深度
 
@@ -32,7 +32,7 @@
 
 深度优先算法，通常使用**堆**的数据结构实现。从一个节点开始，以深度优先的方式，遍历下面的子节点。
 
-![](https://chuantu.xyz/t6/702/1572372575x1033347913.png)
+![](./_assets/dfs.svg)
 
 **复杂度**：最坏情况同样是遍历每个节点，同样是 $O(b^d)$
 
@@ -42,7 +42,7 @@
 
 #### 1.3 BFS与DFS的区别
 
-![BfsDfsDifference](https://chuantu.xyz/t6/702/1572355914x1031866013.png)
+![BfsDfsDifference](./_assets/bfs-dfs-difference.svg)
 
 | 算法         | BFS                                             | DFS                                             |
 | ------------ | ----------------------------------------------- | ----------------------------------------------- |

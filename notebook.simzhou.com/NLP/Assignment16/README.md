@@ -95,7 +95,7 @@ $$
 
 通过求解max(Qa_1, Qa_2, Qa_3,...)来获得当前步最佳策略action。
 
- ![](https://uricc.ga/images/2020/02/06/_20200207001807.png)
+ ![](./_assets/value-function.svg)
 
 
 
@@ -111,7 +111,7 @@ $$
 
 进行值的更新，然后不断迭代，直到收敛 $|W_{t+1}-W_t|\leq \delta$：
 
-![](https://uricc.ga/images/2020/02/07/Bellman-iteration.png)
+![](./_assets/bellman-iteration.svg)
 
 
 
@@ -121,13 +121,13 @@ $$
 
 具体做法是：先对所有状态初始化一个随机策略，然后使用第二种Bellman equation，进行最佳策略的更新，然后不断迭代，直到收敛。
 
-![](https://uricc.ga/images/2020/02/07/Bellman-iteration2.png)
+![](./_assets/policy-iteration.svg)
 
 
 
 ### 4. Monte-Carlo Method - 奖励函数的求解方法2
 
-![](https://uricc.ga/images/2020/02/07/_20200207231312f43e8b578cd59838.png)
+![](./_assets/monte-carlo.svg)
 
 正常情况下一般来讲，各状态之间的Transition Probability是未知的。
 
@@ -199,7 +199,7 @@ Deep Q-Network的思路是使用神经网络来拟合Q函数：f(S1) → Q值
 
 该神经网络的输入就是State，输出就是Q-Value
 
-![](https://uricc.ga/images/2020/02/07/Annotation-2020-02-08-020129.png)
+![](./_assets/deep-q-network.svg)
 
 （例如，Atari游戏中，输入的就是图片像素，使用CNN提取特征）
 

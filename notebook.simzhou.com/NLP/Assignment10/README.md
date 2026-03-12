@@ -57,7 +57,7 @@ $$
 
 例：文档分类
 
-![](https://uricc.ga/images/2019/12/13/_20191213164304.png)
+![](./_assets/naive-bayes-doc-classification.svg)
 
 在用朴素贝叶斯进行文档分类的例子中，由于词库中某些词可能在句子中没有出现，产生条件概率为0的情况，因此对于所有词的初始词频默认为1（而不是0）（Add 1 smoothing）
 
@@ -149,7 +149,7 @@ SVM 的目的是最大化间隔，即
 
 使用非线性函数将数据打到高维空间，使之在高维空间线性可分：
 
-![Kernal Trick](https://uricc.ga/images/2019/12/20/_20191220115256.png)
+![Kernal Trick](./_assets/kernel-trick.svg)
 
 
 
@@ -178,11 +178,11 @@ SVM 的目的是最大化间隔，即
 >
 > **Bagging：每次通过Bootstrap方式训练一个分类器，各分类器相互独立**
 >
-> ![](https://uricc.ga/images/2019/12/20/bagging.png)
+> ![](./_assets/bagging.svg)
 >
 > **Boosting：每次训练出的模型的学习效果不好的部分，都会提升下一次模型的效果**
 >
-> ![](https://uricc.ga/images/2019/12/20/boosting.png)
+> ![](./_assets/boosting.svg)
 
 #### 4.1 随机森林
 
