@@ -12,11 +12,11 @@
 
 > 非形式地说，**算法**（Algorithm）就是任何**良定义**的**计算过程**，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出。这样，算法就是**把输入转换成输出的计算步骤**的一个序列。
 
-<p align="right">—— 《算法导论》第3版，第1章</p>
+*—— 《算法导论》第3版，第1章*
 
 > **算法**（Algorithm）是指**解题方案**的**准确而完整**的**描述**，是一系列解决问题的清晰[指令](https://baike.baidu.com/item/指令/3225201)，算法代表着用**系统的方法**描述**解决问题的策略机制**。也就是说，能够对一定规范的[输入](https://baike.baidu.com/item/输入/32696)，在有限时间内获得所要求的输出。如果一个算法有缺陷，或不适合于某个问题，执行这个算法将不会解决这个问题。不同的算法可能用不同的时间、空间或效率来完成同样的任务。一个算法的优劣可以用[空间复杂度](https://baike.baidu.com/item/空间复杂度/9664257)与[时间复杂度](https://baike.baidu.com/item/时间复杂度/1894057)来衡量。
 
-<p align="right">—— 百度百科，2020.08.19</p>
+*—— 百度百科，2020.08.19*
 
 > An **algorithm** is **a step by step procedure** to **solve logical and mathematical problems**.
 >
@@ -28,7 +28,7 @@
 >
 > In computing, an algorithm is a precise list of operations that could be done by a [Turing machine](https://simple.wikipedia.org/wiki/Turing_machine). For the purpose of computing, algorithms are written in [pseudocode](https://simple.wikipedia.org/wiki/Pseudocode), [flow charts](https://simple.wikipedia.org/wiki/Flow_chart), or [programming languages](https://simple.wikipedia.org/wiki/Programming_language). 
 
-<p align="right">—— Wikipedia, 2020.08.19</p>
+*—— Wikipedia, 2020.08.19*
 
 所以我们可以看到，算法是一个非常广泛的概念。任何接受一个输入，并通过一系列固定步骤把它转化为一个输出的过程，都可以被称为算法。所以，在学习任何算法（包括机器学习算法）的时候，考虑清楚它的输入是什么，输出是什么，计算步骤是什么，是非常重要的。
 
@@ -39,4 +39,3 @@
 机器学习算法通过已有数据学习一个过程，然后再通过这个过程把新的输入转化为输出。
 
 这两者最关键的区别在于是否需要用已有数据来得到这个算法模型。
-

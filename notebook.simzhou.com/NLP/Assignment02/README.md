@@ -8,15 +8,15 @@
 
  在进行这两个算法之前的第一步，就是先把图通过无循环遍历转换成树的形式：
 
-![GraphToTree](http://chuantu.xyz/t6/702/1572356286x1033347913.png)
+![GraphToTree](https://chuantu.xyz/t6/702/1572356286x1033347913.png)
 
 #### 1.1 BFS(Breadth-First Search)
 
 广度优先算法，通常使用**队列**的数据结构实现。从第一层开始，以广度优先的方式，遍历它的下一层所有子节点。
 
-![](http://chuantu.xyz/t6/702/1572372528x1031866013.png)
+![](https://chuantu.xyz/t6/702/1572372528x1031866013.png)
 
-**复杂度**：![](http://latex.codecogs.com/gif.latex?b^0+b^1+b^2+b^3+\dots+b^d=\frac{1-b^{d+1}}{1-b}\stackrel{b,d\to\infty}{\approx}O(b^d))，其中b为宽度，d为深度
+**复杂度**：$b^0+b^1+b^2+b^3+\dots+b^d=\frac{1-b^{d+1}}{1-b}\stackrel{b,d\to\infty}{\approx}O(b^d)$，其中 b 为宽度，d 为深度
 
 **最优路径问题**：当，
 
@@ -32,9 +32,9 @@
 
 深度优先算法，通常使用**堆**的数据结构实现。从一个节点开始，以深度优先的方式，遍历下面的子节点。
 
-![](http://chuantu.xyz/t6/702/1572372575x1033347913.png)
+![](https://chuantu.xyz/t6/702/1572372575x1033347913.png)
 
-**复杂度**：最坏情况同样是遍历每个节点，同样是![](http://latex.codecogs.com/gif.latex?O(b^d))
+**复杂度**：最坏情况同样是遍历每个节点，同样是 $O(b^d)$
 
 **最优路径**：很少给出最优路径
 
@@ -42,13 +42,13 @@
 
 #### 1.3 BFS与DFS的区别
 
-![BfsDfsDifference](http://chuantu.xyz/t6/702/1572355914x1031866013.png)
+![BfsDfsDifference](https://chuantu.xyz/t6/702/1572355914x1031866013.png)
 
 | 算法         | BFS                                             | DFS                                             |
 | ------------ | ----------------------------------------------- | ----------------------------------------------- |
 | 实现方式     | 队列                                            | 堆                                              |
-| 时间复杂度   | ![](http://latex.codecogs.com/gif.latex?O(b^d)) | ![](http://latex.codecogs.com/gif.latex?O(b^d)) |
-| 空间复杂度   | ![](http://latex.codecogs.com/gif.latex?O(b^d)) | ![](http://latex.codecogs.com/gif.latex?O(b*d)) |
+| 时间复杂度   | $O(b^d)$ | $O(b^d)$ |
+| 空间复杂度   | $O(b^d)$ | $O(b*d)$ |
 | 是否最优路径 | 在某些条件下                                    | 很少给出最优                                    |
 
 
@@ -74,4 +74,3 @@
 
 
 [返回目录]( https://github.com/SimZhou/NLP_Assignments )
-

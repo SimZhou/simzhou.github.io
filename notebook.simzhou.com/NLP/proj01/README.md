@@ -43,13 +43,13 @@
 
 #### 2.4 Sentence-to-Vec      *调参点：暂时未知*
 
-计算完词向量后，我们进一步使用普林斯顿大学提出的SIF方法对每个句子进行句子向量化，计算出 ![](http://latex.codecogs.com/gif.latex?V_{Sentence(i)})
+计算完词向量后，我们进一步使用普林斯顿大学提出的 SIF 方法对每个句子进行句子向量化，计算出 $V_{Sentence(i)}$
 
 [A SIMPLE BUT TOUGH-TO-BEAT BASELINE FOR SENTENCE EMBEDDINGS](https://openreview.net/pdf?id=SyK00v5xx)
 
-通过把整篇文章当成一个长句，计算 ![](http://latex.codecogs.com/gif.latex?V_{Doc})。(创新点：是否可以用句向量合成文向量，效果可能会更好？）
+通过把整篇文章当成一个长句，计算 $V_{Doc}$。（创新点：是否可以用句向量合成文向量，效果可能会更好？）
 
-再计算出文章标题的句向量 ![](http://latex.codecogs.com/gif.latex?V_{Title})
+再计算出文章标题的句向量 $V_{Title}$
 
 **（技术点：SIF论文阅读，SIF实现，降维算法 PCA，）**
 
@@ -57,9 +57,9 @@
 
 #### 2.5 Achieve the most similar N sentences
 
-因为已经得到了句向量，标题句向量，文向量，我们构建一个函数![](http://latex.codecogs.com/gif.latex?f)，使得![](http://latex.codecogs.com/gif.latex?f(V_{Sentence(i)}, V_{Title}, V_{Doc})) = ![](http://latex.codecogs.com/gif.latex?C_i)
+因为已经得到了句向量、标题句向量、文向量，我们构建一个函数 $f$，使得 $f(V_{Sentence(i)}, V_{Title}, V_{Doc}) = C_i$
 
-，![](http://latex.codecogs.com/gif.latex?C_i)为该句与全部内容的相似度，排序取出Top_N，就能获得语义上最相关的句子了（即摘要）
+其中，$C_i$ 为该句与全部内容的相似度，排序取出 Top-N，就能获得语义上最相关的句子了（即摘要）
 
 
 
