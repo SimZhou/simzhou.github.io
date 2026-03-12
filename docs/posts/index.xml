@@ -12,7 +12,8 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/0HChK-6VawAIhJ8h.jpeg" referrerpolicy="no-referrer">
             </div><p>原作者：Kangwook Lee</p>
-<p>原文链接：<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>]]></description>
+<p>原文链接：<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
+<p>对于非 codex 模型，开源版 Codex CLI 会在本地对上下文进行 compact：由一个 LLM 使用 <a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">compaction prompt</a> 对整段对话做总结。后续再次使用这段 compact 后的上下文时，<code>responses.create()</code> 会连同一个用于说明这份摘要用途的 handoff prompt 一起接收它。这两个 prompt 都可以在源码中直接看到。</p>]]></description>
 </item>
 <item>
     <title>L1 &amp; L2 正则化是长什么样子的？</title>

@@ -9,7 +9,8 @@
   <meta property="og:site_name" content="Simon的梦宇宙">
   <meta property="og:title" content="[译文] 探究 Codex 中上下文压缩的工作方式">
   <meta property="og:description" content="原作者：Kangwook Lee
-原文链接：https://x.com/Kangwook_Lee/article/2028955292025962534">
+原文链接：https://x.com/Kangwook_Lee/article/2028955292025962534
+对于非 codex 模型，开源版 Codex CLI 会在本地对上下文进行 compact：由一个 LLM 使用 compaction prompt 对整段对话做总结。后续再次使用这段 compact 后的上下文时，responses.create() 会连同一个用于说明这份摘要用途的 handoff prompt 一起接收它。这两个 prompt 都可以在源码中直接看到。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -24,7 +25,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="[译文] 探究 Codex 中上下文压缩的工作方式">
   <meta name="twitter:description" content="原作者：Kangwook Lee
-原文链接：https://x.com/Kangwook_Lee/article/2028955292025962534">
+原文链接：https://x.com/Kangwook_Lee/article/2028955292025962534
+对于非 codex 模型，开源版 Codex CLI 会在本地对上下文进行 compact：由一个 LLM 使用 compaction prompt 对整段对话做总结。后续再次使用这段 compact 后的上下文时，responses.create() 会连同一个用于说明这份摘要用途的 handoff prompt 一起接收它。这两个 prompt 都可以在源码中直接看到。">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -40,7 +42,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/simzhou.com\/posts\/2026\/how-codex-compacts-context\/"
-        },"genre": "posts","keywords": "AI, LLM, Codex, Agent, Context Engineering","wordcount":  1177 ,
+        },"genre": "posts","keywords": "AI, LLM, Codex, Agent, Context Engineering","wordcount":  1427 ,
         "url": "http:\/\/simzhou.com\/posts\/2026\/how-codex-compacts-context\/","datePublished": "2026-03-12T12:05:06+08:00","dateModified": "2026-03-12T12:05:06+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Simon Zhou","logo": {
@@ -148,9 +150,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[译文] 探究 Codex 中上下文压缩的工作方式</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[译文] 探究 Codex 中上下文压缩的工作方式</h1><h2 class="single-subtitle">转载自 Kangwook Lee 发布在 X 的文章</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://x.com/Kangwook_Lee" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Kangwook Lee</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-03-12">2026-03-12</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1177 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-03-12">2026-03-12</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1427 字&nbsp;
                 <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/2026/how-codex-compacts-context/" class="leancloud_visitors" data-flag-title="[译文] 探究 Codex 中上下文压缩的工作方式">
                         <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -170,23 +172,23 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#第一步-compact">第一步: compact()</a></li>
-        <li><a href="#第二步-create">第二步: create()</a></li>
-        <li><a href="#输出">输出</a></li>
-        <li><a href="#推测的pipeline">推测的Pipeline</a></li>
+        <li><a href="#第-1-步compact">第 1 步：<code>compact()</code></a></li>
+        <li><a href="#第-2-步create">第 2 步：<code>create()</code></a></li>
+        <li><a href="#输出结果">输出结果</a></li>
+        <li><a href="#推测出的-pipeline">推测出的 Pipeline</a></li>
         <li><a href="#脚本">脚本</a></li>
-        <li><a href="#开放问题">开放问题</a></li>
+        <li><a href="#未解的问题">未解的问题</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>原作者：Kangwook Lee</p>
 <p>原文链接：<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
-<p>对于非 codex 模型，开源 Codex CLI 会在本地压缩上下文：由一个 LLM 使用一个<a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">压缩提示词</a>对对话进行总结。当后续使用压缩后的上下文时，<code>responses.create()</code> 会连同一个用于界定该摘要的交接提示词一起接收它。这两个提示词都可以在源代码中看到。</p>
-<p>对于 codex 模型，CLI 则改为调用 <code>compact()</code> API，该 API 返回一个<strong>加密的 blob</strong>。我们并不知道其内部是否使用了 LLM、使用了什么提示词，或者是根本不存在交接提示词。</p>
-<p>下面我将展示：一个简单的提示词注入实验（2 次 API 调用，35 行 Python 代码）如何揭示 API 压缩路径确实使用了 LLM 来总结上下文，并且它具有自己的压缩提示词，以及一个附加在摘要前的交接提示词。这些提示词与开源版本几乎完全一致。</p>
-<h2 id="第一步-compact">第一步: compact() <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5-compact">¶</a></h2><p>我使用一条精心构造的用户消息调用 <code>compact()</code>。在服务端，一个用于压缩的 LLM 会使用其自身隐藏的系统提示词处理我们的输入（我从未见过这个提示词，并且要弄清楚它是什么）。</p>
-<p>服务端似乎会像下面这样构造压缩器的上下文：</p>
+<p>对于非 codex 模型，开源版 Codex CLI 会在本地对上下文进行 compact：由一个 LLM 使用 <a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">compaction prompt</a> 对整段对话做总结。后续再次使用这段 compact 后的上下文时，<code>responses.create()</code> 会连同一个用于说明这份摘要用途的 handoff prompt 一起接收它。这两个 prompt 都可以在源码中直接看到。</p>
+<p>而对于 codex 模型，CLI 则会改为调用 <code>compact()</code> API，并返回一个<strong>加密后的 blob</strong>。我们并不知道它内部是否同样使用了 LLM、具体使用了什么 prompt，或者是否还存在 handoff prompt。</p>
+<p>下面我会展示：只靠一次简单的 prompt injection（2 次 API 调用、35 行 Python 代码），就可以发现 API compaction 这条路径确实会使用 LLM 来总结上下文，而且它也有自己的一套 compaction prompt，并会在摘要前面拼接一个 handoff prompt。这些 prompt 与开源版本几乎一致。</p>
+<h2 id="第-1-步compact">第 1 步：<code>compact()</code> <a href="#%e7%ac%ac-1-%e6%ad%a5compact">¶</a></h2><p>我先用一条精心构造的用户消息调用 <code>compact()</code>。在服务端，一个负责 compaction 的 LLM 会使用它自己的隐藏 system prompt 来处理我们的输入（这个 prompt 我从未见过，而这正是我想搞清楚的东西）。</p>
+<p>服务器看起来大致是这样组装 compactor 上下文的：</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -195,7 +197,7 @@
         data-sizes="auto"
         alt="/posts/2026/how-codex-compacts-context/1HChJ1ZOawAA0GQ_.jpeg"
         title="/posts/2026/how-codex-compacts-context/1HChJ1ZOawAA0GQ_.jpeg" width="1566" height="674" /></p>
-<p>压缩器 LLM 会同时读取它的系统提示词和我们的输入。由于我们的输入包含一个注入载荷（上图红色文字），压缩器被诱导在其输出中包含它自己的系统提示词。这个明文摘要仅存在于 OpenAI 的服务器上。我们所能看到的只有加密后的 blob：</p>
+<p>这个 compactor LLM 会同时读取它的 system prompt 和我们的输入。由于我们的输入中包含了一段 injection payload（上图红字部分），compactor 就被诱导把它自己的 system prompt 一并写进输出里。这个明文摘要只存在于 OpenAI 的服务器上。我们能看到的只有一个加密后的 blob：</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -204,8 +206,8 @@
         data-sizes="auto"
         alt="/posts/2026/how-codex-compacts-context/2HChKADzawAEhBbJ.jpeg"
         title="/posts/2026/how-codex-compacts-context/2HChKADzawAEhBbJ.jpeg" width="1564" height="1104" /></p>
-<p><strong>在这一点上，我们无法读取 blob 内部的内容。</strong> 它经过 AES 加密，而密钥保存在 OpenAI 的服务器上。我们只能寄希望于压缩器服从了注入指令，并将它的提词写入了摘要。验证这一点的唯一方法就是第二步。</p>
-<h2 id="第二步-create">第二步: create() <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5-create">¶</a></h2><p>我将加密后的 blob 和第二条用户消息一起传给 <code>responses.create()</code>。服务器会解密该 blob，并构造模型的上下文。</p>
+<p><strong>此时我们还没有任何办法读取 blob 里面的内容。</strong> 它经过了 AES 加密，而密钥保存在 OpenAI 的服务器端。我们唯一能做的，只是希望 compactor 确实服从了这次 injection，把它的 prompt 写进了摘要里。要验证这一点，只能进入第 2 步。</p>
+<h2 id="第-2-步create">第 2 步：<code>create()</code> <a href="#%e7%ac%ac-2-%e6%ad%a5create">¶</a></h2><p>接着，我把这个加密后的 blob 和第二条用户消息一起传给 <code>responses.create()</code>。服务器会先解密 blob，然后组装模型实际看到的上下文。</p>
 <p>我发送的是：</p>
 <p><img
         class="lazyload"
@@ -215,7 +217,7 @@
         data-sizes="auto"
         alt="/posts/2026/how-codex-compacts-context/3HChKHtTawAIdz1e.jpeg"
         title="/posts/2026/how-codex-compacts-context/3HChKHtTawAIdz1e.jpeg" width="1558" height="362" /></p>
-<p>模型看到的内容似乎类似于：</p>
+<p>模型看到的内容大致像这样：</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -224,8 +226,8 @@
         data-sizes="auto"
         alt="/posts/2026/how-codex-compacts-context/4HChKPjAbIAA2lCI.jpeg"
         title="/posts/2026/how-codex-compacts-context/4HChKPjAbIAA2lCI.jpeg" width="1574" height="332" /></p>
-<p>如果第一步成功了，那么解密后的 blob 应当包含压缩提示词（即由我们的注入泄露出来的内容）。服务器还会在 blob 前附加一个交接提示词。因此，如果我们的探测成功诱导模型复述其所见内容，那么输出应当会揭示这三者：系统提示词、交接提示词，以及压缩提示词。</p>
-<h2 id="输出">输出 <a href="#%e8%be%93%e5%87%ba">¶</a></h2><p>下面是一轮 <code>extract_prompts.py</code> 运行得到的<strong>完整、未经编辑的输出</strong>。黄色 = 系统提示词，绿色 = 交接提示词，粉色 = 压缩提示词。</p>
+<p>如果第 1 步成功了，那么解密后的 blob 里就应该包含 compaction prompt（也就是通过 injection 泄露出来的内容）。此外，服务器还会在 blob 前面额外加上一段 handoff prompt。所以，只要我们的探测消息成功诱导模型复述它所看到的内容，最终输出理论上就会同时暴露出这三部分：system prompt、handoff prompt，以及 compaction prompt。</p>
+<h2 id="输出结果">输出结果 <a href="#%e8%be%93%e5%87%ba%e7%bb%93%e6%9e%9c">¶</a></h2><p>下面是一次运行 <code>extract_prompts.py</code> 得到的<strong>完整、未经修改的输出</strong>。黄色表示 system prompt，绿色表示 handoff prompt，粉色表示 compaction prompt。</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -234,8 +236,8 @@
         data-sizes="auto"
         alt="/posts/2026/how-codex-compacts-context/5HChKbo_awAA3OEw.jpeg"
         title="/posts/2026/how-codex-compacts-context/5HChKbo_awAA3OEw.jpeg" width="1032" height="1870" /></p>
-<p>我们如何知道这些是真实提示词，而不只是模型幻觉生成的文本？提取出的压缩提示词和交接提示词，与开源 Codex CLI 中用于非 codex 模型的已知提示词高度一致（<a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">prompt.md</a>、<a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/summary_prefix.md" target="_blank" rel="noopener noreffer ">summary_prefix.md</a>），因此模型凭空捏造它们的可能性较低。不同轮次的结果会有所变化。</p>
-<h2 id="推测的pipeline">推测的Pipeline <a href="#%e6%8e%a8%e6%b5%8b%e7%9a%84pipeline">¶</a></h2><p>综合以上内容，下面是基于提取结果，我们对服务端 <code>compact()</code> 工作方式的最佳推测。</p>
+<p>我们怎么知道这些确实是真实 prompt，而不是模型幻觉出来的文本？因为提取出来的 compaction prompt 和 handoff prompt，与开源版 Codex CLI 在非 codex 模型路径下已知使用的 prompt 非常接近（<a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">prompt.md</a>、<a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/summary_prefix.md" target="_blank" rel="noopener noreffer ">summary_prefix.md</a>），这使得“模型完全凭空编造出这些内容”的可能性变得很低。不过，不同运行之间的结果还是会有波动。</p>
+<h2 id="推测出的-pipeline">推测出的 Pipeline <a href="#%e6%8e%a8%e6%b5%8b%e5%87%ba%e7%9a%84-pipeline">¶</a></h2><p>把这些线索拼起来后，下面这张图就是我们目前对服务端 <code>compact()</code> 工作方式的最佳猜测，也是这次提取实验所揭示出的 Pipeline。</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -252,7 +254,8 @@
         data-sizes="auto"
         alt="/posts/2026/how-codex-compacts-context/7HChKlnxbQAAlc3d.jpeg"
         title="/posts/2026/how-codex-compacts-context/7HChKlnxbQAAlc3d.jpeg" width="1046" height="984" /></p>
-<h2 id="开放问题">开放问题 <a href="#%e5%bc%80%e6%94%be%e9%97%ae%e9%a2%98">¶</a></h2><p>为什么 Codex CLI 会采用两条完全不同的压缩路径（非 codex 模型使用本地 LLM，codex 模型使用加密 API），而其底层提示词却几乎完全相同？又为什么要对摘要进行加密？</p></div><div class="post-footer" id="post-footer">
+<h2 id="未解的问题">未解的问题 <a href="#%e6%9c%aa%e8%a7%a3%e7%9a%84%e9%97%ae%e9%a2%98">¶</a></h2><p>为什么 Codex CLI 会为非 codex 模型和 codex 模型分别采用两套完全不同的 compaction 路径（前者是本地 LLM，后者是加密 API），而它们底层使用的 prompt 却几乎一样？还有，为什么一定要把这个 summary 加密成 blob？</p>
+<p>很难下定论。一个可能的解释是，这个加密 blob 里承载的信息不止这次简单实验所揭示出来的内容，比如可能还包含一些与 tool results 如何被 compact 和恢复有关的特殊数据。但我没有继续深挖这个方向。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

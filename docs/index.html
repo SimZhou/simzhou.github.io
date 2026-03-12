@@ -143,7 +143,8 @@
         </div><h1 class="single-title" itemprop="name headline">
         <a href="/posts/2026/how-codex-compacts-context/">[译文] 探究 Codex 中上下文压缩的工作方式</a>
     </h1><div class="post-meta"><span class="post-author"><a href="https://x.com/Kangwook_Lee" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Kangwook Lee</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2026-03-12">2026-03-12</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div><div class="content"><p>原作者：Kangwook Lee</p>
-<p>原文链接：<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p></div><div class="post-footer">
+<p>原文链接：<a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
+<p>对于非 codex 模型，开源版 Codex CLI 会在本地对上下文进行 compact：由一个 LLM 使用 <a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">compaction prompt</a> 对整段对话做总结。后续再次使用这段 compact 后的上下文时，<code>responses.create()</code> 会连同一个用于说明这份摘要用途的 handoff prompt 一起接收它。这两个 prompt 都可以在源码中直接看到。</p></div><div class="post-footer">
         <a href="/posts/2026/how-codex-compacts-context/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/llm/">LLM</a>,&nbsp;<a href="/tags/codex/">Codex</a>,&nbsp;<a href="/tags/agent/">Agent</a>,&nbsp;<a href="/tags/context-engineering/">Context Engineering</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
