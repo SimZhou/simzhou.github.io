@@ -97,7 +97,71 @@ yarn devNotebook
 - `yarn build`：执行站点构建流程
 - `yarn devNotebook`：运行 VuePress 本地服务
 
-# 四、部署方式
+# 四、Shortcodes 速查
+
+本项目写文章时，可以使用 Hugo 内置 shortcodes，也可以使用 LoveIt 主题额外提供的 shortcodes。
+
+## 1. Hugo 官方内置 shortcodes
+
+按当前 Hugo 官方文档（v0.157.0）可用的内置 shortcodes 包括：
+
+- `details`
+- `figure`
+- `highlight`
+- `instagram`
+- `param`
+- `qr`
+- `ref`
+- `relref`
+- `vimeo`
+- `x`
+- `youtube`
+
+说明：
+
+- 这些 shortcode 的用法以 Hugo 官方文档为准
+- 其中 `ref` / `relref` 常用于站内链接
+- `figure` 常用于普通图片插入
+- `highlight` 常用于代码块高亮
+- `instagram`、`vimeo`、`x`、`youtube` 属于嵌入型 shortcode
+
+## 2. LoveIt 主题提供的 shortcodes
+
+按当前仓库中的主题目录 `themes/loveit/layouts/_shortcodes/`，LoveIt 提供以下 shortcodes：
+
+- `admonition`
+- `bilibili`
+- `echarts`
+- `gist`
+- `highlight`
+- `image`
+- `link`
+- `mapbox`
+- `mermaid`
+- `music`
+- `person`
+- `raw`
+- `script`
+- `style`
+- `typeit`
+- `version`
+
+常用建议：
+
+- 图片优先使用 `image`
+- 提示块/说明块优先使用 `admonition`
+- Mermaid 图表使用 `mermaid`
+- ECharts 使用 `echarts`
+- 需要主题风格化链接时可用 `link`
+- 需要直接插入原始 HTML/脚本/样式时，分别看 `raw`、`script`、`style`
+
+注意：
+
+- `highlight` 在 Hugo 和 LoveIt 中都存在；如果遇到样式或输出差异，以当前站点实际渲染为准
+- LoveIt 的 shortcode 是否可用，最终以当前主题版本源码为准
+- 主题升级后，应重新检查 `themes/loveit/layouts/_shortcodes/` 中是否有新增、删除或参数变化
+
+# 五、部署方式
 
 当前网站通过 GitHub Pages 部署，发布目录为仓库中的 `docs/`。
 
@@ -119,7 +183,7 @@ git commit -m "..."
 git push
 ```
 
-# 五、分支维护建议
+# 六、分支维护建议
 
 如果是以下类型的改动，建议新开分支验证后再合并：
 
@@ -137,7 +201,7 @@ git push
 4. 在线验证页面表现
 5. 验证通过后再合并回 `main`
 
-# 六、如何新增文章
+# 七、如何新增文章
 
 文章内容放在：
 
@@ -179,8 +243,13 @@ content/posts/2026/my-new-post/
 
 - 同目录资源适合在文章中直接引用
 - 封面图也通常与文章正文放在同一个目录下
+- 如果是正文配图，优先使用 LoveIt 的 `image` shortcode，例如：
 
-# 七、如何新增相册内容
+```markdown
+{{< image src="example.jpg" width="60%" >}}
+```
+
+# 八、如何新增相册内容
 
 当前相册照片主要放在：
 
@@ -237,7 +306,7 @@ content/gallery/my-album/
 
 这种方式适合未来做“分专题相册”或“独立相册文章”，但当前默认展示方式仍然是 `assets/album/` 自动相册网格。
 
-# 八、如何修改现有页面内容
+# 九、如何修改现有页面内容
 
 ## 1. 关于页
 

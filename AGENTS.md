@@ -51,6 +51,16 @@
 - 涉及 header、fixed buttons、主题初始化、data attributes、partial 结构等改动时，应优先查看当前主题源码实现，再决定是否保留本地 override
 - 如果某个 override 只是复制旧版主题模板，升级后应优先删减或对齐，而不是继续累积兼容补丁
 
+## Shortcodes
+
+- Hugo v0.157.0 官方内置 shortcodes：`details`、`figure`、`highlight`、`instagram`、`param`、`qr`、`ref`、`relref`、`vimeo`、`x`、`youtube`
+- 当前仓库 `themes/loveit/layouts/_shortcodes/` 提供的 LoveIt shortcodes：`admonition`、`bilibili`、`echarts`、`gist`、`highlight`、`image`、`link`、`mapbox`、`mermaid`、`music`、`person`、`raw`、`script`、`style`、`typeit`、`version`
+- 使用策略：
+  - 通用 Hugo 能力优先查 Hugo 官方文档
+  - 主题特有 shortcode 以及与主题样式/JS耦合的能力，优先查 LoveIt 文档和当前主题源码
+  - `highlight` 在 Hugo 和 LoveIt 中都存在；涉及渲染差异时，以当前主题实际输出为准
+  - `image` 是当前站点最推荐的图片 shortcode，支持宽度、caption、链接等主题集成功能
+
 ## 当前相册实现
 
 - 相册页默认读取 `assets/album/`
