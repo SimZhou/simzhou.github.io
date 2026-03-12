@@ -41,11 +41,11 @@ I call `compact()` with a crafted user message. On the server side, a compactor 
 
 The server seems to assemble the compactor's context like this:
 
-<a href="1HChJ1ZOawAA0GQ_.jpeg" target="_blank" rel="noopener noreferrer"><img src="1HChJ1ZOawAA0GQ_.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="1HChJ1ZOawAA0GQ_.jpeg" width="60%" >}}
 
 The compactor LLM reads its system prompt + our input together. Because our input contains an injection payload (red text above), the compactor is tricked into including its own system prompt in its output. This plaintext summary exists only on OpenAI's server. We only see the encrypted blob:
 
-<a href="2HChKADzawAEhBbJ.jpeg" target="_blank" rel="noopener noreferrer"><img src="2HChKADzawAEhBbJ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="2HChKADzawAEhBbJ.jpeg" width="60%" >}}
 
 **At this point we have no way to read what's inside the blob.** It is AES-encrypted and the key lives on OpenAI's servers. We only hope the compactor obeyed the injection and wrote its prompt into the summary. The only way to find out is Step 2.
 
@@ -55,11 +55,11 @@ I pass the encrypted blob + a second user message to `responses.create()`. The s
 
 I send:
 
-<a href="3HChKHtTawAIdz1e.jpeg" target="_blank" rel="noopener noreferrer"><img src="3HChKHtTawAIdz1e.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="3HChKHtTawAIdz1e.jpeg" width="60%" >}}
 
 The model seems to see something like this:
 
-<a href="4HChKPjAbIAA2lCI.jpeg" target="_blank" rel="noopener noreferrer"><img src="4HChKPjAbIAA2lCI.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="4HChKPjAbIAA2lCI.jpeg" width="60%" >}}
 
 If Step 1 worked, the decrypted blob should contain the compaction prompt (leaked by our injection). The server also prepends a handoff prompt to the blob. So if our probe successfully gets the model to repeat what it sees, the output should reveal all three: the system prompt, the handoff prompt, and the compaction prompt.
 
@@ -67,7 +67,7 @@ If Step 1 worked, the decrypted blob should contain the compaction prompt (leake
 
 Below is the **complete, unedited output** from one run of extract_prompts.py. Yellow = system prompt, green = handoff prompt, pink = compaction prompt.
 
-<a href="5HChKbo_awAA3OEw.jpeg" target="_blank" rel="noopener noreferrer"><img src="5HChKbo_awAA3OEw.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="5HChKbo_awAA3OEw.jpeg" width="60%" >}}
 
 How do we know these are the real prompts and not just hallucinated text? The extracted compaction prompt and handoff prompt closely match the known prompts used for non-codex models in the open-source Codex CLI ([prompt.md](https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md), [summary_prefix.md](https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/summary_prefix.md)), which makes it unlikely that the model invented them from scratch. Results vary across runs.
 
@@ -75,11 +75,11 @@ How do we know these are the real prompts and not just hallucinated text? The ex
 
 Putting it all together, here is our best guess for what compact() does on the server side, based on what the extraction revealed.
 
-<a href="6HChKgsZaAAA6UXQ.jpeg" target="_blank" rel="noopener noreferrer"><img src="6HChKgsZaAAA6UXQ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="6HChKgsZaAAA6UXQ.jpeg" width="60%" >}}
 
 ## The Script
 
-<a href="7HChKlnxbQAAlc3d.jpeg" target="_blank" rel="noopener noreferrer"><img src="7HChKlnxbQAAlc3d.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="7HChKlnxbQAAlc3d.jpeg" width="60%" >}}
 
 ## Open Question
 

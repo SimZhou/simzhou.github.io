@@ -41,11 +41,11 @@ license: ""
 
 服务器看起来大致是这样组装 compactor 上下文的：
 
-<a href="1HChJ1ZOawAA0GQ_.jpeg" target="_blank" rel="noopener noreferrer"><img src="1HChJ1ZOawAA0GQ_.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="1HChJ1ZOawAA0GQ_.jpeg" width="60%" >}}
 
 这个 compactor LLM 会同时读取它的 system prompt 和我们的输入。由于我们的输入中包含了一段 injection payload（上图红字部分），compactor 就被诱导把它自己的 system prompt 一并写进输出里。这个明文摘要只存在于 OpenAI 的服务器上。我们能看到的只有一个加密后的 blob：
 
-<a href="2HChKADzawAEhBbJ.jpeg" target="_blank" rel="noopener noreferrer"><img src="2HChKADzawAEhBbJ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="2HChKADzawAEhBbJ.jpeg" width="60%" >}}
 
 **此时我们还没有任何办法读取 blob 里面的内容。** 它经过了 AES 加密，而密钥保存在 OpenAI 的服务器端。我们唯一能做的，只是希望 compactor 确实服从了这次 injection，把它的 prompt 写进了摘要里。要验证这一点，只能进入第 2 步。
 
@@ -55,11 +55,11 @@ license: ""
 
 我发送的是：
 
-<a href="3HChKHtTawAIdz1e.jpeg" target="_blank" rel="noopener noreferrer"><img src="3HChKHtTawAIdz1e.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="3HChKHtTawAIdz1e.jpeg" width="60%" >}}
 
 模型看到的内容大致像这样：
 
-<a href="4HChKPjAbIAA2lCI.jpeg" target="_blank" rel="noopener noreferrer"><img src="4HChKPjAbIAA2lCI.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="4HChKPjAbIAA2lCI.jpeg" width="60%" >}}
 
 如果第 1 步成功了，那么解密后的 blob 里就应该包含 compaction prompt（也就是通过 injection 泄露出来的内容）。此外，服务器还会在 blob 前面额外加上一段 handoff prompt。所以，只要我们的探测消息成功诱导模型复述它所看到的内容，最终输出理论上就会同时暴露出这三部分：system prompt、handoff prompt，以及 compaction prompt。
 
@@ -67,7 +67,7 @@ license: ""
 
 下面是一次运行 `extract_prompts.py` 得到的**完整、未经修改的输出**。黄色表示 system prompt，绿色表示 handoff prompt，粉色表示 compaction prompt。
 
-<a href="5HChKbo_awAA3OEw.jpeg" target="_blank" rel="noopener noreferrer"><img src="5HChKbo_awAA3OEw.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="5HChKbo_awAA3OEw.jpeg" width="60%" >}}
 
 我们怎么知道这些确实是真实 prompt，而不是模型幻觉出来的文本？因为提取出来的 compaction prompt 和 handoff prompt，与开源版 Codex CLI 在非 codex 模型路径下已知使用的 prompt 非常接近（[prompt.md](https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md)、[summary_prefix.md](https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/summary_prefix.md)），这使得“模型完全凭空编造出这些内容”的可能性变得很低。不过，不同运行之间的结果还是会有波动。
 
@@ -75,11 +75,11 @@ license: ""
 
 把这些线索拼起来后，下面这张图就是我们目前对服务端 `compact()` 工作方式的最佳猜测，也是这次提取实验所揭示出的 Pipeline。
 
-<a href="6HChKgsZaAAA6UXQ.jpeg" target="_blank" rel="noopener noreferrer"><img src="6HChKgsZaAAA6UXQ.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="6HChKgsZaAAA6UXQ.jpeg" width="60%" >}}
 
 ## 脚本
 
-<a href="7HChKlnxbQAAlc3d.jpeg" target="_blank" rel="noopener noreferrer"><img src="7HChKlnxbQAAlc3d.jpeg" alt="" style="width:60%; display:block; margin:1.5rem auto;" /></a>
+{{< image src="7HChKlnxbQAAlc3d.jpeg" width="60%" >}}
 
 ## 未解的问题
 
