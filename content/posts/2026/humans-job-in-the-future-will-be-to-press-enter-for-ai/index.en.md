@@ -55,7 +55,7 @@ I’ve used each of these tools continuously for at least one or two months, and
 
 <span class="text-red"><strong>However, everything changed this month after I started using the combination of Codex + GPT-5.4.</strong></span>
 
-# My Recent Experience with OpenAI Codex
+## My Recent Experience with OpenAI Codex
 
 Since I started using the Codex + GPT-5.4 combination this month, I’ve been enthusiastically recommending it to my friends.
 

@@ -52,7 +52,7 @@ license: ""
 
 <span class="text-red"><strong>然而，自从这个月，我用上最新的 Codex + GPT5.4 组合后，一切开始变得完全不同了。</strong></span>
 
-# 近期使用 OpenAI Codex 的经历
+## 近期使用 OpenAI Codex 的经历
 
 自从这个月开始使用 OpenAI Codex + GPT5.4 的组合后，我便开始疯狂地向周围的朋友安利。
 
