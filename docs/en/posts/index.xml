@@ -11,7 +11,8 @@
     <guid>http://simzhou.com/en/posts/2026/humans-job-in-the-future-will-be-to-press-enter-for-ai/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/The_Stanley_Parable_cover.jpg" referrerpolicy="no-referrer">
-            </div><p>First, I want to make one thing clear: this article is entirely based on phenomena I&rsquo;ve observed recently and the thoughts and reflections that came from them. Every word was typed by hand, and <strong>no AI was used in the writing of this article.</strong></p>]]></description>
+            </div><p class="post-note">Cover image: <em>The Stanley Parable</em>. Its protagonist, Stanley, is Employee 427 in an office building, and his daily work consists of repeatedly pressing keys exactly as the computer instructs him to.</p>
+<p>First, I want to make one thing clear: this article is entirely based on phenomena I&rsquo;ve observed recently and the thoughts and reflections that came from them. Every word was typed by hand, and <strong>no AI was used in the writing of this article.</strong></p>]]></description>
 </item>
 <item>
     <title>Investigating how Codex context compaction works</title>

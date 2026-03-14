@@ -74,3 +74,16 @@
     color: #ff6b6b;
   }
 }
+
+.single .content .post-note {
+  margin: 0.25rem 0 1.25rem;
+  color: #6f6f73;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.8;
+  text-align: center;
+
+  [theme=dark] & {
+    color: #9a9aa1;
+  }
+}

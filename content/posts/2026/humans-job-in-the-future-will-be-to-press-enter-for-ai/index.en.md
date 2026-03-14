@@ -25,6 +25,8 @@ lightgallery: false
 license: ""
 ---
 
+<p class="post-note">Cover image: <em>The Stanley Parable</em>. Its protagonist, Stanley, is Employee 427 in an office building, and his daily work consists of repeatedly pressing keys exactly as the computer instructs him to.</p>
+
 First, I want to make one thing clear: this article is entirely based on phenomena I've observed recently and the thoughts and reflections that came from them. Every word was typed by hand, and **no AI was used in the writing of this article.**
 
 <!--more-->
