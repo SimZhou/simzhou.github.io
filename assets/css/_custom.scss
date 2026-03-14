@@ -62,3 +62,15 @@
 .single .content > a.lightgallery img {
   display: inline-block;
 }
+
+.single .content > p {
+  margin: 1rem 0;
+}
+
+.single .content .text-red {
+  color: #c62828;
+
+  [theme=dark] & {
+    color: #ff6b6b;
+  }
+}

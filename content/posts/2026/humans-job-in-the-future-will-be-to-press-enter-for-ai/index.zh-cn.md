@@ -2,7 +2,7 @@
 title: "人类未来的工作，或许就是给AI敲回车"
 subtitle: "留给人类的时间不多了。"
 date: 2026-03-14T03:53:00+08:00
-lastmod: 2026-03-14T03:53:00+08:00
+lastmod: 2026-03-15T00:00:00+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://github.com/SimZhou"
@@ -50,13 +50,13 @@ license: ""
 
 这些产品我都至少连续使用过 1 到 2 个月，也给其中的大部分产品付费过。
 
-（RED）**然而，自从这个月，我用上最新的 Codex + GPT5.4 组合后，一切开始变得完全不同了。**
+<span class="text-red"><strong>然而，自从这个月，我用上最新的 Codex + GPT5.4 组合后，一切开始变得完全不同了。</strong></span>
 
 # 近期使用 OpenAI Codex 的经历
 
 自从这个月开始使用 OpenAI Codex + GPT5.4 的组合后，我便开始疯狂地向周围的朋友安利。
 
-（RED）**因为它每天都在刷新、颠覆我对 AI 编程工具的认知。**
+<span class="text-red"><strong>因为它每天都在刷新、颠覆我对 AI 编程工具的认知。</strong></span>
 
 我发现：
  - 它非常擅长主动搜集信息，去理解一个复杂的脚本或工程代码；

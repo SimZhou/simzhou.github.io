@@ -2,7 +2,7 @@
 title: "The Future of Human Work Might Just Be Pressing Enter for AI"
 subtitle: "Time may be running out for humans."
 date: 2026-03-14T03:53:00+08:00
-lastmod: 2026-03-14T03:53:00+08:00
+lastmod: 2026-03-15T00:00:00+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://github.com/SimZhou"
@@ -53,13 +53,13 @@ and later CLI-based tools like Claude Code and Gemini CLI.
 
 I’ve used each of these tools continuously for at least one or two months, and I’ve paid for most of them.
 
-**However, everything changed this month after I started using the combination of Codex + GPT-5.4.**
+<span class="text-red"><strong>However, everything changed this month after I started using the combination of Codex + GPT-5.4.</strong></span>
 
 # My Recent Experience with OpenAI Codex
 
 Since I started using the Codex + GPT-5.4 combination this month, I’ve been enthusiastically recommending it to my friends.
 
-**Because it constantly refreshes and overturns my understanding of what AI coding tools can do.**
+<span class="text-red"><strong>Because it constantly refreshes and overturns my understanding of what AI coding tools can do.</strong></span>
 
 I noticed several things:
 
