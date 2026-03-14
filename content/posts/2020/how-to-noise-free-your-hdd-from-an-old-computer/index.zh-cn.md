@@ -14,7 +14,7 @@ categories: ["生活点滴"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-featuredImage: "case-side.JPG"
+featuredImage: "case-side.jpeg"
 featuredImagePreview: "case-side.webp"
 
 toc:

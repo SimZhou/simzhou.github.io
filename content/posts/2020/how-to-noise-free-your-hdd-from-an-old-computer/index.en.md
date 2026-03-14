@@ -14,7 +14,7 @@ categories: ["Life Moments"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-featuredImage: "case-side.JPG"
+featuredImage: "case-side.jpeg"
 featuredImagePreview: "case-side.webp"
 
 toc:
