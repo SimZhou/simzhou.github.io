@@ -61,14 +61,14 @@ Here is one example where an illustrative figure from the original page was lost
 {{< raw >}}
 <div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; margin:1.5rem 0;">
   <figure style="flex:1 1 320px; margin:0;">
-    <a href="Missing_figures--Original.png" data-lightgallery="item" title="Original webpage with the mahjong tile illustration">
-      <img src="Missing_figures--Original.png" alt="Original webpage with the mahjong tile illustration" style="display:block; width:100%; height:auto;">
+    <a href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Original.png" data-lightgallery="item" title="Original webpage with the mahjong tile illustration">
+      <img src="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Original.png" alt="Original webpage with the mahjong tile illustration" style="display:block; width:100%; height:auto;">
     </a>
     <figcaption class="image-caption">Original webpage with the mahjong tile illustration</figcaption>
   </figure>
   <figure style="flex:1 1 320px; margin:0;">
-    <a href="Missing_figures--Observed.png" data-lightgallery="item" title="Translated webpage where the mahjong tile illustration was lost">
-      <img src="Missing_figures--Observed.png" alt="Translated webpage where the mahjong tile illustration was lost" style="display:block; width:100%; height:auto;">
+    <a href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Observed.png" data-lightgallery="item" title="Translated webpage where the mahjong tile illustration was lost">
+      <img src="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Observed.png" alt="Translated webpage where the mahjong tile illustration was lost" style="display:block; width:100%; height:auto;">
     </a>
     <figcaption class="image-caption">Translated webpage where the mahjong tile illustration was lost</figcaption>
   </figure>
