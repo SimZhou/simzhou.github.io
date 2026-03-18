@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Projects - 分类 - Simon的梦宇宙</title>
-        <link>http://simzhou.com/categories/projects/</link>
+        <link>https://simzhou.com/categories/projects/</link>
         <description>Projects - 分类 - Simon的梦宇宙</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 18 Mar 2026 12:35:00 &#43;0800</lastBuildDate><atom:link href="http://simzhou.com/categories/projects/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 18 Mar 2026 12:35:00 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/categories/projects/" rel="self" type="application/rss+xml" /><item>
     <title>我用 Codex 做了一个日麻教程手册网站</title>
-    <link>http://simzhou.com/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/</link>
+    <link>https://simzhou.com/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/</link>
     <pubDate>Wed, 18 Mar 2026 12:35:00 &#43;0800</pubDate>
-    <author>xxxx</author>
-    <guid>http://simzhou.com/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/</guid>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/</guid>
     <description><![CDATA[<p>最近，我用 Codex 做了一个日麻入门网站：<a href="https://simzhou.com/riichi_mahjong_book/" target="_blank" rel="noopener noreffer ">https://simzhou.com/riichi_mahjong_book/</a>。</p>]]></description>
 </item>
 </channel>

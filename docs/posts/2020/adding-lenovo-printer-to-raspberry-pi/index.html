@@ -3,9 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>用树莓派把联想M7605D打印机变成网络打印机 - Simon的梦宇宙</title><meta name="Description" content="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。"><meta property="og:url" content="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/">
+        <title>用树莓派把联想M7605D打印机变成网络打印机 - Simon的梦宇宙</title><meta name="description" content="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。"><meta name="keywords" content="树莓派, 打印机"><meta name="author" content="Simon"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/">
   <meta property="og:site_name" content="Simon的梦宇宙">
   <meta property="og:title" content="用树莓派把联想M7605D打印机变成网络打印机">
   <meta property="og:description" content="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。">
@@ -20,11 +19,11 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="用树莓派把联想M7605D打印机变成网络打印机">
   <meta name="twitter:description" content="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。">
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site">
-<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="Simon的梦宇宙">
+<meta name="apple-mobile-web-app-title" content="Simon的梦宇宙">
+<meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" /><link rel="prev" href="http://simzhou.com/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/" /><link rel="next" href="http://simzhou.com/posts/2021/cross-entropy-loss-visualized/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" /><link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" /><link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/" /><link rel="alternate" hreflang="x-default" href="https://simzhou.com/" /><link rel="prev" href="https://simzhou.com/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/" /><link rel="next" href="https://simzhou.com/posts/2021/cross-entropy-loss-visualized/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -34,13 +33,18 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/simzhou.com\/posts\/2020\/adding-lenovo-printer-to-raspberry-pi\/"
-        },"genre": "posts","keywords": "树莓派, 打印机","wordcount":  830 ,
-        "url": "http:\/\/simzhou.com\/posts\/2020\/adding-lenovo-printer-to-raspberry-pi\/","datePublished": "2020-07-25T19:07:25+08:00","dateModified": "2020-07-25T19:07:25+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/simzhou.com\/posts\/2020\/adding-lenovo-printer-to-raspberry-pi\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                            "width":  1495 ,
+                            "height":  1484 
+                        }],"genre": "posts","keywords": "树莓派, 打印机","wordcount":  830 ,
+        "url": "https:\/\/simzhou.com\/posts\/2020\/adding-lenovo-printer-to-raspberry-pi\/","datePublished": "2020-07-25T19:07:25+08:00","dateModified": "2020-07-25T19:07:25+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Simon Zhou","logo": {
                     "@type": "ImageObject",
-                    "url": "http:\/\/simzhou.com\/images\/earth.jpg",
+                    "url": "https:\/\/simzhou.com\/images\/earth.jpg",
                     "width":  1495 ,
                     "height":  1484 
                 }},"author": {
@@ -270,7 +274,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机" data-hashtags="树莓派,打印机"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-hashtag="树莓派"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机" data-image="IMG_5161-s.jpg"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机" data-description="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fsimzhou.com%2fposts%2f2020%2fadding-lenovo-printer-to-raspberry-pi%2f&amp;text=%e7%94%a8%e6%a0%91%e8%8e%93%e6%b4%be%e6%8a%8a%e8%81%94%e6%83%b3M7605D%e6%89%93%e5%8d%b0%e6%9c%ba%e5%8f%98%e6%88%90%e7%bd%91%e7%bb%9c%e6%89%93%e5%8d%b0%e6%9c%ba" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机" data-hashtags="树莓派,打印机"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-hashtag="树莓派"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机" data-image="IMG_5161-s.jpg"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/" data-title="用树莓派把联想M7605D打印机变成网络打印机" data-description="本文讲述如何从联想官方驱动中提取在Linux/树莓派上安装打印机所需的PPD文件，以供CUPS打印系统使用。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fposts%2f2020%2fadding-lenovo-printer-to-raspberry-pi%2f&amp;text=%e7%94%a8%e6%a0%91%e8%8e%93%e6%b4%be%e6%8a%8a%e8%81%94%e6%83%b3M7605D%e6%89%93%e5%8d%b0%e6%9c%ba%e5%8f%98%e6%88%90%e7%bd%91%e7%bb%9c%e6%89%93%e5%8d%b0%e6%9c%ba" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -290,7 +294,7 @@
             </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.157.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license">如无特殊说明，本站内容遵循<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>创作共享协议，转载请注明出处</span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">如无特殊说明，本站内容遵循<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>创作共享协议，转载请注明出处</span></div>
         </div>
     </footer></div>
 

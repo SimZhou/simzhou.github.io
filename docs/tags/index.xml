@@ -2,137 +2,139 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Simon的梦宇宙</title>
-    <link>http://simzhou.com/tags/</link>
+    <link>https://simzhou.com/tags/</link>
     <description>Recent content in Tags on Simon的梦宇宙</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
+    <managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+    <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Wed, 18 Mar 2026 12:35:00 +0800</lastBuildDate>
-    <atom:link href="http://simzhou.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://simzhou.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Agent</title>
-      <link>http://simzhou.com/tags/agent/</link>
-      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate>
-      <guid>http://simzhou.com/tags/agent/</guid>
+      <link>https://simzhou.com/tags/agent/</link>
+      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/agent/</guid>
       <description></description>
     </item>
     <item>
       <title>AI</title>
-      <link>http://simzhou.com/tags/ai/</link>
-      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate>
-      <guid>http://simzhou.com/tags/ai/</guid>
+      <link>https://simzhou.com/tags/ai/</link>
+      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Codex</title>
-      <link>http://simzhou.com/tags/codex/</link>
-      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate>
-      <guid>http://simzhou.com/tags/codex/</guid>
+      <link>https://simzhou.com/tags/codex/</link>
+      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/codex/</guid>
       <description></description>
     </item>
     <item>
       <title>立直麻将</title>
-      <link>http://simzhou.com/tags/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/</link>
-      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/</guid>
+      <link>https://simzhou.com/tags/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/</link>
+      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/</guid>
       <description></description>
     </item>
     <item>
       <title>日麻</title>
-      <link>http://simzhou.com/tags/%E6%97%A5%E9%BA%BB/</link>
-      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E6%97%A5%E9%BA%BB/</guid>
+      <link>https://simzhou.com/tags/%E6%97%A5%E9%BA%BB/</link>
+      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E6%97%A5%E9%BA%BB/</guid>
       <description></description>
     </item>
     <item>
       <title>人类</title>
-      <link>http://simzhou.com/tags/%E4%BA%BA%E7%B1%BB/</link>
-      <pubDate>Sat, 14 Mar 2026 03:53:00 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E4%BA%BA%E7%B1%BB/</guid>
+      <link>https://simzhou.com/tags/%E4%BA%BA%E7%B1%BB/</link>
+      <pubDate>Sat, 14 Mar 2026 03:53:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E4%BA%BA%E7%B1%BB/</guid>
       <description></description>
     </item>
     <item>
       <title>社会</title>
-      <link>http://simzhou.com/tags/%E7%A4%BE%E4%BC%9A/</link>
-      <pubDate>Sat, 14 Mar 2026 03:53:00 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E7%A4%BE%E4%BC%9A/</guid>
+      <link>https://simzhou.com/tags/%E7%A4%BE%E4%BC%9A/</link>
+      <pubDate>Sat, 14 Mar 2026 03:53:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E7%A4%BE%E4%BC%9A/</guid>
       <description></description>
     </item>
     <item>
       <title>Context Engineering</title>
-      <link>http://simzhou.com/tags/context-engineering/</link>
-      <pubDate>Thu, 12 Mar 2026 12:05:06 +0800</pubDate>
-      <guid>http://simzhou.com/tags/context-engineering/</guid>
+      <link>https://simzhou.com/tags/context-engineering/</link>
+      <pubDate>Thu, 12 Mar 2026 12:05:06 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/context-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM</title>
-      <link>http://simzhou.com/tags/llm/</link>
-      <pubDate>Thu, 12 Mar 2026 12:05:06 +0800</pubDate>
-      <guid>http://simzhou.com/tags/llm/</guid>
+      <link>https://simzhou.com/tags/llm/</link>
+      <pubDate>Thu, 12 Mar 2026 12:05:06 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>机器学习</title>
-      <link>http://simzhou.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Thu, 15 Apr 2021 15:07:46 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <link>https://simzhou.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 15 Apr 2021 15:07:46 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     <item>
       <title>可视化</title>
-      <link>http://simzhou.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
-      <pubDate>Thu, 15 Apr 2021 15:07:46 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+      <link>https://simzhou.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+      <pubDate>Thu, 15 Apr 2021 15:07:46 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
       <description></description>
     </item>
     <item>
       <title>深度学习</title>
-      <link>http://simzhou.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Thu, 15 Apr 2021 15:07:46 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
+      <link>https://simzhou.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 15 Apr 2021 15:07:46 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     <item>
       <title>正则化</title>
-      <link>http://simzhou.com/tags/%E6%AD%A3%E5%88%99%E5%8C%96/</link>
-      <pubDate>Thu, 15 Apr 2021 15:07:46 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E6%AD%A3%E5%88%99%E5%8C%96/</guid>
+      <link>https://simzhou.com/tags/%E6%AD%A3%E5%88%99%E5%8C%96/</link>
+      <pubDate>Thu, 15 Apr 2021 15:07:46 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E6%AD%A3%E5%88%99%E5%8C%96/</guid>
       <description></description>
     </item>
     <item>
       <title>打印机</title>
-      <link>http://simzhou.com/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</link>
-      <pubDate>Sat, 25 Jul 2020 19:07:25 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</guid>
+      <link>https://simzhou.com/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</link>
+      <pubDate>Sat, 25 Jul 2020 19:07:25 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</guid>
       <description></description>
     </item>
     <item>
       <title>树莓派</title>
-      <link>http://simzhou.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
-      <pubDate>Sat, 25 Jul 2020 19:07:25 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</guid>
+      <link>https://simzhou.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
+      <pubDate>Sat, 25 Jul 2020 19:07:25 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</guid>
       <description></description>
     </item>
     <item>
       <title>电脑</title>
-      <link>http://simzhou.com/tags/%E7%94%B5%E8%84%91/</link>
-      <pubDate>Fri, 24 Jul 2020 18:36:17 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E7%94%B5%E8%84%91/</guid>
+      <link>https://simzhou.com/tags/%E7%94%B5%E8%84%91/</link>
+      <pubDate>Fri, 24 Jul 2020 18:36:17 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E7%94%B5%E8%84%91/</guid>
       <description></description>
     </item>
     <item>
       <title>生活</title>
-      <link>http://simzhou.com/tags/%E7%94%9F%E6%B4%BB/</link>
-      <pubDate>Fri, 24 Jul 2020 18:36:17 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E7%94%9F%E6%B4%BB/</guid>
+      <link>https://simzhou.com/tags/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Fri, 24 Jul 2020 18:36:17 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E7%94%9F%E6%B4%BB/</guid>
       <description></description>
     </item>
     <item>
       <title>噪音</title>
-      <link>http://simzhou.com/tags/%E5%99%AA%E9%9F%B3/</link>
-      <pubDate>Fri, 24 Jul 2020 18:36:17 +0800</pubDate>
-      <guid>http://simzhou.com/tags/%E5%99%AA%E9%9F%B3/</guid>
+      <link>https://simzhou.com/tags/%E5%99%AA%E9%9F%B3/</link>
+      <pubDate>Fri, 24 Jul 2020 18:36:17 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/tags/%E5%99%AA%E9%9F%B3/</guid>
       <description></description>
     </item>
   </channel>

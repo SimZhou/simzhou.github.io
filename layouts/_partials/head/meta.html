@@ -1,0 +1,29 @@
+{{- $params := .Scratch.Get "params" -}}
+{{- $siteDescription := index .Site.Params.seo.descriptions .Lang | default .Site.Params.description -}}
+{{- $siteKeywords := index .Site.Params.seo.keywordsByLang .Lang | default .Site.Params.keywords -}}
+{{- $description := $params.description | default .Description | default .Summary | plainify | htmlUnescape | chomp | default $siteDescription -}}
+{{- $author := .Params.author | default .Site.Params.author.name | default .Site.Params.Author.name -}}
+{{- $keywords := cond .Params.tags .Params.tags $siteKeywords -}}
+
+<meta name="description" content="{{ $description }}">
+{{- with $keywords -}}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end -}}
+{{- with $author -}}
+<meta name="author" content="{{ . }}">
+{{- end -}}
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+{{- partial "opengraph.html" . -}}
+{{- partial "twitter_cards.html" . -}}
+
+<meta name="application-name" content="{{ .Site.Title }}">
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+{{- with .Site.Params.app.themeColor -}}
+    <meta name="theme-color" content="{{ . }}">
+{{- end -}}
+
+{{- with .Site.Params.app.tileColor -}}
+    <meta name="msapplication-TileColor" content="{{ . }}">
+{{- end -}}

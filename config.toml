@@ -1,12 +1,18 @@
-baseURL = "http://simzhou.com/"
+baseURL = "https://simzhou.com/"
 # 网站标题
 # title = "SimZhou的个人主页"      # title在下面分语言指定
 # [en, zh-cn, fr, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
+enableRobotsTXT = true
 
 theme = "loveit"
 enableEmoji = true
 publishDir = "docs"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 [params]
   # LoveIt 主题版本
@@ -17,6 +23,12 @@ publishDir = "docs"
   keywords = ["机器学习", "Machine Learning", "人工智能", "AI", "博客", "Blog"]
   # 网站默认主题样式 ("light", "dark", "auto")
   defaultTheme = "light"
+  [params.app]
+    title = "Simon Zhou"
+    themeColor = "#ffffff"
+    tileColor = "#da532c"
+    iconColor = "#5bbad5"
+
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   # gitRepo = ""
   # LoveIt 新增 | 0.1.1 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
@@ -26,6 +38,19 @@ publishDir = "docs"
   dateFormat = "2006-01-02"
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   # images = ["/logo.png"]
+  [params.author]
+    name = "Simon Zhou"
+    email = "yihua.zhou@outlook.com"
+
+  [params.seo]
+    image = "/images/earth.jpg"
+    thumbnailUrl = "/images/earth.jpg"
+    [params.seo.descriptions]
+      zh-cn = "这是周易华的个人博客。在这里，科技，数学，机器学习，心理，什么都有。"
+      en = "Simon Zhou's personal blog about technology, mathematics, machine learning, psychology, and projects."
+    [params.seo.keywordsByLang]
+      zh-cn = ["机器学习", "Machine Learning", "人工智能", "AI", "博客", "Blog"]
+      en = ["machine learning", "AI", "blog", "technology", "mathematics", "projects"]
 
   [params.social]
     email = "yihua.zhou@outlook.com"
