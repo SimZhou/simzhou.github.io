@@ -1,0 +1,43 @@
+{{- $resources := .Page.Resources -}}
+{{- $leftSrc := .Get "left_src" -}}
+{{- $leftAlt := .Get "left_alt" | default $leftSrc -}}
+{{- $leftCaption := .Get "left_caption" | default "" | .Page.RenderString -}}
+{{- $leftTitle := .Get "left_title" | default $leftAlt -}}
+{{- $leftWidth := .Get "left_width" | default "100%" -}}
+
+{{- $rightSrc := .Get "right_src" -}}
+{{- $rightAlt := .Get "right_alt" | default $rightSrc -}}
+{{- $rightCaption := .Get "right_caption" | default "" | .Page.RenderString -}}
+{{- $rightTitle := .Get "right_title" | default $rightAlt -}}
+{{- $rightWidth := .Get "right_width" | default "100%" -}}
+
+<div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; margin:1.5rem 0;">
+  <figure style="flex:1 1 320px; margin:0;">
+    {{- dict
+      "Src" $leftSrc
+      "Alt" $leftAlt
+      "Title" $leftTitle
+      "Caption" $leftCaption
+      "Width" $leftWidth
+      "Linked" true
+      "Resources" $resources
+      | partial "plugin/img.html" -}}
+    {{- with $leftCaption }}
+    <figcaption class="image-caption">{{ . | safeHTML }}</figcaption>
+    {{- end }}
+  </figure>
+  <figure style="flex:1 1 320px; margin:0;">
+    {{- dict
+      "Src" $rightSrc
+      "Alt" $rightAlt
+      "Title" $rightTitle
+      "Caption" $rightCaption
+      "Width" $rightWidth
+      "Linked" true
+      "Resources" $resources
+      | partial "plugin/img.html" -}}
+    {{- with $rightCaption }}
+    <figcaption class="image-caption">{{ . | safeHTML }}</figcaption>
+    {{- end }}
+  </figure>
+</div>

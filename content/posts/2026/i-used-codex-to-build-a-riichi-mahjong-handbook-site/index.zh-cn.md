@@ -58,22 +58,16 @@ license: ""
 
 下面是一个翻译后丢失了原始页面示意图的例子：
 
-{{< raw >}}
-<div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; margin:1.5rem 0;">
-  <figure style="flex:1 1 320px; margin:0;">
-    <a href="Missing_figures--Original.png" data-lightgallery="item" title="原始网页，麻将牌的示意图">
-      <img src="Missing_figures--Original.png" alt="原始网页，麻将牌的示意图" style="display:block; width:100%; height:auto;">
-    </a>
-    <figcaption class="image-caption">原始网页，麻将牌的示意图</figcaption>
-  </figure>
-  <figure style="flex:1 1 320px; margin:0;">
-    <a href="Missing_figures--Observed.png" data-lightgallery="item" title="翻译后网页，麻将牌示意图发生了丢失">
-      <img src="Missing_figures--Observed.png" alt="翻译后网页，麻将牌示意图发生了丢失" style="display:block; width:100%; height:auto;">
-    </a>
-    <figcaption class="image-caption">翻译后网页，麻将牌示意图发生了丢失</figcaption>
-  </figure>
-</div>
-{{< /raw >}}
+{{< compare-images
+  left_src="Missing_figures--Original.png"
+  left_alt="原始网页，麻将牌的示意图"
+  left_title="原始网页，麻将牌的示意图"
+  left_caption="原始网页，麻将牌的示意图"
+  right_src="Missing_figures--Observed.png"
+  right_alt="翻译后网页，麻将牌示意图发生了丢失"
+  right_title="翻译后网页，麻将牌示意图发生了丢失"
+  right_caption="翻译后网页，麻将牌示意图发生了丢失"
+>}}
 
 我当时就在想，翻译这件事对大模型来说，照理说几年前就不该算难题了。
 
