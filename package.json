@@ -10,9 +10,8 @@
     "pushSite": ""
   },
   "devDependencies": {
-    "vuepress": "^1.7.1",
-    "vuepress-plugin-mathjax": "^1.2.8",
-    "watchpack": "^1.7.2"
+    "vuepress": "^1.9.10",
+    "vuepress-plugin-mathjax": "^1.2.8"
   },
   "dependencies": {}
 }

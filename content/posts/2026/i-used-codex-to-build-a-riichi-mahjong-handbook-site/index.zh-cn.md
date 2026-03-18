@@ -56,7 +56,8 @@ license: ""
 
 **不是这边丢了一张示意图，就是那边少了一些内容，或者翻译加了些自己的理解，甚至翻译错误**，
 
-**并且让模型自己抽查了好几次，都没有完全解决，**   
+**并且让模型自己抽查了好几次，都没有完全解决，**
+
 下面是一个翻译后丢失了原始页面示意图的例子：
 
 {{< raw >}}
@@ -76,16 +77,15 @@ license: ""
 </div>
 {{< /raw >}}
 
-
 我心想，翻译这个问题，对大模型来说应该若干年前就不是难事了，
 
 尤其是对于GPT5.4这种当前最领先的模型之一，不应该出现这么低级的错误。
 
-**于是，我尝试创建了一个Skill，一切突然就变得容易了。**
+**于是，我尝试创建了一个Skill，一切突然就变得容易了起来。**
 
 # 使用Skill后的效果
 
-我使用codex的$skill-creator，让它创建了一个Skill，大致告诉他：
+我使用codex的`$skill-creator`，让它创建了一个Skill，大致告诉他：
  - 输入是原始日文的网页，输出为目标语言的网页
  - 尽量按照原来的含义翻译网页，不要加入自己的理解，也不能丢失内容
  - 不能丢失原文中的任何示意图
@@ -93,21 +93,21 @@ license: ""
 
 结果，翻译后的网页无论是翻译还是排版效果都非常完美，贴近原文，没有任何问题。
 
-以下是对比图：
+以下是对比图 (其中左边是最初生成的页面，中间是使用了Skill后的结果，右边是原始日文页面)：
 
-{{< image src="Fixed_Comparation_01.png" caption="(示例1) 左：最初生成的页面 - 中：修正后的页面 - 右：原始日文页面" width="100%" >}}
+{{< image src="Fixed_Comparation_01.png" caption="(示例1) 左:最初生成的页面 vs 中:修正后的页面 vs 右:原始日文页面" width="100%" >}}
 
-{{< image src="Fixed_Comparation_02.png" caption="(示例2) 左：最初生成的页面 - 中：修正后的页面 - 右：原始日文页面" width="100%" >}}
+{{< image src="Fixed_Comparation_02.png" caption="(示例2) 左:最初生成的页面 vs 中:修正后的页面 vs 右:原始日文页面" width="100%" >}}
 
 明显可以看到，修正后的页面效果与原网页已经比较接近，内容和版式都能较好保留。
 
 内容长度也基本一致，不会多内容或者少内容。
 
-(最后优化后的Skill链接: [translate-japanese-webpage/SKILL.md](https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md))
+(最后优化后的Skill文件见: [translate-japanese-webpage/SKILL.md](https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md))
 
 # 总结
 
-目前这样的一个简单任务，已经可以让Codex做的很好。
+目前这样的一个简单任务，Codex已经可以做的相当好。
 
 美中不足的是，全程我还是需要不停的给Codex敲回车。
 
