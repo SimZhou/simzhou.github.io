@@ -86,7 +86,9 @@ I used Codex's `$skill-creator` to create a Skill and gave it instructions rough
 
 The result was much better. The translated pages stayed very close to the original, both in wording and in layout, with almost no obvious issues.
 
-Below are comparison images. The left is the initially generated page, the middle is the corrected version after using the Skill, and the right is the original Japanese page:
+Below are comparison images:
+
+<p class="post-note">The left is the initially generated page, the middle is the corrected version after using the Skill, and the right is the original Japanese page.</p>
 
 {{< image src="Fixed_Comparation_01.png" caption="(Example 1) Left: initially generated page vs Middle: corrected page vs Right: original Japanese page" width="100%" >}}
 
