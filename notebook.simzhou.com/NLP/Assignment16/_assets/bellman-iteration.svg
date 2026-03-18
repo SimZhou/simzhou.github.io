@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <rect width="920" height="420" fill="#eef4f2"/>
+  <text x="50" y="68" font-size="30" font-family="Georgia, serif" fill="#24313a">Value Iteration</text>
+  <text x="50" y="104" font-size="20" font-family="Arial, sans-serif" fill="#59666e">反复根据 Bellman equation 更新每个状态值，直到收敛。</text>
+  <g fill="#ffffff" stroke="#2f7a65" stroke-width="3">
+    <rect x="120" y="150" width="120" height="70" rx="14"/><rect x="280" y="150" width="120" height="70" rx="14"/><rect x="440" y="150" width="120" height="70" rx="14"/><rect x="600" y="150" width="120" height="70" rx="14"/>
+  </g>
+  <g stroke="#6c7a82" stroke-width="4" marker-end="url(#arrow)"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6c7a82"/></marker></defs><line x1="240" y1="185" x2="280" y2="185"/><line x1="400" y1="185" x2="440" y2="185"/><line x1="560" y1="185" x2="600" y2="185"/><line x1="660" y1="240" x2="660" y2="320"/><line x1="660" y1="320" x2="180" y2="320"/><line x1="180" y1="320" x2="180" y2="230"/></g>
+  <text x="155" y="193" font-size="20" font-family="Arial, sans-serif" fill="#59666e">V₁</text><text x="315" y="193" font-size="20" font-family="Arial, sans-serif" fill="#59666e">V₂</text><text x="475" y="193" font-size="20" font-family="Arial, sans-serif" fill="#59666e">V₃</text><text x="635" y="193" font-size="20" font-family="Arial, sans-serif" fill="#59666e">V₄</text>
+  <text x="85" y="360" font-size="18" font-family="Arial, sans-serif" fill="#59666e">每轮迭代都用上一步的状态值重新计算，直到 |V(t+1)-V(t)| 足够小。</text>
+</svg>

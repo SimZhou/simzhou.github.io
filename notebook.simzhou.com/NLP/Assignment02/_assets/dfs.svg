@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#f7f2ee"/>
+  <text x="50" y="68" font-size="30" font-family="Georgia, serif" fill="#24313a">DFS</text>
+  <text x="50" y="104" font-size="20" font-family="Arial, sans-serif" fill="#59666e">深度优先搜索：优先沿单一路径深入，通常配合栈。</text>
+  <g stroke="#61727a" stroke-width="4">
+    <line x1="220" y1="120" x2="360" y2="190"/><line x1="360" y1="190" x2="500" y2="260"/><line x1="500" y1="260" x2="640" y2="330"/>
+    <line x1="220" y1="120" x2="220" y2="230"/><line x1="220" y1="230" x2="220" y2="330"/>
+  </g>
+  <g fill="#ffffff" stroke="#d96c4f" stroke-width="4">
+    <circle cx="220" cy="120" r="24"/><circle cx="360" cy="190" r="24"/><circle cx="500" cy="260" r="24"/><circle cx="640" cy="330" r="24"/><circle cx="220" cy="230" r="24"/><circle cx="220" cy="330" r="24"/>
+  </g>
+  <polyline points="220,120 360,190 500,260 640,330" fill="none" stroke="#2f7a65" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="380" font-size="18" font-family="Arial, sans-serif" fill="#59666e">访问顺序示意：先沿一条分支走到底，再回溯继续搜索。</text>
+  <text x="580" y="100" font-size="18" font-family="Arial, sans-serif" fill="#2f7a65">Stack</text>
+</svg>

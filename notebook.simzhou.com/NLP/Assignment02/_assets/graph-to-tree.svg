@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480">
+  <rect width="900" height="480" fill="#f7f5ee"/>
+  <text x="50" y="70" font-size="30" font-family="Georgia, serif" fill="#24313a">Graph to Tree</text>
+  <text x="50" y="108" font-size="20" font-family="Arial, sans-serif" fill="#59666e">将图展开为无环树结构，便于 BFS / DFS 搜索示意。</text>
+  <circle cx="170" cy="180" r="24" fill="#2f7a65"/><circle cx="100" cy="280" r="24" fill="#d96c4f"/><circle cx="240" cy="280" r="24" fill="#d96c4f"/><circle cx="170" cy="380" r="24" fill="#d9a44f"/>
+  <line x1="170" y1="180" x2="100" y2="280" stroke="#5a6a72" stroke-width="4"/><line x1="170" y1="180" x2="240" y2="280" stroke="#5a6a72" stroke-width="4"/><line x1="100" y1="280" x2="170" y2="380" stroke="#5a6a72" stroke-width="4"/><line x1="240" y1="280" x2="170" y2="380" stroke="#5a6a72" stroke-width="4"/>
+  <text x="95" y="430" font-size="18" font-family="Arial, sans-serif" fill="#59666e">图：存在回路</text>
+  <text x="430" y="255" font-size="52" font-family="Arial, sans-serif" fill="#6c7a82">→</text>
+  <circle cx="610" cy="150" r="22" fill="#2f7a65"/><circle cx="530" cy="250" r="22" fill="#d96c4f"/><circle cx="690" cy="250" r="22" fill="#d96c4f"/><circle cx="490" cy="350" r="22" fill="#d9a44f"/><circle cx="570" cy="350" r="22" fill="#8b6fb8"/><circle cx="650" cy="350" r="22" fill="#d9a44f"/><circle cx="730" cy="350" r="22" fill="#8b6fb8"/>
+  <line x1="610" y1="150" x2="530" y2="250" stroke="#5a6a72" stroke-width="4"/><line x1="610" y1="150" x2="690" y2="250" stroke="#5a6a72" stroke-width="4"/><line x1="530" y1="250" x2="490" y2="350" stroke="#5a6a72" stroke-width="4"/><line x1="530" y1="250" x2="570" y2="350" stroke="#5a6a72" stroke-width="4"/><line x1="690" y1="250" x2="650" y2="350" stroke="#5a6a72" stroke-width="4"/><line x1="690" y1="250" x2="730" y2="350" stroke="#5a6a72" stroke-width="4"/>
+  <text x="545" y="430" font-size="18" font-family="Arial, sans-serif" fill="#59666e">树：按层展开，方便搜索</text>
+</svg>

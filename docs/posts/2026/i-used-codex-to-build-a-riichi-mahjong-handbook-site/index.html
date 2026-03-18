@@ -38,7 +38,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/simzhou.com\/posts\/2026\/i-used-codex-to-build-a-riichi-mahjong-handbook-site\/"
-        },"genre": "posts","keywords": "AI, Codex, Agent, 日麻, 立直麻将","wordcount":  1109 ,
+        },"genre": "posts","keywords": "AI, Codex, Agent, 日麻, 立直麻将","wordcount":  1152 ,
         "url": "http:\/\/simzhou.com\/posts\/2026\/i-used-codex-to-build-a-riichi-mahjong-handbook-site\/","datePublished": "2026-03-18T12:35:00+08:00","dateModified": "2026-03-18T12:35:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Simon Zhou","logo": {
@@ -148,7 +148,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">我用 Codex 做了一个日麻教程手册网站</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/SimZhou" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>SimZhou</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a>&nbsp;<a href="/categories/projects/"><i class="far fa-folder" aria-hidden="true"></i>Projects</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-03-18">2026-03-18</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1109 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-03-18">2026-03-18</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1152 字&nbsp;
                 <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" class="leancloud_visitors" data-flag-title="我用 Codex 做了一个日麻教程手册网站">
                         <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -184,13 +184,13 @@
 <p>网页的前后端是没有任何问题的，</p>
 <p>但发现翻译排版效果差强人意，</p>
 <p><strong>不是这边丢了一张示意图，就是那边少了一些内容，或者翻译加了些自己的理解，甚至翻译错误</strong>，</p>
-<p><strong>并且让模型自己抽查了好几次，都没有完全解决，</strong><br>
-下面是一个翻译后丢失了原始页面示意图的例子：</p>
+<p><strong>并且让模型自己抽查了好几次，都没有完全解决，</strong></p>
+<p>下面是一个翻译后丢失了原始页面示意图的例子：</p>
 <data id="id-1" data-raw></data>
 <p>我心想，翻译这个问题，对大模型来说应该若干年前就不是难事了，</p>
 <p>尤其是对于GPT5.4这种当前最领先的模型之一，不应该出现这么低级的错误。</p>
-<p><strong>于是，我尝试创建了一个Skill，一切突然就变得容易了。</strong></p>
-<h1 id="使用skill后的效果">使用Skill后的效果 <a href="#%e4%bd%bf%e7%94%a8skill%e5%90%8e%e7%9a%84%e6%95%88%e6%9e%9c">¶</a></h1><p>我使用codex的$skill-creator，让它创建了一个Skill，大致告诉他：</p>
+<p><strong>于是，我尝试创建了一个Skill，一切突然就变得容易了起来。</strong></p>
+<h1 id="使用skill后的效果">使用Skill后的效果 <a href="#%e4%bd%bf%e7%94%a8skill%e5%90%8e%e7%9a%84%e6%95%88%e6%9e%9c">¶</a></h1><p>我使用codex的<code>$skill-creator</code>，让它创建了一个Skill，大致告诉他：</p>
 <ul>
 <li>输入是原始日文的网页，输出为目标语言的网页</li>
 <li>尽量按照原来的含义翻译网页，不要加入自己的理解，也不能丢失内容</li>
@@ -198,8 +198,8 @@
 <li>不能改变网页的布局和样式，如果有表格等结构也要保留</li>
 </ul>
 <p>结果，翻译后的网页无论是翻译还是排版效果都非常完美，贴近原文，没有任何问题。</p>
-<p>以下是对比图：</p>
-<figure><a class="lightgallery" href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" title="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" data-thumbnail="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" data-sub-html="<h2>(示例1) 左：最初生成的页面 - 中：修正后的页面 - 右：原始日文页面</h2>">
+<p>以下是对比图 (其中左边是最初生成的页面，中间是使用了Skill后的结果，右边是原始日文页面)：</p>
+<figure><a class="lightgallery" href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" title="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" data-thumbnail="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" data-sub-html="<h2>(示例1) 左:最初生成的页面 vs 中:修正后的页面 vs 右:原始日文页面</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -207,9 +207,9 @@
             data-srcset="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png 1.5x, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png 2x"
             data-sizes="auto"
             alt="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" width="100%" height="2048" />
-    </a><figcaption class="image-caption">(示例1) 左：最初生成的页面 - 中：修正后的页面 - 右：原始日文页面</figcaption>
+    </a><figcaption class="image-caption">(示例1) 左:最初生成的页面 vs 中:修正后的页面 vs 右:原始日文页面</figcaption>
     </figure>
-<figure><a class="lightgallery" href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" title="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" data-thumbnail="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" data-sub-html="<h2>(示例2) 左：最初生成的页面 - 中：修正后的页面 - 右：原始日文页面</h2>">
+<figure><a class="lightgallery" href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" title="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" data-thumbnail="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" data-sub-html="<h2>(示例2) 左:最初生成的页面 vs 中:修正后的页面 vs 右:原始日文页面</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -217,12 +217,12 @@
             data-srcset="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png 1.5x, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png 2x"
             data-sizes="auto"
             alt="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" width="100%" height="2046" />
-    </a><figcaption class="image-caption">(示例2) 左：最初生成的页面 - 中：修正后的页面 - 右：原始日文页面</figcaption>
+    </a><figcaption class="image-caption">(示例2) 左:最初生成的页面 vs 中:修正后的页面 vs 右:原始日文页面</figcaption>
     </figure>
 <p>明显可以看到，修正后的页面效果与原网页已经比较接近，内容和版式都能较好保留。</p>
 <p>内容长度也基本一致，不会多内容或者少内容。</p>
-<p>(最后优化后的Skill链接: <a href="https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md" target="_blank" rel="noopener noreffer ">translate-japanese-webpage/SKILL.md</a>)</p>
-<h1 id="总结">总结 <a href="#%e6%80%bb%e7%bb%93">¶</a></h1><p>目前这样的一个简单任务，已经可以让Codex做的很好。</p>
+<p>(最后优化后的Skill文件见: <a href="https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md" target="_blank" rel="noopener noreffer ">translate-japanese-webpage/SKILL.md</a>)</p>
+<h1 id="总结">总结 <a href="#%e6%80%bb%e7%bb%93">¶</a></h1><p>目前这样的一个简单任务，Codex已经可以做的相当好。</p>
 <p>美中不足的是，全程我还是需要不停的给Codex敲回车。</p>
 <p>后续可以探索一下多Agent/SubAgent功能，指派一个Agent负责进行内容监督工作，另一个Agent负责进行网页翻译排版工作。</p>
 <p>这样就可以解放双手，真正实现AI自动工作了。</p></div><div class="post-footer" id="post-footer">

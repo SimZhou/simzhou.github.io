@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <rect width="920" height="420" fill="#eef4f2"/>
+  <text x="50" y="68" font-size="30" font-family="Georgia, serif" fill="#24313a">Monte Carlo</text>
+  <text x="50" y="104" font-size="20" font-family="Arial, sans-serif" fill="#59666e">通过多次完整采样轨迹估计回报，再统计状态价值。</text>
+  <polyline points="120,300 250,230 360,260 490,170 620,210 780,130" fill="none" stroke="#2f7a65" stroke-width="6"/>
+  <polyline points="120,300 260,320 390,220 510,250 650,170 780,130" fill="none" stroke="#d96c4f" stroke-width="6"/>
+  <circle cx="120" cy="300" r="10" fill="#62727a"/><circle cx="780" cy="130" r="10" fill="#62727a"/>
+  <text x="105" y="335" font-size="18" font-family="Arial, sans-serif" fill="#59666e">S₀</text><text x="760" y="115" font-size="18" font-family="Arial, sans-serif" fill="#59666e">Terminal</text>
+</svg>

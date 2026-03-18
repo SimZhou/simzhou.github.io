@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <rect width="920" height="420" fill="#eef4f2"/>
+  <text x="50" y="68" font-size="30" font-family="Georgia, serif" fill="#24313a">Boosting</text>
+  <text x="50" y="104" font-size="20" font-family="Arial, sans-serif" fill="#59666e">串行训练弱学习器，让后续模型重点关注前一步做错的样本。</text>
+  <g stroke="#6c7a82" stroke-width="4">
+    <line x1="190" y1="240" x2="320" y2="240"/><line x1="470" y1="240" x2="600" y2="240"/><line x1="750" y1="240" x2="850" y2="240"/>
+  </g>
+  <rect x="70" y="200" width="120" height="80" rx="16" fill="#ffffff" stroke="#62727a" stroke-width="3"/><text x="99" y="248" font-size="20" font-family="Arial, sans-serif" fill="#59666e">Data</text>
+  <rect x="320" y="200" width="150" height="80" rx="16" fill="#ffffff" stroke="#2f7a65" stroke-width="3"/><text x="360" y="248" font-size="20" font-family="Arial, sans-serif" fill="#2f7a65">Model 1</text>
+  <rect x="600" y="200" width="150" height="80" rx="16" fill="#ffffff" stroke="#2f7a65" stroke-width="3"/><text x="640" y="248" font-size="20" font-family="Arial, sans-serif" fill="#2f7a65">Model 2</text>
+  <rect x="850" y="200" width="50" height="80" rx="16" fill="#ffffff" stroke="#d96c4f" stroke-width="3"/>
+  <text x="60" y="340" font-size="18" font-family="Arial, sans-serif" fill="#59666e">每一步都会重加权或修正残差，最终组合成更强的模型。</text>
+</svg>
