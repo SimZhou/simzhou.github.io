@@ -221,7 +221,7 @@ publishDir = "docs"
         name = "笔记本"
         pre = "<i class='fas fa-book'></i>"
         post = ""
-        url = "https://simzhou.com/notebook"
+        url = "/404.html"
         weight = 4
       [[languages.zh-cn.menu.main]]
         identifier = "about"
@@ -323,7 +323,7 @@ publishDir = "docs"
       name = "Notebook"
       pre = "<i class='fas fa-book'></i>"
       post = ""
-      url = "https://simzhou.com/notebook"
+      url = "/404.html"
       weight = 4
     [[languages.en.menu.main]]
       identifier = "about"
@@ -384,4 +384,3 @@ publishDir = "docs"
           paginate = 6
       [languages.en.params.footer]
         license= 'This blog is Licensed by<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>if not specified'
-
