@@ -1,0 +1,29 @@
+{{- if not .IsHome -}}
+  {{- $items := slice -}}
+  {{- $items = $items | append (dict "name" .Site.Title "url" .Site.Home.Permalink) -}}
+  {{- range .Ancestors.Reverse -}}
+    {{- if ne .Permalink $.Site.Home.Permalink -}}
+      {{- $items = $items | append (dict "name" .Title "url" .Permalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $items = $items | append (dict "name" .Title "url" .Permalink) -}}
+  {{- if gt (len $items) 1 -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {{- range $index, $item := $items -}}
+          {{- if gt $index 0 }},{{ end -}}
+          {
+            "@type": "ListItem",
+            "position": {{ add $index 1 }},
+            "name": {{ $item.name | safeHTML }},
+            "item": {{ $item.url | safeHTML }}
+          }
+        {{- end -}}
+      ]
+    }
+    </script>
+  {{- end -}}
+{{- end -}}
