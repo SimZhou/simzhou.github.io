@@ -67,6 +67,20 @@
   margin: 1rem 0;
 }
 
+.single .content > h1,
+.single .content > h2,
+.single .content > h3,
+.single .content > h4 {
+  margin-top: 1.8rem;
+}
+
+.single .content > h1:first-child,
+.single .content > h2:first-child,
+.single .content > h3:first-child,
+.single .content > h4:first-child {
+  margin-top: 0;
+}
+
 .single .content .text-red {
   color: #c62828;
 
