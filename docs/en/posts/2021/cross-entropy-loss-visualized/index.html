@@ -4,15 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>What does L1 &amp; L2 Regularization Look Like? - Simon&#39;s Dream Universe</title><meta name="description" content="This article visualizes L1 &amp; L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 &amp; L2 Regularization could affect the original surface of cross entropy loss. Although the concept is not difficult, the visualization do make understanding of L1 &amp; L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful."><meta name="keywords" content="Machine Learning, Deep Learning, Visualization, Regularization"><meta name="author" content="Simon"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/">
+        <title>Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface - Simon&#39;s Dream Universe</title><meta name="description" content="A visual introduction to L1 and L2 regularization through 3D plots of cross-entropy loss surfaces."><meta name="keywords" content="Machine Learning, Deep Learning, Visualization, Regularization"><meta name="author" content="Simon"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/">
   <meta property="og:site_name" content="Simon&#39;s Dream Universe">
-  <meta property="og:title" content="What does L1 & L2 Regularization Look Like?">
-  <meta property="og:description" content="This article visualizes L1 &amp; L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 &amp; L2 Regularization could affect the original surface of cross entropy loss. Although the concept is not difficult, the visualization do make understanding of L1 &amp; L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful.">
+  <meta property="og:title" content="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface">
+  <meta property="og:description" content="A visual introduction to L1 and L2 regularization through 3D plots of cross-entropy loss surfaces.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2021-04-15T15:07:46+08:00">
-    <meta property="article:modified_time" content="2021-04-15T15:07:46+08:00">
+    <meta property="article:modified_time" content="2026-03-19T00:00:00+08:00">
     <meta property="article:tag" content="Machine Learning">
     <meta property="article:tag" content="Deep Learning">
     <meta property="article:tag" content="Visualization">
@@ -21,8 +21,8 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://simzhou.com/posts/2021/cross-entropy-loss-visualized/cover.png">
-  <meta name="twitter:title" content="What does L1 & L2 Regularization Look Like?">
-  <meta name="twitter:description" content="This article visualizes L1 &amp; L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 &amp; L2 Regularization could affect the original surface of cross entropy loss. Although the concept is not difficult, the visualization do make understanding of L1 &amp; L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful.">
+  <meta name="twitter:title" content="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface">
+  <meta name="twitter:description" content="A visual introduction to L1 and L2 regularization through 3D plots of cross-entropy loss surfaces.">
 <meta name="application-name" content="Simon&#39;s Dream Universe">
 <meta name="apple-mobile-web-app-title" content="Simon&#39;s Dream Universe">
 <meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -33,7 +33,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "What does L1 \u0026 L2 Regularization Look Like?",
+        "headline": "Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -43,8 +43,8 @@
                             "url": "https:\/\/simzhou.com\/images\/earth.jpg",
                             "width":  1495 ,
                             "height":  1484 
-                        }],"genre": "posts","keywords": "Machine Learning, Deep Learning, Visualization, Regularization","wordcount":  558 ,
-        "url": "https:\/\/simzhou.com\/en\/posts\/2021\/cross-entropy-loss-visualized\/","datePublished": "2021-04-15T15:07:46+08:00","dateModified": "2021-04-15T15:07:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "Machine Learning, Deep Learning, Visualization, Regularization","wordcount":  783 ,
+        "url": "https:\/\/simzhou.com\/en\/posts\/2021\/cross-entropy-loss-visualized\/","datePublished": "2021-04-15T15:07:46+08:00","dateModified": "2026-03-19T00:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Simon Zhou","logo": {
                     "@type": "ImageObject",
@@ -54,7 +54,7 @@
                 }},"author": {
                 "@type": "Person",
                 "name": "Simon"
-            },"description": "This article visualizes L1 \u0026 L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 \u0026 L2 Regularization could affect the original surface of cross entropy loss. Although the concept is not difficult, the visualization do make understanding of L1 \u0026 L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful."
+            },"description": "A visual introduction to L1 and L2 regularization through 3D plots of cross-entropy loss surfaces."
     }
     </script><script type="application/ld+json">
     {
@@ -73,7 +73,7 @@
           },{
             "@type": "ListItem",
             "position":  3 ,
-            "name": "What does L1 \u0026 L2 Regularization Look Like?",
+            "name": "Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface",
             "item": "https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/"
           }]
     }
@@ -172,10 +172,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">What does L1 & L2 Regularization Look Like?</h1><h2 class="single-subtitle">The Beauty of Mathematics</h2><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface</h1><h2 class="single-subtitle">The Beauty of Mathematics</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/en/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Simon</a></span>&nbsp;<span class="post-category">included in <a href="/en/categories/machine-learning/"><i class="far fa-folder" aria-hidden="true"></i>Machine Learning</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2021-04-15">2021-04-15</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;558 words&nbsp;
-                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;<span id="/en/posts/2021/cross-entropy-loss-visualized/" class="leancloud_visitors" data-flag-title="What does L1 &amp; L2 Regularization Look Like?">
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2021-04-15">2021-04-15</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;783 words&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/en/posts/2021/cross-entropy-loss-visualized/" class="leancloud_visitors" data-flag-title="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface">
                         <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -185,7 +185,7 @@
         data-srcset="/posts/2021/cross-entropy-loss-visualized/cover.png, /posts/2021/cross-entropy-loss-visualized/cover.png 1.5x, /posts/2021/cross-entropy-loss-visualized/cover.png 2x"
         data-sizes="auto"
         alt="/posts/2021/cross-entropy-loss-visualized/cover.png"
-        title="/posts/2021/cross-entropy-loss-visualized/cover.png" width="1884" height="662" /></div><div class="details toc" id="toc-static"  data-kept="">
+        title="A visual introduction to L1 and L2 regularization through 3D plots of cross-entropy loss surfaces." width="1884" height="662" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
@@ -194,19 +194,20 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#1-cross-entropy-loss">1. Cross Entropy Loss</a></li>
-        <li><a href="#2-cross-entropy-loss-with-l1-regularization">2. Cross Entropy Loss with L1 Regularization</a></li>
-        <li><a href="#3-cross-entropy-loss-with-l2-regularization">3. Cross Entropy Loss with L2 Regularization</a></li>
-        <li><a href="#4-cross-entropy-loss-with-l1l2-regularization">4. Cross Entropy Loss with L1+L2 Regularization</a></li>
-        <li><a href="#5-conslusion">5. Conslusion</a></li>
+        <li><a href="#1-cross-entropy-loss">1. Cross-Entropy Loss</a></li>
+        <li><a href="#2-cross-entropy-loss-with-l1-regularization">2. Cross-Entropy Loss with L1 Regularization</a></li>
+        <li><a href="#3-cross-entropy-loss-with-l2-regularization">3. Cross-Entropy Loss with L2 Regularization</a></li>
+        <li><a href="#4-cross-entropy-loss-with-both-l1-and-l2-regularization">4. Cross-Entropy Loss with Both L1 and L2 Regularization</a></li>
+        <li><a href="#5-conclusion">5. Conclusion</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>This article visualizes L1 &amp; L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 &amp; L2 Regularization could affect the original surface of cross entropy loss.
-Although the concept is not difficult, the visualization do make understanding of L1 &amp; L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful.</p>
-<h2 id="1-cross-entropy-loss">1. Cross Entropy Loss <a href="#1-cross-entropy-loss">¶</a></h2><p>Consider a super simple neural network:
-<figure><a class="lightgallery" href="/posts/2021/cross-entropy-loss-visualized/simple_neural_network.png" title="simple_nn" data-thumbnail="/posts/2021/cross-entropy-loss-visualized/simple_neural_network.png" data-sub-html="<h2>a super simple neural network</h2><p>simple_nn</p>">
+            </div><div class="content" id="content"><p>I had wanted to write this post for a long time. Once I finally got ECharts working inside my blog, I could finish it properly.</p>
+<p>The goal here is simple: make L1 and L2 regularization visible. Instead of discussing them only as formulas, we will look at how they reshape a cross-entropy loss surface in 3D. That makes several abstract ideas much easier to grasp, especially why L1 regularization often produces sparse models and therefore behaves a bit like feature selection.</p>
+<p>I first became curious about this after hearing someone describe the &ldquo;sharp corner&rdquo; created by L1 regularization. That immediately raised a question for me: what would the full loss surface look like if we plotted it directly? This article is my attempt to answer that question visually.</p>
+<h2 id="1-cross-entropy-loss">1. Cross-Entropy Loss <a href="#1-cross-entropy-loss">¶</a></h2><p>Consider a very small neural network:
+<figure><a class="lightgallery" href="/posts/2021/cross-entropy-loss-visualized/simple_neural_network.png" title="simple_nn" data-thumbnail="/posts/2021/cross-entropy-loss-visualized/simple_neural_network.png" data-sub-html="<h2>A simple classifier with only two parameters</h2><p>simple_nn</p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -214,20 +215,22 @@ Although the concept is not difficult, the visualization do make understanding o
             data-srcset="/posts/2021/cross-entropy-loss-visualized/simple_neural_network.png, /posts/2021/cross-entropy-loss-visualized/simple_neural_network.png 1.5x, /posts/2021/cross-entropy-loss-visualized/simple_neural_network.png 2x"
             data-sizes="auto"
             alt="/posts/2021/cross-entropy-loss-visualized/simple_neural_network.png" width="364" height="242" />
-    </a><figcaption class="image-caption">a super simple neural network</figcaption>
-    </figure>
-The forward propogation process of the network would be:
+    </a><figcaption class="image-caption">A simple classifier with only two parameters</figcaption>
+    </figure></p>
+<p>Its forward pass can be written as:
 $$\hat{z_1}=\beta_1x$$
 $$\hat{z_2}=\beta_2x$$
-$$Softmax(\hat{z_i}),\ i\in{2}$$
-Consider a cross entropy loss:
+$$Softmax(\hat{z_i}),\ i\in{2}$$</p>
+<p>This network has only two parameters, $\beta_1$ and $\beta_2$.</p>
+<p>Now consider the cross-entropy loss:
 $$J(\beta)=-p\log(q)-(1-p)\log(1-q)$$
 $$=-p\log(\frac{e^{\beta_1x}}{e^{\beta_1x}+e^{\beta_2x}})-(1-p)\log(\frac{e^{\beta_2x}}{e^{\beta_1x}+e^{\beta_2x}})$$
 $$=&hellip;$$
 $$=-p\log{e^{\beta_1x}}-(1-p)log{e^{\beta_2x}}+log(e^{\beta_1x}+e^{\beta_2x})$$
-$$=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})$$
-where $p$ denotes the true label of $z_1$ and $1-p$ denotes the true label of $z_2$, $\beta_1$ and $\beta_2$ are model parameters, $x$ denotes the model input and is a scalar.</p>
-<p>So then, the cross entropy loss could be visualized as:
+$$=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})$$</p>
+<p>Here, $p$ is the ground-truth probability for class $z_1$, $1-p$ is the probability for class $z_2$, $\beta_1$ and $\beta_2$ are the model parameters, and $x$ is a scalar input.</p>
+<p>Using this formula, we can visualize the loss surface directly:</p>
+<p>All 3D plots below can be rotated and zoomed.</p>
 <div id="echarts400" style="width: 100%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
@@ -239,12 +242,13 @@ where $p$ denotes the true label of $z_1$ and $1-p$ denotes the true label of $z
     
     myChart.setOption(option);
 </script>
-(For convenience, p is set to 1 and x is set to 1. Because we only want to see how loss varies to different parameter sets $\beta_1$ and $\beta_2$)</p>
-<p>We could see a smooth curved surface down towards the ground.</p>
-<h2 id="2-cross-entropy-loss-with-l1-regularization">2. Cross Entropy Loss with L1 Regularization <a href="#2-cross-entropy-loss-with-l1-regularization">¶</a></h2><p>Generally, to prevent parameters endlessly fitting to a great number, and to solve overfitting, we could apply regularization.</p>
-<p>L1-Regularization regularizes weights by adding the sum of L1-norm of all parameters to loss function:</p>
+<p>For simplicity, both $p$ and $x$ are fixed at 1, because the point here is to see how the loss changes as $\beta_1$ and $\beta_2$ move.</p>
+<p>The surface is smooth. Its minimum keeps drifting toward the direction where $\beta_1 \to +\infty$ and $\beta_2 \to -\infty$. Intuitively, without regularization, gradient-based optimization keeps rewarding larger and larger parameter magnitudes if that continues to separate the classes better, which is one reason overfitting becomes a concern.</p>
+<h2 id="2-cross-entropy-loss-with-l1-regularization">2. Cross-Entropy Loss with L1 Regularization <a href="#2-cross-entropy-loss-with-l1-regularization">¶</a></h2><p>To prevent parameters from growing too large in magnitude, we can add a regularization term.</p>
+<p>With L1 regularization, the loss becomes:</p>
 <p>$$J(\beta)=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})+\lambda{(||\beta_1||_1+||\beta_2||_1)}$$</p>
-<p>The following graphs show different surfaces upon different L1-reg weights:</p>
+<p>where $\lambda$ is the L1 regularization strength.</p>
+<p>The plots below show how different values of $\lambda$ change the shape of the loss surface:</p>
 <div id="echarts401" style="width: 100%;height: 401px;margin: 0 auto"></div>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
@@ -278,7 +282,7 @@ where $p$ denotes the true label of $z_1$ and $1-p$ denotes the true label of $z
     
     myChart.setOption(option);
 </script>
-<p><div id="echarts404" style="width: 100%;height: 404px;margin: 0 auto"></div>
+<div id="echarts404" style="width: 100%;height: 404px;margin: 0 auto"></div>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
 <script type="text/javascript">
@@ -289,16 +293,17 @@ where $p$ denotes the true label of $z_1$ and $1-p$ denotes the true label of $z
     
     myChart.setOption(option);
 </script>
-See how the folding angle changes with different settings of lambda</p>
-<p>Notice that the folding lines are right above the two axis where $\beta_1=0$ and $\beta_2=0$, which makes the model easily getting into the places where $\beta_1$ or $\beta_2$ is zero, and <strong>that&rsquo;s exactly why L1-Regularization results in sparse model</strong> (which parameters are tend to be 0)</p>
+<p>My own first reaction to these plots was that they are both beautiful and surprisingly informative. A 3D surface turns an abstract optimization idea into something you can inspect directly.</p>
+<p>The key visual change is that L1 regularization introduces <strong>folds</strong> into the surface, and the fold becomes sharper as $\lambda$ increases.</p>
+<p>More importantly, those folds lie exactly on the lines $\beta_1=0$ and $\beta_2=0$. That makes it easier for optimization to land on parameter values that are exactly zero. And that is the geometric reason L1 regularization tends to produce sparse models.</p>
 <div class="details admonition tip open">
     <div class="details-summary admonition-title">
-        <i class="icon far fa-lightbulb" aria-hidden="true"></i>What does Tensorflow do when it encounters differentiating non-differentiable functions?<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon far fa-lightbulb" aria-hidden="true"></i>How does TensorFlow handle a point where the function is not differentiable?<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p>Tensorflow would simply return 0 gradient regarding these non-differentiable points.</p>
-<p>See <a href="https://stackoverflow.com/a/41520694" target="_blank" rel="noopener noreffer ">https://stackoverflow.com/a/41520694</a></p>
-<p>The codes down below could test out the derivative value regarding different piecewise-defined functions:</p>
+        <div class="admonition-content"><p>In TensorFlow, the gradient at a non-differentiable point is typically set to 0.</p>
+<p>Reference: <a href="https://stackoverflow.com/a/41520694" target="_blank" rel="noopener noreffer ">https://stackoverflow.com/a/41520694</a></p>
+<p>The snippet below tests the derivative at $x=0$ for a piecewise-defined function:</p>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-python">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
@@ -306,7 +311,7 @@ See how the folding angle changes with different settings of lambda</p>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 </span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">greater</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># The piecewise-defined function here is：y=2 (x&lt;0), y=x+2 (x&gt;=0)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">greater</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Piecewise function: y=2 (x&lt;0), y=x+2 (x&gt;=0)</span>
 </span></span><span class="line"><span class="cl"><span class="n">grad</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">gradients</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
@@ -319,15 +324,15 @@ See how the folding angle changes with different settings of lambda</p>
         <i class="icon far fa-lightbulb" aria-hidden="true"></i>Coordinate Descent<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p>To solve the issue of non-differentiable resulted from L1-Regularization, sometimes we could apply coordinate descent,
-which avoids calculating the gradient of the loss surface.</p>
-<p>See <a href="https://en.wikipedia.org/wiki/Coordinate_descent" target="_blank" rel="noopener noreffer ">https://en.wikipedia.org/wiki/Coordinate_descent</a></p>
+        <div class="admonition-content"><p>Because L1 regularization creates points that are not differentiable, coordinate descent is sometimes used instead of gradient descent.</p>
+<p>Coordinate descent updates one coordinate at a time rather than following the full gradient, so it can avoid some of the difficulties caused by these sharp corners.</p>
+<p>See: <a href="https://en.wikipedia.org/wiki/Coordinate_descent" target="_blank" rel="noopener noreffer ">https://en.wikipedia.org/wiki/Coordinate_descent</a></p>
 </div>
     </div>
 </div>
-<h2 id="3-cross-entropy-loss-with-l2-regularization">3. Cross Entropy Loss with L2 Regularization <a href="#3-cross-entropy-loss-with-l2-regularization">¶</a></h2><p>Another common one is to apply L2-Regularization, by adding the sum of L2-norm of all parameters:</p>
+<h2 id="3-cross-entropy-loss-with-l2-regularization">3. Cross-Entropy Loss with L2 Regularization <a href="#3-cross-entropy-loss-with-l2-regularization">¶</a></h2><p>Now let us add L2 regularization:</p>
 <p>$$J(\beta)=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})+\Omega{(||\beta_1||_2^2+||\beta_2||_2^2)}$$</p>
-<p>The following graphs show different surfaces upon different L2-reg weights:</p>
+<p>The plots below show the loss surface for different values of the L2 coefficient $\Omega$:</p>
 <div id="echarts399" style="width: 100%;height: 399px;margin: 0 auto"></div>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
@@ -372,8 +377,8 @@ which avoids calculating the gradient of the loss surface.</p>
     
     myChart.setOption(option);
 </script>
-<p>It is observed that L2 regularization makes the loss function curved smoothly, making the minimum loss point at a position where $\beta_1$ and $\beta_2$ takes a non-infinite value! And what&rsquo;s more, when the L2 regularization parameter becomes bigger, the point would get closer to zero point (where $\beta_1=0$，$\beta_2=0$).</p>
-<h2 id="4-cross-entropy-loss-with-l1l2-regularization">4. Cross Entropy Loss with L1+L2 Regularization <a href="#4-cross-entropy-loss-with-l1l2-regularization">¶</a></h2><p>L1 and L2 Regularization can take place at the same time, which is like:</p>
+<p>L2 regularization changes the surface in a very different way. Instead of creating folds, it bends the surface smoothly. The minimum is no longer pushed toward $\beta_1 \to +\infty$ and $\beta_2 \to -\infty$; it moves to a finite location. As the L2 coefficient grows, that minimum also shifts closer to the origin at $(0, 0)$.</p>
+<h2 id="4-cross-entropy-loss-with-both-l1-and-l2-regularization">4. Cross-Entropy Loss with Both L1 and L2 Regularization <a href="#4-cross-entropy-loss-with-both-l1-and-l2-regularization">¶</a></h2><p>Of course, L1 and L2 can also be used together:</p>
 <div id="echarts395" style="width: 100%;height: 395px;margin: 0 auto"></div>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
@@ -385,28 +390,33 @@ which avoids calculating the gradient of the loss surface.</p>
     
     myChart.setOption(option);
 </script>
-<h2 id="5-conslusion">5. Conslusion <a href="#5-conslusion">¶</a></h2><p>L1 Regularization</p>
+<p>This combined surface inherits properties from both penalties: the smooth pull of L2 and the axis-aligned folds introduced by L1.</p>
+<h2 id="5-conclusion">5. Conclusion <a href="#5-conclusion">¶</a></h2><p>L1 regularization:</p>
 <ul>
-<li>Penalizes sum of absolute value of weights, which results in a sparse model</li>
-<li>Sparse model is cater to feature selection</li>
-<li>Sparse model is simple and interpretable, but cannot learn complex patterns</li>
-<li>Robust to outliers</li>
+<li>Penalizes the sum of absolute values of the parameters, which encourages sparsity</li>
+<li>Often behaves like feature selection because some parameters are driven exactly to zero</li>
+<li>Produces simpler, more interpretable models, though this can make it harder to capture very complex relationships</li>
+<li>Tends to be more robust to outliers</li>
 </ul>
-<p>L2 Regularization</p>
+<p>L2 regularization:</p>
 <ul>
-<li>Penalizes sum of squared value of weights, which results in a dense model</li>
-<li>Learns complex patterns and generally gives better prediction</li>
-<li>Sensitive to outliers</li>
-</ul></div><div class="post-footer" id="post-footer">
+<li>Penalizes the sum of squared parameter values, which encourages smaller but usually nonzero weights</li>
+<li>Produces dense models rather than sparse ones</li>
+<li>Usually preserves more information across features and often leads to better predictive performance</li>
+<li>Is more sensitive to outliers than L1</li>
+</ul>
+<p>Further reading:</p>
+<p>What does regularization mean in machine learning? (Chinese)
+<a href="https://zhuanlan.zhihu.com/p/62615141" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/62615141</a></p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2021-04-15</span>
+                <span>Updated on 2026-03-19</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="What does L1 &amp; L2 Regularization Look Like?" data-hashtags="Machine Learning,Deep Learning,Visualization,Regularization"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="What does L1 &amp; L2 Regularization Look Like?"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-hashtag="Machine Learning"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="What does L1 &amp; L2 Regularization Look Like?"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="What does L1 &amp; L2 Regularization Look Like?"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="What does L1 &amp; L2 Regularization Look Like?" data-image="cover.png"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="What does L1 &amp; L2 Regularization Look Like?" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fen%2fposts%2f2021%2fcross-entropy-loss-visualized%2f&amp;text=What%20does%20L1%20%26%20L2%20Regularization%20Look%20Like%3f" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface" data-hashtags="Machine Learning,Deep Learning,Visualization,Regularization"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-hashtag="Machine Learning"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface" data-image="cover.png"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/" data-title="Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface" data-description="A visual introduction to L1 and L2 regularization through 3D plots of cross-entropy loss surfaces."><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fen%2fposts%2f2021%2fcross-entropy-loss-visualized%2f&amp;text=Visualizing%20L1%20and%20L2%20Regularization%20on%20a%20Cross-Entropy%20Loss%20Surface" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>

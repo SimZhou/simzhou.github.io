@@ -36,15 +36,15 @@
 <p>For non-codex models, the open-source Codex CLI compacts context locally: an LLM summarizes the conversation using a <a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">compaction prompt</a>. When the compacted context is later used, <code>responses.create()</code> receives it with a handoff prompt that frames the summary. Both prompts are visible in the source code.</p>]]></description>
 </item>
 <item>
-    <title>What does L1 &amp; L2 Regularization Look Like?</title>
+    <title>Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface</title>
     <link>https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</link>
     <pubDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</pubDate>
     <author>yihua.zhou@outlook.com (Simon Zhou)</author>
     <guid>https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/cover.png" referrerpolicy="no-referrer">
-            </div><p>This article visualizes L1 &amp; L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 &amp; L2 Regularization could affect the original surface of cross entropy loss.
-Although the concept is not difficult, the visualization do make understanding of L1 &amp; L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful.</p>]]></description>
+            </div><p>I had wanted to write this post for a long time. Once I finally got ECharts working inside my blog, I could finish it properly.</p>
+<p>The goal here is simple: make L1 and L2 regularization visible. Instead of discussing them only as formulas, we will look at how they reshape a cross-entropy loss surface in 3D. That makes several abstract ideas much easier to grasp, especially why L1 regularization often produces sparse models and therefore behaves a bit like feature selection.</p>]]></description>
 </item>
 <item>
     <title>Adding Lenovo Printer to Raspberry Pi (or Other Linux Computers)</title>

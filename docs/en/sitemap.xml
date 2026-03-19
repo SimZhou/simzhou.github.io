@@ -29,7 +29,7 @@
                     hreflang="en"
                     href="https://simzhou.com/en/tags/ai/"
                     /></url><url>
-            <loc>https://simzhou.com/en/categories/</loc><lastmod>2026-03-18T12:35:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://simzhou.com/en/categories/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/categories/"
@@ -57,7 +57,7 @@
                     href="https://simzhou.com/en/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/"
                     /></url><url>
             <loc>https://simzhou.com/en/tags/mahjong/</loc><lastmod>2026-03-18T12:35:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://simzhou.com/en/posts/</loc><lastmod>2026-03-18T12:35:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://simzhou.com/en/posts/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/"
@@ -76,7 +76,7 @@
                     href="https://simzhou.com/en/categories/projects/"
                     /></url><url>
             <loc>https://simzhou.com/en/tags/riichi-mahjong/</loc><lastmod>2026-03-18T12:35:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://simzhou.com/en/</loc><lastmod>2026-03-18T12:35:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://simzhou.com/en/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/"
@@ -85,7 +85,7 @@
                     hreflang="en"
                     href="https://simzhou.com/en/"
                     /></url><url>
-            <loc>https://simzhou.com/en/tags/</loc><lastmod>2026-03-18T12:35:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://simzhou.com/en/tags/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/tags/"
@@ -132,12 +132,12 @@
                     hreflang="en"
                     href="https://simzhou.com/en/tags/llm/"
                     /></url><url>
-            <loc>https://simzhou.com/en/tags/deep-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://simzhou.com/en/categories/machine-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://simzhou.com/en/tags/machine-learning/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://simzhou.com/en/tags/regularization/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://simzhou.com/en/tags/visualization/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</loc><lastmod>2021-04-15T15:07:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://simzhou.com/en/tags/deep-learning/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://simzhou.com/en/categories/machine-learning/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://simzhou.com/en/tags/machine-learning/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://simzhou.com/en/tags/regularization/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://simzhou.com/en/tags/visualization/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/</loc><lastmod>2026-03-19T00:00:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/2021/cross-entropy-loss-visualized/"

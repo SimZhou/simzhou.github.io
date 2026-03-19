@@ -1,12 +1,12 @@
 ---
-title: "What does L1 & L2 Regularization Look Like?"
+title: "Visualizing L1 and L2 Regularization on a Cross-Entropy Loss Surface"
 subtitle: "The Beauty of Mathematics"
 date: 2021-04-15T15:07:46+08:00
-lastmod: 2021-04-15T15:07:46+08:00
+lastmod: 2026-03-19T00:00:00+08:00
 draft: false
 author: "Simon"
 authorLink: ""
-description: ""
+description: "A visual introduction to L1 and L2 regularization through 3D plots of cross-entropy loss surfaces."
 
 tags: ["Machine Learning", "Deep Learning", "Visualization", "Regularization"]
 categories: ["Machine Learning"]
@@ -24,26 +24,38 @@ math:
 lightgallery: false
 license: ""
 ---
-This article visualizes L1 & L2 Regularization, with Cross Entropy Loss as the base loss function. Moreover, the Visualization shows how L1 & L2 Regularization could affect the original surface of cross entropy loss. 
-Although the concept is not difficult, the visualization do make understanding of L1 & L2 regularization easier. For example why L1-reg often leads to sparse model. Above all, the visualization itself is indeedly beautiful.
+I had wanted to write this post for a long time. Once I finally got ECharts working inside my blog, I could finish it properly.
+
+The goal here is simple: make L1 and L2 regularization visible. Instead of discussing them only as formulas, we will look at how they reshape a cross-entropy loss surface in 3D. That makes several abstract ideas much easier to grasp, especially why L1 regularization often produces sparse models and therefore behaves a bit like feature selection.
 <!--more-->
 
-## 1. Cross Entropy Loss
-Consider a super simple neural network:
-![simple_nn](simple_neural_network.png "a super simple neural network")
-The forward propogation process of the network would be:
+I first became curious about this after hearing someone describe the "sharp corner" created by L1 regularization. That immediately raised a question for me: what would the full loss surface look like if we plotted it directly? This article is my attempt to answer that question visually.
+
+## 1. Cross-Entropy Loss
+
+Consider a very small neural network:
+![simple_nn](simple_neural_network.png "A simple classifier with only two parameters")
+
+Its forward pass can be written as:
 $$\hat{z_1}=\beta_1x$$
 $$\hat{z_2}=\beta_2x$$
 $$Softmax(\hat{z_i}),\ i\in{2}$$
-Consider a cross entropy loss: 
+
+This network has only two parameters, $\beta_1$ and $\beta_2$.
+
+Now consider the cross-entropy loss:
 $$J(\beta)=-p\log(q)-(1-p)\log(1-q)$$
 $$=-p\log(\frac{e^{\beta_1x}}{e^{\beta_1x}+e^{\beta_2x}})-(1-p)\log(\frac{e^{\beta_2x}}{e^{\beta_1x}+e^{\beta_2x}})$$
 $$=...$$
 $$=-p\log{e^{\beta_1x}}-(1-p)log{e^{\beta_2x}}+log(e^{\beta_1x}+e^{\beta_2x})$$
 $$=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})$$
-where $p$ denotes the true label of $z_1$ and $1-p$ denotes the true label of $z_2$, $\beta_1$ and $\beta_2$ are model parameters, $x$ denotes the model input and is a scalar.
 
-So then, the cross entropy loss could be visualized as: 
+Here, $p$ is the ground-truth probability for class $z_1$, $1-p$ is the probability for class $z_2$, $\beta_1$ and $\beta_2$ are the model parameters, and $x$ is a scalar input.
+
+Using this formula, we can visualize the loss surface directly:
+
+All 3D plots below can be rotated and zoomed.
+
 {{< echarts2 height="400" >}}
 {
   "title": {
@@ -110,18 +122,22 @@ So then, the cross entropy loss could be visualized as:
     }]
 }
 {{< /echarts2 >}}
-(For convenience, p is set to 1 and x is set to 1. Because we only want to see how loss varies to different parameter sets $\beta_1$ and $\beta_2$)
 
-We could see a smooth curved surface down towards the ground. 
+For simplicity, both $p$ and $x$ are fixed at 1, because the point here is to see how the loss changes as $\beta_1$ and $\beta_2$ move.
 
-## 2. Cross Entropy Loss with L1 Regularization
-Generally, to prevent parameters endlessly fitting to a great number, and to solve overfitting, we could apply regularization. 
+The surface is smooth. Its minimum keeps drifting toward the direction where $\beta_1 \to +\infty$ and $\beta_2 \to -\infty$. Intuitively, without regularization, gradient-based optimization keeps rewarding larger and larger parameter magnitudes if that continues to separate the classes better, which is one reason overfitting becomes a concern.
 
-L1-Regularization regularizes weights by adding the sum of L1-norm of all parameters to loss function: 
+## 2. Cross-Entropy Loss with L1 Regularization
+
+To prevent parameters from growing too large in magnitude, we can add a regularization term.
+
+With L1 regularization, the loss becomes:
 
 $$J(\beta)=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})+\lambda{(||\beta_1||_1+||\beta_2||_1)}$$
 
-The following graphs show different surfaces upon different L1-reg weights:
+where $\lambda$ is the L1 regularization strength.
+
+The plots below show how different values of $\lambda$ change the shape of the loss surface:
 
 {{< echarts2 height="401" >}}
 {
@@ -390,20 +406,23 @@ The following graphs show different surfaces upon different L1-reg weights:
     }]
 }
 {{< /echarts2 >}}
-See how the folding angle changes with different settings of lambda
 
-Notice that the folding lines are right above the two axis where $\beta_1=0$ and $\beta_2=0$, which makes the model easily getting into the places where $\beta_1$ or $\beta_2$ is zero, and **that's exactly why L1-Regularization results in sparse model** (which parameters are tend to be 0)
+My own first reaction to these plots was that they are both beautiful and surprisingly informative. A 3D surface turns an abstract optimization idea into something you can inspect directly.
 
-{{< admonition type=tip title="What does Tensorflow do when it encounters differentiating non-differentiable functions?" open=true >}}
-Tensorflow would simply return 0 gradient regarding these non-differentiable points. 
+The key visual change is that L1 regularization introduces **folds** into the surface, and the fold becomes sharper as $\lambda$ increases.
 
-See https://stackoverflow.com/a/41520694
+More importantly, those folds lie exactly on the lines $\beta_1=0$ and $\beta_2=0$. That makes it easier for optimization to land on parameter values that are exactly zero. And that is the geometric reason L1 regularization tends to produce sparse models.
 
-The codes down below could test out the derivative value regarding different piecewise-defined functions:
+{{< admonition type=tip title="How does TensorFlow handle a point where the function is not differentiable?" open=true >}}
+In TensorFlow, the gradient at a non-differentiable point is typically set to 0.
+
+Reference: https://stackoverflow.com/a/41520694
+
+The snippet below tests the derivative at $x=0$ for a piecewise-defined function:
 ```python
 import tensorflow as tf
 x = tf.Variable(0.0)
-y = tf.where(tf.greater(x, 0), x+2, 2)  # The piecewise-defined function here is：y=2 (x<0), y=x+2 (x>=0)
+y = tf.where(tf.greater(x, 0), x+2, 2)  # Piecewise function: y=2 (x<0), y=x+2 (x>=0)
 grad = tf.gradients(y, [x])[0]
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
@@ -412,19 +431,20 @@ with tf.Session() as sess:
 {{< /admonition >}}
 
 {{< admonition type=tip title="Coordinate Descent" open=true >}}
-To solve the issue of non-differentiable resulted from L1-Regularization, sometimes we could apply coordinate descent, 
-which avoids calculating the gradient of the loss surface.
+Because L1 regularization creates points that are not differentiable, coordinate descent is sometimes used instead of gradient descent.
 
-See https://en.wikipedia.org/wiki/Coordinate_descent
+Coordinate descent updates one coordinate at a time rather than following the full gradient, so it can avoid some of the difficulties caused by these sharp corners.
+
+See: https://en.wikipedia.org/wiki/Coordinate_descent
 {{< /admonition >}}
 
-## 3. Cross Entropy Loss with L2 Regularization
+## 3. Cross-Entropy Loss with L2 Regularization
 
-Another common one is to apply L2-Regularization, by adding the sum of L2-norm of all parameters: 
+Now let us add L2 regularization:
 
 $$J(\beta)=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})+\Omega{(||\beta_1||_2^2+||\beta_2||_2^2)}$$
 
-The following graphs show different surfaces upon different L2-reg weights:
+The plots below show the loss surface for different values of the L2 coefficient $\Omega$:
 
 {{< echarts2 height="399" >}}
 {
@@ -694,12 +714,11 @@ The following graphs show different surfaces upon different L2-reg weights:
 }
 {{< /echarts2 >}}
 
-It is observed that L2 regularization makes the loss function curved smoothly, making the minimum loss point at a position where $\beta_1$ and $\beta_2$ takes a non-infinite value! And what's more, when the L2 regularization parameter becomes bigger, the point would get closer to zero point (where $\beta_1=0$，$\beta_2=0$).
+L2 regularization changes the surface in a very different way. Instead of creating folds, it bends the surface smoothly. The minimum is no longer pushed toward $\beta_1 \to +\infty$ and $\beta_2 \to -\infty$; it moves to a finite location. As the L2 coefficient grows, that minimum also shifts closer to the origin at $(0, 0)$.
 
+## 4. Cross-Entropy Loss with Both L1 and L2 Regularization
 
-## 4. Cross Entropy Loss with L1+L2 Regularization
-
-L1 and L2 Regularization can take place at the same time, which is like: 
+Of course, L1 and L2 can also be used together:
 
 {{< echarts2 height="395" >}}
 {
@@ -768,14 +787,23 @@ L1 and L2 Regularization can take place at the same time, which is like:
 }
 {{< /echarts2 >}}
 
-## 5. Conslusion
-L1 Regularization
-- Penalizes sum of absolute value of weights, which results in a sparse model
-- Sparse model is cater to feature selection
-- Sparse model is simple and interpretable, but cannot learn complex patterns
-- Robust to outliers
+This combined surface inherits properties from both penalties: the smooth pull of L2 and the axis-aligned folds introduced by L1.
 
-L2 Regularization
-- Penalizes sum of squared value of weights, which results in a dense model
-- Learns complex patterns and generally gives better prediction
-- Sensitive to outliers
+## 5. Conclusion
+
+L1 regularization:
+- Penalizes the sum of absolute values of the parameters, which encourages sparsity
+- Often behaves like feature selection because some parameters are driven exactly to zero
+- Produces simpler, more interpretable models, though this can make it harder to capture very complex relationships
+- Tends to be more robust to outliers
+
+L2 regularization:
+- Penalizes the sum of squared parameter values, which encourages smaller but usually nonzero weights
+- Produces dense models rather than sparse ones
+- Usually preserves more information across features and often leads to better predictive performance
+- Is more sensitive to outliers than L1
+
+Further reading:
+
+What does regularization mean in machine learning? (Chinese)
+https://zhuanlan.zhihu.com/p/62615141
