@@ -12,7 +12,11 @@
 {{- with $author -}}
 <meta name="author" content="{{ . }}">
 {{- end -}}
+{{- if eq .Kind "404" -}}
+<meta name="robots" content="noindex,nofollow">
+{{- else -}}
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+{{- end -}}
 
 {{- partial "opengraph.html" . -}}
 {{- partial "twitter_cards.html" . -}}

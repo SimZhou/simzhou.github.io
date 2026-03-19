@@ -196,6 +196,31 @@
   - `https://simzhou.com/BingSiteAuth.xml`
   - `https://simzhou.com/2696c9db-b5a7-457c-b5d5-08557966975a.txt`
 
+### Google Search Console 重定向页经验
+
+- Search Console 里的“网页会自动重定向”不一定是故障
+- 对本仓库来说，以下 URL 被标成重定向页通常是正常收敛：
+  - `http://simzhou.com/*`
+  - `http://www.simzhou.com/*`
+  - `https://www.simzhou.com/*`
+  - 无尾斜杠目录 URL，例如 `https://simzhou.com/gallery`
+- 判断是否真有问题时，先检查三件事：
+  - `config.toml` 的 `baseURL` 是否仍是规范域名 `https://simzhou.com/`
+  - 页面 canonical 是否指向规范 URL
+  - sitemap 是否只提交规范 URL，而不是 `http` / `www` / 无尾斜杠版本
+- 如果规范 URL 已可访问且可索引，这类重定向页通常不需要单独“修复”
+- 更值得修的是站内残留的旧绝对链接，例如 front matter 里的 `http://simzhou.com/about`
+
+### 404 与下线页索引策略
+
+- 404 页面不应继续输出 `index,follow`，当前仓库已在 `layouts/_partials/head/meta.html` 中对 `.Kind == "404"` 输出 `noindex,nofollow`
+- notebook 下线跳转页 `docs/notebook/index.html` 也应显式输出 `noindex,nofollow`
+- 以后如果再做临时下线页、占位页或跳转页，优先检查最终生成 HTML 的 `<meta name="robots">`，不要只看模板源文件
+- 涉及搜索收录问题时，排查顺序应优先看生成产物：
+  - `docs/404.html`
+  - `docs/en/404.html`
+  - `docs/notebook/index.html`
+
 ### IndexNow 接入方式
 
 - 仓库已接入 IndexNow，采用官方 key 文件 + POST API 的最小闭环方案

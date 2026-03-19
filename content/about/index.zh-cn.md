@@ -5,7 +5,7 @@ date: 2020-06-28T11:06:43+08:00
 lastmod: 2020-06-28T11:06:43+08:00
 draft: false
 author: "SimZhou"
-authorLink: "http://simzhou.com/about"
+authorLink: "https://simzhou.com/about/"
 description: ""
 
 hiddenFromHomePage: false
