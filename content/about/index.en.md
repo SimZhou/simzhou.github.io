@@ -24,32 +24,26 @@ license: ""
 
 <!--more-->
 
-
 ​    
 
-Hello, and what a great honor to have you here! 
+Hello there. Out of all the people in the world, the fact that you came across my blog feels like quite a lucky coincidence.
 
-I am Simon, a tech lover, hopefully my blog could be of some help to you!  
+I am Simon, a technology enthusiast, and I hope this blog can be of some help to you.
 
-### Who am I ...
+### I Am...
 
 - A dreamer
-- An NLPer
-- An enthusiast of computer, music, games
-- A proponent and practitioner of [Feynman Technique](https://golden.com/wiki/Feynman_Technique)
-- A boy who wants to understand everything in deep
+- A tech geek
+- Someone who dislikes memorizing names and prefers understanding how things work and how they connect, and a practitioner of the [Feynman Technique](https://golden.com/wiki/Feynman_Technique)
+- A fan of music, games, and running
 
+### Why I Built This Blog
 
-
-### The Purpose of This Blog
-
-- :heavy_check_mark: To share some of my opinions of the world
-
-- :heavy_check_mark: To record my life moments
-
-- :heavy_check_mark: ​To keep myself a peace land in the era of exploding information 
-
-  (or probably, contributing to it:upside_down_face:)
+- [x] To share ideas
+- [x] To record my life
+- [x] To present myself
+- [x] In 2020, in an era of information overload on the internet, I chose to contribute a little more to the explosion of information. Just kidding.
+- [x] To remind myself not to forget why I started. (2021.04.15)
 
 <!-- ### My Projects
 
@@ -67,20 +61,9 @@ I am Simon, a tech lover, hopefully my blog could be of some help to you!
 
    {{<image src="/images/sentiment_demo.png" width="100%">}} -->
 
-
-
-### Values
-
-[Names Don't Constitute Knowledge - Rechard Feymann](https://youtu.be/lFIYKmos3-s)
-
-[Learn by playing - the Super Mario Effect](https://youtu.be/9vJRopau0g0)
-
-
-
-
 ### Contact
 
-Mail{{<link "mailto:yihua.zhou@outlook.com" "yihua.zhou@outlook.com">}}
+Mail: {{<link "mailto:yihua.zhou@outlook.com" "yihua.zhou@outlook.com">}}
 
 Github: [@simzhou](https://github.com/simzhou)
 
