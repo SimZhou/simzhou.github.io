@@ -1,0 +1,34 @@
+name: Submit IndexNow URLs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  submit-indexnow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect changed public URLs
+        id: collect
+        shell: bash
+        run: |
+          chmod +x scripts/collect_indexnow_urls.sh scripts/submit_indexnow.sh
+          scripts/collect_indexnow_urls.sh "${{ github.event.before }}" "${{ github.sha }}" > /tmp/indexnow-urls.txt
+          cat /tmp/indexnow-urls.txt
+
+          count="$(wc -l < /tmp/indexnow-urls.txt | tr -d ' ')"
+          echo "count=${count}" >> "$GITHUB_OUTPUT"
+
+      - name: Submit changed URLs to IndexNow
+        if: steps.collect.outputs.count != '0'
+        shell: bash
+        run: |
+          mapfile -t urls < /tmp/indexnow-urls.txt
+          scripts/submit_indexnow.sh "${urls[@]}"
