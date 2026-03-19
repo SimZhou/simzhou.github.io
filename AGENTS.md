@@ -5,7 +5,7 @@
 - 个人网站源码仓库
 - 静态站点生成器：Hugo extended
 - 主题：LoveIt
-- 辅助站点工具：VuePress 1
+- 辅助站点工具：VuePress 2
 - 发布方式：GitHub Pages，发布目录为 `docs/`
 
 ## 关键目录
@@ -75,6 +75,215 @@
 - `layouts/_default/gallery.html`：当前为本地自定义实现，不是主题原生模板；改动时要确认 `assets/album/` 读取、图片处理和 lightgallery 仍可用
 - `content/gallery/index.zh-cn.md` 与 `content/gallery/index.en.md`：当前依赖 `layout: "gallery"`；如果移除或改名，`/gallery/` 可能退回普通页面渲染
 - 任何直接复制自旧版 LoveIt 的 override 文件，升级主题后都应优先与主题当前同名模板逐项比对
+
+## 本项目新增经验
+
+### VuePress notebook 临时下线
+
+- 当前仓库的 notebook 站点源目录是 `notebook.simzhou.com/`，发布目录是 `docs/notebook/`
+- 如果需要临时下线 notebook，不要只改入口，至少做两件事：
+  - 在 `config.toml` 里把中英文菜单中的 notebook 入口改到 `"/404.html"` / `"/en/404.html"`
+  - 把 `docs/notebook/index.html` 改成直接跳转到 `/404.html`
+- 改完菜单后必须重新执行 `hugo --destination docs`，否则主站生成产物里的顶部导航不会同步更新
+
+### 多语言文章图片资源规则
+
+- 本仓库文章通常使用 page bundle：图片与 `index.zh-cn.md` / `index.en.md` 放在同一目录
+- LoveIt 的 `image` shortcode 和 markdown 图片渲染会正确走 `.Page.Resources`，优先使用这套机制
+- 英文页面生成后，图片 URL 往往会落到 `/posts/...`，而不一定是 `/en/posts/...`；这在本仓库里是正常现象
+- 不要假设 Hugo 会把同一组 page bundle 图片复制到中英文两个输出目录
+
+### 这次麻将文章踩坑的根因
+
+- 文章目录：`content/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/`
+- 最初中英文文章里那组左右对比图是用 raw HTML 写的相对路径 `<img src="Missing_figures--Original.png">`
+- raw HTML 不会经过 Hugo 的 page resource 解析
+- 中文页之所以能正常显示，只是因为最终资源刚好位于 `/posts/...`
+- 英文页会按相对路径去找 `/en/posts/...` 下的资源，而这些文件并不存在，所以会裂图
+
+### 并排对比图的正确做法
+
+- 不要在 raw HTML 里手写相对 `img src`
+- 当前仓库已新增项目级 shortcode：`layouts/shortcodes/compare-images.html`
+- 这个 shortcode：
+  - 复用了 LoveIt 的 `plugin/img.html`
+  - 通过 `.Page.Resources` 解析图片
+  - 保留左右并排布局
+  - 保留 lightgallery
+  - 能同时稳定支持中文页和英文页
+- 以后如果文章里需要两张图横向对比，优先用 `compare-images`，不要重复写 raw HTML
+
+### 图片使用策略
+
+- 如果中英文共用同一张图：
+  - 优先使用 `{{< image src="..." >}}` 或 `{{< compare-images ... >}}`
+  - 不要手写相对路径 `<img>`
+- 如果中英文要使用不同图片：
+  - 使用语言区分文件名，例如 `meme1.en.png`、`meme1.zh.jpg`
+  - 构建后检查实际生成路径是否符合预期
+
+### 排查图片问题的方法
+
+- 先看生成产物，不要只看 markdown 源文件：
+  - `docs/posts/...`
+  - `docs/en/posts/...`
+- 直接检查最终 HTML 中的 `href` / `data-src`
+- 任何图片相关修改后，都重新执行 `hugo --destination docs`
+
+### 本环境下 git 操作经验
+
+- 不要并行触发 `git commit` 和 `git push`
+- 正确流程是串行执行：
+  - 先 `git add` / `git commit`
+  - 明确确认提交成功生成
+  - 再执行 `git push origin main`
+- 如果 `git commit` 和 `git push` 并行触发，可能出现 push 先执行、输出 `Everything up-to-date` 的情况
+- 后续在这个仓库里发布改动时，`git push` 必须放在 commit 成功之后，作为后续阻塞操作执行
+
+### VuePress 状态更新
+
+- `notebook.simzhou.com/` 已迁移到 VuePress 2 构建链，不再维护 VuePress 1
+- 根目录 `package.json` 里的 notebook 构建命令当前使用 `vuepress next`
+- 旧版 VuePress 1 依赖链曾是 npm audit / GitHub Dependabot 高危告警的重要来源；后续不要再回退到 VuePress 1
+
+### 当前 notebook 下线策略
+
+- notebook 目前处于临时下线状态
+- 主站导航中的 “笔记本 / Notebook” 入口已经改到主站 404：
+  - 中文：`/404.html`
+  - 英文：`/en/404.html`
+- 发布目录中的 `docs/notebook/index.html` 也被替换为跳转到 `/404.html`
+- 如果将来重新上线 notebook，需要同时恢复：
+  - `config.toml` 中的中英文菜单链接
+  - `docs/notebook/` 的真实构建产物
+
+### 已完成的全站 SEO 基础改造
+
+- `config.toml` 已切到正式 `https` 根地址：`https://simzhou.com/`
+- 已启用并覆盖 `robots.txt`
+- 已生成并发布 `sitemap.xml`
+- `<head>` 已补齐基础 SEO 元信息：
+  - `description`
+  - `keywords`
+  - `author`
+  - `robots`
+  - `canonical`
+  - `hreflang`
+  - `x-default`
+- 已补齐站点级与文章级 JSON-LD 结构化数据
+- 已新增 `BreadcrumbList` 结构化数据 partial：
+  - `layouts/_partials/head/breadcrumb-schema.html`
+- 与 SEO 相关的本地覆盖主要集中在：
+  - `layouts/baseof.html`
+  - `layouts/robots.txt`
+  - `layouts/_partials/head/meta.html`
+  - `layouts/_partials/head/link.html`
+  - `layouts/_partials/head/seo.html`
+  - `layouts/_partials/head/breadcrumb-schema.html`
+
+### 搜索引擎收录与验证状态
+
+- Google / Bing / 百度的优化工作要区分三类：
+  - 抓取与发现：`robots.txt`、`sitemap.xml`
+  - 验证：站长平台文件或 meta / DNS 验证
+  - 主动提交：IndexNow、站长平台 URL 提交
+- 当前已接入或已准备好的验证/提交资源：
+  - 百度验证文件：`static/baidu_verify_ScTCY6Ajb4.html`
+  - Bing 验证文件：`static/BingSiteAuth.xml`
+  - IndexNow key 文件：`static/2696c9db-b5a7-457c-b5d5-08557966975a.txt`
+- 发布后对应线上地址是：
+  - `https://simzhou.com/baidu_verify_ScTCY6Ajb4.html`
+  - `https://simzhou.com/BingSiteAuth.xml`
+  - `https://simzhou.com/2696c9db-b5a7-457c-b5d5-08557966975a.txt`
+
+### IndexNow 接入方式
+
+- 仓库已接入 IndexNow，采用官方 key 文件 + POST API 的最小闭环方案
+- 已有手动提交脚本：
+  - `scripts/submit_indexnow.sh`
+- 已有变更 URL 收集脚本：
+  - `scripts/collect_indexnow_urls.sh`
+- 已有 GitHub Actions 自动提交流程：
+  - `.github/workflows/indexnow.yml`
+- 当前自动化逻辑：
+  - 监听 `main` 分支 push
+  - 比较 push 前后 `docs/*.html` 的差异
+  - 将变更页面路径映射为公开 URL
+  - 自动调用 `submit_indexnow.sh` 提交到 IndexNow
+- 本地手动调用格式：
+  - `scripts/submit_indexnow.sh https://simzhou.com/some-page/`
+- `collect_indexnow_urls.sh` 的路径映射规则：
+  - `docs/index.html` -> `https://simzhou.com/`
+  - `docs/en/index.html` -> `https://simzhou.com/en/`
+  - 目录页 `.../index.html` -> 对应目录 URL，并补尾部 `/`
+  - 跳过 `404.html`
+
+### Bing Webmaster 经验
+
+- Bing 的 XML 文件验证要求文件位于站点根目录；本仓库正确做法是把验证文件放到 `static/`
+- 不要把用户手工下载后临时放在仓库根目录的 `BingSiteAuth.xml` 直接当发布文件使用
+- 正确流程：
+  - 读取根目录临时文件内容
+  - 同步到 `static/BingSiteAuth.xml`
+  - 重新 `hugo --destination docs`
+  - 确认 `docs/BingSiteAuth.xml`
+  - 再提交和推送
+- Bing 的 SEO 提示里：
+  - `Indexed successfully` 说明收录链路是通的
+  - `More than one h1 tag` 值得优先处理
+  - `Title too short` 次一级处理即可
+
+### H1 层级优化经验
+
+- LoveIt 默认 `themes/loveit/layouts/summary.html` 会在列表页把每篇摘要标题渲染成 `h1`
+- 这会导致首页和列表页出现多个 `h1`，容易被 Bing 报 `More than one h1 tag`
+- 当前仓库已新增本地覆盖：
+  - `layouts/summary.html`
+- 该覆盖的核心策略是：
+  - 列表页摘要标题从 `h1` 降为 `h2`
+  - 单篇文章页主标题仍保留 `h1`
+- 文章正文中如果已经有页面主标题，正文小节应尽量从 `##` 开始
+- 这次已对文章 `content/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/` 的中英文正文做过一次 `# -> ##` 调整
+- 以后如果 Bing 再报多 `h1`，先检查：
+  - 列表模板
+  - 单篇页模板
+  - markdown 正文是否误用过多一级标题
+
+### 文章与样式相关经验
+
+- 文章正文 `h1` 到 `h4` 的“标题前间距”已在 `assets/css/_custom.scss` 中调大；标题后间距未调
+- 麻将文章中那句对比说明已经改成单独一行的辅助说明，使用 `post-note` 样式，灰色、缩小、居中显示
+- 以后如果要做类似“补充说明/注释”，优先复用 `post-note` 样式，而不是写内联样式
+
+### 这篇麻将文章的当前状态
+
+- 文章目录：
+  - `content/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/`
+- 当前已有：
+  - 中文稿 `index.zh-cn.md`
+  - 英文稿 `index.en.md`
+  - 中英文文章都启用了 `lightgallery: true`
+- 已做过的关键修正：
+  - 中文正文做过一轮轻量措辞和语法优化
+  - 新增英文版本
+  - 英文文内链接已指向英文站点入口
+  - 并排对比图已改为项目级 shortcode
+  - 中英文文章中的并排图和说明文案已同步
+  - 正文一级标题已降为二级标题
+
+### SEO / 站长平台后续优先级
+
+- 当前已经完成的技术层工作：
+  - 基础 meta
+  - canonical / hreflang
+  - sitemap / robots
+  - Article / Breadcrumb JSON-LD
+  - IndexNow
+  - Bing / 百度验证文件准备
+- 后续若继续推进，优先级建议：
+  - 先完成 Google Search Console / Bing / 百度的站点验证与 sitemap 提交
+  - 再补历史文章的 `description`、高质量封面图和英文内容质量
+  - 最后才处理低优先级的首页 title 微调或更细碎的 SEO 提示
 
 ## 检索入口
 
