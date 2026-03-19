@@ -26,7 +26,7 @@ Recently, I used Codex to build a beginner-friendly riichi mahjong site: <https:
 <!--more-->
 The source repository is here: <https://github.com/SimZhou/riichi_mahjong_book>.
 
-# Background
+## Background
 
 I recently got into Mahjong Soul, then quickly realized I kept dealing into other players, to the point that I almost rage-uninstalled the game.
 
@@ -36,7 +36,7 @@ That led me to a riichi mahjong tutorial site that seems fairly well known in Ja
 
 It looks like the site had once been reposted and translated by a blog called 79, but that site appears to have shut down, so I decided to build my own version.
 
-# Building the Site with Codex
+## Building the Site with Codex
 
 Using Codex for this turned out to be very simple. It is especially good at this kind of fairly direct frontend-and-backend work.
 
@@ -46,7 +46,7 @@ In practice, the whole project got started from a single prompt:
 Please build a riichi mahjong handbook site based on http://beginners.biz/.
 ```
 
-# An Important Pitfall
+## An Important Pitfall
 
 At first, I used Codex + GPT-5.4 and directly asked the model to translate the source pages one by one and turn them into web pages.
 
@@ -75,7 +75,7 @@ Especially for a model like GPT-5.4, which is one of the strongest models curren
 
 **So I tried creating a Skill, and suddenly things became much easier.**
 
-# The Results After Using a Skill
+## The Results After Using a Skill
 
 I used Codex's `$skill-creator` to create a Skill and gave it instructions roughly like these:
 
@@ -100,7 +100,7 @@ The length of the content also stays roughly aligned, without becoming obviously
 
 (The final refined Skill file is here: [translate-japanese-webpage/SKILL.md](https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md))
 
-# Summary
+## Summary
 
 For a task like this, Codex can already do a pretty solid job.
 

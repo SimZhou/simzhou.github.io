@@ -184,20 +184,24 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#background">Background</a></li>
-    <li><a href="#building-the-site-with-codex">Building the Site with Codex</a></li>
-    <li><a href="#an-important-pitfall">An Important Pitfall</a></li>
-    <li><a href="#the-results-after-using-a-skill">The Results After Using a Skill</a></li>
-    <li><a href="#summary">Summary</a></li>
+    <li>
+      <ul>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#building-the-site-with-codex">Building the Site with Codex</a></li>
+        <li><a href="#an-important-pitfall">An Important Pitfall</a></li>
+        <li><a href="#the-results-after-using-a-skill">The Results After Using a Skill</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>Recently, I used Codex to build a beginner-friendly riichi mahjong site: <a href="https://simzhou.com/riichi_mahjong_book/en/" target="_blank" rel="noopener noreffer ">https://simzhou.com/riichi_mahjong_book/en/</a>.</p>
 <p>The source repository is here: <a href="https://github.com/SimZhou/riichi_mahjong_book" target="_blank" rel="noopener noreffer ">https://github.com/SimZhou/riichi_mahjong_book</a>.</p>
-<h1 id="background">Background <a href="#background">¶</a></h1><p>I recently got into Mahjong Soul, then quickly realized I kept dealing into other players, to the point that I almost rage-uninstalled the game.</p>
+<h2 id="background">Background <a href="#background">¶</a></h2><p>I recently got into Mahjong Soul, then quickly realized I kept dealing into other players, to the point that I almost rage-uninstalled the game.</p>
 <p>In the end, I decided I should seriously spend some time learning riichi mahjong.</p>
 <p>That led me to a riichi mahjong tutorial site that seems fairly well known in Japan: <a href="http://beginners.biz/" target="_blank" rel="noopener noreffer ">http://beginners.biz/</a></p>
 <p>It looks like the site had once been reposted and translated by a blog called 79, but that site appears to have shut down, so I decided to build my own version.</p>
-<h1 id="building-the-site-with-codex">Building the Site with Codex <a href="#building-the-site-with-codex">¶</a></h1><p>Using Codex for this turned out to be very simple. It is especially good at this kind of fairly direct frontend-and-backend work.</p>
+<h2 id="building-the-site-with-codex">Building the Site with Codex <a href="#building-the-site-with-codex">¶</a></h2><p>Using Codex for this turned out to be very simple. It is especially good at this kind of fairly direct frontend-and-backend work.</p>
 <p>In practice, the whole project got started from a single prompt:</p>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-text">
@@ -205,7 +209,7 @@
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Please build a riichi mahjong handbook site based on http://beginners.biz/.</span></span></code></pre></div></div>
-<h1 id="an-important-pitfall">An Important Pitfall <a href="#an-important-pitfall">¶</a></h1><p>At first, I used Codex + GPT-5.4 and directly asked the model to translate the source pages one by one and turn them into web pages.</p>
+<h2 id="an-important-pitfall">An Important Pitfall <a href="#an-important-pitfall">¶</a></h2><p>At first, I used Codex + GPT-5.4 and directly asked the model to translate the source pages one by one and turn them into web pages.</p>
 <p>The frontend and backend themselves were fine, but the translation and layout quality were disappointing.</p>
 <p><strong>Sometimes one illustrative image would go missing; other times some content disappeared. In some places, the model even added its own interpretation or made translation mistakes.</strong></p>
 <p><strong>And even after asking the model to review the output several times, those issues still were not fully resolved.</strong></p>
@@ -238,7 +242,7 @@
 <p>At that point I was thinking: translation should have stopped being a hard problem for large models years ago.</p>
 <p>Especially for a model like GPT-5.4, which is one of the strongest models currently available, this kind of low-level mistake really should not have been happening.</p>
 <p><strong>So I tried creating a Skill, and suddenly things became much easier.</strong></p>
-<h1 id="the-results-after-using-a-skill">The Results After Using a Skill <a href="#the-results-after-using-a-skill">¶</a></h1><p>I used Codex&rsquo;s <code>$skill-creator</code> to create a Skill and gave it instructions roughly like these:</p>
+<h2 id="the-results-after-using-a-skill">The Results After Using a Skill <a href="#the-results-after-using-a-skill">¶</a></h2><p>I used Codex&rsquo;s <code>$skill-creator</code> to create a Skill and gave it instructions roughly like these:</p>
 <ul>
 <li>The input is the original Japanese webpage, and the output is the webpage in the target language</li>
 <li>Translate as faithfully as possible to the original meaning, without adding your own interpretation and without losing content</li>
@@ -271,7 +275,7 @@
 <p>You can clearly see that the corrected version is much closer to the original page, with both the content and the layout preserved more faithfully.</p>
 <p>The length of the content also stays roughly aligned, without becoming obviously longer or shorter than the source.</p>
 <p>(The final refined Skill file is here: <a href="https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md" target="_blank" rel="noopener noreffer ">translate-japanese-webpage/SKILL.md</a>)</p>
-<h1 id="summary">Summary <a href="#summary">¶</a></h1><p>For a task like this, Codex can already do a pretty solid job.</p>
+<h2 id="summary">Summary <a href="#summary">¶</a></h2><p>For a task like this, Codex can already do a pretty solid job.</p>
 <p>The main drawback is that I still had to keep pressing Enter for Codex throughout the process.</p>
 <p>Later on, it would be worth exploring a multi-Agent / SubAgent workflow: for example, assigning one Agent to supervise content quality and another to handle webpage translation and layout.</p>
 <p>That would get much closer to having AI collaborate and complete this kind of work automatically.</p></div><div class="post-footer" id="post-footer">

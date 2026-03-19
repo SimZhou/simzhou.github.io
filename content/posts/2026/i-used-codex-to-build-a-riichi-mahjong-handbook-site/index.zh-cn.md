@@ -26,7 +26,7 @@ license: ""
 <!--more-->
 源码仓库在这里：<https://github.com/SimZhou/riichi_mahjong_book>。
 
-# 背景
+## 背景
 
 起因是最近入坑了雀魂，结果发现自己老是给人点炮，于是一度想怒卸游戏（不是）。
 
@@ -36,7 +36,7 @@ license: ""
 
 之前似乎曾被一个叫 79 的博客转载并翻译过，但那个网站后来似乎已经关闭了，所以我就想着自己再搭一个。
 
-# 使用 Codex 搭建网站
+## 使用 Codex 搭建网站
 
 用 Codex 做这件事，真的非常简单。它尤其擅长这种相对直接的前后端任务。
 
@@ -46,7 +46,7 @@ license: ""
 请帮我根据http://beginners.biz/网页，做一个日麻教程手册网站。
 ```
 
-# 一个重要的踩坑点
+## 一个重要的踩坑点
 
 最初我用 Codex + GPT-5.4 来搭建时，直接让模型逐页翻译网页并生成对应页面。
 
@@ -75,7 +75,7 @@ license: ""
 
 **于是，我尝试创建了一个 Skill，一切突然就变得容易了起来。**
 
-# 使用 Skill 后的效果
+## 使用 Skill 后的效果
 
 我使用 Codex 的 `$skill-creator` 创建了一个 Skill，大致告诉它：
  - 输入是原始日文的网页，输出为目标语言的网页
@@ -99,7 +99,7 @@ license: ""
 
 （最后优化后的 Skill 文件见：[translate-japanese-webpage/SKILL.md](https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md)）
 
-# 总结
+## 总结
 
 对于这样的简单任务，Codex 目前已经能做得相当不错。
 

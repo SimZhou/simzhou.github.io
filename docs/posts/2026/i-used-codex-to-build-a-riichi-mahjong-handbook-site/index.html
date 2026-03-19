@@ -184,20 +184,24 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#背景">背景</a></li>
-    <li><a href="#使用-codex-搭建网站">使用 Codex 搭建网站</a></li>
-    <li><a href="#一个重要的踩坑点">一个重要的踩坑点</a></li>
-    <li><a href="#使用-skill-后的效果">使用 Skill 后的效果</a></li>
-    <li><a href="#总结">总结</a></li>
+    <li>
+      <ul>
+        <li><a href="#背景">背景</a></li>
+        <li><a href="#使用-codex-搭建网站">使用 Codex 搭建网站</a></li>
+        <li><a href="#一个重要的踩坑点">一个重要的踩坑点</a></li>
+        <li><a href="#使用-skill-后的效果">使用 Skill 后的效果</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>最近，我用 Codex 做了一个日麻入门网站：<a href="https://simzhou.com/riichi_mahjong_book/" target="_blank" rel="noopener noreffer ">https://simzhou.com/riichi_mahjong_book/</a>。</p>
 <p>源码仓库在这里：<a href="https://github.com/SimZhou/riichi_mahjong_book" target="_blank" rel="noopener noreffer ">https://github.com/SimZhou/riichi_mahjong_book</a>。</p>
-<h1 id="背景">背景 <a href="#%e8%83%8c%e6%99%af">¶</a></h1><p>起因是最近入坑了雀魂，结果发现自己老是给人点炮，于是一度想怒卸游戏（不是）。</p>
+<h2 id="背景">背景 <a href="#%e8%83%8c%e6%99%af">¶</a></h2><p>起因是最近入坑了雀魂，结果发现自己老是给人点炮，于是一度想怒卸游戏（不是）。</p>
 <p>后来还是决定认真补一补日麻技术（认真脸）。</p>
 <p>于是我找到了一个在日本似乎比较知名的立直麻将教学网站：<a href="http://beginners.biz/" target="_blank" rel="noopener noreffer ">http://beginners.biz/</a></p>
 <p>之前似乎曾被一个叫 79 的博客转载并翻译过，但那个网站后来似乎已经关闭了，所以我就想着自己再搭一个。</p>
-<h1 id="使用-codex-搭建网站">使用 Codex 搭建网站 <a href="#%e4%bd%bf%e7%94%a8-codex-%e6%90%ad%e5%bb%ba%e7%bd%91%e7%ab%99">¶</a></h1><p>用 Codex 做这件事，真的非常简单。它尤其擅长这种相对直接的前后端任务。</p>
+<h2 id="使用-codex-搭建网站">使用 Codex 搭建网站 <a href="#%e4%bd%bf%e7%94%a8-codex-%e6%90%ad%e5%bb%ba%e7%bd%91%e7%ab%99">¶</a></h2><p>用 Codex 做这件事，真的非常简单。它尤其擅长这种相对直接的前后端任务。</p>
 <p>基本上只要一句话，就能把项目初始化起来：</p>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-">
@@ -205,7 +209,7 @@
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
         <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">请帮我根据http://beginners.biz/网页，做一个日麻教程手册网站。</span></span></code></pre></div></div>
-<h1 id="一个重要的踩坑点">一个重要的踩坑点 <a href="#%e4%b8%80%e4%b8%aa%e9%87%8d%e8%a6%81%e7%9a%84%e8%b8%a9%e5%9d%91%e7%82%b9">¶</a></h1><p>最初我用 Codex + GPT-5.4 来搭建时，直接让模型逐页翻译网页并生成对应页面。</p>
+<h2 id="一个重要的踩坑点">一个重要的踩坑点 <a href="#%e4%b8%80%e4%b8%aa%e9%87%8d%e8%a6%81%e7%9a%84%e8%b8%a9%e5%9d%91%e7%82%b9">¶</a></h2><p>最初我用 Codex + GPT-5.4 来搭建时，直接让模型逐页翻译网页并生成对应页面。</p>
 <p>网页的前后端本身没有问题，但翻译和排版效果却差强人意。</p>
 <p><strong>不是这里丢了一张示意图，就是那里少了一些内容；有时还会擅自加入自己的理解，甚至出现翻译错误。</strong></p>
 <p><strong>而且即便让模型自己抽查了好几次，这些问题也始终没有完全解决。</strong></p>
@@ -238,7 +242,7 @@
 <p>我当时就在想，翻译这件事对大模型来说，照理说几年前就不该算难题了。</p>
 <p>尤其是像 GPT-5.4 这样当前最领先的模型之一，按理不该出现这么低级的错误。</p>
 <p><strong>于是，我尝试创建了一个 Skill，一切突然就变得容易了起来。</strong></p>
-<h1 id="使用-skill-后的效果">使用 Skill 后的效果 <a href="#%e4%bd%bf%e7%94%a8-skill-%e5%90%8e%e7%9a%84%e6%95%88%e6%9e%9c">¶</a></h1><p>我使用 Codex 的 <code>$skill-creator</code> 创建了一个 Skill，大致告诉它：</p>
+<h2 id="使用-skill-后的效果">使用 Skill 后的效果 <a href="#%e4%bd%bf%e7%94%a8-skill-%e5%90%8e%e7%9a%84%e6%95%88%e6%9e%9c">¶</a></h2><p>我使用 Codex 的 <code>$skill-creator</code> 创建了一个 Skill，大致告诉它：</p>
 <ul>
 <li>输入是原始日文的网页，输出为目标语言的网页</li>
 <li>尽量按照原来的含义翻译网页，不要加入自己的理解，也不能丢失内容</li>
@@ -271,7 +275,7 @@
 <p>可以明显看出，修正后的页面已经比较接近原网页，内容和版式都保留得更完整。</p>
 <p>内容长度也基本一致，不会明显偏多或偏少。</p>
 <p>（最后优化后的 Skill 文件见：<a href="https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md" target="_blank" rel="noopener noreffer ">translate-japanese-webpage/SKILL.md</a>）</p>
-<h1 id="总结">总结 <a href="#%e6%80%bb%e7%bb%93">¶</a></h1><p>对于这样的简单任务，Codex 目前已经能做得相当不错。</p>
+<h2 id="总结">总结 <a href="#%e6%80%bb%e7%bb%93">¶</a></h2><p>对于这样的简单任务，Codex 目前已经能做得相当不错。</p>
 <p>美中不足的是，全程我还是需要不停的给Codex敲回车。</p>
 <p>后续可以探索一下多 Agent / SubAgent 的工作流，比如指派一个 Agent 负责内容监督，另一个 Agent 负责网页翻译和排版。</p>
 <p>这样也许就能进一步解放双手，更接近让 AI 自动协作完成这类任务。</p></div><div class="post-footer" id="post-footer">
