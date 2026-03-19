@@ -13,6 +13,8 @@ categories: ["AI", "Projects"]
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
+featuredImage: "mahjong-soul-games.webp"
+featuredImagePreview: "mahjong-soul-games.webp"
 
 toc:
   enable: true
