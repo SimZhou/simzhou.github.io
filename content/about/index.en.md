@@ -80,10 +80,8 @@ I am Simon, a tech lover, hopefully my blog could be of some help to you!
 
 ### Contact
 
-Mail: {{<link "mailto:yihua.zhou@outlook.com" "yihua.zhou@outlook.com">}}
+Mail{{<link "mailto:yihua.zhou@outlook.com" "yihua.zhou@outlook.com">}}
 
-WeChat: astro1boy
+Github: [@simzhou](https://github.com/simzhou)
 
-Github: [@SimZhou](https://github.com/simzhou)
-
-Twitter: @zhouyh0102
+LinkedIn: [@yihua-zhou](https://www.linkedin.com/in/yihua-zhou/)

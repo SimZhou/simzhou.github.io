@@ -69,13 +69,6 @@ license: ""
 
 邮箱：{{<link "mailto:yihua.zhou@outlook.com" "yihua.zhou@outlook.com">}}
 
-WeChat: astro1boy
+Github: [@simzhou](https://github.com/simzhou)
 
-Github: [@SimZhou](https://github.com/simzhou)
-
-Twitter: @zhouyh0102
-
-*(P.S. Twitter 很少用，微信或邮件可以确保联系到我，加我记得备注来由)*
-
-​    
-
+LinkedIn: [@yihua-zhou](https://www.linkedin.com/in/yihua-zhou/)
