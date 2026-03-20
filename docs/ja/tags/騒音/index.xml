@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>騒音 - タグ - Simonの夢宇宙</title>
+        <link>https://simzhou.com/ja/tags/%E9%A8%92%E9%9F%B3/</link>
+        <description>騒音 - タグ - Simonの夢宇宙</description>
+        <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 24 Jul 2020 18:36:17 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/ja/tags/%E9%A8%92%E9%9F%B3/" rel="self" type="application/rss+xml" /><item>
+    <title>古いパソコンのうるさい HDD を静かにした方法</title>
+    <link>https://simzhou.com/ja/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</link>
+    <pubDate>Fri, 24 Jul 2020 18:36:17 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/ja/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/case-side.jpeg" referrerpolicy="no-referrer">
+            </div>古い PC ケースの中で鳴っていた HDD の騒音を、簡単な方法で完全に消すことができた。]]></description>
+</item>
+</channel>
+</rss>

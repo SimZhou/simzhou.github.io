@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Codex を使ってリーチ麻雀の入門サイトを作った - Simonの夢宇宙</title><meta name="description" content="Codex を使ってリーチ麻雀の入門サイトを作り、保守したときの記録。"><meta name="keywords" content="AI, Codex, Agent, リーチ麻雀, 麻雀"><meta name="author" content="SimZhou"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/">
+  <meta property="og:site_name" content="Simonの夢宇宙">
+  <meta property="og:title" content="Codex を使ってリーチ麻雀の入門サイトを作った">
+  <meta property="og:description" content="Codex を使ってリーチ麻雀の入門サイトを作り、保守したときの記録。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-18T12:35:00+08:00">
+    <meta property="article:modified_time" content="2026-03-18T12:35:00+08:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Codex">
+    <meta property="article:tag" content="Agent">
+    <meta property="article:tag" content="リーチ麻雀">
+    <meta property="article:tag" content="麻雀">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Codex を使ってリーチ麻雀の入門サイトを作った">
+  <meta name="twitter:description" content="Codex を使ってリーチ麻雀の入門サイトを作り、保守したときの記録。">
+<meta name="application-name" content="Simonの夢宇宙">
+<meta name="apple-mobile-web-app-title" content="Simonの夢宇宙">
+<meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" /><link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" /><link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" /><link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" /><link rel="alternate" hreflang="x-default" href="https://simzhou.com/" /><link rel="prev" href="https://simzhou.com/ja/posts/2026/humans-job-in-the-future-will-be-to-press-enter-for-ai/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Codex を使ってリーチ麻雀の入門サイトを作った",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/simzhou.com\/ja\/posts\/2026\/i-used-codex-to-build-a-riichi-mahjong-handbook-site\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                            "width":  1495 ,
+                            "height":  1484 
+                        }],"genre": "posts","keywords": "AI, Codex, Agent, リーチ麻雀, 麻雀","wordcount":  1540 ,
+        "url": "https:\/\/simzhou.com\/ja\/posts\/2026\/i-used-codex-to-build-a-riichi-mahjong-handbook-site\/","datePublished": "2026-03-18T12:35:00+08:00","dateModified": "2026-03-18T12:35:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Simon Zhou","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                    "width":  1495 ,
+                    "height":  1484 
+                }},"author": {
+                "@type": "Person",
+                "name": "SimZhou"
+            },"description": "Codex を使ってリーチ麻雀の入門サイトを作り、保守したときの記録。"
+    }
+    </script><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Simonの夢宇宙",
+            "item": "https://simzhou.com/ja/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Posts",
+            "item": "https://simzhou.com/ja/posts/"
+          },{
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Codex を使ってリーチ麻雀の入門サイトを作った",
+            "item": "https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/"
+          }]
+    }
+    </script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?8410d61b6138746461857e5ba600200a";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'light';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/ja/" title="Simonの夢宇宙"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simonの夢宇宙</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/ja/posts/"><i class='fa fa-heart'></i> 記事 </a><a class="menu-item" href="/ja/categories/"><i class='fas fa-th-list'></i> カテゴリ </a><a class="menu-item" href="/ja/gallery/"><i class='fas fa-images'></i> ギャラリー </a><a class="menu-item" href="/ja/404.html"><i class='fas fa-book'></i> ノート </a><a class="menu-item" href="/ja/about/"><i class='fas fa-question-circle'></i> 自己紹介 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="言語を選択">
+                        
+                        <i class="fas fa-language"></i>
+                        
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/">中文</option><option value="/en/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/">English</option><option value="/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" selected>日本語</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="タイトルと内容を検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマの切り替え">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/ja/" title="Simonの夢宇宙"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simonの夢宇宙</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="タイトルと内容を検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/ja/posts/" title=""><i class='fa fa-heart'></i>記事</a><a class="menu-item" href="/ja/categories/" title=""><i class='fas fa-th-list'></i>カテゴリ</a><a class="menu-item" href="/ja/gallery/" title=""><i class='fas fa-images'></i>ギャラリー</a><a class="menu-item" href="/ja/404.html" title=""><i class='fas fa-book'></i>ノート</a><a class="menu-item" href="/ja/about/" title=""><i class='fas fa-question-circle'></i>自己紹介</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマの切り替え">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="言語を選択">日本語<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/">中文</option><option value="/en/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/">English</option><option value="/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Codex を使ってリーチ麻雀の入門サイトを作った</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/SimZhou" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>SimZhou</a></span>&nbsp;<span class="post-category">カテゴリー <a href="/ja/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a>&nbsp;<a href="/ja/categories/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/"><i class="far fa-folder" aria-hidden="true"></i>プロジェクト</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-03-18">2026-03-18</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;1540 語&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;4 分&nbsp;<span id="/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" class="leancloud_visitors" data-flag-title="Codex を使ってリーチ麻雀の入門サイトを作った">
+                        <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;ビュー
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/mahjong-soul-games.webp"
+        data-srcset="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/mahjong-soul-games.webp, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/mahjong-soul-games.webp 1.5x, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/mahjong-soul-games.webp 2x"
+        data-sizes="auto"
+        alt="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/mahjong-soul-games.webp"
+        title="Codex を使ってリーチ麻雀の入門サイトを作り、保守したときの記録。" width="1980" height="506" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#背景">背景</a></li>
+        <li><a href="#codex-を使ってサイトを作る">Codex を使ってサイトを作る</a></li>
+        <li><a href="#大きな落とし穴">大きな落とし穴</a></li>
+        <li><a href="#skill-を使ったあとの結果">Skill を使ったあとの結果</a></li>
+        <li><a href="#まとめ">まとめ</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>最近、Codex を使って初心者向けのリーチ麻雀サイトを作った。<a href="https://simzhou.com/riichi_mahjong_book/en/" target="_blank" rel="noopener noreffer ">https://simzhou.com/riichi_mahjong_book/en/</a></p>
+<p>ソースリポジトリはこちら: <a href="https://github.com/SimZhou/riichi_mahjong_book" target="_blank" rel="noopener noreffer ">https://github.com/SimZhou/riichi_mahjong_book</a>。</p>
+<h2 id="背景">背景 <a href="#%e8%83%8c%e6%99%af">¶</a></h2><p>最近 Mahjong Soul を始めたのだが、すぐに他家へ放銃しまくることに気づき、危うくキレてアンインストールしかけた。</p>
+<p>結局、ちゃんと時間を取ってリーチ麻雀を勉強したほうがいいと思うようになった。</p>
+<p>そこでたどり着いたのが、日本ではかなり有名らしいリーチ麻雀の解説サイトだった。<a href="http://beginners.biz/" target="_blank" rel="noopener noreffer ">http://beginners.biz/</a></p>
+<p>以前は「79」というブログが転載・翻訳していたようだが、そのサイトはもう閉鎖されたようなので、自分で作ることにした。</p>
+<h2 id="codex-を使ってサイトを作る">Codex を使ってサイトを作る <a href="#codex-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e4%bd%9c%e3%82%8b">¶</a></h2><p>こういう作業に Codex を使うのは、実際かなり簡単だった。特にこの手の、比較的まっすぐなフロントエンド＋バックエンド作業はとても得意だ。</p>
+<p>実際、このプロジェクトはほぼ 1 本のプロンプトから始まった。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="クリップボードにコピー"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Please build a riichi mahjong handbook site based on http://beginners.biz/.</span></span></code></pre></div></div>
+<h2 id="大きな落とし穴">大きな落とし穴 <a href="#%e5%a4%a7%e3%81%8d%e3%81%aa%e8%90%bd%e3%81%a8%e3%81%97%e7%a9%b4">¶</a></h2><p>最初のうちは Codex + GPT-5.4 を使い、元のページを 1 枚ずつ翻訳して Web ページに変換させていた。</p>
+<p>フロントエンドとバックエンド自体は問題なかったが、翻訳品質とレイアウト品質は期待外れだった。</p>
+<p><strong>説明用の画像が 1 枚抜け落ちることもあれば、内容の一部が消えることもあった。場所によっては、モデルが勝手に解釈を足したり、誤訳したりすることすらあった。</strong></p>
+<p><strong>しかも、何度かセルフレビューさせても、それらの問題は完全には解消されなかった。</strong></p>
+<p>以下は、翻訳後に元ページの説明図が欠落してしまった例である。</p>
+<div style="display:flex; flex-wrap:wrap; gap:1rem; align-items:flex-start; margin:1.5rem 0;">
+  <figure style="flex:1 1 320px; margin:0;"><a class="lightgallery" href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Original.png" title="麻雀牌の説明図が含まれている元ページ" data-thumbnail="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Original.png" data-sub-html="<h2>麻雀牌の説明図が含まれている元ページ</h2><p>麻雀牌の説明図が含まれている元ページ</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Original.png"
+            data-srcset="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Original.png, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Original.png 1.5x, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Original.png 2x"
+            data-sizes="auto"
+            alt="麻雀牌の説明図が含まれている元ページ" width="100%" height="344" />
+    </a>
+    <figcaption class="image-caption">麻雀牌の説明図が含まれている元ページ</figcaption>
+  </figure>
+  <figure style="flex:1 1 320px; margin:0;"><a class="lightgallery" href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Observed.png" title="麻雀牌の説明図が失われた翻訳後のページ" data-thumbnail="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Observed.png" data-sub-html="<h2>麻雀牌の説明図が失われた翻訳後のページ</h2><p>麻雀牌の説明図が失われた翻訳後のページ</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Observed.png"
+            data-srcset="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Observed.png, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Observed.png 1.5x, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Missing_figures--Observed.png 2x"
+            data-sizes="auto"
+            alt="麻雀牌の説明図が失われた翻訳後のページ" width="100%" height="576" />
+    </a>
+    <figcaption class="image-caption">麻雀牌の説明図が失われた翻訳後のページ</figcaption>
+  </figure>
+</div>
+
+<p>そのとき私はこう思った。翻訳は、大規模モデルにとって何年も前に難問でなくなっていてよいはずではないか。</p>
+<p>特に GPT-5.4 のような、現時点でもっとも強力なモデルのひとつであれば、この程度の低レベルなミスは本来起きるべきではない。</p>
+<p><strong>そこで Skill を作ってみたところ、一気に話が楽になった。</strong></p>
+<h2 id="skill-を使ったあとの結果">Skill を使ったあとの結果 <a href="#skill-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e3%81%82%e3%81%a8%e3%81%ae%e7%b5%90%e6%9e%9c">¶</a></h2><p>Codex の <code>$skill-creator</code> を使って Skill を作り、だいたい次のような指示を与えた。</p>
+<ul>
+<li>入力は元の日本語 Web ページ、出力はターゲット言語版のページ</li>
+<li>勝手な解釈を加えず、内容も落とさず、できる限り原文に忠実に翻訳する</li>
+<li>元ページにある説明図は 1 枚も省略しない</li>
+<li>ページのレイアウトやスタイルを変えず、表などの構造も保つ</li>
+</ul>
+<p>すると結果はかなり良くなった。翻訳後のページは文面でもレイアウトでも原文にかなり近くなり、目立つ問題はほとんどなくなった。</p>
+<p>以下は比較画像である。</p>
+<p class="post-note">左が最初に生成されたページ、中央が Skill 使用後に修正されたページ、右が元の日本語ページ。</p>
+<figure><a class="lightgallery" href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" title="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" data-thumbnail="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" data-sub-html="<h2>（例 1）左: 初期生成ページ / 中央: 修正版 / 右: 元の日本語ページ</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png"
+            data-srcset="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png 1.5x, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_01.png" width="100%" height="2048" />
+    </a><figcaption class="image-caption">（例 1）左: 初期生成ページ / 中央: 修正版 / 右: 元の日本語ページ</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" title="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" data-thumbnail="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" data-sub-html="<h2>（例 2）左: 初期生成ページ / 中央: 修正版 / 右: 元の日本語ページ</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png"
+            data-srcset="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png 1.5x, /posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/Fixed_Comparation_02.png" width="100%" height="2046" />
+    </a><figcaption class="image-caption">（例 2）左: 初期生成ページ / 中央: 修正版 / 右: 元の日本語ページ</figcaption>
+    </figure>
+<p>見れば分かるように、修正版のほうが内容面でもレイアウト面でも原ページにずっと忠実だ。</p>
+<p>本文の長さもおおむね原文とそろっており、不自然に長くなったり短くなったりしていない。</p>
+<p>（最終的に洗練された Skill ファイルはこちら: <a href="https://github.com/SimZhou/riichi_mahjong_book/blob/main/.agents/skills/translate-japanese-webpage/SKILL.md" target="_blank" rel="noopener noreffer ">translate-japanese-webpage/SKILL.md</a>）</p>
+<h2 id="まとめ">まとめ <a href="#%e3%81%be%e3%81%a8%e3%82%81">¶</a></h2><p>この種の作業であれば、Codex はすでにかなりしっかり仕事をしてくれる。</p>
+<p>主な欠点は、作業中ずっとこちらが Enter を押し続けなければならなかったことだ。</p>
+<p>今後は、マルチ Agent / SubAgent のワークフローも試してみる価値があるだろう。たとえば、1 体の Agent にコンテンツ品質を監督させ、別の Agent にページ翻訳とレイアウト処理を担当させる、といった形だ。</p>
+<p>そうなれば、この手の作業を AI 同士が協調して、かなり自動的に完了させる姿にずっと近づくはずだ。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新日 2026-03-18</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" data-title="Codex を使ってリーチ麻雀の入門サイトを作った" data-hashtags="AI,Codex,Agent,リーチ麻雀,麻雀"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" data-title="Codex を使ってリーチ麻雀の入門サイトを作った"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" data-hashtag="AI"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" data-title="Codex を使ってリーチ麻雀の入門サイトを作った"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" data-title="Codex を使ってリーチ麻雀の入門サイトを作った"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" data-title="Codex を使ってリーチ麻雀の入門サイトを作った" data-image="mahjong-soul-games.webp"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" data-title="Codex を使ってリーチ麻雀の入門サイトを作った" data-description="Codex を使ってリーチ麻雀の入門サイトを作り、保守したときの記録。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fi-used-codex-to-build-a-riichi-mahjong-handbook-site%2f&amp;text=Codex%20%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%83%aa%e3%83%bc%e3%83%81%e9%ba%bb%e9%9b%80%e3%81%ae%e5%85%a5%e9%96%80%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%9f" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/ja/tags/ai/">AI</a>,&nbsp;<a href="/ja/tags/codex/">Codex</a>,&nbsp;<a href="/ja/tags/agent/">Agent</a>,&nbsp;<a href="/ja/tags/%E3%83%AA%E3%83%BC%E3%83%81%E9%BA%BB%E9%9B%80/">リーチ麻雀</a>,&nbsp;<a href="/ja/tags/%E9%BA%BB%E9%9B%80/">麻雀</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ja/posts/2026/humans-job-in-the-future-will-be-to-press-enter-for-ai/" class="prev" rel="prev" title="人類の未来の仕事は、AI のために Enter キーを押すことになるかもしれない"><i class="fas fa-angle-left" aria-hidden="true"></i>人類の未来の仕事は、AI のために Enter キーを押すことになるかもしれない</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.157.0">Hugo</a> | テーマ - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/ja/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">特に明記がない限り、このブログの内容は<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>ライセンスの下で公開しています</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="ページのトップへ">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.TinySegmenter.min.js"></script><script src="/lib/lunr/lunr.ja.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{"valine":{"appId":"lug1GaEEqYeOlGnUCyg1yT0k-gzGzoHsz","appKey":"TnhoSJWNWDKTrEOX5zd3CkgQ","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@15.1.2/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"ja","pageSize":10,"placeholder":"コメント ...","recordIP":true,"visitor":true}},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/ja/index.json","lunrLanguageCode":"ja","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"見つかりませんでした","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

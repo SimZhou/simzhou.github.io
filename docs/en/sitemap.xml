@@ -7,6 +7,10 @@
                         hreflang="zh-cn"
                         href="https://simzhou.com/tags/agent/"
                         /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/tags/agent/"
+                        /><xhtml:link
                     rel="alternate"
                     hreflang="en"
                     href="https://simzhou.com/en/tags/agent/"
@@ -15,6 +19,10 @@
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/categories/ai/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/categories/ai/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
@@ -25,6 +33,10 @@
                         hreflang="zh-cn"
                         href="https://simzhou.com/tags/ai/"
                         /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/tags/ai/"
+                        /><xhtml:link
                     rel="alternate"
                     hreflang="en"
                     href="https://simzhou.com/en/tags/ai/"
@@ -33,6 +45,10 @@
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/categories/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
@@ -43,6 +59,10 @@
                         hreflang="zh-cn"
                         href="https://simzhou.com/tags/codex/"
                         /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/tags/codex/"
+                        /><xhtml:link
                     rel="alternate"
                     hreflang="en"
                     href="https://simzhou.com/en/tags/codex/"
@@ -51,6 +71,10 @@
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
@@ -61,6 +85,10 @@
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/posts/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
@@ -81,6 +109,10 @@
                         hreflang="zh-cn"
                         href="https://simzhou.com/"
                         /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/"
+                        /><xhtml:link
                     rel="alternate"
                     hreflang="en"
                     href="https://simzhou.com/en/"
@@ -89,6 +121,10 @@
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/tags/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
@@ -100,6 +136,10 @@
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/2026/humans-job-in-the-future-will-be-to-press-enter-for-ai/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/posts/2026/humans-job-in-the-future-will-be-to-press-enter-for-ai/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
@@ -119,6 +159,10 @@
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/2026/how-codex-compacts-context/"
                         /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/"
+                        /><xhtml:link
                     rel="alternate"
                     hreflang="en"
                     href="https://simzhou.com/en/posts/2026/how-codex-compacts-context/"
@@ -127,6 +171,10 @@
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/tags/llm/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/tags/llm/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
@@ -142,6 +190,10 @@
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/2021/cross-entropy-loss-visualized/"
                         /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/posts/2021/cross-entropy-loss-visualized/"
+                        /><xhtml:link
                     rel="alternate"
                     hreflang="en"
                     href="https://simzhou.com/en/posts/2021/cross-entropy-loss-visualized/"
@@ -151,18 +203,34 @@
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/2020/adding-lenovo-printer-to-raspberry-pi/"
                         /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/posts/2020/adding-lenovo-printer-to-raspberry-pi/"
+                        /><xhtml:link
                     rel="alternate"
                     hreflang="en"
                     href="https://simzhou.com/en/posts/2020/adding-lenovo-printer-to-raspberry-pi/"
                     /></url><url>
             <loc>https://simzhou.com/en/categories/life-moments/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://simzhou.com/en/tags/printer/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://simzhou.com/en/tags/raspberry-pi/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://simzhou.com/en/tags/raspberry-pi/</loc><lastmod>2020-07-25T19:07:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/tags/raspberry-pi/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="https://simzhou.com/en/tags/raspberry-pi/"
+                    /></url><url>
             <loc>https://simzhou.com/en/tags/computer/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://simzhou.com/en/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/</loc><lastmod>2020-07-24T18:36:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/posts/2020/how-to-noise-free-your-hdd-from-an-old-computer/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
@@ -175,6 +243,10 @@
                         hreflang="zh-cn"
                         href="https://simzhou.com/about/"
                         /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/about/"
+                        /><xhtml:link
                     rel="alternate"
                     hreflang="en"
                     href="https://simzhou.com/en/about/"
@@ -183,6 +255,10 @@
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://simzhou.com/gallery/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="ja"
+                        href="https://simzhou.com/ja/gallery/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"

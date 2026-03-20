@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>可視化 - タグ - Simonの夢宇宙</title>
+        <link>https://simzhou.com/ja/tags/%E5%8F%AF%E8%A6%96%E5%8C%96/</link>
+        <description>可視化 - タグ - Simonの夢宇宙</description>
+        <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/ja/tags/%E5%8F%AF%E8%A6%96%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
+    <title>交差エントロピー損失面で L1 と L2 正則化を可視化する</title>
+    <link>https://simzhou.com/ja/posts/2021/cross-entropy-loss-visualized/</link>
+    <pubDate>Thu, 15 Apr 2021 15:07:46 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/ja/posts/2021/cross-entropy-loss-visualized/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/cover.png" referrerpolicy="no-referrer">
+            </div><p>この投稿はずっと前から書きたかった。ようやく ECharts をブログの中で動かせるようになったので、きちんと形にできた。</p>
+<p>今回の目的はシンプルだ。L1 正則化と L2 正則化を「見える」ようにすること。式だけで語るのではなく、交差エントロピー損失面が 3D 空間でどう変形するかを見ていく。そうすると、いくつかの抽象的な考え方がぐっと理解しやすくなる。特に、なぜ L1 正則化が疎なモデルを生みやすく、結果として特徴選択のように振る舞うのかが直感的に分かる。</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>LLM - タグ - Simonの夢宇宙</title>
+        <link>https://simzhou.com/ja/tags/llm/</link>
+        <description>LLM - タグ - Simonの夢宇宙</description>
+        <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Mar 2026 12:05:06 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/ja/tags/llm/" rel="self" type="application/rss+xml" /><item>
+    <title>Codex のコンテキスト圧縮はどう動くのか</title>
+    <link>https://simzhou.com/ja/posts/2026/how-codex-compacts-context/</link>
+    <pubDate>Thu, 12 Mar 2026 12:05:06 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/ja/posts/2026/how-codex-compacts-context/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/0HChK-6VawAIhJ8h.jpeg" referrerpolicy="no-referrer">
+            </div><p>原著者: Kangwook Lee</p>
+<p>元記事: <a href="https://x.com/Kangwook_Lee/article/2028955292025962534" target="_blank" rel="noopener noreffer ">https://x.com/Kangwook_Lee/article/2028955292025962534</a></p>
+<p>codex 以外のモデルでは、オープンソースの Codex CLI はローカルでコンテキスト圧縮を行います。LLM が <a href="https://github.com/openai/codex/blob/main/codex-rs/core/templates/compact/prompt.md" target="_blank" rel="noopener noreffer ">compaction prompt</a> を使って会話を要約します。後でその圧縮済みコンテキストを使うときには、<code>responses.create()</code> がその要約を位置づける handoff prompt と一緒に受け取ります。これらのプロンプトはどちらもソースコード上で確認できます。</p>]]></description>
+</item>
+</channel>
+</rss>
