@@ -1,12 +1,12 @@
 ---
-title: "How to Noise-Free your HDD from an Old Computer?"
+title: "How I Silenced a Noisy HDD in an Old Computer"
 subtitle: ""
 date: 2020-07-24T18:36:17+08:00
 lastmod: 2020-07-24T18:36:17+08:00
 draft: false
 author: "Simon"
 authorLink: ""
-description: "Recently, I came up with a brilliant idea to remove the noise from the HDD in my old PC. "
+description: "Recently, I came up with a simple way to completely eliminate the noise from the HDD in my old computer case."
 
 tags: ["Life", "Computer", "Noise"]
 categories: ["Life Moments"]
@@ -27,26 +27,28 @@ license: ""
 
 <!--more-->
 
-Apart from fans, the HDD could be another main source of unpleasant noise in a old PC. Normally if your computer case is advanced enough, it would prepare you anti-vibration nail rubbers to remove the noise from HDD. However as an old computer which don't have the condition, what can we do?
+Inside a computer case, cooling fans are not the only source of noise. A mechanical hard drive can be just as bad, especially in an older machine. After years of use, wear inside the drive can make it spin less smoothly, which means more vibration, more resonance, and a lot more noise. Once the case starts amplifying that vibration, the whole computer can sound like a small machine shop.
+
+On better cases, this problem is often handled with rubber grommets instead of metal screws, so the drive vibrations do not get transferred directly into the chassis. Older cases usually do not have anything like that. So I had to improvise.
 
 ## A Basic Idea
 
-Before coming up with the new idea, I firstly thought of removing the conduction of vibration between HDD and the case with rubber bands, which the result turns out to be quite good. Having nearly the whole HDD plastered with rubber bands makes it not only less noise conducted but also safer (in case if I wanna move the computer here and there sometime). 
+Before I came up with the better fix, this was the first thing I tried. The idea was still the same: reduce vibration. I wrapped the hard drive with rubber strips, stopped using the original drive bay, and just placed the drive directly inside the case.
 
-{{< image src="hdd-old.jpg" caption="Old method, which has already removed most of the noise" width="100%" >}}
+{{< image src="hdd-old.jpg" caption="Old method: wrap the hard drive with rubber strips and place it directly inside the case" width="100%" >}}
 
-After applied, the noise is largely decreased and I wouldn't notice anymore if not paying attention carefully. 
+The improvement was immediate. Compared with the loud rumbling I had before, the drive became quiet enough that I could only hear it if I listened carefully. If the air conditioner was running, that sound was enough to cover it completely.
 
 ## A Better Idea, Even More Effective
 
-Recently, I suddenly came up with a brilliant idea which totally removes the contact between HDD and the case, and it truly did. That is to make a rubber rope bridge between the gap and put the HDD on it. 
+That solution was already good enough in practice, but every now and then I would still notice the noise.
 
-{{< image src="hdd-new.jpg" caption="New method, which turns out to be even more effective" width="100%" >}}
+Then a better idea came to me: what if I used rubber bands to suspend the hard drive in mid-air, so it would not touch the case at all? If the drive never touched the metal chassis, maybe the noise would disappear completely.
 
-And it turns out to be a critical hit! 
+{{< image src="hdd-new.jpg" caption="New method: stretch several rubber bands across an empty space in the case and rest the hard drive on them" width="100%" >}}
+
+It worked beautifully.
 
 {{< figure src="meme1.en.png" >}}
 
-Since the vibration is totally absorbed by the rubber rope, the noise has totally disappeared. 
-
-Finally, I've totally resolved the noise issue of the 8-year-old HDD！
+And just like that, this 8-year-old computer finally stopped rumbling.
