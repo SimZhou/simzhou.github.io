@@ -93,6 +93,28 @@
 - 英文页面生成后，图片 URL 往往会落到 `/posts/...`，而不一定是 `/en/posts/...`；这在本仓库里是正常现象
 - 不要假设 Hugo 会把同一组 page bundle 图片复制到中英文两个输出目录
 
+### 日文站点与多语言本地化经验
+
+- 站点现已支持第三语言 `ja`；新增语言时，不要只补文章文件，还要同步补：
+  - `config.toml` 中的 `languages.<lang>`
+  - `about` / `gallery` 这类静态页
+  - 重新执行 `hugo --destination docs`
+- 本仓库多语言文章仍遵循 page bundle 规则：在同目录下新增 `index.ja.md`
+- `draft: true` 的日文稿不会生成到 `docs/ja/`；检查缺页时先看 front matter，不要误判为构建失败
+- 新增日语搜索后，Hugo 会产出：
+  - `docs/lib/lunr/lunr.ja.min.js`
+  - `docs/lib/lunr/lunr.TinySegmenter.min.js`
+- 日语站点的站点级 SEO fallback 依赖：
+  - `params.seo.descriptions.ja`
+  - `params.seo.keywordsByLang.ja`
+  - 否则首页、列表页、分类页、无自定义描述的静态页会回落到默认语言文案
+- 本仓库已新增本地 SEO 覆盖：
+  - `layouts/_partials/opengraph.html`
+  - `layouts/_partials/twitter_cards.html`
+  - 这些覆盖的目的，是让多语言页面的 `og:description` / `twitter:description` 跟随当前语言，而不是回落到站点默认中文
+- `layouts/_partials/head/breadcrumb-schema.html` 已做多语言修正；列表页 / taxonomy 的 Breadcrumb JSON-LD 不应再残留 `Posts` / `Categories` 这类英文
+- 语言切换菜单当前故意保留 `中文 / English / 日本語` 这种混合显示；这是为了误切换后更容易找回原语言，不要为了“视觉统一”轻易改掉
+
 ### 这次麻将文章踩坑的根因
 
 - 文章目录：`content/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/`
