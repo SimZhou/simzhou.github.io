@@ -1,0 +1,40 @@
+{{- $params := .Scratch.Get "params" -}}
+{{- $siteDescription := index .Site.Params.seo.descriptions .Lang | default .Site.Params.description -}}
+{{- $description := $params.description | default .Description | default .Summary | plainify | htmlUnescape | chomp | default $siteDescription -}}
+{{- $title := .Title -}}
+{{- if .IsHome -}}
+  {{- $title = .Site.Title -}}
+{{- else if eq .Kind "section" -}}
+  {{- $title = T .Section | default .Title -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- $title = T .Data.Plural | default .Title -}}
+{{- end -}}
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+{{- with .Site.LanguageCode -}}
+<meta property="og:locale" content="{{ replace . "-" "_" }}">
+{{- end -}}
+{{- $images := $params.seo.images | default slice -}}
+{{- if not $images -}}
+  {{- with .Resources.GetMatch "featured-image-preview" -}}
+    {{- $images = slice "featured-image-preview" -}}
+  {{- end -}}
+  {{- with .Resources.GetMatch "featured-image" -}}
+    {{- $images = slice "featured-image" -}}
+  {{- end -}}
+{{- end -}}
+{{- with .Site.Params.seo.image -}}
+  {{- $images = $images | default (slice .) -}}
+{{- end -}}
+{{- with index $images 0 -}}
+  {{- with dict "Path" . "Resources" $.Resources | partial "function/resource.html" -}}
+<meta property="og:image" content="{{ .Permalink }}">
+    {{- with .Width }}<meta property="og:image:width" content="{{ . }}">{{ end -}}
+    {{- with .Height }}<meta property="og:image:height" content="{{ . }}">{{ end -}}
+  {{- else -}}
+<meta property="og:image" content="{{ . | absURL }}">
+  {{- end -}}
+{{- end -}}
+

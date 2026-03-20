@@ -48,9 +48,11 @@ publishDir = "docs"
     [params.seo.descriptions]
       zh-cn = "这是周易华的个人博客。在这里，科技，数学，机器学习，心理，什么都有。"
       en = "Simon Zhou's personal blog about technology, mathematics, machine learning, psychology, and projects."
+      ja = "Simon Zhou の個人ブログ。技術、数学、機械学習、心理、プロジェクトなどについて書いています。"
     [params.seo.keywordsByLang]
       zh-cn = ["机器学习", "Machine Learning", "人工智能", "AI", "博客", "Blog"]
       en = ["machine learning", "AI", "blog", "technology", "mathematics", "projects"]
+      ja = ["機械学習", "AI", "ブログ", "技術", "数学", "プロジェクト"]
 
   [params.social]
     email = "yihua.zhou@outlook.com"

@@ -1,0 +1,15 @@
+{{- $params := .Scratch.Get "params" -}}
+{{- $siteDescription := index .Site.Params.seo.descriptions .Lang | default .Site.Params.description -}}
+{{- $description := $params.description | default .Description | default .Summary | plainify | htmlUnescape | chomp | default $siteDescription -}}
+{{- $title := .Title -}}
+{{- if .IsHome -}}
+  {{- $title = .Site.Title -}}
+{{- else if eq .Kind "section" -}}
+  {{- $title = T .Section | default .Title -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- $title = T .Data.Plural | default .Title -}}
+{{- end -}}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+

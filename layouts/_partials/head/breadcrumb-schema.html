@@ -1,12 +1,26 @@
 {{- if not .IsHome -}}
+  {{- $translatedTitle := .Title -}}
+  {{- if eq .Kind "section" -}}
+    {{- $translatedTitle = T .Section | default .Title -}}
+  {{- else if eq .Kind "taxonomy" -}}
+    {{- $translatedTitle = T .Data.Plural | default .Title -}}
+  {{- else if eq .Kind "term" -}}
+    {{- $translatedTitle = .Title -}}
+  {{- end -}}
   {{- $items := slice -}}
   {{- $items = $items | append (dict "name" .Site.Title "url" .Site.Home.Permalink) -}}
   {{- range .Ancestors.Reverse -}}
     {{- if ne .Permalink $.Site.Home.Permalink -}}
-      {{- $items = $items | append (dict "name" .Title "url" .Permalink) -}}
+      {{- $ancestorTitle := .Title -}}
+      {{- if eq .Kind "section" -}}
+        {{- $ancestorTitle = T .Section | default .Title -}}
+      {{- else if eq .Kind "taxonomy" -}}
+        {{- $ancestorTitle = T .Data.Plural | default .Title -}}
+      {{- end -}}
+      {{- $items = $items | append (dict "name" $ancestorTitle "url" .Permalink) -}}
     {{- end -}}
   {{- end -}}
-  {{- $items = $items | append (dict "name" .Title "url" .Permalink) -}}
+  {{- $items = $items | append (dict "name" $translatedTitle "url" .Permalink) -}}
   {{- if gt (len $items) 1 -}}
     <script type="application/ld+json">
     {
