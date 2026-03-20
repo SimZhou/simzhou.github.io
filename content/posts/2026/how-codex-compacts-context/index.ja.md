@@ -6,7 +6,7 @@ lastmod: 2026-03-12T12:05:06+08:00
 draft: false
 author: "Kangwook Lee"
 authorLink: "https://x.com/Kangwook_Lee"
-description: ""
+description: "Codex の compact() API がどのようにコンテキストを圧縮しているのかを、実験を通して探った記事の日本語版。"
 
 tags: ["AI", "LLM", "Codex", "Agent", "コンテキストエンジニアリング"]
 categories: ["AI"]

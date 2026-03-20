@@ -4,7 +4,7 @@ subtitle: ""
 draft: false
 author: ""
 authorLink: ""
-description: ""
+description: "このサイトの写真ギャラリーです。旅先や日常で撮った写真をまとめています。"
 layout: "gallery"
 
 tags: []

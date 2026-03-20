@@ -6,7 +6,7 @@ lastmod: 2020-08-07T14:12:16+08:00
 draft: true
 author: "Simon"
 authorLink: ""
-description: ""
+description: "自分が過去に抱いていた誤った認知や価値観について、断片的に書き留めたメモ。"
 
 tags: ["認知", "価値観", "世界観"]
 categories: ["心理学"]

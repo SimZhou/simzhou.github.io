@@ -6,7 +6,7 @@ lastmod: 2020-06-28T11:06:43+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://simzhou.com/about/"
-description: ""
+description: "Simon の自己紹介ページ。技術への興味、このブログを作った理由、連絡先をまとめています。"
 
 hiddenFromHomePage: false
 hiddenFromSearch: false

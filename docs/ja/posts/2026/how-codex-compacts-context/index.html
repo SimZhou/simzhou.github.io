@@ -4,14 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Codex のコンテキスト圧縮はどう動くのか - Simonの夢宇宙</title><meta name="description" content="原著者: Kangwook Lee
-元記事: https://x.com/Kangwook_Lee/article/2028955292025962534
-codex 以外のモデルでは、オープンソースの Codex CLI はローカルでコンテキスト圧縮を行います。LLM が compaction prompt を使って会話を要約します。後でその圧縮済みコンテキストを使うときには、responses.create() がその要約を位置づける handoff prompt と一緒に受け取ります。これらのプロンプトはどちらもソースコード上で確認できます。"><meta name="keywords" content="AI, LLM, Codex, Agent, コンテキストエンジニアリング"><meta name="author" content="Kangwook Lee"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/">
+        <title>Codex のコンテキスト圧縮はどう動くのか - Simonの夢宇宙</title><meta name="description" content="Codex の compact() API がどのようにコンテキストを圧縮しているのかを、実験を通して探った記事の日本語版。"><meta name="keywords" content="AI, LLM, Codex, Agent, コンテキストエンジニアリング"><meta name="author" content="Kangwook Lee"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/">
   <meta property="og:site_name" content="Simonの夢宇宙">
   <meta property="og:title" content="Codex のコンテキスト圧縮はどう動くのか">
-  <meta property="og:description" content="原著者: Kangwook Lee
-元記事: https://x.com/Kangwook_Lee/article/2028955292025962534
-codex 以外のモデルでは、オープンソースの Codex CLI はローカルでコンテキスト圧縮を行います。LLM が compaction prompt を使って会話を要約します。後でその圧縮済みコンテキストを使うときには、responses.create() がその要約を位置づける handoff prompt と一緒に受け取ります。これらのプロンプトはどちらもソースコード上で確認できます。">
+  <meta property="og:description" content="Codex の compact() API がどのようにコンテキストを圧縮しているのかを、実験を通して探った記事の日本語版。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -25,9 +21,7 @@ codex 以外のモデルでは、オープンソースの Codex CLI はローカ
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Codex のコンテキスト圧縮はどう動くのか">
-  <meta name="twitter:description" content="原著者: Kangwook Lee
-元記事: https://x.com/Kangwook_Lee/article/2028955292025962534
-codex 以外のモデルでは、オープンソースの Codex CLI はローカルでコンテキスト圧縮を行います。LLM が compaction prompt を使って会話を要約します。後でその圧縮済みコンテキストを使うときには、responses.create() がその要約を位置づける handoff prompt と一緒に受け取ります。これらのプロンプトはどちらもソースコード上で確認できます。">
+  <meta name="twitter:description" content="Codex の compact() API がどのようにコンテキストを圧縮しているのかを、実験を通して探った記事の日本語版。">
 <meta name="application-name" content="Simonの夢宇宙">
 <meta name="apple-mobile-web-app-title" content="Simonの夢宇宙">
 <meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -59,7 +53,7 @@ codex 以外のモデルでは、オープンソースの Codex CLI はローカ
                 }},"author": {
                 "@type": "Person",
                 "name": "Kangwook Lee"
-            },"description": "原著者: Kangwook Lee\n元記事: https://x.com/Kangwook_Lee/article/2028955292025962534\ncodex 以外のモデルでは、オープンソースの Codex CLI はローカルでコンテキスト圧縮を行います。LLM が compaction prompt を使って会話を要約します。後でその圧縮済みコンテキストを使うときには、responses.create() がその要約を位置づける handoff prompt と一緒に受け取ります。これらのプロンプトはどちらもソースコード上で確認できます。"
+            },"description": "Codex の compact() API がどのようにコンテキストを圧縮しているのかを、実験を通して探った記事の日本語版。"
     }
     </script><script type="application/ld+json">
     {
@@ -190,7 +184,7 @@ codex 以外のモデルでは、オープンソースの Codex CLI はローカ
         data-srcset="/posts/2026/how-codex-compacts-context/0HChK-6VawAIhJ8h.jpeg, /posts/2026/how-codex-compacts-context/0HChK-6VawAIhJ8h.jpeg 1.5x, /posts/2026/how-codex-compacts-context/0HChK-6VawAIhJ8h.jpeg 2x"
         data-sizes="auto"
         alt="/posts/2026/how-codex-compacts-context/0HChK-6VawAIhJ8h.jpeg"
-        title="/posts/2026/how-codex-compacts-context/0HChK-6VawAIhJ8h.jpeg" width="1580" height="632" /></div><div class="details toc" id="toc-static"  data-kept="">
+        title="Codex の compact() API がどのようにコンテキストを圧縮しているのかを、実験を通して探った記事の日本語版。" width="1580" height="632" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目次</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
@@ -298,7 +292,7 @@ codex 以外のモデルでは、オープンソースの Codex CLI はローカ
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか" data-hashtags="AI,LLM,Codex,Agent,コンテキストエンジニアリング"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-hashtag="AI"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか" data-image="0HChK-6VawAIhJ8h.jpeg"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fhow-codex-compacts-context%2f&amp;text=Codex%20%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88%e5%9c%a7%e7%b8%ae%e3%81%af%e3%81%a9%e3%81%86%e5%8b%95%e3%81%8f%e3%81%ae%e3%81%8b" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか" data-hashtags="AI,LLM,Codex,Agent,コンテキストエンジニアリング"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-hashtag="AI"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか" data-image="0HChK-6VawAIhJ8h.jpeg"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/how-codex-compacts-context/" data-title="Codex のコンテキスト圧縮はどう動くのか" data-description="Codex の compact() API がどのようにコンテキストを圧縮しているのかを、実験を通して探った記事の日本語版。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fhow-codex-compacts-context%2f&amp;text=Codex%20%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88%e5%9c%a7%e7%b8%ae%e3%81%af%e3%81%a9%e3%81%86%e5%8b%95%e3%81%8f%e3%81%ae%e3%81%8b" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
