@@ -1,0 +1,4 @@
+interface:
+  display_name: "博客文章多语种化"
+  short_description: "安全处理 Hugo 文章目录的多语种化"
+  default_prompt: "使用 $blog-post-localizer 为一个 Hugo 文章目录创建或优化目标语种文章。"
