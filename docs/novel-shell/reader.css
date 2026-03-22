@@ -485,11 +485,14 @@ input {
   .novel-sidebar,
   .novel-rail {
     position: fixed;
-    top: 4.3rem;
+    top: calc(4.3rem + env(safe-area-inset-top, 0px));
+    bottom: 0.9rem;
     left: 0.9rem;
     right: 0.9rem;
     width: auto;
-    max-height: calc(100vh - 5.2rem);
+    max-height: none;
+    overflow: auto;
+    overscroll-behavior: contain;
     transform: translateY(calc(-100% - 1rem));
     transition: transform 180ms ease;
     z-index: 19;
@@ -505,6 +508,16 @@ input {
     width: min(360px, calc(100vw - 1.8rem));
     right: 0.9rem;
     transform: translateX(calc(100% + 1rem));
+  }
+
+  .sidebar-inner {
+    max-height: none;
+    overflow: auto;
+  }
+
+  .chapter-list {
+    max-height: none;
+    overflow: visible;
   }
 
   .novel-rail[data-open="true"] {
