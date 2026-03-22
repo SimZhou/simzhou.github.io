@@ -1,0 +1,11 @@
+{
+  "kdf": "PBKDF2",
+  "hash": "SHA-256",
+  "iterations": 210000,
+  "cipher": "AES-256-GCM",
+  "salt": "ZXNa47F8PVP/ViUFNSEsEQ==",
+  "iv": "El4/HbUUlWajmsbP",
+  "tag": "58KuyCvam80greqBp2UjGg==",
+  "ciphertext": "El/MIPwLZoE1nGGmn115K4m5fey7pI61pdlagm4wCdH1fpbg6daV7sDvaeq6rH2ySKewewgj2XtuV+GxHCFuQWD6IriCRdfweIjevTe5jxEH2wJW4P5PTMAokQWGID11Dj7lt+mDiyxDqXf/qbTLU3ny5Urgr8XRiMufXZ0bUBDsUZSETfo=",
+  "meta": {}
+}

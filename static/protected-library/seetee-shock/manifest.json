@@ -1,0 +1,158 @@
+{
+  "slug": "seetee-shock",
+  "title_zh": "反物质辐射 中文译本",
+  "title_en": "Seetee Shock",
+  "probe_asset": "/protected-library/seetee-shock/probe.json",
+  "chapters": [
+    {
+      "number": 1,
+      "title_en": "ONE",
+      "title_zh": "示例章节",
+      "asset": "/protected-library/seetee-shock/chapter-01.json"
+    },
+    {
+      "number": 2,
+      "title_en": "TWO",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 3,
+      "title_en": "THREE",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 4,
+      "title_en": "FOUR",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 5,
+      "title_en": "FIVE",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 6,
+      "title_en": "SIX",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 7,
+      "title_en": "SEVEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 8,
+      "title_en": "EIGHT",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 9,
+      "title_en": "NINE",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 10,
+      "title_en": "TEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 11,
+      "title_en": "ELEVEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 12,
+      "title_en": "TWELVE",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 13,
+      "title_en": "THIRTEEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 14,
+      "title_en": "FOURTEEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 15,
+      "title_en": "FIFTEEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 16,
+      "title_en": "SIXTEEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 17,
+      "title_en": "SEVENTEEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 18,
+      "title_en": "EIGHTEEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 19,
+      "title_en": "NINETEEN",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 20,
+      "title_en": "TWENTY",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 21,
+      "title_en": "TWENTY-ONE",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 22,
+      "title_en": "TWENTY-TWO",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 23,
+      "title_en": "TWENTY-THREE",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 24,
+      "title_en": "TWENTY-FOUR",
+      "title_zh": null,
+      "asset": null
+    },
+    {
+      "number": 25,
+      "title_en": "TWENTY-FIVE",
+      "title_zh": null,
+      "asset": null
+    }
+  ]
+}

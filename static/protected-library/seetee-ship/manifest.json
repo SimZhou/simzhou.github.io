@@ -1,0 +1,128 @@
+{
+  "slug": "seetee-ship",
+  "title_zh": "反物质飞船 中文译本",
+  "title_en": "Seetee Ship",
+  "probe_asset": "/protected-library/seetee-ship/probe.json",
+  "chapters": [
+    {
+      "number": 1,
+      "title_en": "THE HIGH FRONTIER",
+      "title_zh": "高空边疆",
+      "asset": null
+    },
+    {
+      "number": 2,
+      "title_en": "FIRE IN THE SKY",
+      "title_zh": "天火临空",
+      "asset": null
+    },
+    {
+      "number": 3,
+      "title_en": "BETWEEN WORLDS",
+      "title_zh": "两界之间",
+      "asset": null
+    },
+    {
+      "number": 4,
+      "title_en": "THE ADMIRABLE BOMB",
+      "title_zh": "那枚可畏的炸弹",
+      "asset": null
+    },
+    {
+      "number": 5,
+      "title_en": "THE LIGHT THAT WENT OUT",
+      "title_zh": "熄灭的光",
+      "asset": null
+    },
+    {
+      "number": 6,
+      "title_en": "KISS YOUR GIRL GOOD-BY!",
+      "title_zh": "“吻别你的姑娘吧！”",
+      "asset": null
+    },
+    {
+      "number": 7,
+      "title_en": "THE NARROW FOOTWAY",
+      "title_zh": "狭窄的通路",
+      "asset": null
+    },
+    {
+      "number": 8,
+      "title_en": "A SENSE OF SPACE-TIME",
+      "title_zh": "时空感",
+      "asset": null
+    },
+    {
+      "number": 9,
+      "title_en": "THE SLEEPING SPACEMEN",
+      "title_zh": "沉睡的太空人",
+      "asset": null
+    },
+    {
+      "number": 10,
+      "title_en": "NO RUNAWAY ROCK",
+      "title_zh": "绝非逃逸的岩块",
+      "asset": null
+    },
+    {
+      "number": 11,
+      "title_en": "THE BARRIER OF DUST",
+      "title_zh": "尘埃屏障",
+      "asset": null
+    },
+    {
+      "number": 12,
+      "title_en": "THE UNTOUCHABLE INGOT",
+      "title_zh": "不可触碰的锭块",
+      "asset": null
+    },
+    {
+      "number": 13,
+      "title_en": "THE ALIEN VOICE",
+      "title_zh": "异星之声",
+      "asset": null
+    },
+    {
+      "number": 14,
+      "title_en": "THE SEETEE SHIP",
+      "title_zh": "反物质飞船",
+      "asset": null
+    },
+    {
+      "number": 15,
+      "title_en": "THE VANISHING ENEMY",
+      "title_zh": "消失的敌人",
+      "asset": null
+    },
+    {
+      "number": 16,
+      "title_en": "THE IRON MUSHROOMS",
+      "title_zh": "铁蘑菇",
+      "asset": null
+    },
+    {
+      "number": 17,
+      "title_en": "THE FROZEN MUTINEERS",
+      "title_zh": "冻结的叛徒",
+      "asset": null
+    },
+    {
+      "number": 18,
+      "title_en": "COINCIDENCE",
+      "title_zh": "巧合",
+      "asset": null
+    },
+    {
+      "number": 19,
+      "title_en": "A MATTER OF TIME",
+      "title_zh": "时间问题",
+      "asset": null
+    },
+    {
+      "number": 20,
+      "title_en": "THE WHIRLPOOL",
+      "title_zh": "漩涡",
+      "asset": null
+    }
+  ]
+}

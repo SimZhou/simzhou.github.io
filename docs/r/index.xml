@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rs on Simon的梦宇宙</title>
+    <link>https://simzhou.com/r/</link>
+    <description>Recent content in Rs on Simon的梦宇宙</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+    <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 22 Mar 2026 20:50:00 +0800</lastBuildDate>
+    <atom:link href="https://simzhou.com/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>反物质飞船 中文译本</title>
+      <link>https://simzhou.com/r/seetee-ship-n9q2m/</link>
+      <pubDate>Sun, 22 Mar 2026 20:50:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/r/seetee-ship-n9q2m/</guid>
+      <description>&lt;p&gt;这个页面用于分章发布《反物质飞船》中文译本。&lt;/p&gt;&#xA;&lt;p&gt;它不会出现在导航、文章列表或站内搜索里，但它仍然是公开静态资源，不等同于真正私密访问。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>反物质辐射 中文译本</title>
+      <link>https://simzhou.com/r/seetee-shock-v4n8p/</link>
+      <pubDate>Sun, 22 Mar 2026 20:50:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/r/seetee-shock-v4n8p/</guid>
+      <description>&lt;p&gt;这个页面用于分章发布《反物质辐射》中文译本。&lt;/p&gt;&#xA;&lt;p&gt;它不会出现在导航、文章列表或站内搜索里，但它仍然是公开静态资源，不等同于真正私密访问。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
