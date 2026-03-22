@@ -13,7 +13,7 @@ privatePage: true
 layout: "novel-protected"
 url: "/r/seetee-ship-n9q2m/"
 protectedManifest: "/protected-library/seetee-ship/manifest.json"
-passwordHint: "提示：这是一个我临时生成的随机密码，不会出现在站内页面里。"
+passwordHint: "提示：本阅读区使用固定访问密码。"
 emptyNote: "这个章节位还没填入中文译文。"
 toc:
   enable: false
