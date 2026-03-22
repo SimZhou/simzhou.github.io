@@ -14,15 +14,18 @@
 - `Jean Lazarene` -> `让·拉扎雷恩`
 - `Martin Brand` -> `马丁·布兰德`
 - `Jim Drake` / `Drake` -> `吉姆·德雷克` / `德雷克`
+- `Rob McGee` -> `罗布·麦吉`
 
 ## 地名与组织
 
 - `Freedonia` -> `弗里多尼亚`
 - `Pallasport` -> `帕拉斯港`
+- `Obania` -> `奥巴尼亚`
 - `Solar City` -> `太阳城`
 - `Adonis` -> `阿多尼斯`
 - `Seetee, Inc.` -> `Seetee 公司`
 - `Interplanet Corporation` -> `星际公司`
+- `Mandate` -> `托管政府`
 
 ## 技术词
 
@@ -35,6 +38,10 @@
 - `drift` / `contraterrene drift` -> `漂移带` / `反物质漂移带`
 - `seetee marker` -> `反物质信标`
 - `seetee shock` -> `反物质辐射`
+- `variant` / `mutant` -> `变异者`
+- `photophone` -> `光话机`
+- `Geiger` -> `盖革计数器`
+- `Good-by Jane` -> `“再会，简”号`
 
 ## 风格规则
 
