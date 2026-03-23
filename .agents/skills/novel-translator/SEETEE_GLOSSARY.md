@@ -55,6 +55,7 @@
 - `Interplanet Corporation` -> `星际公司`
 - `Interplanet family` / `Interplanet families` -> `星际公司家族`
 - `Mandate` -> `托管政府`
+- `high commissioners` -> `高空专员`
 - `High Space Mandate` -> `高空托管政府`
 - `Free Space Republic` -> `自由太空共和国`
 - `Treaty of Space` -> `空间条约`
@@ -112,6 +113,7 @@
 - `blinker` -> `闪标`
 - `Invader` -> `入侵者`
 - `Interplanet agent` -> `星际公司特派员`
+- `Seetee-Interplanet` -> `Seetee-星际公司`
 - `counterradiation` -> `反辐射疗法`
 - `condulloy` -> `康达合金`
 - `Lemoyne-Dahlberg field` -> `勒莫因-达尔伯格场`
