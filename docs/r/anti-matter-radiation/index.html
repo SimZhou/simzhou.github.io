@@ -50,15 +50,7 @@
           </div>
 
           <div class="sidebar-panel">
-            <p class="panel-title">访问方式</p>
-            <p class="panel-copy">这是一个没有站内入口的隐藏阅读页。知道链接的人可以直接访问，但页面保持 <code>noindex,nofollow</code>，且整段 <code>/r/</code> 已从 sitemap 与 robots 收口。</p>
-          </div>
-
-          <div class="sidebar-panel">
-            <div class="panel-row">
-              <span class="panel-title">章节目录</span>
-              <span class="lock-badge" id="library-state">Open</span>
-            </div>
+            <p class="panel-title">章节目录</p>
             <ol class="chapter-list" id="novel-chapter-list"></ol>
           </div>
         </div>
@@ -103,17 +95,8 @@
 
       <aside class="novel-rail" id="novel-rail">
         <div class="rail-panel">
-          <p class="panel-title">页面说明</p>
-          <p>外壳借用文档站的清爽框架感，但正文排版按小说阅读优化，不走 LoveIt 的头部、页脚或博客元信息。</p>
-        </div>
-
-        <div class="rail-panel">
-          <p class="panel-title">阅读状态</p>
+          <p class="panel-title">当前阅读</p>
           <dl class="meta-list">
-            <div>
-              <dt>状态</dt>
-              <dd id="rail-status">公开隐藏页</dd>
-            </div>
             <div>
               <dt>作品</dt>
               <dd id="rail-work-title">反物质辐射 中文译本</dd>
@@ -123,15 +106,6 @@
               <dd id="rail-chapter">未载入</dd>
             </div>
           </dl>
-        </div>
-
-        <div class="rail-panel">
-          <p class="panel-title">译名规则</p>
-          <ul class="rule-list">
-            <li><code>Seetee Ship</code> 统一译为“反物质飞船”</li>
-            <li><code>Seetee Shock</code> 统一译为“反物质辐射”</li>
-            <li>后续章节的人名、地名、组织名必须保持跨章一致</li>
-          </ul>
         </div>
       </aside>
     </div>
@@ -149,10 +123,8 @@
     const chapterTitleEl = document.getElementById("novel-chapter-title");
     const chapterSubtitleEl = document.getElementById("novel-chapter-subtitle");
     const readerBodyEl = document.getElementById("novel-reader-body");
-    const railStatusEl = document.getElementById("rail-status");
     const railChapterEl = document.getElementById("rail-chapter");
     const railWorkTitleEl = document.getElementById("rail-work-title");
-    const libraryStateEl = document.getElementById("library-state");
     const prevButtonEl = document.getElementById("prev-chapter");
     const nextButtonEl = document.getElementById("next-chapter");
     const sidebarEl = document.getElementById("novel-sidebar");

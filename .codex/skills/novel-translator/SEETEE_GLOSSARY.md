@@ -29,6 +29,8 @@
 - `Amador` -> `阿马多尔`
 - `Gall Manrique` -> `加尔·曼里克`
 - `Vidal` -> `比达尔`
+- `Admiral Julius Augustus Goldmark-Granger` -> `尤利乌斯·奥古斯都·戈德马克-格兰杰海军上将`
+- `Kaganovich` -> `卡冈诺维奇`
 
 ## 地名与组织
 
@@ -57,6 +59,11 @@
 - `Terran Tor` -> `地球岬`
 - `Seetee warehouse` -> `Seetee 仓库`
 - `Zodiacal Light` -> `黄道光`
+- `Leninsk` -> `列宁斯克`
+- `Trojan Planets` -> `特洛伊行星`
+- `Achilles` -> `阿喀琉斯`
+- `New Yukon` -> `新育空`
+- `Lunar bases` -> `月球基地`
 - `Jupiter Light` -> `木星电台`
 - `Luna Light` -> `月球电台`
 - `Mandate Light` -> `托管之声`
@@ -95,6 +102,7 @@
 - `counterradiation` -> `反辐射疗法`
 - `condulloy` -> `康达合金`
 - `paragravity loading tube` -> `副重力装载管`
+- `robot pilot` -> `机器人驾驶仪`
 
 ## 风格规则
 
