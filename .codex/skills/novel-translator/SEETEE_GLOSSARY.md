@@ -54,6 +54,10 @@
 - `Worringer Clinic` -> `沃林格诊疗所`
 - `Terran Tor` -> `地球岬`
 - `Seetee warehouse` -> `Seetee 仓库`
+- `Jupiter Light` -> `木星电台`
+- `Luna Light` -> `月球电台`
+- `Mandate Light` -> `托管之声`
+- `Nuevo Jalisco` -> `新哈利斯科`
 
 ## 技术词
 
