@@ -114,8 +114,10 @@
 - `Interplanet agent` -> `星际公司特派员`
 - `counterradiation` -> `反辐射疗法`
 - `condulloy` -> `康达合金`
+- `Lemoyne-Dahlberg field` -> `勒莫因-达尔伯格场`
 - `paragravity loading tube` -> `副重力装载管`
 - `robot pilot` -> `机器人驾驶仪`
+- `unipolar receptor` -> `单极接收器`
 - `Third World War` -> `第三次世界大战`
 - `Spatial War` -> `太空战争`
 
