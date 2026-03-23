@@ -42,10 +42,13 @@
 
 - `Freedonia` -> `弗里多尼亚`
 - `Pallasport` -> `帕拉斯港`
+- `Pallas` -> `智神星`
 - `Obania` -> `奥巴尼亚`
 - `Solar City` -> `太阳城`
 - `Adonis` -> `阿多尼斯`
 - `Vesta` -> `灶神星`
+- `Planetania` -> `行星世界号`
+- `Ivanov` -> `伊万诺夫号`
 - `Callisto` / `Callistonian` -> `卡利斯托` / `卡利斯托的`
 - `Pallasport` -> `帕拉斯港`
 - `Santa Fe` -> `圣菲`
