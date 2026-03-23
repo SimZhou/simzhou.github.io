@@ -104,6 +104,7 @@
 - `Geiger` -> `盖革计数器`
 - `Good-by Jane` -> `“再会，简”号`
 - `prospecting gun` -> `勘测枪`
+- `specific` -> `特效药`
 - `ametine` -> `阿美定`
 - `ametine bomb` -> `阿美定炸弹`
 - `maximite` -> `最大米特`
@@ -121,6 +122,7 @@
 - `paragravity loading tube` -> `副重力装载管`
 - `robot pilot` -> `机器人驾驶仪`
 - `unipolar receptor` -> `单极接收器`
+- `terraforming units` -> `地貌改造装置`
 - `Third World War` -> `第三次世界大战`
 - `Spatial War` -> `太空战争`
 - `mesons` -> `介子`
