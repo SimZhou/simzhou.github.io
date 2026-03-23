@@ -62,7 +62,7 @@
             <div>
               <p class="eyebrow">Current Chapter</p>
               <h2 id="novel-chapter-title">正在载入章节</h2>
-              <p class="chapter-subtitle" id="novel-chapter-subtitle">章节目录会在左侧保持固定，页面不再需要密码。</p>
+              <p class="chapter-subtitle" id="novel-chapter-subtitle">章节正文正在准备。</p>
             </div>
             <div class="reader-modes">
               <button type="button" class="mode-button" data-mode="paper">Paper</button>
@@ -114,6 +114,7 @@
     const chapterListEl = document.getElementById("novel-chapter-list");
     const chapterTitleEl = document.getElementById("novel-chapter-title");
     const chapterSubtitleEl = document.getElementById("novel-chapter-subtitle");
+    const readerEl = document.getElementById("novel-reader");
     const readerBodyEl = document.getElementById("novel-reader-body");
     const railChapterEl = document.getElementById("rail-chapter");
     const railWorkTitleEl = document.getElementById("rail-work-title");
@@ -129,10 +130,10 @@
 
     function resetReadingPosition() {
       const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
-      const heroOffset = 16;
+      const cardOffset = 10;
       const targetTop = Math.max(
         0,
-        window.scrollY + readerBodyEl.getBoundingClientRect().top - topbarOffset - heroOffset
+        window.scrollY + readerEl.getBoundingClientRect().top - topbarOffset - cardOffset
       );
       window.scrollTo(0, targetTop);
     }
@@ -201,7 +202,7 @@
       readerBodyEl.innerHTML = `
         <div class="loading-chapter">
           <p>正在载入章节。</p>
-          <p>请稍候，正文会立刻回到开头并展开。</p>
+          <p>正文会直接切到本章开头。</p>
         </div>
       `;
       updateNavButtons();
@@ -259,7 +260,7 @@
       }
       return null;
     }).catch((error) => {
-      railStatusEl.textContent = "目录载入失败";
+      railChapterEl.textContent = "目录载入失败";
       console.error(error);
     });
   })();

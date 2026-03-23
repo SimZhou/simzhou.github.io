@@ -377,6 +377,7 @@ input {
 
 .reader-header {
   border-bottom: 1px solid var(--paper-border);
+  min-height: 7.4rem;
 }
 
 .reader-footer {
@@ -392,6 +393,7 @@ input {
 .reader-body {
   max-width: 780px;
   margin: 0 auto;
+  min-height: 56vh;
   padding: 2.2rem 1.4rem 2.6rem;
   font-family: var(--ui-serif);
   font-size: 1.08rem;
@@ -401,19 +403,29 @@ input {
 
 .reader-body p,
 .locked-placeholder p,
-.empty-chapter p {
+.empty-chapter p,
+.loading-chapter p {
   margin: 0 0 1.25rem;
   text-indent: 2em;
 }
 
+.chapter-subtitle {
+  min-height: 1.5rem;
+}
+
 .locked-placeholder p:first-child,
-.empty-chapter p:first-child {
+.empty-chapter p:first-child,
+.loading-chapter p:first-child {
   text-indent: 0;
 }
 
-.loading-chapter p {
-  margin: 0 0 1.1rem;
-  text-indent: 0;
+.loading-chapter,
+.empty-chapter,
+.locked-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: calc(56vh - 4.8rem);
 }
 
 .loading-chapter p:last-child,

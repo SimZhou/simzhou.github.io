@@ -53,6 +53,7 @@
 - `Vega` -> `织女星`
 - `Seetee, Inc.` -> `Seetee 公司`
 - `Interplanet Corporation` -> `星际公司`
+- `Interplanet family` / `Interplanet families` -> `星际公司家族`
 - `Mandate` -> `托管政府`
 - `High Space Mandate` -> `高空托管政府`
 - `Free Space Republic` -> `自由太空共和国`
@@ -110,10 +111,13 @@
 - `Fifth Freedom` -> `第五自由`
 - `blinker` -> `闪标`
 - `Invader` -> `入侵者`
+- `Interplanet agent` -> `星际公司特派员`
 - `counterradiation` -> `反辐射疗法`
 - `condulloy` -> `康达合金`
 - `paragravity loading tube` -> `副重力装载管`
 - `robot pilot` -> `机器人驾驶仪`
+- `Third World War` -> `第三次世界大战`
+- `Spatial War` -> `太空战争`
 
 ## 风格规则
 
