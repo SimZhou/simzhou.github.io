@@ -39,6 +39,7 @@
 - `Brother Stone` -> `斯通兄弟`
 - `Asteria Rogers` -> `阿斯特里亚·罗杰斯`
 - `Miss Rasper` -> `拉斯珀小姐`
+- `Rykov` -> `雷科夫`
 
 ## 地名与组织
 
@@ -54,6 +55,7 @@
 - `Callisto` / `Callistonian` -> `卡利斯托` / `卡利斯托的`
 - `Pallasport` -> `帕拉斯港`
 - `Santa Fe` -> `圣菲`
+- `Ceres Street` -> `谷神街`
 - `Octans` -> `南极座`
 - `Vega` -> `织女星`
 - `Seetee, Inc.` -> `Seetee 公司`
@@ -61,6 +63,7 @@
 - `Interplanet family` / `Interplanet families` -> `星际公司家族`
 - `Mandate` -> `托管政府`
 - `high commissioners` -> `高空专员`
+- `Mandate House` -> `托管大厦`
 - `High Space Mandate` -> `高空托管政府`
 - `Free Space Republic` -> `自由太空共和国`
 - `Treaty of Space` -> `空间条约`
