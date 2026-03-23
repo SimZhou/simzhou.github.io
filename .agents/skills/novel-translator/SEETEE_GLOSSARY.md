@@ -78,6 +78,7 @@
 - `Jupiter Light` -> `木星电台`
 - `Luna Light` -> `月球电台`
 - `Mandate Light` -> `托管之声`
+- `martial law` -> `戒严`
 - `Nuevo Jalisco` -> `新哈利斯科`
 - `Thorium Star` -> `钍星号`
 - `Jovian Soviet` -> `木星苏维埃`
@@ -122,6 +123,7 @@
 - `unipolar receptor` -> `单极接收器`
 - `Third World War` -> `第三次世界大战`
 - `Spatial War` -> `太空战争`
+- `mesons` -> `介子`
 
 ## 风格规则
 
