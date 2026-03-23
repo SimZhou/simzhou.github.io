@@ -1,0 +1,4 @@
+interface:
+  display_name: "小说翻译器"
+  short_description: "翻译长篇小说并按章节维护统一译名"
+  default_prompt: "使用 $novel-translator 为一部长篇小说按章节翻译并维护术语一致性。"
