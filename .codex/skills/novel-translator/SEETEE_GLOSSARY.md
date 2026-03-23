@@ -37,6 +37,7 @@
 - `High Space Mandate` -> `高空托管政府`
 - `Treaty of Space` -> `空间条约`
 - `Treaty of Santa Fe` -> `圣菲条约`
+- `Spatial Museum` -> `太空博物馆`
 
 ## 技术词
 
@@ -58,6 +59,8 @@
 - `ametine bomb` -> `阿美定炸弹`
 - `Power Unlimited` -> `《无限动力》`
 - `asterite` / `asterites` -> `小行星人`
+- `Fifth Freedom` -> `第五自由`
+- `blinker` -> `闪标`
 
 ## 风格规则
 
