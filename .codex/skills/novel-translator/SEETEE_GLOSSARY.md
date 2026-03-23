@@ -32,6 +32,7 @@
 - `Obania` -> `奥巴尼亚`
 - `Solar City` -> `太阳城`
 - `Adonis` -> `阿多尼斯`
+- `Vesta` -> `灶神星`
 - `Callisto` / `Callistonian` -> `卡利斯托` / `卡利斯托的`
 - `Pallasport` -> `帕拉斯港`
 - `Santa Fe` -> `圣菲`
