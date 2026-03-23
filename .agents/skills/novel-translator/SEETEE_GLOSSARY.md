@@ -23,9 +23,11 @@
 - `Adam Gast` -> `亚当·加斯特`
 - `Rick Drake` / `Rick` -> `里克·德雷克` / `里克`
 - `Karen Hood` -> `卡伦·胡德`
+- `Austin Hood` -> `奥斯汀·胡德`
 - `Karen Drake` -> `卡伦·德雷克`
 - `Ann O'Banion` -> `安·奥巴尼恩`
 - `Paul Anders` -> `保罗·安德斯`
+- `Max Vickers` -> `马克斯·维克斯`
 - `Ann Anders` -> `安·安德斯`
 - `Worringer` -> `沃林格`
 - `Amador` -> `阿马多尔`
@@ -65,6 +67,7 @@
 - `Treaty of Santa Fe` -> `圣菲条约`
 - `Spatial Museum` -> `太空博物馆`
 - `High Space Guard` -> `高空卫队`
+- `Seetee Patrol` -> `反物质巡逻队`
 - `Free Space Party` -> `自由太空党`
 - `High Space Union` -> `高空联盟`
 - `Worringer Clinic` -> `沃林格诊疗所`
@@ -84,11 +87,13 @@
 - `martial law` -> `戒严`
 - `Nuevo Jalisco` -> `新哈利斯科`
 - `Thorium Star` -> `钍星号`
+- `Perseus` -> `珀耳修斯号`
 - `Jovian Soviet` -> `木星苏维埃`
 - `Vladimir Ilich Ulyanov Arsenal` -> `弗拉基米尔·伊里奇·乌里扬诺夫兵工厂`
 - `Venusian Empire` -> `金星帝国`
 - `Monteith` -> `蒙泰思`
 - `Benedict` -> `本尼迪克特`
+- `von Falkenberg` -> `冯·法尔肯贝格`
 - `rock rats` -> `岩鼠`
 
 ## 技术词
