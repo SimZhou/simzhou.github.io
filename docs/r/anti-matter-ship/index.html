@@ -57,14 +57,6 @@
       </aside>
 
       <main class="novel-main">
-        <div class="hero-card">
-          <p class="eyebrow">Novel Reader</p>
-          <h2 id="hero-title">反物质飞船 中文译本</h2>
-          <p class="hero-copy">这个页面用于分章发布《反物质飞船》中文译本。
-它不会出现在导航、文章列表或站内搜索里，但它仍然是公开静态资源，不等同于真正私密访问。
-</p>
-        </div>
-
         <article class="novel-reader" id="novel-reader">
           <header class="reader-header">
             <div>
@@ -131,7 +123,6 @@
     const railEl = document.getElementById("novel-rail");
     const sidebarToggleEl = document.getElementById("sidebar-toggle");
     const tocToggleEl = document.getElementById("toc-toggle");
-    const heroTitleEl = document.getElementById("hero-title");
 
     let manifest = null;
     let activeChapterIndex = 0;
@@ -160,7 +151,6 @@
       if (!response.ok) throw new Error("无法读取章节清单。");
       manifest = await response.json();
       railWorkTitleEl.textContent = manifest.title_zh || app.dataset.title;
-      heroTitleEl.textContent = manifest.title_zh || app.dataset.title;
       renderChapterList();
       return manifest;
     }
@@ -204,16 +194,26 @@
       nextButtonEl.disabled = activeChapterIndex >= manifest.chapters.length - 1;
     }
 
-    async function renderChapter(index) {
-      const chapter = manifest.chapters[index];
+    function renderLoadingState(chapter) {
       chapterTitleEl.textContent = chapterLabel(chapter);
       chapterSubtitleEl.textContent = chapter.title_en || "";
       railChapterEl.textContent = chapterLabel(chapter);
+      readerBodyEl.innerHTML = `
+        <div class="loading-chapter">
+          <p>正在载入章节。</p>
+          <p>请稍候，正文会立刻回到开头并展开。</p>
+        </div>
+      `;
+      updateNavButtons();
+      resetReadingPosition();
+    }
+
+    async function renderChapter(index) {
+      const chapter = manifest.chapters[index];
+      renderLoadingState(chapter);
 
       if (!chapter.asset) {
         readerBodyEl.innerHTML = `<div class="empty-chapter"><p>${emptyNote}</p></div>`;
-        updateNavButtons();
-        resetReadingPosition();
         return;
       }
 
@@ -222,7 +222,6 @@
       const payload = await response.json();
       readerBodyEl.innerHTML = payload.content_html;
       updateNavButtons();
-      resetReadingPosition();
     }
     document.querySelectorAll(".mode-button").forEach((button) => {
       button.addEventListener("click", () => setMode(button.dataset.mode));

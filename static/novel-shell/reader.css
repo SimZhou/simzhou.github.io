@@ -38,7 +38,7 @@ body[data-reader-mode="night"] {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -409,6 +409,16 @@ input {
 .locked-placeholder p:first-child,
 .empty-chapter p:first-child {
   text-indent: 0;
+}
+
+.loading-chapter p {
+  margin: 0 0 1.1rem;
+  text-indent: 0;
+}
+
+.loading-chapter p:last-child,
+.empty-chapter p:last-child {
+  margin-bottom: 0;
 }
 
 .reader-body h1,

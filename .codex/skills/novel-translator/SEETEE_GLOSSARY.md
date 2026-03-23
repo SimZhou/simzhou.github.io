@@ -35,6 +35,8 @@
 - `Kaganovich` -> `卡冈诺维奇`
 - `Eos` -> `伊俄斯`
 - `Brother Stone` -> `斯通兄弟`
+- `Asteria Rogers` -> `阿斯特里亚·罗杰斯`
+- `Miss Rasper` -> `拉斯珀小姐`
 
 ## 地名与组织
 
@@ -102,6 +104,7 @@
 - `ametine` -> `阿美定`
 - `ametine bomb` -> `阿美定炸弹`
 - `maximite` -> `最大米特`
+- `seetee iron` -> `反物质铁`
 - `Power Unlimited` -> `《无限动力》`
 - `asterite` / `asterites` -> `小行星人`
 - `Fifth Freedom` -> `第五自由`
