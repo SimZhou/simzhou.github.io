@@ -6,62 +6,62 @@
     {
       "number": 1,
       "title_en": "ONE",
-      "title_zh": null,
+      "title_zh": "危险的收获",
       "asset": "/protected-library/seetee-shock/chapter-01.json"
     },
     {
       "number": 2,
       "title_en": "TWO",
-      "title_zh": null,
+      "title_zh": "喷气阀的低语",
       "asset": "/protected-library/seetee-shock/chapter-02.json"
     },
     {
       "number": 3,
       "title_en": "THREE",
-      "title_zh": null,
+      "title_zh": "无声工场",
       "asset": "/protected-library/seetee-shock/chapter-03.json"
     },
     {
       "number": 4,
       "title_en": "FOUR",
-      "title_zh": null,
+      "title_zh": "黑区指针",
       "asset": "/protected-library/seetee-shock/chapter-04.json"
     },
     {
       "number": 5,
       "title_en": "FIVE",
-      "title_zh": null,
+      "title_zh": "布兰德的旧梦",
       "asset": "/protected-library/seetee-shock/chapter-05.json"
     },
     {
       "number": 6,
       "title_en": "SIX",
-      "title_zh": null,
+      "title_zh": "第五自由",
       "asset": "/protected-library/seetee-shock/chapter-06.json"
     },
     {
       "number": 7,
       "title_en": "SEVEN",
-      "title_zh": null,
+      "title_zh": "转向之处",
       "asset": "/protected-library/seetee-shock/chapter-07.json"
     },
     {
       "number": 8,
       "title_en": "EIGHT",
-      "title_zh": null,
+      "title_zh": "广告与理想",
       "asset": "/protected-library/seetee-shock/chapter-08.json"
     },
     {
       "number": 9,
       "title_en": "NINE",
-      "title_zh": null,
+      "title_zh": "八到十二天",
       "asset": "/protected-library/seetee-shock/chapter-09.json"
     },
     {
       "number": 10,
       "title_en": "TEN",
-      "title_zh": null,
-      "asset": null
+      "title_zh": "红漆与噩耗",
+      "asset": "/protected-library/seetee-shock/chapter-10.json"
     },
     {
       "number": 11,

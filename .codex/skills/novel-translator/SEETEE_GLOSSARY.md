@@ -22,7 +22,9 @@
 - `Vyacheslav Skryabin` -> `维亚切斯拉夫·斯克里亚宾`
 - `Adam Gast` -> `亚当·加斯特`
 - `Karen Hood` -> `卡伦·胡德`
+- `Karen Drake` -> `卡伦·德雷克`
 - `Ann O'Banion` -> `安·奥巴尼恩`
+- `Paul Anders` -> `保罗·安德斯`
 - `Worringer` -> `沃林格`
 
 ## 地名与组织
@@ -48,6 +50,7 @@
 - `Free Space Party` -> `自由太空党`
 - `High Space Union` -> `高空联盟`
 - `Worringer Clinic` -> `沃林格诊疗所`
+- `Seetee warehouse` -> `Seetee 仓库`
 
 ## 技术词
 
@@ -73,6 +76,7 @@
 - `blinker` -> `闪标`
 - `Invader` -> `入侵者`
 - `counterradiation` -> `反辐射疗法`
+- `condulloy` -> `康达合金`
 
 ## 风格规则
 
