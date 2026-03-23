@@ -4,16 +4,15 @@ subtitle: "隐藏页，无站内入口"
 date: 2026-03-22T20:50:00+08:00
 lastmod: 2026-03-22T20:50:00+08:00
 draft: false
-description: "前端密码保护的《反物质飞船》中文章节页。"
+description: "隐藏链接访问的《反物质飞船》中文章节页。"
 
 hiddenFromHomePage: true
 hiddenFromSearch: true
 privatePage: true
 
 layout: "novel-protected"
-url: "/r/seetee-ship-n9q2m/"
+url: "/r/anti-matter-ship/"
 protectedManifest: "/protected-library/seetee-ship/manifest.json"
-passwordHint: "提示：本阅读区使用固定访问密码。"
 emptyNote: "这个章节位还没填入中文译文。"
 toc:
   enable: false

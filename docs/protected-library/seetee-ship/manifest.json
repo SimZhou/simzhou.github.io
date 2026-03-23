@@ -2,7 +2,6 @@
   "slug": "seetee-ship",
   "title_zh": "反物质飞船 中文译本",
   "title_en": "Seetee Ship",
-  "probe_asset": "/protected-library/seetee-ship/probe.json",
   "chapters": [
     {
       "number": 1,

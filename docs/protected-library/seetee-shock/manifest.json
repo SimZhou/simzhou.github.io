@@ -2,7 +2,6 @@
   "slug": "seetee-shock",
   "title_zh": "反物质辐射 中文译本",
   "title_en": "Seetee Shock",
-  "probe_asset": "/protected-library/seetee-shock/probe.json",
   "chapters": [
     {
       "number": 1,
@@ -20,7 +19,7 @@
       "number": 3,
       "title_en": "THREE",
       "title_zh": null,
-      "asset": null
+      "asset": "/protected-library/seetee-shock/chapter-03.json"
     },
     {
       "number": 4,

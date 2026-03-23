@@ -3,6 +3,7 @@ Allow: /
 
 # Keep the temporary notebook takedown out of search while it is offline.
 Disallow: /notebook/
+Disallow: /r/
 
 # Block low-value or abusive crawlers.
 User-agent: MJ12bot

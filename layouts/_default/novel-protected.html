@@ -23,7 +23,6 @@
 <body>
   <div class="novel-app" id="novel-app"
        data-manifest="{{ .Params.protectedManifest }}"
-       data-password-hint="{{ .Params.passwordHint }}"
        data-empty-note="{{ .Params.emptyNote }}"
        data-title="{{ .Title }}"
        data-subtitle="{{ .Params.subtitle }}"
@@ -33,7 +32,7 @@
       <div class="brand-cluster">
         <a class="home-link" href="/">Simon Zhou Archive</a>
         <span class="brand-divider"></span>
-        <span class="brand-context">Private Reading Room</span>
+        <span class="brand-context">Hidden Reading Room</span>
       </div>
       <div class="topbar-actions">
         <button type="button" class="chip-button" id="sidebar-toggle">目录</button>
@@ -50,20 +49,15 @@
             {{ with .Params.subtitle }}<p class="sidebar-subtitle">{{ . }}</p>{{ end }}
           </div>
 
-          <div class="sidebar-panel gate-panel" id="gate-panel">
-            <p class="panel-title">访问密码</p>
-            <p class="panel-copy">这是一个隐藏阅读页。输入密码后，章节内容会在浏览器本地解密。</p>
-            <label class="field-label" for="novel-password">Password</label>
-            <input id="novel-password" class="field-input" type="password" autocomplete="current-password">
-            <button type="button" class="primary-button" id="novel-unlock">解锁阅读</button>
-            <p class="field-hint" id="novel-hint"></p>
-            <p class="field-error" id="novel-error" hidden></p>
+          <div class="sidebar-panel">
+            <p class="panel-title">访问方式</p>
+            <p class="panel-copy">这是一个没有站内入口的隐藏阅读页。知道链接的人可以直接访问，但页面保持 <code>noindex,nofollow</code>，且整段 <code>/r/</code> 已从 sitemap 与 robots 收口。</p>
           </div>
 
           <div class="sidebar-panel">
             <div class="panel-row">
               <span class="panel-title">章节目录</span>
-              <span class="lock-badge" id="library-state">Locked</span>
+              <span class="lock-badge" id="library-state">Open</span>
             </div>
             <ol class="chapter-list" id="novel-chapter-list"></ol>
           </div>
@@ -81,8 +75,8 @@
           <header class="reader-header">
             <div>
               <p class="eyebrow">Current Chapter</p>
-              <h2 id="novel-chapter-title">输入密码后开始阅读</h2>
-              <p class="chapter-subtitle" id="novel-chapter-subtitle">章节目录会在左侧保持固定。</p>
+              <h2 id="novel-chapter-title">正在载入章节</h2>
+              <p class="chapter-subtitle" id="novel-chapter-subtitle">章节目录会在左侧保持固定，页面不再需要密码。</p>
             </div>
             <div class="reader-modes">
               <button type="button" class="mode-button" data-mode="paper">Paper</button>
@@ -94,7 +88,7 @@
           <div class="reader-body" id="novel-reader-body">
             <div class="locked-placeholder">
               <p>这里会显示章节正文。阅读栏已按长篇小说做了更窄的行宽、更松的行距和更克制的界面元素。</p>
-              <p>确认你认可这个阅读器外壳后，我再继续逐章填入《反物质辐射》和《反物质飞船》的正式译文。</p>
+              <p>页面会自动载入当前已发布的章节，不再要求输入密码。</p>
             </div>
           </div>
 
@@ -116,7 +110,7 @@
           <dl class="meta-list">
             <div>
               <dt>状态</dt>
-              <dd id="rail-status">待解锁</dd>
+              <dd id="rail-status">公开隐藏页</dd>
             </div>
             <div>
               <dt>作品</dt>
@@ -147,7 +141,6 @@
     if (!app) return;
 
     const manifestPath = app.dataset.manifest;
-    const hint = app.dataset.passwordHint || "";
     const emptyNote = app.dataset.emptyNote || "该章节尚未加入中文译文。";
 
     const chapterListEl = document.getElementById("novel-chapter-list");
@@ -158,10 +151,6 @@
     const railChapterEl = document.getElementById("rail-chapter");
     const railWorkTitleEl = document.getElementById("rail-work-title");
     const libraryStateEl = document.getElementById("library-state");
-    const hintEl = document.getElementById("novel-hint");
-    const errorEl = document.getElementById("novel-error");
-    const inputEl = document.getElementById("novel-password");
-    const unlockButtonEl = document.getElementById("novel-unlock");
     const prevButtonEl = document.getElementById("prev-chapter");
     const nextButtonEl = document.getElementById("next-chapter");
     const sidebarEl = document.getElementById("novel-sidebar");
@@ -171,15 +160,7 @@
     const heroTitleEl = document.getElementById("hero-title");
 
     let manifest = null;
-    let password = "";
-    let unlocked = false;
     let activeChapterIndex = 0;
-
-    const decoder = new TextDecoder();
-
-    function b64ToBytes(value) {
-      return Uint8Array.from(atob(value), (char) => char.charCodeAt(0));
-    }
 
     function setMode(mode) {
       document.body.dataset.readerMode = mode;
@@ -187,43 +168,6 @@
       document.querySelectorAll(".mode-button").forEach((button) => {
         button.dataset.active = button.dataset.mode === mode ? "true" : "false";
       });
-    }
-
-    async function deriveKey(passwordValue, payload) {
-      const keyMaterial = await crypto.subtle.importKey(
-        "raw",
-        new TextEncoder().encode(passwordValue),
-        "PBKDF2",
-        false,
-        ["deriveKey"]
-      );
-      return crypto.subtle.deriveKey(
-        {
-          name: "PBKDF2",
-          salt: b64ToBytes(payload.salt),
-          iterations: payload.iterations,
-          hash: payload.hash,
-        },
-        keyMaterial,
-        { name: "AES-GCM", length: 256 },
-        false,
-        ["decrypt"]
-      );
-    }
-
-    async function decryptPayload(payload) {
-      const key = await deriveKey(password, payload);
-      const ciphertext = b64ToBytes(payload.ciphertext);
-      const tag = b64ToBytes(payload.tag);
-      const joined = new Uint8Array(ciphertext.length + tag.length);
-      joined.set(ciphertext, 0);
-      joined.set(tag, ciphertext.length);
-      const plaintext = await crypto.subtle.decrypt(
-        { name: "AES-GCM", iv: b64ToBytes(payload.iv) },
-        key,
-        joined
-      );
-      return JSON.parse(decoder.decode(plaintext));
     }
 
     async function loadManifest() {
@@ -262,11 +206,6 @@
         button.addEventListener("click", () => {
           activeChapterIndex = index;
           renderChapterList();
-          if (!unlocked) {
-            inputEl.focus();
-            railStatusEl.textContent = "请先解锁";
-            return;
-          }
           void renderChapter(index);
         });
         li.appendChild(button);
@@ -275,8 +214,8 @@
     }
 
     function updateNavButtons() {
-      prevButtonEl.disabled = !unlocked || activeChapterIndex <= 0;
-      nextButtonEl.disabled = !unlocked || activeChapterIndex >= manifest.chapters.length - 1;
+      prevButtonEl.disabled = activeChapterIndex <= 0;
+      nextButtonEl.disabled = activeChapterIndex >= manifest.chapters.length - 1;
     }
 
     async function renderChapter(index) {
@@ -292,41 +231,11 @@
       }
 
       const response = await fetch(chapter.asset, { cache: "no-store" });
-      if (!response.ok) {
-        throw new Error("无法读取加密章节文件。");
-      }
-      const encrypted = await response.json();
-      const decrypted = await decryptPayload(encrypted);
-      readerBodyEl.innerHTML = decrypted.content_html;
+      if (!response.ok) throw new Error("无法读取章节文件。");
+      const payload = await response.json();
+      readerBodyEl.innerHTML = payload.content_html;
       updateNavButtons();
     }
-
-    async function unlock() {
-      errorEl.hidden = true;
-      password = inputEl.value;
-      if (!password) {
-        errorEl.textContent = "请输入密码。";
-        errorEl.hidden = false;
-        return;
-      }
-
-      await loadManifest();
-
-      if (manifest.probe_asset) {
-        const probeResponse = await fetch(manifest.probe_asset, { cache: "no-store" });
-        if (!probeResponse.ok) throw new Error("无法读取密码校验文件。");
-        const encryptedProbe = await probeResponse.json();
-        await decryptPayload(encryptedProbe);
-      }
-
-      unlocked = true;
-      railStatusEl.textContent = "已解锁";
-      libraryStateEl.textContent = "Unlocked";
-      document.body.dataset.unlocked = "true";
-      await renderChapter(activeChapterIndex);
-    }
-
-    hintEl.textContent = hint;
     document.querySelectorAll(".mode-button").forEach((button) => {
       button.addEventListener("click", () => setMode(button.dataset.mode));
     });
@@ -346,21 +255,6 @@
       void renderChapter(activeChapterIndex);
     });
 
-    unlockButtonEl.addEventListener("click", () => {
-      unlock().catch((error) => {
-        errorEl.textContent = "密码错误，或加密内容已损坏。";
-        errorEl.hidden = false;
-        console.error(error);
-      });
-    });
-
-    inputEl.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        unlockButtonEl.click();
-      }
-    });
-
     sidebarToggleEl.addEventListener("click", () => {
       sidebarEl.dataset.open = sidebarEl.dataset.open === "true" ? "false" : "true";
     });
@@ -369,7 +263,15 @@
       railEl.dataset.open = railEl.dataset.open === "true" ? "false" : "true";
     });
 
-    loadManifest().catch((error) => {
+    loadManifest().then(() => {
+      const firstReadableIndex = manifest.chapters.findIndex((chapter) => Boolean(chapter.asset));
+      if (firstReadableIndex >= 0) {
+        activeChapterIndex = firstReadableIndex;
+        renderChapterList();
+        return renderChapter(activeChapterIndex);
+      }
+      return null;
+    }).catch((error) => {
       railStatusEl.textContent = "目录载入失败";
       console.error(error);
     });
@@ -377,4 +279,3 @@
   </script>
 </body>
 </html>
-
