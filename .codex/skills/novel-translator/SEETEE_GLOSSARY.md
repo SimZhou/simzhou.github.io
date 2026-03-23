@@ -26,6 +26,7 @@
 - `Ann O'Banion` -> `安·奥巴尼恩`
 - `Paul Anders` -> `保罗·安德斯`
 - `Worringer` -> `沃林格`
+- `Amador` -> `阿马多尔`
 
 ## 地名与组织
 
