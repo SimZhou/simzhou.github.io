@@ -39,6 +39,7 @@
 - `Pallasport` -> `帕拉斯港`
 - `Santa Fe` -> `圣菲`
 - `Octans` -> `南极座`
+- `Vega` -> `织女星`
 - `Seetee, Inc.` -> `Seetee 公司`
 - `Interplanet Corporation` -> `星际公司`
 - `Mandate` -> `托管政府`
@@ -50,6 +51,7 @@
 - `Free Space Party` -> `自由太空党`
 - `High Space Union` -> `高空联盟`
 - `Worringer Clinic` -> `沃林格诊疗所`
+- `Terran Tor` -> `地球岬`
 - `Seetee warehouse` -> `Seetee 仓库`
 
 ## 技术词
