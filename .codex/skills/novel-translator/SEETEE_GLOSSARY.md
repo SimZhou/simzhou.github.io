@@ -27,6 +27,8 @@
 - `Paul Anders` -> `保罗·安德斯`
 - `Worringer` -> `沃林格`
 - `Amador` -> `阿马多尔`
+- `Gall Manrique` -> `加尔·曼里克`
+- `Vidal` -> `比达尔`
 
 ## 地名与组织
 
@@ -54,6 +56,7 @@
 - `Worringer Clinic` -> `沃林格诊疗所`
 - `Terran Tor` -> `地球岬`
 - `Seetee warehouse` -> `Seetee 仓库`
+- `Zodiacal Light` -> `黄道光`
 - `Jupiter Light` -> `木星电台`
 - `Luna Light` -> `月球电台`
 - `Mandate Light` -> `托管之声`
@@ -91,6 +94,7 @@
 - `Invader` -> `入侵者`
 - `counterradiation` -> `反辐射疗法`
 - `condulloy` -> `康达合金`
+- `paragravity loading tube` -> `副重力装载管`
 
 ## 风格规则
 
