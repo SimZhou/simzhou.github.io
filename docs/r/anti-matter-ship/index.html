@@ -143,7 +143,7 @@
         0,
         window.scrollY + readerBodyEl.getBoundingClientRect().top - topbarOffset - heroOffset
       );
-      window.scrollTo({ top: targetTop, behavior: "smooth" });
+      window.scrollTo(0, targetTop);
     }
 
     function setMode(mode) {
@@ -213,7 +213,7 @@
       if (!chapter.asset) {
         readerBodyEl.innerHTML = `<div class="empty-chapter"><p>${emptyNote}</p></div>`;
         updateNavButtons();
-        requestAnimationFrame(resetReadingPosition);
+        resetReadingPosition();
         return;
       }
 
@@ -222,7 +222,7 @@
       const payload = await response.json();
       readerBodyEl.innerHTML = payload.content_html;
       updateNavButtons();
-      requestAnimationFrame(resetReadingPosition);
+      resetReadingPosition();
     }
     document.querySelectorAll(".mode-button").forEach((button) => {
       button.addEventListener("click", () => setMode(button.dataset.mode));

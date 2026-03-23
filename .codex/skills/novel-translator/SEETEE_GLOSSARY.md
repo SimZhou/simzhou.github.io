@@ -21,6 +21,7 @@
 - `Bruce O'Banion` -> `布鲁斯·奥巴尼恩`
 - `Vyacheslav Skryabin` -> `维亚切斯拉夫·斯克里亚宾`
 - `Adam Gast` -> `亚当·加斯特`
+- `Rick Drake` / `Rick` -> `里克·德雷克` / `里克`
 - `Karen Hood` -> `卡伦·胡德`
 - `Karen Drake` -> `卡伦·德雷克`
 - `Ann O'Banion` -> `安·奥巴尼恩`
@@ -31,6 +32,7 @@
 - `Vidal` -> `比达尔`
 - `Admiral Julius Augustus Goldmark-Granger` -> `尤利乌斯·奥古斯都·戈德马克-格兰杰海军上将`
 - `Kaganovich` -> `卡冈诺维奇`
+- `Eos` -> `伊俄斯`
 
 ## 地名与组织
 
@@ -64,6 +66,7 @@
 - `Achilles` -> `阿喀琉斯`
 - `New Yukon` -> `新育空`
 - `Lunar bases` -> `月球基地`
+- `Ametine coma` -> `阿美定昏迷`
 - `Jupiter Light` -> `木星电台`
 - `Luna Light` -> `月球电台`
 - `Mandate Light` -> `托管之声`
