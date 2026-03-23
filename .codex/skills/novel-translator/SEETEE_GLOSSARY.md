@@ -23,6 +23,7 @@
 - `Obania` -> `奥巴尼亚`
 - `Solar City` -> `太阳城`
 - `Adonis` -> `阿多尼斯`
+- `Octans` -> `南极座`
 - `Seetee, Inc.` -> `Seetee 公司`
 - `Interplanet Corporation` -> `星际公司`
 - `Mandate` -> `托管政府`
@@ -42,6 +43,9 @@
 - `photophone` -> `光话机`
 - `Geiger` -> `盖革计数器`
 - `Good-by Jane` -> `“再会，简”号`
+- `prospecting gun` -> `勘测枪`
+- `ametine` -> `阿美定`
+- `ametine bomb` -> `阿美定炸弹`
 
 ## 风格规则
 
