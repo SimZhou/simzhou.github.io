@@ -97,6 +97,7 @@
 - `Monteith` -> `蒙泰思`
 - `Benedict` -> `本尼迪克特`
 - `von Falkenberg` -> `冯·法尔肯贝格`
+- `Kurt von Sudenhorst` -> `库尔特·冯·苏登霍斯特`
 - `rock rats` -> `岩鼠`
 
 ## 技术词
