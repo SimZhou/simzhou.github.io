@@ -19,6 +19,11 @@
 - `Rene Lemoyne` -> `勒内·勒莫因`
 - `Dahlberg` -> `达尔伯格`
 - `Bruce O'Banion` -> `布鲁斯·奥巴尼恩`
+- `Vyacheslav Skryabin` -> `维亚切斯拉夫·斯克里亚宾`
+- `Adam Gast` -> `亚当·加斯特`
+- `Karen Hood` -> `卡伦·胡德`
+- `Ann O'Banion` -> `安·奥巴尼恩`
+- `Worringer` -> `沃林格`
 
 ## 地名与组织
 
@@ -38,6 +43,8 @@
 - `Treaty of Space` -> `空间条约`
 - `Treaty of Santa Fe` -> `圣菲条约`
 - `Spatial Museum` -> `太空博物馆`
+- `High Space Guard` -> `高空卫队`
+- `Free Space Party` -> `自由太空党`
 
 ## 技术词
 
