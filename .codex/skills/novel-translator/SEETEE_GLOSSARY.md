@@ -15,6 +15,10 @@
 - `Martin Brand` -> `马丁·布兰德`
 - `Jim Drake` / `Drake` -> `吉姆·德雷克` / `德雷克`
 - `Rob McGee` -> `罗布·麦吉`
+- `Maxim-Gore` -> `马克西姆-戈尔`
+- `Rene Lemoyne` -> `勒内·勒莫因`
+- `Dahlberg` -> `达尔伯格`
+- `Bruce O'Banion` -> `布鲁斯·奥巴尼恩`
 
 ## 地名与组织
 
@@ -23,10 +27,16 @@
 - `Obania` -> `奥巴尼亚`
 - `Solar City` -> `太阳城`
 - `Adonis` -> `阿多尼斯`
+- `Callisto` / `Callistonian` -> `卡利斯托` / `卡利斯托的`
+- `Pallasport` -> `帕拉斯港`
+- `Santa Fe` -> `圣菲`
 - `Octans` -> `南极座`
 - `Seetee, Inc.` -> `Seetee 公司`
 - `Interplanet Corporation` -> `星际公司`
 - `Mandate` -> `托管政府`
+- `High Space Mandate` -> `高空托管政府`
+- `Treaty of Space` -> `空间条约`
+- `Treaty of Santa Fe` -> `圣菲条约`
 
 ## 技术词
 
@@ -46,6 +56,8 @@
 - `prospecting gun` -> `勘测枪`
 - `ametine` -> `阿美定`
 - `ametine bomb` -> `阿美定炸弹`
+- `Power Unlimited` -> `《无限动力》`
+- `asterite` / `asterites` -> `小行星人`
 
 ## 风格规则
 
