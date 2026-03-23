@@ -46,6 +46,8 @@
 - `Spatial Museum` -> `太空博物馆`
 - `High Space Guard` -> `高空卫队`
 - `Free Space Party` -> `自由太空党`
+- `High Space Union` -> `高空联盟`
+- `Worringer Clinic` -> `沃林格诊疗所`
 
 ## 技术词
 
@@ -69,6 +71,8 @@
 - `asterite` / `asterites` -> `小行星人`
 - `Fifth Freedom` -> `第五自由`
 - `blinker` -> `闪标`
+- `Invader` -> `入侵者`
+- `counterradiation` -> `反辐射疗法`
 
 ## 风格规则
 
