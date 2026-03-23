@@ -58,6 +58,11 @@
 - `Luna Light` -> `月球电台`
 - `Mandate Light` -> `托管之声`
 - `Nuevo Jalisco` -> `新哈利斯科`
+- `Thorium Star` -> `钍星号`
+- `Jovian Soviet` -> `木星苏维埃`
+- `Vladimir Ilich Ulyanov Arsenal` -> `弗拉基米尔·伊里奇·乌里扬诺夫兵工厂`
+- `Venusian Empire` -> `金星帝国`
+- `Monteith` -> `蒙泰思`
 
 ## 技术词
 

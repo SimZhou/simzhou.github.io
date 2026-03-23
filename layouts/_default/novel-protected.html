@@ -162,6 +162,16 @@
     let manifest = null;
     let activeChapterIndex = 0;
 
+    function resetReadingPosition() {
+      const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
+      const heroOffset = 16;
+      const targetTop = Math.max(
+        0,
+        window.scrollY + readerBodyEl.getBoundingClientRect().top - topbarOffset - heroOffset
+      );
+      window.scrollTo({ top: targetTop, behavior: "smooth" });
+    }
+
     function setMode(mode) {
       document.body.dataset.readerMode = mode;
       window.localStorage?.setItem("novel-reader-mode", mode);
@@ -206,6 +216,8 @@
         button.addEventListener("click", () => {
           activeChapterIndex = index;
           renderChapterList();
+          sidebarEl.dataset.open = "false";
+          railEl.dataset.open = "false";
           void renderChapter(index);
         });
         li.appendChild(button);
@@ -227,6 +239,7 @@
       if (!chapter.asset) {
         readerBodyEl.innerHTML = `<div class="empty-chapter"><p>${emptyNote}</p></div>`;
         updateNavButtons();
+        requestAnimationFrame(resetReadingPosition);
         return;
       }
 
@@ -235,6 +248,7 @@
       const payload = await response.json();
       readerBodyEl.innerHTML = payload.content_html;
       updateNavButtons();
+      requestAnimationFrame(resetReadingPosition);
     }
     document.querySelectorAll(".mode-button").forEach((button) => {
       button.addEventListener("click", () => setMode(button.dataset.mode));
