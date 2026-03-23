@@ -26,6 +26,7 @@
 - `Karen Drake` -> `卡伦·德雷克`
 - `Ann O'Banion` -> `安·奥巴尼恩`
 - `Paul Anders` -> `保罗·安德斯`
+- `Ann Anders` -> `安·安德斯`
 - `Worringer` -> `沃林格`
 - `Amador` -> `阿马多尔`
 - `Gall Manrique` -> `加尔·曼里克`
@@ -33,6 +34,7 @@
 - `Admiral Julius Augustus Goldmark-Granger` -> `尤利乌斯·奥古斯都·戈德马克-格兰杰海军上将`
 - `Kaganovich` -> `卡冈诺维奇`
 - `Eos` -> `伊俄斯`
+- `Brother Stone` -> `斯通兄弟`
 
 ## 地名与组织
 
@@ -51,6 +53,7 @@
 - `Interplanet Corporation` -> `星际公司`
 - `Mandate` -> `托管政府`
 - `High Space Mandate` -> `高空托管政府`
+- `Free Space Republic` -> `自由太空共和国`
 - `Treaty of Space` -> `空间条约`
 - `Treaty of Santa Fe` -> `圣菲条约`
 - `Spatial Museum` -> `太空博物馆`
@@ -60,6 +63,7 @@
 - `Worringer Clinic` -> `沃林格诊疗所`
 - `Terran Tor` -> `地球岬`
 - `Seetee warehouse` -> `Seetee 仓库`
+- `Seetee Invader` -> `反物质入侵者号`
 - `Zodiacal Light` -> `黄道光`
 - `Leninsk` -> `列宁斯克`
 - `Trojan Planets` -> `特洛伊行星`
@@ -97,6 +101,7 @@
 - `prospecting gun` -> `勘测枪`
 - `ametine` -> `阿美定`
 - `ametine bomb` -> `阿美定炸弹`
+- `maximite` -> `最大米特`
 - `Power Unlimited` -> `《无限动力》`
 - `asterite` / `asterites` -> `小行星人`
 - `Fifth Freedom` -> `第五自由`
