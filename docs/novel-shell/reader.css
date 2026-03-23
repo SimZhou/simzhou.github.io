@@ -367,6 +367,10 @@ input {
   overflow: hidden;
 }
 
+.novel-reader[data-loading="true"] .reader-body {
+  opacity: 0.92;
+}
+
 .reader-header,
 .reader-footer {
   display: flex;
@@ -419,7 +423,6 @@ input {
   text-indent: 0;
 }
 
-.loading-chapter,
 .empty-chapter,
 .locked-placeholder {
   display: flex;
@@ -428,7 +431,6 @@ input {
   min-height: calc(56vh - 4.8rem);
 }
 
-.loading-chapter p:last-child,
 .empty-chapter p:last-child {
   margin-bottom: 0;
 }

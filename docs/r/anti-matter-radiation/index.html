@@ -62,7 +62,7 @@
             <div>
               <p class="eyebrow">Current Chapter</p>
               <h2 id="novel-chapter-title">正在载入章节</h2>
-              <p class="chapter-subtitle" id="novel-chapter-subtitle">章节正文正在准备。</p>
+              <p class="chapter-subtitle" id="novel-chapter-subtitle">章节目录会在左侧保持固定。</p>
             </div>
             <div class="reader-modes">
               <button type="button" class="mode-button" data-mode="paper">Paper</button>
@@ -195,34 +195,30 @@
       nextButtonEl.disabled = activeChapterIndex >= manifest.chapters.length - 1;
     }
 
-    function renderLoadingState(chapter) {
+    function updateChapterMeta(chapter) {
       chapterTitleEl.textContent = chapterLabel(chapter);
       chapterSubtitleEl.textContent = chapter.title_en || "";
       railChapterEl.textContent = chapterLabel(chapter);
-      readerBodyEl.innerHTML = `
-        <div class="loading-chapter">
-          <p>正在载入章节。</p>
-          <p>正文会直接切到本章开头。</p>
-        </div>
-      `;
       updateNavButtons();
-      resetReadingPosition();
     }
 
     async function renderChapter(index) {
       const chapter = manifest.chapters[index];
-      renderLoadingState(chapter);
+      updateChapterMeta(chapter);
 
       if (!chapter.asset) {
         readerBodyEl.innerHTML = `<div class="empty-chapter"><p>${emptyNote}</p></div>`;
+        resetReadingPosition();
         return;
       }
 
+      readerEl.dataset.loading = "true";
       const response = await fetch(chapter.asset, { cache: "no-store" });
       if (!response.ok) throw new Error("无法读取章节文件。");
       const payload = await response.json();
       readerBodyEl.innerHTML = payload.content_html;
-      updateNavButtons();
+      readerEl.dataset.loading = "false";
+      resetReadingPosition();
     }
     document.querySelectorAll(".mode-button").forEach((button) => {
       button.addEventListener("click", () => setMode(button.dataset.mode));
