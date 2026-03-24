@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="{{ .Description | default .Params.description }}">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/novel-shell/reader.css">
+  <link rel="stylesheet" href="/novel-shell/reader.css?v={{ now.Unix }}">
 </head>
 <body>
   <div class="novel-app" id="novel-app"
