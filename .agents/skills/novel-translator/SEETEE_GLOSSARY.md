@@ -63,6 +63,8 @@
 - `Pallasport` -> `帕拉斯港`
 - `Santa Fe` -> `圣菲`
 - `Southern Cross` -> `南十字座`
+- `Cassiopeia` -> `仙后座`
+- `Sagittarius` -> `射手座`
 - `Ceres Street` -> `谷神街`
 - `Octans` -> `南极座`
 - `Vega` -> `织女星`
