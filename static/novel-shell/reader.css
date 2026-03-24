@@ -506,23 +506,26 @@ input {
 
 @media (max-width: 900px) {
   .novel-topbar {
-    gap: 0.75rem;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.6rem;
     padding: 0.8rem 0.9rem;
   }
 
   .brand-cluster {
-    flex: 1 1 auto;
+    display: block;
     min-width: 0;
-    gap: 0.5rem;
   }
 
   .home-link {
+    display: block;
     min-width: 0;
+    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 
   .brand-context,
@@ -534,12 +537,15 @@ input {
     display: flex;
     gap: 0.45rem;
     flex: 0 0 auto;
+    align-items: center;
   }
 
   .chip-button {
-    padding: 0.42rem 0.72rem;
+    min-width: 3.2rem;
+    padding: 0.4rem 0.68rem;
     line-height: 1.1;
-    font-size: 0.92rem;
+    font-size: 0.88rem;
+    text-align: center;
   }
 
   .novel-layout {
@@ -549,16 +555,17 @@ input {
 
   .novel-sidebar,
   .novel-rail {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     top: calc(4.3rem + env(safe-area-inset-top, 0px));
     bottom: 0.9rem;
     left: 0.9rem;
     right: 0.9rem;
     width: auto;
+    height: auto;
     max-height: none;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
     transform: translateY(calc(-100% - 1rem));
     transition: transform 180ms ease;
@@ -578,28 +585,18 @@ input {
   }
 
   .sidebar-inner {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    min-height: 0;
-    max-height: 100%;
-    overflow: hidden;
+    display: block;
+    min-height: 100%;
+    overflow: visible;
   }
 
   .sidebar-panel {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    min-height: 0;
+    display: block;
   }
 
   .chapter-list {
-    flex: 1 1 auto;
-    min-height: 0;
     max-height: none;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
+    overflow: visible;
   }
 
   .novel-rail[data-open="true"] {
