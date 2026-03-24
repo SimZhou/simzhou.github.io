@@ -107,6 +107,8 @@ input {
 .topbar-actions {
   display: none;
   gap: 0.6rem;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
 }
 
 .chip-button,
@@ -123,6 +125,8 @@ input {
 
 .chip-button {
   padding: 0.45rem 0.85rem;
+  white-space: nowrap;
+  writing-mode: horizontal-tb;
 }
 
 .primary-button {
@@ -501,6 +505,43 @@ input {
 }
 
 @media (max-width: 900px) {
+  .novel-topbar {
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .brand-cluster {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 0.5rem;
+  }
+
+  .home-link {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  .brand-context,
+  .brand-divider {
+    display: none;
+  }
+
+  .topbar-actions {
+    display: flex;
+    gap: 0.45rem;
+    flex: 0 0 auto;
+  }
+
+  .chip-button {
+    padding: 0.42rem 0.72rem;
+    line-height: 1.1;
+    font-size: 0.92rem;
+  }
+
   .novel-layout {
     grid-template-columns: 1fr;
     padding: 0.9rem;
@@ -508,6 +549,8 @@ input {
 
   .novel-sidebar,
   .novel-rail {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: calc(4.3rem + env(safe-area-inset-top, 0px));
     bottom: 0.9rem;
@@ -515,7 +558,7 @@ input {
     right: 0.9rem;
     width: auto;
     max-height: none;
-    overflow: auto;
+    overflow: hidden;
     overscroll-behavior: contain;
     transform: translateY(calc(-100% - 1rem));
     transition: transform 180ms ease;
@@ -535,13 +578,28 @@ input {
   }
 
   .sidebar-inner {
-    max-height: none;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .sidebar-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
   }
 
   .chapter-list {
+    flex: 1 1 auto;
+    min-height: 0;
     max-height: none;
-    overflow: visible;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
 
   .novel-rail[data-open="true"] {

@@ -43,7 +43,7 @@
 - `Mikhail Ivanovich Protopopov` -> `米哈伊尔·伊万诺维奇·普罗托波波夫`
 - `Luigi Muratori` -> `路易吉·穆拉托里`
 - `Suzuki Omura` -> `铃木大村`
-- `Captain Erickson` -> `埃瑞克松船长`
+- `Captain Erickson` -> `埃里克松船长`
 
 ## 地名与组织
 
