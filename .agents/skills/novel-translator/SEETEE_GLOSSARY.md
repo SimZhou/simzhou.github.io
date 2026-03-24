@@ -14,24 +14,24 @@
 - `Jean Lazarene` -> `让·拉扎雷恩`
 - `Martin Brand` -> `马丁·布兰德`
 - `Jim Drake` / `Drake` -> `吉姆·德雷克` / `德雷克`
-- `Rob McGee` -> `罗布·麦吉`
+- `Rob McGee` -> `罗伯·麦吉`
 - `Maxim-Gore` -> `马克西姆-戈尔`
 - `Rene Lemoyne` -> `勒内·勒莫因`
 - `Dahlberg` -> `达尔伯格`
 - `Bruce O'Banion` -> `布鲁斯·奥巴尼恩`
 - `Vyacheslav Skryabin` -> `维亚切斯拉夫·斯克里亚宾`
 - `Adam Gast` -> `亚当·加斯特`
-- `Rick Drake` / `Rick` -> `里克·德雷克` / `里克`
-- `Karen Hood` -> `卡伦·胡德`
+- `Rick Drake` / `Rick` -> `瑞克·德雷克` / `瑞克`
+- `Karen Hood` -> `凯伦·胡德`
 - `Austin Hood` -> `奥斯汀·胡德`
-- `Karen Drake` -> `卡伦·德雷克`
+- `Karen Drake` -> `凯伦·德雷克`
 - `Ann O'Banion` -> `安·奥巴尼恩`
 - `Paul Anders` -> `保罗·安德斯`
 - `Max Vickers` -> `马克斯·维克斯`
 - `Ann Anders` -> `安·安德斯`
 - `Worringer` -> `沃林格`
 - `Amador` -> `阿马多尔`
-- `Gall Manrique` -> `加尔·曼里克`
+- `Gall Manrique` -> `加尔·曼瑞克`
 - `Vidal` -> `比达尔`
 - `Admiral Julius Augustus Goldmark-Granger` -> `尤利乌斯·奥古斯都·戈德马克-格兰杰海军上将`
 - `Kaganovich` -> `卡冈诺维奇`
@@ -43,12 +43,12 @@
 - `Mikhail Ivanovich Protopopov` -> `米哈伊尔·伊万诺维奇·普罗托波波夫`
 - `Luigi Muratori` -> `路易吉·穆拉托里`
 - `Suzuki Omura` -> `铃木大村`
-- `Captain Erickson` -> `埃里克松船长`
+- `Captain Erickson` -> `埃瑞克松船长`
 
 ## 地名与组织
 
 - `Freedonia` -> `弗里多尼亚`
-- `Pallasport` -> `帕拉斯港`
+- `Pallasport` -> `巴勒斯港`
 - `Pallas` -> `智神星`
 - `Pallas I` -> `智神星一号`
 - `Pallas II` -> `智神星二号`
@@ -60,7 +60,7 @@
 - `Planetania` -> `行星世界号`
 - `Ivanov` -> `伊万诺夫号`
 - `Callisto` / `Callistonian` -> `卡利斯托` / `卡利斯托的`
-- `Pallasport` -> `帕拉斯港`
+- `Pallasport` -> `巴勒斯港`
 - `Santa Fe` -> `圣菲`
 - `Southern Cross` -> `南十字座`
 - `Cassiopeia` -> `仙后座`
