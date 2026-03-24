@@ -40,6 +40,10 @@
 - `Asteria Rogers` -> `阿斯特里亚·罗杰斯`
 - `Miss Rasper` -> `拉斯珀小姐`
 - `Rykov` -> `雷科夫`
+- `Mikhail Ivanovich Protopopov` -> `米哈伊尔·伊万诺维奇·普罗托波波夫`
+- `Luigi Muratori` -> `路易吉·穆拉托里`
+- `Suzuki Omura` -> `铃木大村`
+- `Captain Erickson` -> `埃里克松船长`
 
 ## 地名与组织
 
@@ -95,6 +99,7 @@
 - `Thorium Star` -> `钍星号`
 - `Perseus` -> `珀耳修斯号`
 - `Orion` -> `猎户座号`
+- `Galactic Queen` -> `银河女王号`
 - `Jovian Soviet` -> `木星苏维埃`
 - `Vladimir Ilich Ulyanov Arsenal` -> `弗拉基米尔·伊里奇·乌里扬诺夫兵工厂`
 - `Venusian Empire` -> `金星帝国`
