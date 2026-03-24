@@ -146,8 +146,12 @@
 - `condulloy` -> `康达合金`
 - `Lemoyne-Dahlberg field` -> `勒莫因-达尔伯格场`
 - `paragravity loading tube` -> `副重力装载管`
+- `paragravitic alloy` -> `副重力合金`
 - `robot pilot` -> `机器人驾驶仪`
 - `unipolar receptor` -> `单极接收器`
+- `inverse-square law` -> `平方反比定律`
+- `entropy` -> `熵`
+- `entropic field` -> `熵场`
 - `terraforming units` -> `地貌改造装置`
 - `bedplate` -> `底板`
 - `orbital marker` -> `轨道信标`
