@@ -62,6 +62,7 @@
 - `Callisto` / `Callistonian` -> `卡利斯托` / `卡利斯托的`
 - `Pallasport` -> `帕拉斯港`
 - `Santa Fe` -> `圣菲`
+- `Southern Cross` -> `南十字座`
 - `Ceres Street` -> `谷神街`
 - `Octans` -> `南极座`
 - `Vega` -> `织女星`
