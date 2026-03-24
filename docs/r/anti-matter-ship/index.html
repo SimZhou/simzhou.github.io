@@ -43,6 +43,10 @@
     <div class="novel-layout">
       <aside class="novel-sidebar" id="novel-sidebar">
         <div class="sidebar-inner">
+          <div class="overlay-toolbar">
+            <span class="overlay-title">目录</span>
+            <button type="button" class="overlay-close" id="sidebar-close" aria-label="关闭目录">关闭</button>
+          </div>
           <div class="sidebar-head">
             <p class="eyebrow">作品</p>
             <h1>反物质飞船 中文译本</h1>
@@ -87,6 +91,10 @@
 
       <aside class="novel-rail" id="novel-rail">
         <div class="rail-panel">
+          <div class="overlay-toolbar">
+            <span class="overlay-title">信息</span>
+            <button type="button" class="overlay-close" id="rail-close" aria-label="关闭信息">关闭</button>
+          </div>
           <p class="panel-title">当前阅读</p>
           <dl class="meta-list">
             <div>
@@ -124,6 +132,8 @@
     const railEl = document.getElementById("novel-rail");
     const sidebarToggleEl = document.getElementById("sidebar-toggle");
     const tocToggleEl = document.getElementById("toc-toggle");
+    const sidebarCloseEl = document.getElementById("sidebar-close");
+    const railCloseEl = document.getElementById("rail-close");
 
     let manifest = null;
     let activeChapterIndex = 0;
@@ -285,6 +295,16 @@
       if (railEl.dataset.open === "true") {
         sidebarEl.dataset.open = "false";
       }
+      syncOverlayState();
+    });
+
+    sidebarCloseEl?.addEventListener("click", () => {
+      sidebarEl.dataset.open = "false";
+      syncOverlayState();
+    });
+
+    railCloseEl?.addEventListener("click", () => {
+      railEl.dataset.open = "false";
       syncOverlayState();
     });
 
