@@ -128,6 +128,12 @@
     let manifest = null;
     let activeChapterIndex = 0;
 
+    function syncOverlayState() {
+      const overlayOpen =
+        sidebarEl.dataset.open === "true" || railEl.dataset.open === "true";
+      document.body.dataset.overlayOpen = overlayOpen ? "true" : "false";
+    }
+
     function resetReadingPosition() {
       const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
       const cardOffset = 10;
@@ -183,6 +189,7 @@
           renderChapterList();
           sidebarEl.dataset.open = "false";
           railEl.dataset.open = "false";
+          syncOverlayState();
           void renderChapter(index);
         });
         li.appendChild(button);
@@ -241,10 +248,18 @@
 
     sidebarToggleEl.addEventListener("click", () => {
       sidebarEl.dataset.open = sidebarEl.dataset.open === "true" ? "false" : "true";
+      if (sidebarEl.dataset.open === "true") {
+        railEl.dataset.open = "false";
+      }
+      syncOverlayState();
     });
 
     tocToggleEl.addEventListener("click", () => {
       railEl.dataset.open = railEl.dataset.open === "true" ? "false" : "true";
+      if (railEl.dataset.open === "true") {
+        sidebarEl.dataset.open = "false";
+      }
+      syncOverlayState();
     });
 
     loadManifest().then(() => {

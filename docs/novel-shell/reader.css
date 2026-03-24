@@ -51,6 +51,12 @@ body {
   font-family: var(--ui-sans);
 }
 
+body[data-overlay-open="true"] {
+  overflow: hidden;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
 a {
   color: inherit;
 }
@@ -566,6 +572,7 @@ input {
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
     overscroll-behavior: contain;
     transform: translateY(calc(-100% - 1rem));
     transition: transform 180ms ease;
