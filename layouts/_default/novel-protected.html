@@ -43,10 +43,6 @@
     <div class="novel-layout">
       <aside class="novel-sidebar" id="novel-sidebar">
         <div class="sidebar-inner">
-          <div class="overlay-toolbar">
-            <span class="overlay-title">目录</span>
-            <button type="button" class="overlay-close" id="sidebar-close" aria-label="关闭目录">关闭</button>
-          </div>
           <div class="sidebar-head">
             <p class="eyebrow">作品</p>
             <h1>{{ .Title }}</h1>
@@ -91,10 +87,6 @@
 
       <aside class="novel-rail" id="novel-rail">
         <div class="rail-panel">
-          <div class="overlay-toolbar">
-            <span class="overlay-title">信息</span>
-            <button type="button" class="overlay-close" id="rail-close" aria-label="关闭信息">关闭</button>
-          </div>
           <p class="panel-title">当前阅读</p>
           <dl class="meta-list">
             <div>
@@ -132,43 +124,9 @@
     const railEl = document.getElementById("novel-rail");
     const sidebarToggleEl = document.getElementById("sidebar-toggle");
     const tocToggleEl = document.getElementById("toc-toggle");
-    const sidebarCloseEl = document.getElementById("sidebar-close");
-    const railCloseEl = document.getElementById("rail-close");
 
     let manifest = null;
     let activeChapterIndex = 0;
-    let lockedScrollY = 0;
-
-    function lockPageScroll() {
-      lockedScrollY = window.scrollY || window.pageYOffset || 0;
-      document.body.dataset.overlayOpen = "true";
-      document.body.style.top = `-${lockedScrollY}px`;
-      document.body.style.left = "0";
-      document.body.style.right = "0";
-      document.body.style.width = "100%";
-      document.body.style.position = "fixed";
-    }
-
-    function unlockPageScroll() {
-      const restoreY = lockedScrollY;
-      document.body.dataset.overlayOpen = "false";
-      document.body.style.top = "";
-      document.body.style.left = "";
-      document.body.style.right = "";
-      document.body.style.width = "";
-      document.body.style.position = "";
-      window.scrollTo(0, restoreY);
-    }
-
-    function syncOverlayState() {
-      const overlayOpen =
-        sidebarEl.dataset.open === "true" || railEl.dataset.open === "true";
-      if (overlayOpen) {
-        lockPageScroll();
-      } else {
-        unlockPageScroll();
-      }
-    }
 
     function resetReadingPosition() {
       const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
@@ -225,7 +183,6 @@
           renderChapterList();
           sidebarEl.dataset.open = "false";
           railEl.dataset.open = "false";
-          syncOverlayState();
           void renderChapter(index);
         });
         li.appendChild(button);
@@ -284,28 +241,10 @@
 
     sidebarToggleEl.addEventListener("click", () => {
       sidebarEl.dataset.open = sidebarEl.dataset.open === "true" ? "false" : "true";
-      if (sidebarEl.dataset.open === "true") {
-        railEl.dataset.open = "false";
-      }
-      syncOverlayState();
     });
 
     tocToggleEl.addEventListener("click", () => {
       railEl.dataset.open = railEl.dataset.open === "true" ? "false" : "true";
-      if (railEl.dataset.open === "true") {
-        sidebarEl.dataset.open = "false";
-      }
-      syncOverlayState();
-    });
-
-    sidebarCloseEl?.addEventListener("click", () => {
-      sidebarEl.dataset.open = "false";
-      syncOverlayState();
-    });
-
-    railCloseEl?.addEventListener("click", () => {
-      railEl.dataset.open = "false";
-      syncOverlayState();
     });
 
     loadManifest().then(() => {
