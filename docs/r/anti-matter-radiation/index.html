@@ -127,11 +127,37 @@
 
     let manifest = null;
     let activeChapterIndex = 0;
+    let lockedScrollY = 0;
+
+    function lockPageScroll() {
+      lockedScrollY = window.scrollY || window.pageYOffset || 0;
+      document.body.dataset.overlayOpen = "true";
+      document.body.style.top = `-${lockedScrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+      document.body.style.position = "fixed";
+    }
+
+    function unlockPageScroll() {
+      const restoreY = lockedScrollY;
+      document.body.dataset.overlayOpen = "false";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+      document.body.style.position = "";
+      window.scrollTo(0, restoreY);
+    }
 
     function syncOverlayState() {
       const overlayOpen =
         sidebarEl.dataset.open === "true" || railEl.dataset.open === "true";
-      document.body.dataset.overlayOpen = overlayOpen ? "true" : "false";
+      if (overlayOpen) {
+        lockPageScroll();
+      } else {
+        unlockPageScroll();
+      }
     }
 
     function resetReadingPosition() {
