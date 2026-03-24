@@ -48,6 +48,7 @@
 - `Pallas` -> `智神星`
 - `Pallas I` -> `智神星一号`
 - `Pallas II` -> `智神星二号`
+- `Pallas IV` -> `智神星四号`
 - `Obania` -> `奥巴尼亚`
 - `Solar City` -> `太阳城`
 - `Adonis` -> `阿多尼斯`
@@ -102,6 +103,7 @@
 - `von Falkenberg` -> `冯·法尔肯贝格`
 - `Kurt von Sudenhorst` -> `库尔特·冯·苏登霍斯特`
 - `rock rats` -> `岩鼠`
+- `New Heidelberg` -> `新海德堡`
 
 ## 技术词
 
@@ -138,6 +140,7 @@
 - `robot pilot` -> `机器人驾驶仪`
 - `unipolar receptor` -> `单极接收器`
 - `terraforming units` -> `地貌改造装置`
+- `bedplate` -> `底板`
 - `Third World War` -> `第三次世界大战`
 - `Spatial War` -> `太空战争`
 - `mesons` -> `介子`
