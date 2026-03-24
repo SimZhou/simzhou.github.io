@@ -557,17 +557,20 @@ input {
     left: 0.9rem;
     right: 0.9rem;
     width: auto;
-    max-height: none;
+    height: calc(100dvh - 4.3rem - env(safe-area-inset-top, 0px) - 0.9rem);
+    max-height: calc(100dvh - 4.3rem - env(safe-area-inset-top, 0px) - 0.9rem);
     overflow: hidden;
     overscroll-behavior: contain;
     transform: translateY(calc(-100% - 1rem));
     transition: transform 180ms ease;
     z-index: 19;
+    pointer-events: none;
   }
 
   .novel-sidebar[data-open="true"],
   .novel-rail[data-open="true"] {
     transform: translateY(0);
+    pointer-events: auto;
   }
 
   .novel-rail {
