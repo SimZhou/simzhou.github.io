@@ -46,6 +46,8 @@
 - `Freedonia` -> `弗里多尼亚`
 - `Pallasport` -> `帕拉斯港`
 - `Pallas` -> `智神星`
+- `Pallas I` -> `智神星一号`
+- `Pallas II` -> `智神星二号`
 - `Obania` -> `奥巴尼亚`
 - `Solar City` -> `太阳城`
 - `Adonis` -> `阿多尼斯`
@@ -91,6 +93,7 @@
 - `Nuevo Jalisco` -> `新哈利斯科`
 - `Thorium Star` -> `钍星号`
 - `Perseus` -> `珀耳修斯号`
+- `Orion` -> `猎户座号`
 - `Jovian Soviet` -> `木星苏维埃`
 - `Vladimir Ilich Ulyanov Arsenal` -> `弗拉基米尔·伊里奇·乌里扬诺夫兵工厂`
 - `Venusian Empire` -> `金星帝国`
