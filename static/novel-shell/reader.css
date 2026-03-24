@@ -574,21 +574,25 @@ input {
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
     overscroll-behavior: contain;
-    transform: translateY(calc(-100% - 1rem));
-    transition: transform 180ms ease;
-    z-index: 19;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 160ms ease, visibility 0s linear 160ms;
+    z-index: 30;
   }
 
   .novel-sidebar[data-open="true"],
   .novel-rail[data-open="true"] {
-    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 160ms ease;
   }
 
   .novel-rail {
-    left: auto;
-    width: min(360px, calc(100vw - 1.8rem));
+    left: 0.9rem;
+    width: auto;
     right: 0.9rem;
-    transform: translateX(calc(100% + 1rem));
   }
 
   .sidebar-inner {
@@ -604,10 +608,6 @@ input {
   .chapter-list {
     max-height: none;
     overflow: visible;
-  }
-
-  .novel-rail[data-open="true"] {
-    transform: translateX(0);
   }
 
   .reader-header,
