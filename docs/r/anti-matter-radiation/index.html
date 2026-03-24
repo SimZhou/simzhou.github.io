@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="隐藏链接访问的《反物质辐射》中文章节页。">
   <link rel="canonical" href="https://simzhou.com/r/anti-matter-radiation/">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/novel-shell/reader.css?v=1774368380">
+  <link rel="stylesheet" href="/novel-shell/reader.css?v=1774368595">
 </head>
 <body>
   <div class="novel-app" id="novel-app"
@@ -170,38 +170,6 @@
       }
     }
 
-    function bindTap(button, handler) {
-      if (!button) return;
-      let touchHandled = false;
-
-      button.addEventListener("touchend", (event) => {
-        touchHandled = true;
-        event.preventDefault();
-        handler();
-        window.setTimeout(() => {
-          touchHandled = false;
-        }, 350);
-      }, { passive: false });
-
-      button.addEventListener("pointerup", (event) => {
-        if (event.pointerType !== "touch") return;
-        touchHandled = true;
-        event.preventDefault();
-        handler();
-        window.setTimeout(() => {
-          touchHandled = false;
-        }, 350);
-      });
-
-      button.addEventListener("click", (event) => {
-        if (touchHandled) {
-          event.preventDefault();
-          return;
-        }
-        handler();
-      });
-    }
-
     function resetReadingPosition() {
       const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
       const cardOffset = 10;
@@ -314,7 +282,7 @@
       void renderChapter(activeChapterIndex);
     });
 
-    bindTap(sidebarToggleEl, () => {
+    sidebarToggleEl.addEventListener("click", () => {
       sidebarEl.dataset.open = sidebarEl.dataset.open === "true" ? "false" : "true";
       if (sidebarEl.dataset.open === "true") {
         railEl.dataset.open = "false";
@@ -322,7 +290,7 @@
       syncOverlayState();
     });
 
-    bindTap(tocToggleEl, () => {
+    tocToggleEl.addEventListener("click", () => {
       railEl.dataset.open = railEl.dataset.open === "true" ? "false" : "true";
       if (railEl.dataset.open === "true") {
         sidebarEl.dataset.open = "false";
@@ -330,12 +298,12 @@
       syncOverlayState();
     });
 
-    bindTap(sidebarCloseEl, () => {
+    sidebarCloseEl?.addEventListener("click", () => {
       sidebarEl.dataset.open = "false";
       syncOverlayState();
     });
 
-    bindTap(railCloseEl, () => {
+    railCloseEl?.addEventListener("click", () => {
       railEl.dataset.open = "false";
       syncOverlayState();
     });
