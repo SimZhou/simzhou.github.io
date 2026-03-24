@@ -109,6 +109,7 @@
 - `Kurt von Sudenhorst` -> `库尔特·冯·苏登霍斯特`
 - `rock rats` -> `岩鼠`
 - `New Heidelberg` -> `新海德堡`
+- `Lotus Flower Bar` -> `莲花酒吧`
 
 ## 技术词
 
@@ -146,6 +147,7 @@
 - `unipolar receptor` -> `单极接收器`
 - `terraforming units` -> `地貌改造装置`
 - `bedplate` -> `底板`
+- `orbital marker` -> `轨道信标`
 - `Third World War` -> `第三次世界大战`
 - `Spatial War` -> `太空战争`
 - `mesons` -> `介子`
