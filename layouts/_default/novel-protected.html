@@ -170,6 +170,38 @@
       }
     }
 
+    function bindTap(button, handler) {
+      if (!button) return;
+      let touchHandled = false;
+
+      button.addEventListener("touchend", (event) => {
+        touchHandled = true;
+        event.preventDefault();
+        handler();
+        window.setTimeout(() => {
+          touchHandled = false;
+        }, 350);
+      }, { passive: false });
+
+      button.addEventListener("pointerup", (event) => {
+        if (event.pointerType !== "touch") return;
+        touchHandled = true;
+        event.preventDefault();
+        handler();
+        window.setTimeout(() => {
+          touchHandled = false;
+        }, 350);
+      });
+
+      button.addEventListener("click", (event) => {
+        if (touchHandled) {
+          event.preventDefault();
+          return;
+        }
+        handler();
+      });
+    }
+
     function resetReadingPosition() {
       const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
       const cardOffset = 10;
@@ -282,7 +314,7 @@
       void renderChapter(activeChapterIndex);
     });
 
-    sidebarToggleEl.addEventListener("click", () => {
+    bindTap(sidebarToggleEl, () => {
       sidebarEl.dataset.open = sidebarEl.dataset.open === "true" ? "false" : "true";
       if (sidebarEl.dataset.open === "true") {
         railEl.dataset.open = "false";
@@ -290,7 +322,7 @@
       syncOverlayState();
     });
 
-    tocToggleEl.addEventListener("click", () => {
+    bindTap(tocToggleEl, () => {
       railEl.dataset.open = railEl.dataset.open === "true" ? "false" : "true";
       if (railEl.dataset.open === "true") {
         sidebarEl.dataset.open = "false";
@@ -298,12 +330,12 @@
       syncOverlayState();
     });
 
-    sidebarCloseEl?.addEventListener("click", () => {
+    bindTap(sidebarCloseEl, () => {
       sidebarEl.dataset.open = "false";
       syncOverlayState();
     });
 
-    railCloseEl?.addEventListener("click", () => {
+    bindTap(railCloseEl, () => {
       railEl.dataset.open = "false";
       syncOverlayState();
     });
