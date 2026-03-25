@@ -1,6 +1,7 @@
 ---
 title: "反物质飞船 中文译本"
-subtitle: "隐藏页，无站内入口"
+subtitle: "Jack Williamson"
+author: "Jack Williamson"
 date: 2026-03-22T20:50:00+08:00
 lastmod: 2026-03-22T20:50:00+08:00
 draft: false

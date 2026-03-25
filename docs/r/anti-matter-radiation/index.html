@@ -18,21 +18,19 @@
   <meta name="twitter:description" content="隐藏链接访问的《反物质辐射》中文章节页。">
   <link rel="canonical" href="https://simzhou.com/r/anti-matter-radiation/">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/novel-shell/reader.css?v=1774403323">
+  <link rel="stylesheet" href="/novel-shell/reader.css?v=1774410304">
 </head>
 <body>
   <div class="novel-app" id="novel-app"
        data-manifest="/protected-library/seetee-shock/manifest.json"
        data-empty-note="这个章节位还没填入中文译文。"
        data-title="反物质辐射 中文译本"
-       data-subtitle="隐藏页，无站内入口"
+       data-subtitle="Jack Williamson"
        data-permalink="https://simzhou.com/r/anti-matter-radiation/">
 
     <header class="novel-topbar">
       <div class="brand-cluster">
-        <a class="home-link" href="/">Simon Zhou Archive</a>
-        <span class="brand-divider"></span>
-        <span class="brand-context">Hidden Reading Room</span>
+        <span class="brand-title">静夜书库</span>
       </div>
       <div class="topbar-actions">
         <button type="button" class="chip-button" id="sidebar-toggle">目录</button>
@@ -46,7 +44,7 @@
           <div class="sidebar-head">
             <p class="eyebrow">作品</p>
             <h1>反物质辐射 中文译本</h1>
-            <p class="sidebar-subtitle">隐藏页，无站内入口</p>
+            <p class="sidebar-subtitle">Jack Williamson</p>
           </div>
 
           <div class="sidebar-panel">
@@ -127,6 +125,7 @@
 
     let manifest = null;
     let activeChapterIndex = 0;
+    let lastTouchEndAt = 0;
 
     function resetReadingPosition() {
       const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
@@ -246,6 +245,18 @@
     tocToggleEl.addEventListener("click", () => {
       railEl.dataset.open = railEl.dataset.open === "true" ? "false" : "true";
     });
+
+    app.addEventListener("dblclick", (event) => {
+      event.preventDefault();
+    });
+
+    app.addEventListener("touchend", (event) => {
+      const now = Date.now();
+      if (now - lastTouchEndAt < 280) {
+        event.preventDefault();
+      }
+      lastTouchEndAt = now;
+    }, { passive: false });
 
     loadManifest().then(() => {
       const firstReadableIndex = manifest.chapters.findIndex((chapter) => Boolean(chapter.asset));

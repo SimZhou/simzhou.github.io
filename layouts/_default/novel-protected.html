@@ -30,9 +30,7 @@
 
     <header class="novel-topbar">
       <div class="brand-cluster">
-        <a class="home-link" href="/">Simon Zhou Archive</a>
-        <span class="brand-divider"></span>
-        <span class="brand-context">Hidden Reading Room</span>
+        <span class="brand-title">静夜书库</span>
       </div>
       <div class="topbar-actions">
         <button type="button" class="chip-button" id="sidebar-toggle">目录</button>
@@ -46,7 +44,7 @@
           <div class="sidebar-head">
             <p class="eyebrow">作品</p>
             <h1>{{ .Title }}</h1>
-            {{ with .Params.subtitle }}<p class="sidebar-subtitle">{{ . }}</p>{{ end }}
+            {{ with .Params.author }}<p class="sidebar-subtitle">{{ . }}</p>{{ else }}{{ with .Params.subtitle }}<p class="sidebar-subtitle">{{ . }}</p>{{ end }}{{ end }}
           </div>
 
           <div class="sidebar-panel">
@@ -127,6 +125,7 @@
 
     let manifest = null;
     let activeChapterIndex = 0;
+    let lastTouchEndAt = 0;
 
     function resetReadingPosition() {
       const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
@@ -246,6 +245,18 @@
     tocToggleEl.addEventListener("click", () => {
       railEl.dataset.open = railEl.dataset.open === "true" ? "false" : "true";
     });
+
+    app.addEventListener("dblclick", (event) => {
+      event.preventDefault();
+    });
+
+    app.addEventListener("touchend", (event) => {
+      const now = Date.now();
+      if (now - lastTouchEndAt < 280) {
+        event.preventDefault();
+      }
+      lastTouchEndAt = now;
+    }, { passive: false });
 
     loadManifest().then(() => {
       const firstReadableIndex = manifest.chapters.findIndex((chapter) => Boolean(chapter.asset));
