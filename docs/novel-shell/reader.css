@@ -94,6 +94,10 @@ input {
 .brand-title {
   font-weight: 600;
   letter-spacing: 0.08em;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .brand-context {
@@ -111,6 +115,7 @@ input {
   gap: 0.6rem;
   flex-shrink: 0;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .chip-button,
@@ -530,14 +535,14 @@ input {
 
   .topbar-actions {
     display: flex;
-    gap: 0.45rem;
+    gap: 0.38rem;
     flex: 0 0 auto;
   }
 
   .chip-button {
-    padding: 0.42rem 0.72rem;
+    padding: 0.42rem 0.62rem;
     line-height: 1.1;
-    font-size: 0.92rem;
+    font-size: 0.88rem;
   }
 
   .novel-layout {
@@ -621,6 +626,10 @@ input {
   .reader-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .reader-modes {
+    display: none;
   }
 
   .reader-footer {

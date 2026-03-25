@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="隐藏链接访问的《反物质飞船》中文章节页。">
   <link rel="canonical" href="https://simzhou.com/r/anti-matter-ship/">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/novel-shell/reader.css?v=1774410304">
+  <link rel="stylesheet" href="/novel-shell/reader.css?v=1774417828">
 </head>
 <body>
   <div class="novel-app" id="novel-app"
@@ -33,6 +33,7 @@
         <span class="brand-title">静夜书库</span>
       </div>
       <div class="topbar-actions">
+        <button type="button" class="chip-button" id="mode-toggle">纸</button>
         <button type="button" class="chip-button" id="sidebar-toggle">目录</button>
         <button type="button" class="chip-button" id="toc-toggle">信息</button>
       </div>
@@ -122,10 +123,15 @@
     const railEl = document.getElementById("novel-rail");
     const sidebarToggleEl = document.getElementById("sidebar-toggle");
     const tocToggleEl = document.getElementById("toc-toggle");
+    const modeToggleEl = document.getElementById("mode-toggle");
+    const brandTitleEl = document.querySelector(".brand-title");
 
     let manifest = null;
     let activeChapterIndex = 0;
     let lastTouchEndAt = 0;
+    const defaultBrandTitle = "静夜书库";
+    const modeCycle = ["paper", "sepia", "night"];
+    const modeLabels = { paper: "纸", sepia: "暖", night: "夜" };
 
     function resetReadingPosition() {
       const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
@@ -143,6 +149,27 @@
       document.querySelectorAll(".mode-button").forEach((button) => {
         button.dataset.active = button.dataset.mode === mode ? "true" : "false";
       });
+      if (modeToggleEl) {
+        modeToggleEl.textContent = modeLabels[mode] || "纸";
+      }
+    }
+
+    function isMobileViewport() {
+      return window.matchMedia("(max-width: 900px)").matches;
+    }
+
+    function updateTopbarTitle() {
+      if (!brandTitleEl) return;
+      if (!manifest || !isMobileViewport()) {
+        brandTitleEl.textContent = defaultBrandTitle;
+        return;
+      }
+      const topbarOffset = document.querySelector(".novel-topbar")?.offsetHeight || 0;
+      const readerTop = readerEl.getBoundingClientRect().top;
+      const shouldShowChapter = readerTop <= topbarOffset + 18;
+      brandTitleEl.textContent = shouldShowChapter
+        ? chapterLabel(manifest.chapters[activeChapterIndex])
+        : defaultBrandTitle;
     }
 
     async function loadManifest() {
@@ -199,6 +226,7 @@
       chapterSubtitleEl.textContent = chapter.title_en || "";
       railChapterEl.textContent = chapterLabel(chapter);
       updateNavButtons();
+      updateTopbarTitle();
     }
 
     async function renderChapter(index) {
@@ -223,6 +251,12 @@
       button.addEventListener("click", () => setMode(button.dataset.mode));
     });
     setMode(window.localStorage?.getItem("novel-reader-mode") || "paper");
+    modeToggleEl?.addEventListener("click", () => {
+      const currentMode = document.body.dataset.readerMode || "paper";
+      const currentIndex = modeCycle.indexOf(currentMode);
+      const nextMode = modeCycle[(currentIndex + 1) % modeCycle.length];
+      setMode(nextMode);
+    });
 
     prevButtonEl.addEventListener("click", () => {
       if (activeChapterIndex <= 0) return;
@@ -257,6 +291,9 @@
       }
       lastTouchEndAt = now;
     }, { passive: false });
+
+    window.addEventListener("scroll", updateTopbarTitle, { passive: true });
+    window.addEventListener("resize", updateTopbarTitle);
 
     loadManifest().then(() => {
       const firstReadableIndex = manifest.chapters.findIndex((chapter) => Boolean(chapter.asset));
