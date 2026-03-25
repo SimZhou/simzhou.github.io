@@ -623,6 +623,26 @@ input {
     align-items: flex-start;
   }
 
+  .reader-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+  }
+
+  .reader-footer .nav-button {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .reader-footer .nav-button:first-child {
+    text-align: left;
+  }
+
+  .reader-footer .nav-button:last-child {
+    text-align: right;
+  }
+
   .reader-body {
     padding: 1.6rem 1rem 2rem;
     font-size: 1.02rem;
