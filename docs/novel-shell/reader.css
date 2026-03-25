@@ -549,7 +549,7 @@ input {
 
   .novel-sidebar,
   .novel-rail {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     top: calc(4.3rem + env(safe-area-inset-top, 0px));
@@ -561,23 +561,18 @@ input {
     max-height: calc(100dvh - 4.3rem - env(safe-area-inset-top, 0px) - 0.9rem);
     overflow: hidden;
     overscroll-behavior: contain;
-    transform: translateY(calc(-100% - 1rem));
-    transition: transform 180ms ease;
     z-index: 19;
-    pointer-events: none;
   }
 
   .novel-sidebar[data-open="true"],
   .novel-rail[data-open="true"] {
-    transform: translateY(0);
-    pointer-events: auto;
+    display: flex;
   }
 
   .novel-rail {
     left: auto;
     width: min(360px, calc(100vw - 1.8rem));
     right: 0.9rem;
-    transform: translateX(calc(100% + 1rem));
   }
 
   .sidebar-inner {
@@ -603,10 +598,6 @@ input {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
-  }
-
-  .novel-rail[data-open="true"] {
-    transform: translateX(0);
   }
 
   .reader-header,
