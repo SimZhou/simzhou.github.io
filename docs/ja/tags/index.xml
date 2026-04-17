@@ -9,27 +9,55 @@
     <managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
     <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 19 Mar 2026 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 20:09:00 +0800</lastBuildDate>
     <atom:link href="https://simzhou.com/ja/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Agent</title>
-      <link>https://simzhou.com/ja/tags/agent/</link>
-      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
-      <guid>https://simzhou.com/ja/tags/agent/</guid>
-      <description></description>
-    </item>
     <item>
       <title>AI</title>
       <link>https://simzhou.com/ja/tags/ai/</link>
-      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <pubDate>Fri, 17 Apr 2026 20:09:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
       <guid>https://simzhou.com/ja/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude Code</title>
+      <link>https://simzhou.com/ja/tags/claude-code/</link>
+      <pubDate>Fri, 17 Apr 2026 20:09:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/ja/tags/claude-code/</guid>
       <description></description>
     </item>
     <item>
       <title>Codex</title>
       <link>https://simzhou.com/ja/tags/codex/</link>
-      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <pubDate>Fri, 17 Apr 2026 20:09:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
       <guid>https://simzhou.com/ja/tags/codex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gemini CLI</title>
+      <link>https://simzhou.com/ja/tags/gemini-cli/</link>
+      <pubDate>Fri, 17 Apr 2026 20:09:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/ja/tags/gemini-cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://simzhou.com/ja/tags/llm/</link>
+      <pubDate>Fri, 17 Apr 2026 20:09:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/ja/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VibeCoding</title>
+      <link>https://simzhou.com/ja/tags/vibecoding/</link>
+      <pubDate>Fri, 17 Apr 2026 20:09:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/ja/tags/vibecoding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent</title>
+      <link>https://simzhou.com/ja/tags/agent/</link>
+      <pubDate>Wed, 18 Mar 2026 12:35:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
+      <guid>https://simzhou.com/ja/tags/agent/</guid>
       <description></description>
     </item>
     <item>
@@ -58,13 +86,6 @@
       <link>https://simzhou.com/ja/tags/%E4%BA%BA%E9%A1%9E/</link>
       <pubDate>Sat, 14 Mar 2026 03:53:00 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
       <guid>https://simzhou.com/ja/tags/%E4%BA%BA%E9%A1%9E/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLM</title>
-      <link>https://simzhou.com/ja/tags/llm/</link>
-      <pubDate>Thu, 12 Mar 2026 12:05:06 +0800</pubDate><author>yihua.zhou@outlook.com (Simon Zhou)</author>
-      <guid>https://simzhou.com/ja/tags/llm/</guid>
       <description></description>
     </item>
     <item>

@@ -4,7 +4,19 @@
         <link>https://simzhou.com/en/posts/</link>
         <description>All Posts | Simon&#39;s Dream Universe</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
-            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 18 Mar 2026 12:35:00 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/en/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 17 Apr 2026 20:09:00 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/en/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>A Programming Guide for the New Era - 2026</title>
+    <link>https://simzhou.com/en/posts/2026/programming-guide-for-the-new-era-2026/</link>
+    <pubDate>Fri, 17 Apr 2026 20:09:00 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/en/posts/2026/programming-guide-for-the-new-era-2026/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/ClaudeGeminiCodex.jpg" referrerpolicy="no-referrer">
+            </div><p>This article originally began as the draft script for an internal talk at my company, but I decided to turn the reusable parts into a public blog post. So I will deliberately avoid any internal repositories, processes, or case studies, and keep only the methods, work habits, and mindset shifts that are useful to most developers.</p>
+<p>The main audience for this article is people who are still using IDE-based AI assistance and web chat products from large models, but have not really used command-line tools such as Claude Code or Codex CLI yet. Through this article, what I want to convey is why CLI tools are the future, along with a rough beginner-oriented introduction to how they are used.</p>
+<p>If I had to summarize the core point of this article in one sentence, it would be this: <strong>large-model-assisted programming is only the starting point, while Vibe Coding is a new way of working.</strong> It is not just “an IDE with an extra chat box,” nor is it simply “asking AI to autocomplete code.” It is closer to <strong>gradually reconstructing the act of “writing code” into the process of “describing goals, constraining execution, reviewing results, and iterating on the system”</strong>. And for the latter, <strong>all you really need is to interact with an Agent in natural language</strong>.</p>]]></description>
+</item>
+<item>
     <title>I Used Codex to Build a Riichi Mahjong Handbook Site</title>
     <link>https://simzhou.com/en/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/</link>
     <pubDate>Wed, 18 Mar 2026 12:35:00 &#43;0800</pubDate>

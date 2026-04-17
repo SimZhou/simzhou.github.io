@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>新時代のためのプログラミングガイド - 2026 - Simonの夢宇宙</title><meta name="description" content="AI によるプログラミングのパラダイム変化についての個人的な記事。初期の大規模モデルによる補助的コーディングから、今日の CLI Agent を中心とした Vibe Coding までを扱う。"><meta name="keywords" content="AI, LLM, VibeCoding, Claude Code, Codex, Gemini CLI"><meta name="author" content="Simon Zhou"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/">
+<meta property="og:site_name" content="Simonの夢宇宙">
+<meta property="og:title" content="新時代のためのプログラミングガイド - 2026">
+<meta property="og:description" content="AI によるプログラミングのパラダイム変化についての個人的な記事。初期の大規模モデルによる補助的コーディングから、今日の CLI Agent を中心とした Vibe Coding までを扱う。"><meta property="og:locale" content="ja"><meta property="og:image" content="https://simzhou.com/images/earth.jpg"><meta property="og:image:width" content="1495"><meta property="og:image:height" content="1484"><meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="新時代のためのプログラミングガイド - 2026">
+<meta name="twitter:description" content="AI によるプログラミングのパラダイム変化についての個人的な記事。初期の大規模モデルによる補助的コーディングから、今日の CLI Agent を中心とした Vibe Coding までを扱う。">
+
+<meta name="application-name" content="Simonの夢宇宙">
+<meta name="apple-mobile-web-app-title" content="Simonの夢宇宙">
+<meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" /><link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/posts/2026/programming-guide-for-the-new-era-2026/" /><link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/2026/programming-guide-for-the-new-era-2026/" /><link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" /><link rel="alternate" hreflang="x-default" href="https://simzhou.com/" /><link rel="prev" href="https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "新時代のためのプログラミングガイド - 2026",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/simzhou.com\/ja\/posts\/2026\/programming-guide-for-the-new-era-2026\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                            "width":  1495 ,
+                            "height":  1484 
+                        }],"genre": "posts","keywords": "AI, LLM, VibeCoding, Claude Code, Codex, Gemini CLI","wordcount":  12336 ,
+        "url": "https:\/\/simzhou.com\/ja\/posts\/2026\/programming-guide-for-the-new-era-2026\/","datePublished": "2026-04-17T20:09:00+08:00","dateModified": "2026-04-17T20:09:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Simon Zhou","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                    "width":  1495 ,
+                    "height":  1484 
+                }},"author": {
+                "@type": "Person",
+                "name": "Simon Zhou"
+            },"description": "AI によるプログラミングのパラダイム変化についての個人的な記事。初期の大規模モデルによる補助的コーディングから、今日の CLI Agent を中心とした Vibe Coding までを扱う。"
+    }
+    </script><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Simonの夢宇宙",
+            "item": "https://simzhou.com/ja/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "投稿",
+            "item": "https://simzhou.com/ja/posts/"
+          },{
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "新時代のためのプログラミングガイド - 2026",
+            "item": "https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/"
+          }]
+    }
+    </script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?8410d61b6138746461857e5ba600200a";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'light';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/ja/" title="Simonの夢宇宙"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simonの夢宇宙</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/ja/posts/"><i class='fa fa-heart'></i> 記事 </a><a class="menu-item" href="/ja/categories/"><i class='fas fa-th-list'></i> カテゴリ </a><a class="menu-item" href="/ja/gallery/"><i class='fas fa-images'></i> ギャラリー </a><a class="menu-item" href="/ja/404.html"><i class='fas fa-book'></i> ノート </a><a class="menu-item" href="/ja/about/"><i class='fas fa-question-circle'></i> 自己紹介 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="言語を選択">
+                        
+                        <i class="fas fa-language"></i>
+                        
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/2026/programming-guide-for-the-new-era-2026/">中文</option><option value="/en/posts/2026/programming-guide-for-the-new-era-2026/">English</option><option value="/ja/posts/2026/programming-guide-for-the-new-era-2026/" selected>日本語</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="タイトルと内容を検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマの切り替え">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/ja/" title="Simonの夢宇宙"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simonの夢宇宙</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="タイトルと内容を検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/ja/posts/" title=""><i class='fa fa-heart'></i>記事</a><a class="menu-item" href="/ja/categories/" title=""><i class='fas fa-th-list'></i>カテゴリ</a><a class="menu-item" href="/ja/gallery/" title=""><i class='fas fa-images'></i>ギャラリー</a><a class="menu-item" href="/ja/404.html" title=""><i class='fas fa-book'></i>ノート</a><a class="menu-item" href="/ja/about/" title=""><i class='fas fa-question-circle'></i>自己紹介</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマの切り替え">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="言語を選択">日本語<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/2026/programming-guide-for-the-new-era-2026/">中文</option><option value="/en/posts/2026/programming-guide-for-the-new-era-2026/">English</option><option value="/ja/posts/2026/programming-guide-for-the-new-era-2026/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">新時代のためのプログラミングガイド - 2026</h1><h2 class="single-subtitle">補助的コーディングから Vibe Coding へ</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/ja/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Simon Zhou</a></span>&nbsp;<span class="post-category">カテゴリー <a href="/ja/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-04-17">2026-04-17</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;12336 語&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;25 分&nbsp;<span id="/ja/posts/2026/programming-guide-for-the-new-era-2026/" class="leancloud_visitors" data-flag-title="新時代のためのプログラミングガイド - 2026">
+                        <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;ビュー
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/2026/programming-guide-for-the-new-era-2026/ClaudeGeminiCodex.jpg"
+        data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/ClaudeGeminiCodex.jpg, /posts/2026/programming-guide-for-the-new-era-2026/ClaudeGeminiCodex.jpg 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/ClaudeGeminiCodex.jpg 2x"
+        data-sizes="auto"
+        alt="/posts/2026/programming-guide-for-the-new-era-2026/ClaudeGeminiCodex.jpg"
+        title="AI によるプログラミングのパラダイム変化についての個人的な記事。初期の大規模モデルによる補助的コーディングから、今日の CLI Agent を中心とした Vibe Coding までを扱う。" width="1280" height="720" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前書き-補助的コーディングから-vibe-coding-へ至る私的な利用史">前書き: 補助的コーディングから Vibe Coding へ至る私的な利用史</a></li>
+    <li><a href="#1-大規模モデルを使うことはそのまま-vibe-coding-ではない">1. 大規模モデルを使うことは、そのまま Vibe Coding ではない</a></li>
+    <li><a href="#2-ai-coding-cli-ツールにおけるいくつかの約束事">2. AI Coding CLI ツールにおけるいくつかの約束事</a>
+      <ul>
+        <li><a href="#21-agents-向けの説明文書">2.1 Agents 向けの説明文書</a></li>
+        <li><a href="#22-skills---agent-向けの遅延読み込みマニュアル">2.2 Skills - Agent 向けの遅延読み込みマニュアル</a></li>
+        <li><a href="#23-説明文書と-skillsmd-の発見階層">2.3 説明文書と SKILLS.md の発見階層</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-ai-coding-cli-ツールの入門">3. AI Coding CLI ツールの入門</a>
+      <ul>
+        <li><a href="#31-通常モード--計画モード--高権限モード">3.1 通常モード / 計画モード / 高権限モード</a></li>
+        <li><a href="#32-よく使う-slash-コマンド">3.2 よく使う Slash コマンド</a></li>
+        <li><a href="#33-skill-の明示呼び出しと暗黙呼び出し">3.3 Skill の明示呼び出しと暗黙呼び出し</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-ai-coding-cli-ツールのいくつかの上級--前沿機能">4. AI Coding CLI ツールのいくつかの上級 / 前沿機能</a>
+      <ul>
+        <li><a href="#41-subagents子代理">4.1 Subagents（子代理）</a></li>
+        <li><a href="#42-ralph-loop">4.2 Ralph Loop</a></li>
+        <li><a href="#43-agent-teams代理チーム">4.3 Agent Teams（代理チーム）</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-個人的な利用経験と理解">5. 個人的な利用経験と理解</a>
+      <ul>
+        <li><a href="#51-1-つの原則-メインリポジトリで雑談しない">5.1 1 つの原則: メインリポジトリで雑談しない</a></li>
+        <li><a href="#52-subagents-と-skills-の違い">5.2 Subagents と Skills の違い</a></li>
+        <li><a href="#53-ツールごとの違い">5.3 ツールごとの違い</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-まとめ">6. まとめ</a></li>
+    <li><a href="#7-おすすめの参考資料">7. おすすめの参考資料</a>
+      <ul>
+        <li><a href="#71-おすすめclaude-code-ベストプラクティス">7.1 （おすすめ）Claude Code ベストプラクティス:</a></li>
+        <li><a href="#72-claude-code-のソースコード級解説">7.2 Claude Code のソースコード級解説</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考リンク">参考リンク</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>この記事はもともと、社内共有のために準備していた発表原稿の下書きとして書き始めたものだ。ただ、その中で公開しても再利用できる部分を整理し、ブログ記事としてまとめることにした。なので、社内リポジトリや社内フロー、社内事例のような内容は意図的に避け、できるだけ多くの開発者にとって再利用可能な方法論、仕事の習慣、考え方の変化だけを残すつもりでいる。</p>
+<p>この記事の主な読者として想定しているのは、まだ IDE ベースの補助的コーディングや、大規模モデルの Web チャット機能を使ってはいるものの、Claude Code や Codex CLI のようなコマンドラインツールはまだあまり使ったことがない人たちだ。だからこの文章で伝えたいのは、なぜ CLI ツールこそが未来なのか、そして CLI ツールの入門的な使い方を大まかに紹介することだ。</p>
+<p>この文章の核心を一言で要約するなら、こうなる。<strong>大規模モデルによる補助的コーディングは出発点にすぎず、Vibe Coding は新しい働き方そのものだ。</strong> それは単に「IDE にチャット欄が 1 つ増えた」ことでもなければ、「AI にコード補完を手伝わせる」ことでもない。むしろ、<strong>「コードを書く」という行為そのものが、少しずつ「目標を説明し、過程に制約を与え、結果をレビューし、システムを反復的に改善する」プロセスへと再構成されていくこと</strong>に近い。そして後者に必要なのは、<strong>自然言語で Agent と対話することだけ</strong>だ。</p>
+<p>私は最初からこう理解していたわけではない。むしろ、ごく普通に「ChatGPT の Web 版で数行のコードを直してもらう」ところから始まり、少しずつ今の理解にたどり着いた。</p>
+<a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp" title="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp, /posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp" width="60%" height="421" />
+    </a>
+<h1 id="前書き-補助的コーディングから-vibe-coding-へ至る私的な利用史">前書き: 補助的コーディングから Vibe Coding へ至る私的な利用史 <a href="#%e5%89%8d%e6%9b%b8%e3%81%8d-%e8%a3%9c%e5%8a%a9%e7%9a%84%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%8b%e3%82%89-vibe-coding-%e3%81%b8%e8%87%b3%e3%82%8b%e7%a7%81%e7%9a%84%e3%81%aa%e5%88%a9%e7%94%a8%e5%8f%b2">¶</a></h1><p>ここ数年の自分の利用の軌跡を振り返ると、おおまかにはいくつかの段階に分けられる。</p>
+<p>最初期、<strong>2022 年に ChatGPT が登場したころ</strong>、私は GPT-3.5 の Web サービスを購入し、それを<strong>検索エンジンよりも人間らしいプログラミング Q&amp;A ツール</strong>として使っていた。当時の典型的な使い方はとても単純で、Linux ツールの引数の使い方を聞く、エラー内容を説明させる、ちょっとしたボイラープレートコードを生成させる、関数のリファクタリングを手伝わせる、散らかったロジックを整理してもらう、といったものだった。あの時代の大規模モデルは、今と比べればまだずっと弱かったが、それでもプログラミングの中には外部委託できる「機械的な思考」がかなりあるのだと、初めて実感させられた。</p>
+<a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp" title="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp, /posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp" width="40%" height="2160" />
+    </a>
+<p>その後、私は <strong>Cursor</strong> に課金して使い始めた。これは非常に重要な段階だった。なぜなら、<strong>AI が単に質問に答えるだけでなく、プロジェクト全体の文脈を理解し始めた</strong>ことを初めて体験したからだ。私は次第に「このコードはどう書くべきか」だけを聞かなくなり、「現在のプロジェクトのスタイルに合わせてこの機能を完成させてほしい」といった聞き方をするようになった。この時点で、AI の役割は検索の代替から、<strong>まだ完全には信頼できないが、すでに協働できる初級の相棒</strong>へと変わっていた。</p>
+<a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" title="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png, /posts/2026/programming-guide-for-the-new-era-2026/cursor.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/cursor.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" width="40%" height="480" />
+    </a>
+<p>その後、VSCode の GitHub Copilot も試した。Copilot が私に与えた影響は、「いちばんうまくコードを書く」ことではなかった。むしろ、「AI がコーディングに参加すること」を日常化した点にある。自動補完、局所的な生成、書きながら先回りして提案してくる体験によって、私は徐々にモデルと一緒に働くことに慣れていった。この段階では、Copilot はむしろ、決して嫌がらずに手伝ってくれる助手のような存在だった。</p>
+<p>さらにその後、私は <strong>Claude Code を使い始めた</strong>。これは、私の AI コーディング体験全体の中でも、ほとんどもっとも<strong>認知を揺さぶられた</strong>段階だった。それ以前の Web ベースの LLM、Cursor、Copilot でも効率向上は強く感じていたが、あくまで「補助的コーディングの相棒」に近かった。ところが Claude Code は、<strong>AI がもはや数行のコード補完や数個の質問への回答を手伝うだけではなく、具体的なタスクを独立して完了できる段階に入っている</strong>ことを実感させた。予算の制約があり、さらに Claude は中国本土向けにかなり厳しいアクセス制限をかけていたため、かなり長いあいだ私は Claude Code を主に智譜 GLM-4.7 につないで使っていた。この時期に最も衝撃だったのは、モデルそのものの強さ以上に、CLI Agent という対話形式そのものが、すでに仕事の進め方を変えていたことだ。つまり、IDE の中で「この小さなコード片を直して」と頼むのではなく、<strong>ターミナルの中で、実在するリポジトリ、実在する制約、実在するコマンド、実在するリスクを Agent に渡し、調査と処理を任せる</strong>ようになっていた。</p>
+<p>そのあいだ、Gemini 3.1 Pro が公開されたあとには、Gemini CLI と組み合わせて数か月ほど使っていたこともある。その使い心地にも、私は再び素直に驚かされた。</p>
+<p>しかし、2026 年 3 月に <strong>Codex と GPT-5.4</strong> を使い始めてから、私は<strong>もう一度、大きく認識を揺さぶられた</strong>。ある意味では、この衝撃は Claude Code を初めて使ったときよりもさらに直接的だった。なぜなら、<strong>十分に賢い Agent であれば、私の仕事のかなりの部分を本当に丸ごと引き受けられるのだと、Codex が初めてここまで具体的に感じさせたからだ</strong>。以前なら最低限レビューくらいは必要だと思っていたコードも、今では完全に読まずに任せられることがある。（あとから分かったことだが、その一因は Codex の安全審査メカニズムが Claude Code より緩く、確認なしでやってくれることが多かったからでもある。）</p>
+<a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" title="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png, /posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" width="40%" height="545" />
+    </a>
+<figure><a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" title="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" data-sub-html="<h2>私はこれを「御三家」と呼ぶのが好きだ。ポケモンの最初の 3 匹を思わせるからだ。</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg, /posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="40%" height="848" />
+    </a><figcaption class="image-caption">私はこれを「御三家」と呼ぶのが好きだ。ポケモンの最初の 3 匹を思わせるからだ。</figcaption>
+    </figure>
+<p>その時期、私は 1 週間ほど、かなり強い不安と恐怖に襲われた時期すらあった。感覚としてはとても直接的だった。<strong>AI はあまりにも賢く、もしかすると本当に私を置き換えてしまうかもしれない。</strong> そう感じるほど賢いがゆえに、人は「プログラマの仕事の中で本当に代替不能な部分はどこなのか」「将来、ソフトウェア工学の中心的な労働は全体として別の場所へ移るのではないか」「ワークフローの中で人間の役割は、承認し、検収し、Enter を押す人に近づいていくのではないか」といった前提を、改めて見直し始めることになる。</p>
+<p>そして、まさにそうした感情と考えが、私の別の記事 <a href="/ja/posts/2026/humans-job-in-the-future-will-be-to-press-enter-for-ai/" rel="">人類の未来の仕事は、AI のために Enter キーを押すことになるかもしれない</a> を直接生み出した。あの記事を書いたのは不安を煽りたかったからではない。Codex を本当に生産性ツールとして使うようになってから、それが本当に人類の未来の 1 つの可能性かもしれないと、私は真剣に感じたからだ。</p>
+<p><strong>だから、なぜ私は Vibe Coding を一過性の流行語としてではなく、かなり真面目に語るのかと聞かれたら、答えは単純だ。自分が本当にその道を通ってきて、実際にパラダイムの変化を体感したからだ。</strong></p>
+<h1 id="1-大規模モデルを使うことはそのまま-vibe-coding-ではない">1. 大規模モデルを使うことは、そのまま Vibe Coding ではない <a href="#1-%e5%a4%a7%e8%a6%8f%e6%a8%a1%e3%83%a2%e3%83%87%e3%83%ab%e3%82%92%e4%bd%bf%e3%81%86%e3%81%93%e3%81%a8%e3%81%af%e3%81%9d%e3%81%ae%e3%81%be%e3%81%be-vibe-coding-%e3%81%a7%e3%81%af%e3%81%aa%e3%81%84">¶</a></h1><p>ここではまず 1 つ区別しておく必要がある。<strong>大規模モデルを使って補助的にコーディングすること ≠ Vibe Coding</strong> だ。</p>
+<p>「Vibe Coding」という言葉は、<a href="https://x.com/karpathy/status/1886192184808149383" target="_blank" rel="noopener noreffer ">Andrej Karpathy が X に投稿したツイート</a> に由来する。その言葉は当時、多くの人が AI コーディングツールを使う中で薄々感じていながら、まだうまく言語化できていなかった体験の変化を、かなり正確に捉えていた。</p>
+<figure><a class="lightgallery" href="/en/posts/2026/programming-guide-for-the-new-era-2026/VibeCodingDefinition-AndrejKarpathy.en.png" title="/en/posts/2026/programming-guide-for-the-new-era-2026/VibeCodingDefinition-AndrejKarpathy.en.png" data-thumbnail="/en/posts/2026/programming-guide-for-the-new-era-2026/VibeCodingDefinition-AndrejKarpathy.en.png" data-sub-html="<h2>Vibe Coding について語った Karpathy の X 投稿</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/en/posts/2026/programming-guide-for-the-new-era-2026/VibeCodingDefinition-AndrejKarpathy.en.png"
+            data-srcset="/en/posts/2026/programming-guide-for-the-new-era-2026/VibeCodingDefinition-AndrejKarpathy.en.png, /en/posts/2026/programming-guide-for-the-new-era-2026/VibeCodingDefinition-AndrejKarpathy.en.png 1.5x, /en/posts/2026/programming-guide-for-the-new-era-2026/VibeCodingDefinition-AndrejKarpathy.en.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2026/programming-guide-for-the-new-era-2026/VibeCodingDefinition-AndrejKarpathy.en.png" width="60%" height="1084" />
+    </a><figcaption class="image-caption">Vibe Coding について語った Karpathy の X 投稿</figcaption>
+    </figure>
+<p>今では多くの人が、<strong>ChatGPT（Web 版）、Cursor、Trae、DeepSeek のようなツールを使ってコードを書くのを補助させている</strong>。しかし、<strong>ほとんどの場合、それはまだ「補助的コーディング」にとどまっている</strong>。AI が補完、説明、生成、修正を手伝ってくれる一方で、主たるワークフローそのものは人間が IDE の中で手作業で前に進めている。もちろん、それでも効率は大きく向上する。だが<strong>本質的には、まだ「自分がコードを書く人」であり、AI は少し賢い道具にすぎない。</strong></p>
+<p>そこに対して Vibe Coding では、決定的に重要な変化が 1 つ加わる。つまり、<strong>「どうやるか」の部分を丸ごと Agent に委ねる</strong>ようになり、<strong>自分は主に「何をやるか」「どこまでやるか」「境界条件は何か」「いつ止めるか」を管理する</strong>ようになるのだ。</p>
+<p class="text-red"><strong>もっと正確に言えば、あなたは Prompt だけを書く。コードは 1 行も打たないし、git push のような最も簡単なコマンドすら自分では打たない。</strong></p>
+<p>このとき、あなたとツールの関係は、もはや単なる Q&amp;A の関係ではなく、むしろタスク委任に近い関係になる。</p>
+<a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png" title="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png, /posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png" width="50%" height="198" />
+    </a>
+<figure><a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" title="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" data-sub-html="<h2>Reddit 上のユーザーによる Vibe Coding の定義。非常に正確だと思う。</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png, /posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" width="45%" height="178" />
+    </a><figcaption class="image-caption">Reddit 上のユーザーによる Vibe Coding の定義。非常に正確だと思う。</figcaption>
+    </figure>
+<p>IDE を使う人の中には、なぜ CLI を使う必要があるのかと聞く人もいるかもしれない。彼らはまだこの問題を「VSCode vs Vim」の選択として理解していることが多い。だが、AI 時代において IDE と CLI は、すでにまったく異なる協働哲学になっている。</p>
+<ol>
+<li><strong>IDE</strong> のワークフローでは、AI はむしろ<strong>超有能な同僚や顧問</strong>のようなもので、必要なときに呼び出す存在だ。</li>
+<li><strong>CLI</strong> のワークフローでは、AI はむしろ<strong>超有能な部下</strong>に近く、あなたはその直属の上司になる。あなたはそれをどう制約し、どう権限を与え、どう監査するかを学ばなければならない。</li>
+</ol>
+<p>この 2 つは同じ次元の比較ではない。しかし私個人の感覚では、後者のほうが前者より上位にある。理由は 1 つ、かなり残酷な現実があるからだ。</p>
+<p class="text-red"><strong>今の AI は、コードを書くことも Debug することも、すでに速くてうまい。人間は手放すことを学ぶべきだ。</strong></p>
+<p>ただし、ここでいう「Vibe」とは、レビューしないことでも、考えないことでも、モデルに適当に書かせることでもない。むしろ別のリズムに入るということだ。</p>
+<ul>
+<li><strong>人間がより多く担うもの: 目標の定義、タスク分解、制約設定、成果物の点検</strong></li>
+<li><strong>Agent が担うもの: 資料調査、具体実装、ファイル探索、コマンド実行、テスト検証</strong></li>
+</ul>
+<p>このリズムは、**もはや「AI が私のコードを書くのを助ける」ではなく、「私は優秀な部下に仕事を指示している」**という関係だ。だからといって「コードを理解する必要が完全になくなる」わけでもないし、「人間の言葉さえ話せれば複雑なエンジニアリングができる」わけでもない。信頼できるエンジニアリングを行うには、やはり判断力が必要だ。<strong>目標が正しく理解されたか、どこにリスクがあるか、いつ Agent を止めるべきか、どの変更を人間が手で確認すべきか</strong>を見極める力がいる。</p>
+<p>言い換えれば、<strong>Vibe Coding とはエンジニアリング規律を捨てることではなく、「実装を手で書く」ことから「タスクシステムとレビュー機構を設計する」ことへと、その規律の置き場所を移すことだ。</strong></p>
+<a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg" title="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg, /posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg" width="80%" height="579" />
+    </a>
+<h1 id="2-ai-coding-cli-ツールにおけるいくつかの約束事">2. AI Coding CLI ツールにおけるいくつかの約束事 <a href="#2-ai-coding-cli-%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8b%e3%81%84%e3%81%8f%e3%81%a4%e3%81%8b%e3%81%ae%e7%b4%84%e6%9d%9f%e4%ba%8b">¶</a></h1><p>AI Coding CLI ツールが発展するにつれて、<strong>業界では徐々にいくつかのデフォルトの約束事や規範が形成されてきた。この章ではそれらを紹介していく。</strong></p>
+<p>まず、AI Coding CLI はチャットツールではない。これは、<strong>リポジトリを読み、コマンドを実行し、ファイルを書き換えることのできるエンジニアリング代理人</strong>だと考えると分かりやすい。だからこそ、リポジトリの中には、大規模モデルの仕事を導くための約束されたファイルが必要になる。</p>
+<h2 id="21-agents-向けの説明文書">2.1 Agents 向けの説明文書 <a href="#21-agents-%e5%90%91%e3%81%91%e3%81%ae%e8%aa%ac%e6%98%8e%e6%96%87%e6%9b%b8">¶</a></h2><p>最近の AI が書いたコードリポジトリを見ていると、リポジトリのルートに <code>AGENTS.md</code>、<code>CLAUDE.md</code>、<code>GEMINI.md</code> のようなファイルが置かれていることがよくある。</p>
+<p>その仕組み自体はとても単純だ。</p>
+<ul>
+<li>
+<p class="text-red"><strong>AI Coding CLI ツールを起動すると、この Markdown ファイルはデフォルトでコンテキストに読み込まれる。</strong></p>
+</li>
+</ul>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-lightbulb" aria-hidden="true"></i>AGENTS.md について<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><p><code>AGENTS.md</code> (<a href="https://agents.md/" target="_blank" rel="noopener noreffer ">https://agents.md/</a>) は、リポジトリ主説明文書のための仕様を定めたオープン標準であり、現在は Codex と Gemini に採用されている。その定義は次のとおりだ。</p>
+<blockquote>
+<p>Think of AGENTS.md as a README for agents: a dedicated, predictable place to provide the context and instructions to help AI coding agents work on your project.</p>
+</blockquote>
+<p>つまり、</p>
+<ul>
+<li><code>README.md</code> は人間向けで、クイックスタート、プロジェクト紹介、コントリビューションガイドなどを主に置く。</li>
+<li><code>AGENTS.md</code> は Agent 向けで、ビルド手順、テスト方法、コード規約、README に入れると冗長になるが Agent にとっては重要な詳細を書く。</li>
+</ul>
+<p>この 2 つは互いを置き換えるのではなく、相互補完の関係にある。</p>
+</div>
+    </div>
+</div>
+<p>現在よく使われる CLI ツールでは、入口となるファイル名の慣習はおおむね次のとおりだ。</p>
+<ol>
+<li><a href="https://code.claude.com/docs/ja/memory#claude-md-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" target="_blank" rel="noopener noreffer ">Claude Code</a>: <code>CLAUDE.md</code> を使う</li>
+<li><a href="https://developers.openai.com/codex/guides/agents-md" target="_blank" rel="noopener noreffer ">Codex CLI</a>: <code>AGENTS.md</code> を使う</li>
+<li><a href="https://geminicli.com/docs/cli/gemini-md/" target="_blank" rel="noopener noreffer ">Gemini CLI</a>: <code>GEMINI.md</code> を使うか、設定ファイルで変更できる</li>
+</ol>
+<p>開発者ごとに使うツールが異なるため、実務上は 1 つの主説明文書を維持しつつ、各ツールが期待するファイル名をシンボリックリンクで同じ文書へ向けるやり方がよく使われる。例えば:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="クリップボードにコピー"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./AGENTS.md
+</span></span><span class="line"><span class="cl">./CLAUDE.md@ -&gt; AGENTS.md
+</span></span><span class="line"><span class="cl">./GEMINI.md@ -&gt; AGENTS.md</span></span></code></pre></div></div>
+<p>ここで 1 つ、オープンソースリポジトリの例を挙げる。それはこのブログで使っているフレームワーク <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener noreffer ">Gohugo</a> だ。このフレームワークは 13 年の歴史を持つが、最近になって Agent 向けの説明文書も導入した。</p>
+<ul>
+<li>AGENTS.md: <a href="https://github.com/gohugoio/hugo/blob/master/AGENTS.md" target="_blank" rel="noopener noreffer ">https://github.com/gohugoio/hugo/blob/master/AGENTS.md</a></li>
+<li>CLAUDE.md: <a href="https://github.com/gohugoio/hugo/blob/master/CLAUDE.md" target="_blank" rel="noopener noreffer ">https://github.com/gohugoio/hugo/blob/master/CLAUDE.md</a></li>
+</ul>
+<h2 id="22-skills---agent-向けの遅延読み込みマニュアル">2.2 Skills - Agent 向けの遅延読み込みマニュアル <a href="#22-skills---agent-%e5%90%91%e3%81%91%e3%81%ae%e9%81%85%e5%bb%b6%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf%e3%83%9e%e3%83%8b%e3%83%a5%e3%82%a2%e3%83%ab">¶</a></h2><p>Agent にとって、必要な情報をすべて <code>AGENTS.md</code> に詰め込んでしまうと、コンテキストは簡単に膨れ上がってしまう。</p>
+<p>中には、無関係な仕事をしているときには知らなくてもよく、関連する問題に遭遇したときにだけ対応する文書を読めばよい情報もある。</p>
+<p>こうした問題意識から生まれたのが <code>SKILL.md</code> だ。</p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-lightbulb" aria-hidden="true"></i>SKILL.md について<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><p><code>SKILL.md</code> (<a href="https://agentskills.io/what-are-skills" target="_blank" rel="noopener noreffer ">https://agentskills.io/what-are-skills</a>) もまたオープン標準であり、Skills に関する一連の規範を定めている。現在、すべての AI Coding CLI ツールはこの形式を採用している。</p>
+<p>その定義はこうだ。</p>
+<blockquote>
+<p>Agent Skills are folders of instructions, scripts, and resources that agents can discover and use to do things more accurately and efficiently.</p>
+</blockquote>
+<p>そしてその仕組みの核心は、<a href="https://agentskills.io/what-are-skills#how-skills-work" target="_blank" rel="noopener noreffer ">この一文</a> にある。</p>
+<blockquote>
+<p>Skills use <strong>progressive disclosure</strong> to manage context efficiently</p>
+</blockquote>
+<p><strong>漸進的開示 (progressive disclosure)</strong> によって、SKILL.md の長い本文は<strong>必要なときだけ</strong>読み込まれ、一気にコンテキストを圧迫しないようになっている。</p>
+</div>
+    </div>
+</div>
+<p>ここでは、具体的な SKILL.md の例を 1 つ示す（<em>Code を開いて参照</em>）。</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="クリップボードにコピー"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">name: summarize-experiment
+</span></span><span class="line"><span class="cl">description: アルゴリズム実験の結果を要約する。実験出力の分析、異なる実験設定の比較、指標変化の要約、実験振り返りの執筆などを依頼されたときに使う。
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ユーザーから実験結果の要約を求められたら、次の順番で行う。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. まずリポジトリの説明ファイルを読み、このプロジェクトにおける実験ディレクトリ、ログ形式、指標名、結果保存場所を確認する。
+</span></span><span class="line"><span class="cl">2. 直近の実験出力ファイルを探す。例えば:
+</span></span><span class="line"><span class="cl">    ```bash
+</span></span><span class="line"><span class="cl">    find . -type f \( -name &#34;*.log&#34; -o -name &#34;*.json&#34; -o -name &#34;*.yaml&#34; -o -name &#34;*.csv&#34; \) | tail -n 50
+</span></span><span class="line"><span class="cl">    ```
+</span></span><span class="line"><span class="cl">3. よくある指標フィールドを検索する。例えば:
+</span></span><span class="line"><span class="cl">    ```bash
+</span></span><span class="line"><span class="cl">    rg -n &#34;accuracy|acc|auc|f1|precision|recall|loss|ndcg|mrr|bleu|rouge&#34; .
+</span></span><span class="line"><span class="cl">    ```
+</span></span><span class="line"><span class="cl">4. 実験が複数ある場合は、次を優先して抽出する:
+</span></span><span class="line"><span class="cl">    - 実験設定の差分
+</span></span><span class="line"><span class="cl">    - データセットの差分
+</span></span><span class="line"><span class="cl">    - ランダムシードの差分
+</span></span><span class="line"><span class="cl">    - 主要指標の変化
+</span></span><span class="line"><span class="cl">5. 結果を出力するときは、次の形式で要約する:
+</span></span><span class="line"><span class="cl">    - 今回の実験目的
+</span></span><span class="line"><span class="cl">    - 主要設定
+</span></span><span class="line"><span class="cl">    - 中核指標
+</span></span><span class="line"><span class="cl">    - ベースラインとの違い
+</span></span><span class="line"><span class="cl">    - 可能性のある原因
+</span></span><span class="line"><span class="cl">    - 次の提案
+</span></span><span class="line"><span class="cl">6. 指標の揺れが異常なら、必ず次を確認してユーザーに注意を促す:
+</span></span><span class="line"><span class="cl">    - データセットやデータ分割が変わっていないか
+</span></span><span class="line"><span class="cl">    - ランダムシードが変わっていないか
+</span></span><span class="line"><span class="cl">    - 評価スクリプトが変わっていないか
+</span></span><span class="line"><span class="cl">    - 学習が未収束、またはログ不完全ではないか</span></span></code></pre></div></div>
+<p class="post-emphasis-center post-note">（例: 実際のアルゴリズム実験フローをまとめた Skill）</p>
+<p>この Skill は、Agent が実験結果の要約を依頼されたときにどう振る舞うべきかを定義している。</p>
+<p>そして、その動作原理も実はとても単純だ。</p>
+<ul>
+<li>
+<p class="text-red"><strong>AI Coding CLI ツール起動時には、各 SKILL.md のうち '---' で囲まれた 'name' と 'description' の部分だけがデフォルトでコンテキストに読み込まれ、それ以外の本文は、その Skill が実際に使われたときにだけ読み込まれる。</strong></p>
+</li>
+</ul>
+<p>つまり、次の部分だけ:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="クリップボードにコピー"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">name: summarize-experiment
+</span></span><span class="line"><span class="cl">description: アルゴリズム実験の結果を要約する。実験出力の分析、異なる実験設定の比較、指標変化の要約、実験振り返りの執筆などを依頼されたときに使う。
+</span></span><span class="line"><span class="cl">---</span></span></code></pre></div></div>
+<p>が CLI 起動時に読み込まれ、その下の本文はどれだけ長くても、「漸進的開示」によって、その Skill が必要になったときにだけモデルのコンテキストへ入る。</p>
+<p>こうして、AI Coding CLI は起動時点でどんな Skill を持っているかを知り、対応する呼び出し条件に遭遇したときに、その Skill を読み込めるようになる。</p>
+<h2 id="23-説明文書と-skillsmd-の発見階層">2.3 説明文書と SKILLS.md の発見階層 <a href="#23-%e8%aa%ac%e6%98%8e%e6%96%87%e6%9b%b8%e3%81%a8-skillsmd-%e3%81%ae%e7%99%ba%e8%a6%8b%e9%9a%8e%e5%b1%a4">¶</a></h2><p>上の 2 つの約束事は、AI Coding CLI におけるコンテキスト管理の中でも特に重要な 2 つの概念だ。</p>
+<p><strong>ただし、<code>CLAUDE.md / AGENTS.md</code> はプロジェクトのルートにしか置けないわけではない。</strong></p>
+<ul>
+<li>ユーザーディレクトリにも置ける。そうすると、より広域なユーザーレベルのコンテキストになる。</li>
+<li>プロジェクトのサブディレクトリにも置ける。そうすると、現在の作業ディレクトリにより近い、局所的なコンテキストになる。</li>
+</ul>
+<p>Codex を例にすると、公式にはその階層は次のように定義されている。</p>
+<ol>
+<li>AGENTS.md
+<ul>
+<li>リポジトリのルール、作業規約、長期的制約を担う</li>
+<li>公式ドキュメントでは明示的に 3 層をサポートしている:
+<ul>
+<li><code>グローバル級</code>: <code>~/.codex/AGENTS.md</code></li>
+<li><code>プロジェクト級</code>: リポジトリルートの AGENTS.md</li>
+<li><code>サブディレクトリ級</code>: プロジェクトルートから現在の作業ディレクトリまでの途中にある AGENTS.md</li>
+</ul>
+</li>
+<li>現在の作業ディレクトリに近いほど優先度が高い</li>
+<li>参考: <a href="https://developers.openai.com/codex/guides/agents-md#how-codex-discovers-guidance" target="_blank" rel="noopener noreffer ">https://developers.openai.com/codex/guides/agents-md#how-codex-discovers-guidance</a></li>
+<li>参考: <a href="https://developers.openai.com/codex/skills#where-to-save-skills" target="_blank" rel="noopener noreffer ">https://developers.openai.com/codex/skills#where-to-save-skills</a></li>
+</ul>
+</li>
+</ol>
+<p><strong>より汎用的な Markdown ほど階層は高く、より具体的な Markdown ほど階層は低い。</strong></p>
+<p><strong>こうして書けば、説明文書は肥大化しにくく、Skill も再利用しやすくなる。</strong></p>
+<h1 id="3-ai-coding-cli-ツールの入門">3. AI Coding CLI ツールの入門 <a href="#3-ai-coding-cli-%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e5%85%a5%e9%96%80">¶</a></h1><p>ツールの起動方法自体はとても簡単で、リポジトリ内で対応するコマンドを実行するだけでよい。</p>
+<a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png" title="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png, /posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png" width="100%" height="538" />
+    </a>
+<h2 id="31-通常モード--計画モード--高権限モード">3.1 通常モード / 計画モード / 高権限モード <a href="#31-%e9%80%9a%e5%b8%b8%e3%83%a2%e3%83%bc%e3%83%89--%e8%a8%88%e7%94%bb%e3%83%a2%e3%83%bc%e3%83%89--%e9%ab%98%e6%a8%a9%e9%99%90%e3%83%a2%e3%83%bc%e3%83%89">¶</a></h2><p>Shift + Tab でモードを切り替えられる。Claude Code には 3 種類のモードがある。</p>
+<ol>
+<li><strong>通常モード (normal mode)</strong>: デフォルトの作業モード。Claude はプロジェクト内容を直接読み、分析し、修正できるが、重要な操作では依然として確認を求める。</li>
+<li><strong>計画モード (plan mode)</strong>: 調査、分析、実行計画の作成だけを行い、ファイルは直接変更しない。先に方針を見て影響範囲を評価してから、着手するか決めたいときに向いている。</li>
+<li><strong>高権限モード (always accept edits on)</strong>: Claude が逐次確認なしで直接編集を行える。目標がすでに明確で、連続して改動を完了してほしいときに向いている。</li>
+</ol>
+<p><em>(Codex の場合、Shift + Tab で切り替えられるのは最初の 2 モードだけで、高権限モードは <code>/permissions</code> コマンドで明示的に有効化する必要がある。)</em></p>
+<h2 id="32-よく使う-slash-コマンド">3.2 よく使う Slash コマンド <a href="#32-%e3%82%88%e3%81%8f%e4%bd%bf%e3%81%86-slash-%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89">¶</a></h2><p>対話インターフェースで <code>/</code> から始まる特定のコマンドを入力すると、特定の機能が使える。ツールごとに完全には一致しないが、大まかに共通していて、しかもよく使うのは次のようなものだ。</p>
+<ol>
+<li><code>/init</code>: プロジェクトを初期化する。<code>git init</code> に近いイメージで、ここでの <code>/init</code> は AGENTS.md 文書を初期化することを指す</li>
+<li><code>/model</code>: モデルを切り替える</li>
+<li><code>/skills</code>: 現在読み込まれている技能を確認・管理する</li>
+<li><code>/status</code>: 現在のセッション状態、権限、コンテキスト使用量、Token 使用量などを確認する</li>
+<li><code>/compact</code>: 長い会話のコンテキストを圧縮する（コンテキストウィンドウが埋まりそうなときに使う）</li>
+<li><code>/clear</code>: コンテキスト履歴を消去する（話題を切り替えたいときに使う）</li>
+</ol>
+<p>Claude Code には、さらに Codex にはない独自の Slash コマンドもいくつかある。</p>
+<ol>
+<li><code>/rewind</code>: コンテキストを過去のある時点まで巻き戻す。入力を誤って戻したいときや、別の分岐を試したいときにとても便利だ。</li>
+<li><code>/btw</code>: “by the way モード”。主タスクを中断せず、主コンテキストも汚さずに、小さな質問を一時的に差し込める。たとえば作業中に「この設定項目は何か」「このコマンドはどう書くか」のような小さな確認をして、終わったらその話題だけ閉じたいときに向いている。</li>
+<li><code>/plugin</code>: Claude Code 独自のプラグインマーケットプレイス。アプリストアのようなもので、各種プラグイン、Skills、MCP を検索して直接インストールできる。</li>
+</ol>
+<p style="color: #6f6f73; font-style: italic;">（Codex はこのあたりの機能を今のところ追ってこなかった。個人的には、これは両者の設計思想の違いなのだと思う。Codex はもっと簡潔なツールを目指していて、巻き戻しやプラグインに頼らなくても、自然言語だけで等価な機能を得られると考えているのだろう。）</p>
+<h2 id="33-skill-の明示呼び出しと暗黙呼び出し">3.3 Skill の明示呼び出しと暗黙呼び出し <a href="#33-skill-%e3%81%ae%e6%98%8e%e7%a4%ba%e5%91%bc%e3%81%b3%e5%87%ba%e3%81%97%e3%81%a8%e6%9a%97%e9%bb%99%e5%91%bc%e3%81%b3%e5%87%ba%e3%81%97">¶</a></h2><p>Skill を明示的に呼び出したい場合は、<code>$&lt;SkillName&gt;</code> (Codex) または <code>/&lt;SkillName&gt;</code> (Claude Code) を使える。例えば:</p>
+<figure><a class="lightgallery" href="/en/posts/2026/programming-guide-for-the-new-era-2026/skill-explicitly-trigger.en.png" title="/en/posts/2026/programming-guide-for-the-new-era-2026/skill-explicitly-trigger.en.png" data-thumbnail="/en/posts/2026/programming-guide-for-the-new-era-2026/skill-explicitly-trigger.en.png" data-sub-html="<h2>命令の中に skill 名を含めると、明示的に呼び出せる。</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/en/posts/2026/programming-guide-for-the-new-era-2026/skill-explicitly-trigger.en.png"
+            data-srcset="/en/posts/2026/programming-guide-for-the-new-era-2026/skill-explicitly-trigger.en.png, /en/posts/2026/programming-guide-for-the-new-era-2026/skill-explicitly-trigger.en.png 1.5x, /en/posts/2026/programming-guide-for-the-new-era-2026/skill-explicitly-trigger.en.png 2x"
+            data-sizes="auto"
+            alt="/en/posts/2026/programming-guide-for-the-new-era-2026/skill-explicitly-trigger.en.png" width="80%" height="368" />
+    </a><figcaption class="image-caption">命令の中に skill 名を含めると、明示的に呼び出せる。</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png" title="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png" data-sub-html="<h2>ツールごとに Skill の明示呼び出し方法は異なる。Codex は $、Claude Code は / を使う。</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png, /posts/2026/programming-guide-for-the-new-era-2026/use-skills.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/use-skills.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png" width="80%" height="594" />
+    </a><figcaption class="image-caption">ツールごとに Skill の明示呼び出し方法は異なる。Codex は $、Claude Code は / を使う。</figcaption>
+    </figure>
+<p>また、どの Skill を使うべきかを明示しなくても、AI Coding CLI ツールは作業中に SKILL.md の <code>&quot;description&quot;</code> フィールドに書かれた「呼び出し条件のヒント」に基づいて、自動的に Skill を呼び出すことがある。</p>
+<h1 id="4-ai-coding-cli-ツールのいくつかの上級--前沿機能">4. AI Coding CLI ツールのいくつかの上級 / 前沿機能 <a href="#4-ai-coding-cli-%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ae%e3%81%84%e3%81%8f%e3%81%a4%e3%81%8b%e3%81%ae%e4%b8%8a%e7%b4%9a--%e5%89%8d%e6%b2%bf%e6%a9%9f%e8%83%bd">¶</a></h1><p>今日（2026 年 4 月 18 日）の時点では、ほとんどの人にとって必要なのは、実は上で述べた内容を押さえたうえで、自分の <code>AGENTS.md</code> / <code>CLAUDE.md</code> / <code>GEMINI.md</code> と Skills リポジトリをしっかり作り込み、十分に賢い大規模モデルのインターフェースにつなぐことだけだ。それだけでも Agent にかなり難しいタスクをやらせられるようになる。</p>
+<p>ただ、人間は目の前のもので満足しない。いつだって、モデルの能力をできるだけ限界まで引き出そうとする。なのでこの章では、私が取り上げる価値があると思うものを選びつつ、いわゆる Harness Engineering の界隈が CLI ツールに与えようとしている、いくつかの上級 / 前沿機能について話してみたい。</p>
+<h2 id="41-subagents子代理">4.1 Subagents（子代理） <a href="#41-subagents%e5%ad%90%e4%bb%a3%e7%90%86">¶</a></h2><p>Agent が特定のタスクを実行するとき、その中でさらにいくつかの Subagent(s) を呼び出し、特定の仕事を任せられることがある。これらの Subagent(s) は、次の特徴を持つ。</p>
+<ul>
+<li>独立したコンテキスト（主 Agent のコンテキストを継承しない）</li>
+<li>カスタムされたシステムプロンプト（自分の担当タスクを遂行するため）</li>
+<li>特定のツールアクセス権限と独立した許可</li>
+</ul>
+<p>少し抽象的なので、ここでは <a href="https://code.claude.com/docs/ja/sub-agents#%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88" target="_blank" rel="noopener noreffer ">Claude Code 公式の例</a> を直接見てみよう。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="クリップボードにコピー"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">-</span><span class="c1">--
+</span></span></span><span class="line"><span class="cl"><span class="c1">name: data-scientist
+</span></span></span><span class="line"><span class="cl"><span class="n">description</span><span class="p">:</span><span class="w"> </span><span class="err">データ分析の専門家。</span><span class="k">SQL</span><span class="w"> </span><span class="err">クエリ、</span><span class="n">BigQuery</span><span class="w"> </span><span class="err">操作、データインサイトが得意。データ分析タスクやクエリでは積極的に使うべき。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">tools</span><span class="p">:</span><span class="w"> </span><span class="n">Bash</span><span class="p">,</span><span class="w"> </span><span class="k">Read</span><span class="p">,</span><span class="w"> </span><span class="k">Write</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">model</span><span class="p">:</span><span class="w"> </span><span class="n">sonnet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="c1">--
+</span></span></span><span class="line"><span class="cl"><span class="c1">
+</span></span></span><span class="line"><span class="cl"><span class="c1">あなたは SQL と BigQuery 分析を専門とするデータサイエンティストだ。
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">呼び出されたら</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="mi">1</span><span class="p">.</span><span class="w"> </span><span class="err">分析要求を理解する</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="mi">2</span><span class="p">.</span><span class="w"> </span><span class="err">効率的な</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span><span class="err">クエリを書く</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="mi">3</span><span class="p">.</span><span class="w"> </span><span class="err">必要に応じて</span><span class="w"> </span><span class="n">BigQuery</span><span class="w"> </span><span class="nf">CLI</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">bq</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="err">を使う</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="mi">4</span><span class="p">.</span><span class="w"> </span><span class="err">結果を分析し要約する</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="mi">5</span><span class="p">.</span><span class="w"> </span><span class="err">発見を分かりやすく提示する</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">重要な実践</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">適切なフィルタを入れた最適化</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span><span class="err">を書く</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">適切な集約と</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="err">を使う</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">複雑なロジックには説明コメントを加える</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">結果を読みやすく整形する</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">データに基づく提案を出す</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">各分析について</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">クエリ方針を説明する</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">すべての仮定を書く</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">重要な発見を強調する</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">-</span><span class="w"> </span><span class="err">データに基づく次の提案を行う</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">クエリは常に効率的かつコスト効率よくすること。</span></span></span></code></pre></div></div>
+<p class="post-emphasis-center post-note">（Claude Code 公式の Subagent 例: データサイエンティスト）</p>
+<p class="text-red"><strong>見て分かるように、Subagent のフォーマットは Skill と非常によく似ている。</strong></p>
+<p class="text-red"><strong>そのため、Subagent の呼び出し方も Skill と非常によく似ており、明示呼び出しと暗黙呼び出しの両方がある。</strong></p>
+<p><a href="https://code.claude.com/docs/ja/sub-agents#%E3%82%B5%E3%83%96%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B" target="_blank" rel="noopener noreffer ">Claude Code 公式ドキュメントの Subagents 章</a> では、次のように明記されている。</p>
+<ul>
+<li>Claude は、リクエスト内のタスク記述、subagent 設定内の description フィールド、現在のコンテキストに基づいて自動的に委任する。</li>
+<li>自動委任だけでは足りない場合は、自分で subagent を指定して呼び出せる。</li>
+</ul>
+<p>さらに、Subagent は <a href="https://code.claude.com/docs/ja/sub-agents#%E3%82%B5%E3%83%96%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%92%E3%83%95%E3%82%A9%E3%82%A2%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%90%E3%83%83%E3%82%AF%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%81%A7%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B" target="_blank" rel="noopener noreffer ">バックグラウンド実行</a> もサポートしており、並列タスクが可能になる。これは Skill にはない能力だ。</p>
+<h2 id="42-ralph-loop">4.2 Ralph Loop <a href="#42-ralph-loop">¶</a></h2><p>Ralph Loop はサードパーティのリポジトリで、出典は <a href="https://github.com/snarktank/ralph" target="_blank" rel="noopener noreffer ">https://github.com/snarktank/ralph</a> だ。</p>
+<a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png" title="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png, /posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png" width="70%" height="1538" />
+    </a>
+<p>Ralph Loop の思想は、<strong>Agent にタスクリストに従って自動的に何度も実行させ、最後までやり切らせる</strong>というものだ。</p>
+<p class="text-red"><strong>ここでいう「自動」とは、Agent が完全な権限を持ち、人間の確認を必要としないという意味だ。人は本当に寝ていてもいい。</strong></p>
+<p>その仕組みはソースコードを見ると分かりやすい。</p>
+<ul>
+<li><a href="https://github.com/snarktank/ralph/blob/6c53cb0b831ebe8739c6a003e22af14902d8b0b5/ralph.sh#L84" target="_blank" rel="noopener noreffer ">https://github.com/snarktank/ralph/blob/6c53cb0b831ebe8739c6a003e22af14902d8b0b5/ralph.sh#L84</a></li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="クリップボードにコピー"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$MAX_ITERATIONS</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;===============================================================&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;  Ralph Iteration </span><span class="nv">$i</span><span class="s2"> of </span><span class="nv">$MAX_ITERATIONS</span><span class="s2"> (</span><span class="nv">$TOOL</span><span class="s2">)&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;===============================================================&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Run the selected tool with the ralph prompt</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[[</span> <span class="s2">&#34;</span><span class="nv">$TOOL</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;amp&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">OUTPUT</span><span class="o">=</span><span class="k">$(</span>cat <span class="s2">&#34;</span><span class="nv">$SCRIPT_DIR</span><span class="s2">/prompt.md&#34;</span> <span class="p">|</span> amp --dangerously-allow-all 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> tee /dev/stderr<span class="k">)</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Claude Code: use --dangerously-skip-permissions for autonomous operation, --print for output</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">OUTPUT</span><span class="o">=</span><span class="k">$(</span>claude --dangerously-skip-permissions --print &lt; <span class="s2">&#34;</span><span class="nv">$SCRIPT_DIR</span><span class="s2">/CLAUDE.md&#34;</span> 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> tee /dev/stderr<span class="k">)</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Check for completion signal</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$OUTPUT</span><span class="s2">&#34;</span> <span class="p">|</span> grep -q <span class="s2">&#34;&lt;promise&gt;COMPLETE&lt;/promise&gt;&#34;</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Ralph completed all tasks!&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Completed at iteration </span><span class="nv">$i</span><span class="s2"> of </span><span class="nv">$MAX_ITERATIONS</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Iteration </span><span class="nv">$i</span><span class="s2"> complete. Continuing...&#34;</span>
+</span></span><span class="line"><span class="cl">  sleep <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div></div>
+<p class="post-emphasis-center post-note">（Ralph Loop の中核ロジック部分）</p>
+<p>その中で最も重要なのは、次の 1 行だ。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="クリップボードにコピー"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">claude --dangerously-skip-permissions --print</span></span></code></pre></div></div>
+<ul>
+<li><code>--dangerously-skip-permissions</code>: Claude Code に完全権限を与え、人間の確認を不要にする</li>
+<li><code>--print</code>: Claude Code を非対話モードで動かす（公式ドキュメント: <a href="https://code.claude.com/docs/ja/headless" target="_blank" rel="noopener noreffer ">Claude Code をプログラムから実行する</a> を参照）</li>
+</ul>
+<p>Ralph Loop は <code>for</code> ループで Claude を回す際、各イテレーションで Progress Report を記録し、それを次のイテレーションへ渡している。参考:</p>
+<ul>
+<li><a href="https://github.com/snarktank/ralph/blob/main/prompt.md#consolidate-patterns" target="_blank" rel="noopener noreffer ">https://github.com/snarktank/ralph/blob/main/prompt.md#consolidate-patterns</a></li>
+</ul>
+<p class="text-red"><strong>そして、こうした反復を通じて、徐々に進捗を前に進め、最終的にタスク完了まで持っていく。</strong></p>
+<p>私の考えでは、Ralph Loop は GitHub リポジトリ内での利用シーン（プロダクト機能開発）に加えて、特に次の 2 つの場面にも向いている。</p>
+<ol>
+<li>非常に見つけにくいシステム Bug の分析と特定</li>
+<li>アルゴリズムモデル性能の改善</li>
+</ol>
+<h2 id="43-agent-teams代理チーム">4.3 Agent Teams（代理チーム） <a href="#43-agent-teams%e4%bb%a3%e7%90%86%e3%83%81%e3%83%bc%e3%83%a0">¶</a></h2><p>Agent Teams は Claude Code の <u>実験的機能</u> であり、公式ドキュメントには <a href="https://code.claude.com/docs/ja/agent-teams#subagents-%E3%81%A8%E3%81%AE%E6%AF%94%E8%BC%83" target="_blank" rel="noopener noreffer ">Subagents との違い</a> を説明する図がある。</p>
+<figure><a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif" title="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif" data-sub-html="<h2>Subagents は主 Agent にだけ結果を返し、互いには会話しない。一方、agent teams ではメンバーがタスクリストを共有し、作業を引き受け、互いに直接コミュニケーションする。</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif"
+            data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif, /posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif 2x"
+            data-sizes="auto"
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif" width="100%" height="951" />
+    </a><figcaption class="image-caption">Subagents は主 Agent にだけ結果を返し、互いには会話しない。一方、agent teams ではメンバーがタスクリストを共有し、作業を引き受け、互いに直接コミュニケーションする。</figcaption>
+    </figure>
+<p>ただ、この機能は複数の「Teammate」を立ち上げ、しかもその「Teammate」同士が互いに会話もできるため、Token 消費が非常に激しい。そのわりに、現時点では Agent Teams が実運用で本当にうまく使われている場面をまだあまり見ていないので、<del>Anthropic が Token をもっと売るために考えた、実用性の低い華やかな機能なのではないかと言いたくもなる</del>。もちろん、これを単に実験的な機能として受け止め、今後この仕組みを使って本当に価値あるプロダクトを作る人が現れるのを期待してもよい。</p>
+<h1 id="5-個人的な利用経験と理解">5. 個人的な利用経験と理解 <a href="#5-%e5%80%8b%e4%ba%ba%e7%9a%84%e3%81%aa%e5%88%a9%e7%94%a8%e7%b5%8c%e9%a8%93%e3%81%a8%e7%90%86%e8%a7%a3">¶</a></h1><h2 id="51-1-つの原則-メインリポジトリで雑談しない">5.1 1 つの原則: メインリポジトリで雑談しない <a href="#51-1-%e3%81%a4%e3%81%ae%e5%8e%9f%e5%89%87-%e3%83%a1%e3%82%a4%e3%83%b3%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%a7%e9%9b%91%e8%ab%87%e3%81%97%e3%81%aa%e3%81%84">¶</a></h2><p><strong>メインリポジトリでは、現在のプロジェクトに直接関係することだけをやる。</strong></p>
+<p>もし、もっと開いた話題や別の話題をしたいなら、例えば:</p>
+<ol>
+<li>学習ルート</li>
+<li>副次プロジェクトの brainstorming</li>
+<li>アーキテクチャ方針の比較</li>
+<li>その他のさらに関係の薄い雑談や Q&amp;A</li>
+</ol>
+<p>より良いやり方は、次のとおりだ。</p>
+<ol>
+<li>別の一時ディレクトリを作って、新しく Codex / Claude のセッションを立ち上げ、その新しいセッションでやり取りする</li>
+<li>新しいセッションの中で話題を変える前には、<code>/clear</code> する</li>
+</ol>
+<p class="text-red"><strong>理由は単純だ。既存のコンテキストは、新しい質問に対する Agent の判断を乱すし、新しい質問は元のプロジェクト主線のコンテキストも汚してしまう。</strong></p>
+<h2 id="52-subagents-と-skills-の違い">5.2 Subagents と Skills の違い <a href="#52-subagents-%e3%81%a8-skills-%e3%81%ae%e9%81%95%e3%81%84">¶</a></h2><p><a href="https://code.claude.com/docs/ja/skills" target="_blank" rel="noopener noreffer ">Subagents</a> と <a href="https://code.claude.com/docs/ja/sub-agents" target="_blank" rel="noopener noreffer ">Skills</a> は <u>Markdown の形式が非常によく似ている</u> が、本質的には別物だ。公式ドキュメントによれば、その違いは次のとおりだ。</p>
+<ul>
+<li>Skill の本体は <code>SKILL.md</code> であり、文書の言い方を借りれば「Skills は Claude ができることを拡張する」。Claude はそれを「自分のツールキットに追加し」、関連するときに読み込んだり、<code>/skill-name</code> で呼び出したりする。本質的には、説明、知識、ワークフロー、タスクスクリプトの集合だ。</li>
+<li>Subagent の本体は「専門化された AI アシスタント」であり、それぞれが「自分自身のコンテキストウィンドウで動作」し、独自のシステムプロンプト、ツール権限、独立した許可を持つ。主 Claude は適合するタスクをそれに委任し、Subagent は独立して作業したあと結果を返す。</li>
+</ul>
+<p>つまり:</p>
+<ul>
+<li>Skill が解決するのは、「この種のことに遭遇したら、どんなルールや台本に従って行うべきか」だ。</li>
+<li>Subagent が解決するのは、「この仕事を誰に任せ、どんな隔離されたコンテキストと権限で実行させるか」だ。</li>
+</ul>
+<p>もう 1 つ、混同されやすいが公式文書には明確に書かれている点がある。Skill も <code>context: fork</code> を設定でき、その場合は subagent による隔離環境で実行される。しかし、それでも本質は変わらない。文書では「skill content becomes the prompt that drives the subagent」と書かれている。つまり、subagent の中で動いていたとしても、Skill は依然として「タスク説明 / プロンプト」であり、「実行者」そのものではない。実行者はあくまで subagent という種類の存在だ。</p>
+<h2 id="53-ツールごとの違い">5.3 ツールごとの違い <a href="#53-%e3%83%84%e3%83%bc%e3%83%ab%e3%81%94%e3%81%a8%e3%81%ae%e9%81%95%e3%81%84">¶</a></h2><p>2025 年初頭から、OpenAI は大規模モデルアプリで最も広く使われていた <code>/chat/completions</code> API を段階的に廃止し、<code>/responses</code> API へ移行してきた。その結果、大規模モデル推論の基盤インターフェースは相互互換ではなくなり、異なるツールを同じモデルにつないで純粋比較することが難しくなった。</p>
+<p>この点について、私はすでに智譜公式に要望を出している (<a href="https://github.com/zai-org/GLM-5/issues/39" target="_blank" rel="noopener noreffer ">https://github.com/zai-org/GLM-5/issues/39</a>)。OpenAI の <code>/responses</code> API を互換実装して Codex に対応してほしい、という要望だ。もしそうなれば、将来的には同じモデルに接続した状態で Claude Code と Codex の長短を比較しやすくなるだろう。</p>
+<p>総じて言えば、</p>
+<ul>
+<li>エコシステムの成熟度だけを見るなら、現時点ではやはり Claude Code のほうが強い。特に <code>/marketplace</code> とコミュニティ活性の面でそうだ。</li>
+<li>実行体験だけを見るなら、Codex はとても強い。Agent Loop の実行は速く、探索能力も高く、特にリポジトリの規約、制約、コマンドがよく整備されている場合に向いている。</li>
+</ul>
+<p>ただし、現時点ではツールとモデルの結びつきがまだかなり深いため、モデルから切り離してツール単体の良し悪しを評価するのは難しい。</p>
+<p>また、GPT-5.4、Opus4.6、GLM-5.1、MINIMAX-M2.7 などのモデル差については、ここでは評価しない。実際に使いながら体感したり、周囲やネット上の人と意見交換したりすれば、各自それなりの使用感が見えてくると思う。</p>
+<h1 id="6-まとめ">6. まとめ <a href="#6-%e3%81%be%e3%81%a8%e3%82%81">¶</a></h1><p>以上の内容を通して、AI Coding CLI ツールがもたらす生産性の大きな向上を、より多くの人が実感し、新しい Vibe Coding という働き方の魅力を感じ、<del>ついでに自分の仕事が AI に置き換えられるかもしれないという不安も少し味わって</del> もらえたらと思う。</p>
+<p>すでに Claude Code / Codex CLI / Gemini CLI のような CLI ツールを使い始めている人、あるいは深く使っている人にとっては、上の内容は比較的浅く、十分に網羅的ではないかもしれない。それでも、これから入門する大多数の人にとっては、十分すぎるくらいの資料にはなっているはずだ。</p>
+<p>学習が進んできたら、さらに多くの公式ドキュメント、ネット上の資料、フォーラムなども読んで、自分が AI をより上手に扱う力を深めていくことを勧めたい。</p>
+<p>最後に、楽しい Token 焼きを！</p>
+<h1 id="7-おすすめの参考資料">7. おすすめの参考資料 <a href="#7-%e3%81%8a%e3%81%99%e3%81%99%e3%82%81%e3%81%ae%e5%8f%82%e8%80%83%e8%b3%87%e6%96%99">¶</a></h1><h2 id="71-おすすめclaude-code-ベストプラクティス">7.1 （おすすめ）Claude Code ベストプラクティス: <a href="#71-%e3%81%8a%e3%81%99%e3%81%99%e3%82%81claude-code-%e3%83%99%e3%82%b9%e3%83%88%e3%83%97%e3%83%a9%e3%82%af%e3%83%86%e3%82%a3%e3%82%b9">¶</a></h2><a class="lightgallery" href="Claude-Code-Best-Practice.en.png" title="Claude-Code-Best-Practice.en.png" data-thumbnail="Claude-Code-Best-Practice.en.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="Claude-Code-Best-Practice.en.png"
+            data-srcset="Claude-Code-Best-Practice.en.png, Claude-Code-Best-Practice.en.png 1.5x, Claude-Code-Best-Practice.en.png 2x"
+            data-sizes="auto"
+            alt="Claude-Code-Best-Practice.en.png" width="60%" />
+    </a>
+<p>Claude Code が以前に公開した公式ベストプラクティスガイド。さまざまなコードベース、言語、環境の中で Anthropic 社内チームが実際に有効だと確認した使い方がまとめられている。内容の多くは Codex にも当てはまる。</p>
+<ul>
+<li><a href="https://code.claude.com/docs/ja/best-practices" target="_blank" rel="noopener noreffer ">https://code.claude.com/docs/ja/best-practices</a></li>
+</ul>
+<h2 id="72-claude-code-のソースコード級解説">7.2 Claude Code のソースコード級解説 <a href="#72-claude-code-%e3%81%ae%e3%82%bd%e3%83%bc%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%89%e7%b4%9a%e8%a7%a3%e8%aa%ac">¶</a></h2><a class="lightgallery" href="Learn-Claude-Code.en.png" title="Learn-Claude-Code.en.png" data-thumbnail="Learn-Claude-Code.en.png">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="Learn-Claude-Code.en.png"
+            data-srcset="Learn-Claude-Code.en.png, Learn-Claude-Code.en.png 1.5x, Learn-Claude-Code.en.png 2x"
+            data-sizes="auto"
+            alt="Learn-Claude-Code.en.png" width="60%" />
+    </a>
+<p>以前に誤って公開されてしまった Claude Code のソースコードをもとに、大規模モデルを使って作られた解説サイト:</p>
+<ul>
+<li><a href="https://learn.shareai.run/ja/" target="_blank" rel="noopener noreffer ">https://learn.shareai.run/ja/</a></li>
+</ul>
+<p>Harness Engineering、Agent の実行メカニズム、コンテキストの編成方法、あるいはこうしたツールが内部でどう組み上がっているかに興味があるなら、このサイトは延伸読書としてかなり向いている。</p>
+<h1 id="参考リンク">参考リンク <a href="#%e5%8f%82%e8%80%83%e3%83%aa%e3%83%b3%e3%82%af">¶</a></h1><ol>
+<li>Vibe Coding に関する Andrej Karpathy の X 投稿: <a href="https://x.com/karpathy/status/1886192184808149383" target="_blank" rel="noopener noreffer ">https://x.com/karpathy/status/1886192184808149383</a></li>
+<li>Claude Code
+<ul>
+<li>公式ドキュメント: <a href="https://code.claude.com/docs/ja/quickstart" target="_blank" rel="noopener noreffer ">https://code.claude.com/docs/ja/quickstart</a></li>
+<li>CLAUDE.md: <a href="https://code.claude.com/docs/ja/memory#claude-md-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" target="_blank" rel="noopener noreffer ">https://code.claude.com/docs/ja/memory#claude-md-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB</a></li>
+<li>Skills: <a href="https://code.claude.com/docs/ja/skills" target="_blank" rel="noopener noreffer ">https://code.claude.com/docs/ja/skills</a></li>
+</ul>
+</li>
+<li>OpenAI - Codex
+<ul>
+<li>公式ドキュメント: <a href="https://developers.openai.com/codex/cli" target="_blank" rel="noopener noreffer ">https://developers.openai.com/codex/cli</a></li>
+<li>AGENTS.md: <a href="https://developers.openai.com/codex/guides/agents-md" target="_blank" rel="noopener noreffer ">https://developers.openai.com/codex/guides/agents-md</a></li>
+<li>Skills: <a href="https://developers.openai.com/codex/skills/" target="_blank" rel="noopener noreffer ">https://developers.openai.com/codex/skills/</a></li>
+</ul>
+</li>
+<li>Google - Gemini CLI
+<ul>
+<li>公式ドキュメント: <a href="https://geminicli.com/docs/get-started/" target="_blank" rel="noopener noreffer ">https://geminicli.com/docs/get-started/</a></li>
+<li>GEMINI.md: <a href="https://geminicli.com/docs/cli/gemini-md/" target="_blank" rel="noopener noreffer ">https://geminicli.com/docs/cli/gemini-md/</a></li>
+<li>Skills: <a href="https://geminicli.com/docs/cli/skills/" target="_blank" rel="noopener noreffer ">https://geminicli.com/docs/cli/skills/</a></li>
+</ul>
+</li>
+<li>AGENTS.md のオープン標準: <a href="https://agents.md/" target="_blank" rel="noopener noreffer ">https://agents.md/</a></li>
+<li>Agent Skills のオープン標準: <a href="https://agentskills.io/" target="_blank" rel="noopener noreffer ">https://agentskills.io/</a></li>
+<li>Ralph プロジェクト: <a href="https://github.com/snarktank/ralph" target="_blank" rel="noopener noreffer ">https://github.com/snarktank/ralph</a></li>
+</ol></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新日 2026-04-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" data-title="新時代のためのプログラミングガイド - 2026" data-hashtags="AI,LLM,VibeCoding,Claude Code,Codex,Gemini CLI"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" data-title="新時代のためのプログラミングガイド - 2026"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" data-hashtag="AI"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" data-title="新時代のためのプログラミングガイド - 2026"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" data-title="新時代のためのプログラミングガイド - 2026"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" data-title="新時代のためのプログラミングガイド - 2026" data-image="ClaudeGeminiCodex.jpg"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" data-title="新時代のためのプログラミングガイド - 2026" data-description="AI によるプログラミングのパラダイム変化についての個人的な記事。初期の大規模モデルによる補助的コーディングから、今日の CLI Agent を中心とした Vibe Coding までを扱う。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fprogramming-guide-for-the-new-era-2026%2f&amp;text=%e6%96%b0%e6%99%82%e4%bb%a3%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0%e3%82%ac%e3%82%a4%e3%83%89%20-%202026" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/ja/tags/ai/">AI</a>,&nbsp;<a href="/ja/tags/llm/">LLM</a>,&nbsp;<a href="/ja/tags/vibecoding/">VibeCoding</a>,&nbsp;<a href="/ja/tags/claude-code/">Claude Code</a>,&nbsp;<a href="/ja/tags/codex/">Codex</a>,&nbsp;<a href="/ja/tags/gemini-cli/">Gemini CLI</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/" class="prev" rel="prev" title="Codex を使ってリーチ麻雀の入門サイトを作った"><i class="fas fa-angle-left" aria-hidden="true"></i>Codex を使ってリーチ麻雀の入門サイトを作った</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | テーマ - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/ja/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">特に明記がない限り、このブログの内容は<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>ライセンスの下で公開しています</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="ページのトップへ">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.TinySegmenter.min.js"></script><script src="/lib/lunr/lunr.ja.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{"valine":{"appId":"lug1GaEEqYeOlGnUCyg1yT0k-gzGzoHsz","appKey":"TnhoSJWNWDKTrEOX5zd3CkgQ","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@15.1.2/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"ja","pageSize":10,"placeholder":"コメント ...","recordIP":true,"visitor":true}},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/ja/index.json","lunrLanguageCode":"ja","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"見つかりませんでした","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>キーボード - タグ - Simonの夢宇宙</title>
+        <link>http://localhost:1313/ja/tags/%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</link>
+        <description>キーボード - タグ - Simonの夢宇宙</description>
+        <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 31 Jul 2020 16:04:42 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/ja/tags/%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/" rel="self" type="application/rss+xml" /><item>
+    <title>Niz Plum Topre キーボードに潤滑してスプリングノイズを消す話</title>
+    <link>http://localhost:1313/ja/posts/2020/on-lubricating-the-niz-topre-keyboard-to-get-rid-of-spring-noise/</link>
+    <pubDate>Fri, 31 Jul 2020 16:04:42 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>http://localhost:1313/ja/posts/2020/on-lubricating-the-niz-topre-keyboard-to-get-rid-of-spring-noise/</guid>
+    <description><![CDATA[Plum Niz Topre キーボードを分解し、スプリングに潤滑剤を塗ってスプリングノイズを解消する方法を紹介する。]]></description>
+</item>
+</channel>
+</rss>

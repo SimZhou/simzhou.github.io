@@ -4,7 +4,19 @@
         <link>https://simzhou.com/ja/categories/ai/</link>
         <description>AI - カテゴリー - Simonの夢宇宙</description>
         <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
-            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 18 Mar 2026 12:35:00 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/ja/categories/ai/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 17 Apr 2026 20:09:00 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/ja/categories/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>新時代のためのプログラミングガイド - 2026</title>
+    <link>https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/</link>
+    <pubDate>Fri, 17 Apr 2026 20:09:00 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/ClaudeGeminiCodex.jpg" referrerpolicy="no-referrer">
+            </div><p>この記事はもともと、社内共有のために準備していた発表原稿の下書きとして書き始めたものだ。ただ、その中で公開しても再利用できる部分を整理し、ブログ記事としてまとめることにした。なので、社内リポジトリや社内フロー、社内事例のような内容は意図的に避け、できるだけ多くの開発者にとって再利用可能な方法論、仕事の習慣、考え方の変化だけを残すつもりでいる。</p>
+<p>この記事の主な読者として想定しているのは、まだ IDE ベースの補助的コーディングや、大規模モデルの Web チャット機能を使ってはいるものの、Claude Code や Codex CLI のようなコマンドラインツールはまだあまり使ったことがない人たちだ。だからこの文章で伝えたいのは、なぜ CLI ツールこそが未来なのか、そして CLI ツールの入門的な使い方を大まかに紹介することだ。</p>
+<p>この文章の核心を一言で要約するなら、こうなる。<strong>大規模モデルによる補助的コーディングは出発点にすぎず、Vibe Coding は新しい働き方そのものだ。</strong> それは単に「IDE にチャット欄が 1 つ増えた」ことでもなければ、「AI にコード補完を手伝わせる」ことでもない。むしろ、<strong>「コードを書く」という行為そのものが、少しずつ「目標を説明し、過程に制約を与え、結果をレビューし、システムを反復的に改善する」プロセスへと再構成されていくこと</strong>に近い。そして後者に必要なのは、<strong>自然言語で Agent と対話することだけ</strong>だ。</p>]]></description>
+</item>
+<item>
     <title>Codex を使ってリーチ麻雀の入門サイトを作った</title>
     <link>https://simzhou.com/ja/posts/2026/i-used-codex-to-build-a-riichi-mahjong-handbook-site/</link>
     <pubDate>Wed, 18 Mar 2026 12:35:00 &#43;0800</pubDate>

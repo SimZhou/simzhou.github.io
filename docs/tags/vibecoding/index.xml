@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>VibeCoding - 标签 - Simon的梦宇宙</title>
+        <link>https://simzhou.com/tags/vibecoding/</link>
+        <description>VibeCoding - 标签 - Simon的梦宇宙</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 17 Apr 2026 20:09:00 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/tags/vibecoding/" rel="self" type="application/rss+xml" /><item>
+    <title>面向新时代的编程指南 - 2026</title>
+    <link>https://simzhou.com/posts/2026/programming-guide-for-the-new-era-2026/</link>
+    <pubDate>Fri, 17 Apr 2026 20:09:00 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/posts/2026/programming-guide-for-the-new-era-2026/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/ClaudeGeminiCodex.jpg" referrerpolicy="no-referrer">
+            </div><p>这篇文章本来是为了我一次公司内部分享准备的讲稿底稿，但我决定把其中可以公开复用的部分整理成一篇博客。所以会刻意避开任何公司内部仓库、流程和案例，只保留那些对大多数开发者都适用的方法论、工作习惯和思维转变。</p>
+<p>这篇文章的主要受众是那些还在使用IDE辅助编程，大模型网页端聊天功能，但是还没怎么用过类似 Claude Code 或者 Codex CLI 这种命令行工具的人。因此，通过这篇文章，我想传达的是：为什么 CLI 工具才是未来，以及大致介绍一下 CLI 工具的入门使用教程。</p>
+<p>如果要用一句话概括我这篇文章的核心观点，那就是：<strong>大模型辅助编程只是起点，而 Vibe Coding 是一种新的工作方式。</strong> 它不只是“IDE 里多了个聊天框”，也不只是“让 AI 帮你补全代码”。它更像是<strong>把“写代码”这件事，逐步重构成“描述目标、约束过程、审阅结果、迭代系统”的过程</strong>，而后者，只需要<strong>用自然语言与 Agent 交互即可</strong>。</p>]]></description>
+</item>
+</channel>
+</rss>

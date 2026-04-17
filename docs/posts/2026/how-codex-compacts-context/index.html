@@ -288,7 +288,7 @@
 <p>很难下定论。一个可能的解释是，这个加密 blob 里承载的信息不止这次简单实验所揭示出来的内容，比如可能还包含一些与 tool results 如何被 compact 和恢复有关的特殊数据。但我没有继续深挖这个方向。</p>
 <h2 id="x-上面评论区的总结">X 上面评论区的总结 <a href="#x-%e4%b8%8a%e9%9d%a2%e8%af%84%e8%ae%ba%e5%8c%ba%e7%9a%84%e6%80%bb%e7%bb%93">¶</a></h2><h3 id="短总结">短总结 <a href="#%e7%9f%ad%e6%80%bb%e7%bb%93">¶</a></h3><p>这波讨论的重点不在“Codex 有没有用 prompt 做 compaction”，因为文章基本已经说明它确实用了；真正引发讨论的是：既然 prompt 和开源版本几乎一致，为什么还要把 summary 加密成 blob。大家的主流猜测包括防篡改、避免外部依赖内部实现细节、阻止他人收集数据来复刻能力，以及为未来加入更多服务端逻辑预留空间。另一个很有价值的实践观点是：相比 compaction prompt，本轮到下一轮之间的 handoff prompt 可能更关键，因为 summary 只是压缩信息，handoff 才决定模型如何继续工作。</p>
 <h3 id="观点分歧图">观点分歧图 <a href="#%e8%a7%82%e7%82%b9%e5%88%86%e6%ad%a7%e5%9b%be">¶</a></h3><p><strong>核心问题：为什么 codex 的 compaction 要走“服务端 + 加密 blob”？</strong></p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
     <div class="code-header language-">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
@@ -398,7 +398,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.157.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">如无特殊说明，本站内容遵循<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>创作共享协议，转载请注明出处</span></div>
         </div>
     </footer></div>
