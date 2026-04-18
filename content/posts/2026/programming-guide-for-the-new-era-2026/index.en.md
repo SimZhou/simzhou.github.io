@@ -34,7 +34,7 @@ If I had to summarize the core point of this article in one sentence, it would b
 
 I did not understand it this way from the beginning. On the contrary, I started from the most ordinary stage of “using the ChatGPT web app to help me edit a few snippets of code,” and only reached where I am today step by step.
 
-{{< image src="dev-to-uploads.webp" width="60%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp" width="60%" >}}
 
 
 # Preface: My Personal Journey from Assisted Coding to Vibe Coding
@@ -43,11 +43,11 @@ If I look back at my own path over the past few years, it can roughly be divided
 
 At the very beginning, when **ChatGPT appeared in 2022**, I subscribed to the GPT-3.5 web service and treated it as a **programming Q&A tool that felt more human than a search engine**. Its typical use cases at the time were simple: asking how to pass parameters to Linux tools, explaining error messages, generating short boilerplate snippets, helping me refactor a function, or reorganizing a piece of messy logic. Models at that stage were nowhere near as capable as they are today, but for the first time they made me realize that a lot of the “mechanical thinking” in programming could be outsourced.
 
-{{< image src="ChatGPT_Entry_Point.webp" width="40%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp" width="40%" >}}
 
 Later on, I started paying for **Cursor**. This was a crucial stage, because it was the first time I experienced that **AI was no longer just answering questions, but beginning to understand the context of an entire project**. I gradually stopped asking only “how should I write this code,” and started asking things like “please implement this feature based on the current project's style.” At this point, AI had already shifted from being a search substitute to becoming a **junior collaborator that was still not fully reliable, but already usable in cooperation**.
 
-{{< image src="cursor.png" width="40%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" width="40%" >}}
 
 After that, I also tried GitHub Copilot in VSCode. Copilot did not influence me because it wrote the best code, but because it normalized the idea of “accepting AI as part of the coding process.” Autocomplete, local generation, and predictive suggestions while typing gradually got me used to working together with a model. At that stage, it felt more like an assistant that never got tired of helping.
 
@@ -58,9 +58,9 @@ During that period, after Gemini 3.1 Pro was released, I also used it together w
 However, once I started using **Codex with GPT-5.4** in March 2026, I **experienced another cognitive shock**. In some sense, this impact was even more direct than the first time I used Claude Code, because **Codex made me feel concretely, for the first time, that a sufficiently capable Agent could genuinely take over a lot of my work completely**. Some code that I used to feel I had to at least review can now be left entirely unread. (Later I realized that part of the reason was that Codex's safety review mechanism is looser than Claude Code's, so it handles many things without asking for confirmation.)
 
 
-{{< image src="CC-Gemini-Codex.png" width="40%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" width="50%" >}}
 
-{{< image src="TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="40%" caption="I like to call them the 'starter trio,' because they remind me of the three starter Pokemon." >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="50%" caption="I like to call them the 'starter trio,' because they remind me of the three starter Pokemon." >}}
 
 For about a week during that period, I even went through a brief stretch of anxiety and fear. The feeling was extremely direct: **AI is simply too smart, and it may very well replace me.** It is smart enough that you begin to re-examine many default assumptions, such as “what part of a programmer's work is truly irreplaceable,” “whether the core labor of software engineering as a whole will migrate elsewhere in the future,” and “whether the human role in the workflow will increasingly become someone who mainly authorizes, accepts results, and presses Enter.”
 
@@ -84,9 +84,9 @@ Vibe Coding adds one crucial change on top of that: you begin to **delegate the 
 
 At that point, the relationship between you and the tool is no longer a simple Q&A relationship, but something much closer to task delegation.
 
-{{< image src="Reddit-WhatIsVibeCoding-Question.png" width="50%" caption="" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png" width="60%" >}}
 
-{{< image src="Reddit-WhatIsVibeCoding-Answer.png" width="45%" caption="A Reddit user's definition of Vibe Coding, and an extremely precise one." >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" width="65%" caption="A Reddit user's definition of Vibe Coding, and an extremely precise one." >}}
 
 Many IDE users may ask why they should use a CLI. They may still be understanding the issue as a “VSCode vs Vim” choice. But in the age of AI, IDE and CLI already represent two completely different collaboration philosophies:
 
@@ -105,7 +105,7 @@ This rhythm is **no longer “AI helps me write code,” but “I am directing a
 
 In other words, **Vibe Coding is not abandoning engineering discipline. It is moving engineering discipline away from “manually writing the implementation” and toward “designing the task system and the review mechanism.”**
 
-{{< image src="vibe-coding-1.jpg" width="80%" caption="" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg" width="80%" caption="" >}}
 
 # 2. Some Conventions in AI Coding CLI Tools
 
@@ -259,7 +259,7 @@ Taking Codex as an example, its official hierarchy is defined as:
 
 Starting these tools is simple: just run the corresponding command inside a repository:
 
-{{< image src="Snipaste_2026-04-17_23-41-58.png" width="100%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png" width="100%" >}}
 
 ## 3.1 Normal Mode / Plan Mode / High-Authorization Mode
 
@@ -296,7 +296,7 @@ If you want to invoke a Skill explicitly, you can use `$<SkillName>` (Codex) or 
 
 {{< image src="skill-explicitly-trigger.en.png" width="80%" caption="Include the skill name directly in the instruction to invoke it explicitly." >}}
 
-{{< image src="use-skills.png" width="80%" caption="Different tools use different syntax for explicit Skill invocation. Codex uses $, while Claude Code uses /." >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png" width="80%" caption="Different tools use different syntax for explicit Skill invocation. Codex uses $, while Claude Code uses /." >}}
 
 In addition, even if you do not explicitly specify which Skill should be used, AI coding CLI tools can still call Skills automatically during work, based on the “triggering cues” described by the `"description"` field in SKILL.md.
 
@@ -362,7 +362,7 @@ In addition, subagents can also [run in the background](https://code.claude.com/
 
 Ralph Loop is a third-party repository from: <https://github.com/snarktank/ralph>
 
-{{< image src="Ralph-Loop.png" width="70%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png" width="70%" >}}
 
 The core idea of Ralph Loop is to **let an Agent keep running automatically against a task list until everything is finished**.
 
@@ -421,7 +421,7 @@ In my view, beyond the GitHub-repository use case shown in the project itself (p
 
 Agent Teams is an <u>experimental feature</u> in Claude Code. In the official documentation, there is a figure that explains [how it differs from Subagents](https://code.claude.com/docs/en/agent-teams#compare-with-subagents):
 
-{{< image src="subagents-vs-agent-teams-light.avif" width="100%" caption="Subagents report results only to the main agent and do not talk to each other. In agent teams, teammates share task lists, claim work, and communicate directly with one another." >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif" width="100%" caption="Subagents report results only to the main agent and do not talk to each other. In agent teams, teammates share task lists, claim work, and communicate directly with one another." >}}
 
 However, because this feature spins up multiple “teammates,” and those teammates can also communicate with one another, it burns an enormous amount of tokens. And so far I still have not really seen a production scenario where Agent Teams is genuinely used very effectively, so ~~it is hard to say whether this is an impractical feature Anthropic invented partly to sell more tokens~~. Of course, we can also simply treat it as an experimental capability and wait to see whether someone in the industry eventually builds something truly valuable with it.
 

@@ -34,7 +34,7 @@ license: ""
 
 私は最初からこう理解していたわけではない。むしろ、ごく普通に「ChatGPT の Web 版で数行のコードを直してもらう」ところから始まり、少しずつ今の理解にたどり着いた。
 
-{{< image src="dev-to-uploads.webp" width="60%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp" width="60%" >}}
 
 
 # 前書き: 補助的コーディングから Vibe Coding へ至る私的な利用史
@@ -43,11 +43,11 @@ license: ""
 
 最初期、**2022 年に ChatGPT が登場したころ**、私は GPT-3.5 の Web サービスを購入し、それを**検索エンジンよりも人間らしいプログラミング Q&A ツール**として使っていた。当時の典型的な使い方はとても単純で、Linux ツールの引数の使い方を聞く、エラー内容を説明させる、ちょっとしたボイラープレートコードを生成させる、関数のリファクタリングを手伝わせる、散らかったロジックを整理してもらう、といったものだった。あの時代の大規模モデルは、今と比べればまだずっと弱かったが、それでもプログラミングの中には外部委託できる「機械的な思考」がかなりあるのだと、初めて実感させられた。
 
-{{< image src="ChatGPT_Entry_Point.webp" width="40%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp" width="40%" >}}
 
 その後、私は **Cursor** に課金して使い始めた。これは非常に重要な段階だった。なぜなら、**AI が単に質問に答えるだけでなく、プロジェクト全体の文脈を理解し始めた**ことを初めて体験したからだ。私は次第に「このコードはどう書くべきか」だけを聞かなくなり、「現在のプロジェクトのスタイルに合わせてこの機能を完成させてほしい」といった聞き方をするようになった。この時点で、AI の役割は検索の代替から、**まだ完全には信頼できないが、すでに協働できる初級の相棒**へと変わっていた。
 
-{{< image src="cursor.png" width="40%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" width="40%" >}}
 
 その後、VSCode の GitHub Copilot も試した。Copilot が私に与えた影響は、「いちばんうまくコードを書く」ことではなかった。むしろ、「AI がコーディングに参加すること」を日常化した点にある。自動補完、局所的な生成、書きながら先回りして提案してくる体験によって、私は徐々にモデルと一緒に働くことに慣れていった。この段階では、Copilot はむしろ、決して嫌がらずに手伝ってくれる助手のような存在だった。
 
@@ -58,9 +58,9 @@ license: ""
 しかし、2026 年 3 月に **Codex と GPT-5.4** を使い始めてから、私は**もう一度、大きく認識を揺さぶられた**。ある意味では、この衝撃は Claude Code を初めて使ったときよりもさらに直接的だった。なぜなら、**十分に賢い Agent であれば、私の仕事のかなりの部分を本当に丸ごと引き受けられるのだと、Codex が初めてここまで具体的に感じさせたからだ**。以前なら最低限レビューくらいは必要だと思っていたコードも、今では完全に読まずに任せられることがある。（あとから分かったことだが、その一因は Codex の安全審査メカニズムが Claude Code より緩く、確認なしでやってくれることが多かったからでもある。）
 
 
-{{< image src="CC-Gemini-Codex.png" width="40%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" width="50%" >}}
 
-{{< image src="TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="40%" caption="私はこれを「御三家」と呼ぶのが好きだ。ポケモンの最初の 3 匹を思わせるからだ。" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="50%" caption="私はこれを「御三家」と呼ぶのが好きだ。ポケモンの最初の 3 匹を思わせるからだ。" >}}
 
 その時期、私は 1 週間ほど、かなり強い不安と恐怖に襲われた時期すらあった。感覚としてはとても直接的だった。**AI はあまりにも賢く、もしかすると本当に私を置き換えてしまうかもしれない。** そう感じるほど賢いがゆえに、人は「プログラマの仕事の中で本当に代替不能な部分はどこなのか」「将来、ソフトウェア工学の中心的な労働は全体として別の場所へ移るのではないか」「ワークフローの中で人間の役割は、承認し、検収し、Enter を押す人に近づいていくのではないか」といった前提を、改めて見直し始めることになる。
 
@@ -84,9 +84,9 @@ license: ""
 
 このとき、あなたとツールの関係は、もはや単なる Q&A の関係ではなく、むしろタスク委任に近い関係になる。
 
-{{< image src="Reddit-WhatIsVibeCoding-Question.png" width="50%" caption="" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png" width="60%" >}}
 
-{{< image src="Reddit-WhatIsVibeCoding-Answer.png" width="45%" caption="Reddit 上のユーザーによる Vibe Coding の定義。非常に正確だと思う。" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" width="65%" caption="Reddit 上のユーザーによる Vibe Coding の定義。非常に正確だと思う。" >}}
 
 IDE を使う人の中には、なぜ CLI を使う必要があるのかと聞く人もいるかもしれない。彼らはまだこの問題を「VSCode vs Vim」の選択として理解していることが多い。だが、AI 時代において IDE と CLI は、すでにまったく異なる協働哲学になっている。
 
@@ -105,7 +105,7 @@ IDE を使う人の中には、なぜ CLI を使う必要があるのかと聞�
 
 言い換えれば、**Vibe Coding とはエンジニアリング規律を捨てることではなく、「実装を手で書く」ことから「タスクシステムとレビュー機構を設計する」ことへと、その規律の置き場所を移すことだ。**
 
-{{< image src="vibe-coding-1.jpg" width="80%" caption="" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg" width="80%" caption="" >}}
 
 # 2. AI Coding CLI ツールにおけるいくつかの約束事
 
@@ -259,7 +259,7 @@ Codex を例にすると、公式にはその階層は次のように定義さ�
 
 ツールの起動方法自体はとても簡単で、リポジトリ内で対応するコマンドを実行するだけでよい。
 
-{{< image src="Snipaste_2026-04-17_23-41-58.png" width="100%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png" width="100%" >}}
 
 ## 3.1 通常モード / 計画モード / 高権限モード
 
@@ -296,7 +296,7 @@ Skill を明示的に呼び出したい場合は、`$<SkillName>` (Codex) また
 
 {{< image src="skill-explicitly-trigger.en.png" width="80%" caption="命令の中に skill 名を含めると、明示的に呼び出せる。" >}}
 
-{{< image src="use-skills.png" width="80%" caption="ツールごとに Skill の明示呼び出し方法は異なる。Codex は $、Claude Code は / を使う。" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png" width="80%" caption="ツールごとに Skill の明示呼び出し方法は異なる。Codex は $、Claude Code は / を使う。" >}}
 
 また、どの Skill を使うべきかを明示しなくても、AI Coding CLI ツールは作業中に SKILL.md の `"description"` フィールドに書かれた「呼び出し条件のヒント」に基づいて、自動的に Skill を呼び出すことがある。
 
@@ -362,7 +362,7 @@ model: sonnet
 
 Ralph Loop はサードパーティのリポジトリで、出典は <https://github.com/snarktank/ralph> だ。
 
-{{< image src="Ralph-Loop.png" width="70%" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png" width="70%" >}}
 
 Ralph Loop の思想は、**Agent にタスクリストに従って自動的に何度も実行させ、最後までやり切らせる**というものだ。
 
@@ -421,7 +421,7 @@ Ralph Loop は `for` ループで Claude を回す際、各イテレーション
 
 Agent Teams は Claude Code の <u>実験的機能</u> であり、公式ドキュメントには [Subagents との違い](https://code.claude.com/docs/ja/agent-teams#subagents-%E3%81%A8%E3%81%AE%E6%AF%94%E8%BC%83) を説明する図がある。
 
-{{< image src="subagents-vs-agent-teams-light.avif" width="100%" caption="Subagents は主 Agent にだけ結果を返し、互いには会話しない。一方、agent teams ではメンバーがタスクリストを共有し、作業を引き受け、互いに直接コミュニケーションする。" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif" width="100%" caption="Subagents は主 Agent にだけ結果を返し、互いには会話しない。一方、agent teams ではメンバーがタスクリストを共有し、作業を引き受け、互いに直接コミュニケーションする。" >}}
 
 ただ、この機能は複数の「Teammate」を立ち上げ、しかもその「Teammate」同士が互いに会話もできるため、Token 消費が非常に激しい。そのわりに、現時点では Agent Teams が実運用で本当にうまく使われている場面をまだあまり見ていないので、~~Anthropic が Token をもっと売るために考えた、実用性の低い華やかな機能なのではないかと言いたくもなる~~。もちろん、これを単に実験的な機能として受け止め、今後この仕組みを使って本当に価値あるプロダクトを作る人が現れるのを期待してもよい。
 
@@ -488,7 +488,7 @@ Agent Teams は Claude Code の <u>実験的機能</u> であり、公式ドキ�
 
 ## 7.1 （おすすめ）Claude Code ベストプラクティス:
 
-{{< image src="Claude-Code-Best-Practice.en.png" width="60%" >}}
+{{< image src="/ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png" width="60%" >}}
 
 Claude Code が以前に公開した公式ベストプラクティスガイド。さまざまなコードベース、言語、環境の中で Anthropic 社内チームが実際に有効だと確認した使い方がまとめられている。内容の多くは Codex にも当てはまる。
 
@@ -496,7 +496,7 @@ Claude Code が以前に公開した公式ベストプラクティスガイド�
 
 ## 7.2 Claude Code のソースコード級解説
 
-{{< image src="Learn-Claude-Code.en.png" width="60%" >}}
+{{< image src="/ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png" width="60%" >}}
 
 以前に誤って公開されてしまった Claude Code のソースコードをもとに、大規模モデルを使って作られた解説サイト:
 

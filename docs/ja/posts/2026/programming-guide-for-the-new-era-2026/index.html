@@ -231,7 +231,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp, /posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp" width="60%" height="421" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/dev-to-uploads.webp" width="60%" />
     </a>
 <h1 id="前書き-補助的コーディングから-vibe-coding-へ至る私的な利用史">前書き: 補助的コーディングから Vibe Coding へ至る私的な利用史 <a href="#%e5%89%8d%e6%9b%b8%e3%81%8d-%e8%a3%9c%e5%8a%a9%e7%9a%84%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%8b%e3%82%89-vibe-coding-%e3%81%b8%e8%87%b3%e3%82%8b%e7%a7%81%e7%9a%84%e3%81%aa%e5%88%a9%e7%94%a8%e5%8f%b2">¶</a></h1><p>ここ数年の自分の利用の軌跡を振り返ると、おおまかにはいくつかの段階に分けられる。</p>
 <p>最初期、<strong>2022 年に ChatGPT が登場したころ</strong>、私は GPT-3.5 の Web サービスを購入し、それを<strong>検索エンジンよりも人間らしいプログラミング Q&amp;A ツール</strong>として使っていた。当時の典型的な使い方はとても単純で、Linux ツールの引数の使い方を聞く、エラー内容を説明させる、ちょっとしたボイラープレートコードを生成させる、関数のリファクタリングを手伝わせる、散らかったロジックを整理してもらう、といったものだった。あの時代の大規模モデルは、今と比べればまだずっと弱かったが、それでもプログラミングの中には外部委託できる「機械的な思考」がかなりあるのだと、初めて実感させられた。</p>
@@ -242,7 +242,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp, /posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp" width="40%" height="2160" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/ChatGPT_Entry_Point.webp" width="40%" />
     </a>
 <p>その後、私は <strong>Cursor</strong> に課金して使い始めた。これは非常に重要な段階だった。なぜなら、<strong>AI が単に質問に答えるだけでなく、プロジェクト全体の文脈を理解し始めた</strong>ことを初めて体験したからだ。私は次第に「このコードはどう書くべきか」だけを聞かなくなり、「現在のプロジェクトのスタイルに合わせてこの機能を完成させてほしい」といった聞き方をするようになった。この時点で、AI の役割は検索の代替から、<strong>まだ完全には信頼できないが、すでに協働できる初級の相棒</strong>へと変わっていた。</p>
 <a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" title="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png">
@@ -252,7 +252,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png, /posts/2026/programming-guide-for-the-new-era-2026/cursor.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/cursor.png 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" width="40%" height="480" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/cursor.png" width="40%" />
     </a>
 <p>その後、VSCode の GitHub Copilot も試した。Copilot が私に与えた影響は、「いちばんうまくコードを書く」ことではなかった。むしろ、「AI がコーディングに参加すること」を日常化した点にある。自動補完、局所的な生成、書きながら先回りして提案してくる体験によって、私は徐々にモデルと一緒に働くことに慣れていった。この段階では、Copilot はむしろ、決して嫌がらずに手伝ってくれる助手のような存在だった。</p>
 <p>さらにその後、私は <strong>Claude Code を使い始めた</strong>。これは、私の AI コーディング体験全体の中でも、ほとんどもっとも<strong>認知を揺さぶられた</strong>段階だった。それ以前の Web ベースの LLM、Cursor、Copilot でも効率向上は強く感じていたが、あくまで「補助的コーディングの相棒」に近かった。ところが Claude Code は、<strong>AI がもはや数行のコード補完や数個の質問への回答を手伝うだけではなく、具体的なタスクを独立して完了できる段階に入っている</strong>ことを実感させた。予算の制約があり、さらに Claude は中国本土向けにかなり厳しいアクセス制限をかけていたため、かなり長いあいだ私は Claude Code を主に智譜 GLM-4.7 につないで使っていた。この時期に最も衝撃だったのは、モデルそのものの強さ以上に、CLI Agent という対話形式そのものが、すでに仕事の進め方を変えていたことだ。つまり、IDE の中で「この小さなコード片を直して」と頼むのではなく、<strong>ターミナルの中で、実在するリポジトリ、実在する制約、実在するコマンド、実在するリスクを Agent に渡し、調査と処理を任せる</strong>ようになっていた。</p>
@@ -265,7 +265,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png, /posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" width="40%" height="545" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" width="50%" />
     </a>
 <figure><a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" title="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" data-sub-html="<h2>私はこれを「御三家」と呼ぶのが好きだ。ポケモンの最初の 3 匹を思わせるからだ。</h2>">
         <img
@@ -274,7 +274,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg, /posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="40%" height="848" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="50%" />
     </a><figcaption class="image-caption">私はこれを「御三家」と呼ぶのが好きだ。ポケモンの最初の 3 匹を思わせるからだ。</figcaption>
     </figure>
 <p>その時期、私は 1 週間ほど、かなり強い不安と恐怖に襲われた時期すらあった。感覚としてはとても直接的だった。<strong>AI はあまりにも賢く、もしかすると本当に私を置き換えてしまうかもしれない。</strong> そう感じるほど賢いがゆえに、人は「プログラマの仕事の中で本当に代替不能な部分はどこなのか」「将来、ソフトウェア工学の中心的な労働は全体として別の場所へ移るのではないか」「ワークフローの中で人間の役割は、承認し、検収し、Enter を押す人に近づいていくのではないか」といった前提を、改めて見直し始めることになる。</p>
@@ -303,7 +303,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png, /posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png" width="50%" height="198" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Question.png" width="60%" />
     </a>
 <figure><a class="lightgallery" href="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" title="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" data-thumbnail="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" data-sub-html="<h2>Reddit 上のユーザーによる Vibe Coding の定義。非常に正確だと思う。</h2>">
         <img
@@ -312,7 +312,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png, /posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" width="45%" height="178" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/Reddit-WhatIsVibeCoding-Answer.png" width="65%" />
     </a><figcaption class="image-caption">Reddit 上のユーザーによる Vibe Coding の定義。非常に正確だと思う。</figcaption>
     </figure>
 <p>IDE を使う人の中には、なぜ CLI を使う必要があるのかと聞く人もいるかもしれない。彼らはまだこの問題を「VSCode vs Vim」の選択として理解していることが多い。だが、AI 時代において IDE と CLI は、すでにまったく異なる協働哲学になっている。</p>
@@ -336,7 +336,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg, /posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg" width="80%" height="579" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/vibe-coding-1.jpg" width="80%" />
     </a>
 <h1 id="2-ai-coding-cli-ツールにおけるいくつかの約束事">2. AI Coding CLI ツールにおけるいくつかの約束事 <a href="#2-ai-coding-cli-%e3%83%84%e3%83%bc%e3%83%ab%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8b%e3%81%84%e3%81%8f%e3%81%a4%e3%81%8b%e3%81%ae%e7%b4%84%e6%9d%9f%e4%ba%8b">¶</a></h1><p>AI Coding CLI ツールが発展するにつれて、<strong>業界では徐々にいくつかのデフォルトの約束事や規範が形成されてきた。この章ではそれらを紹介していく。</strong></p>
 <p>まず、AI Coding CLI はチャットツールではない。これは、<strong>リポジトリを読み、コマンドを実行し、ファイルを書き換えることのできるエンジニアリング代理人</strong>だと考えると分かりやすい。だからこそ、リポジトリの中には、大規模モデルの仕事を導くための約束されたファイルが必要になる。</p>
@@ -499,7 +499,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png, /posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png" width="100%" height="538" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/Snipaste_2026-04-17_23-41-58.png" width="100%" />
     </a>
 <h2 id="31-通常モード--計画モード--高権限モード">3.1 通常モード / 計画モード / 高権限モード <a href="#31-%e9%80%9a%e5%b8%b8%e3%83%a2%e3%83%bc%e3%83%89--%e8%a8%88%e7%94%bb%e3%83%a2%e3%83%bc%e3%83%89--%e9%ab%98%e6%a8%a9%e9%99%90%e3%83%a2%e3%83%bc%e3%83%89">¶</a></h2><p>Shift + Tab でモードを切り替えられる。Claude Code には 3 種類のモードがある。</p>
 <ol>
@@ -542,7 +542,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png, /posts/2026/programming-guide-for-the-new-era-2026/use-skills.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/use-skills.png 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png" width="80%" height="594" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/use-skills.png" width="80%" />
     </a><figcaption class="image-caption">ツールごとに Skill の明示呼び出し方法は異なる。Codex は $、Claude Code は / を使う。</figcaption>
     </figure>
 <p>また、どの Skill を使うべきかを明示しなくても、AI Coding CLI ツールは作業中に SKILL.md の <code>&quot;description&quot;</code> フィールドに書かれた「呼び出し条件のヒント」に基づいて、自動的に Skill を呼び出すことがある。</p>
@@ -607,7 +607,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png, /posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png" width="70%" height="1538" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/Ralph-Loop.png" width="70%" />
     </a>
 <p>Ralph Loop の思想は、<strong>Agent にタスクリストに従って自動的に何度も実行させ、最後までやり切らせる</strong>というものだ。</p>
 <p class="text-red"><strong>ここでいう「自動」とは、Agent が完全な権限を持ち、人間の確認を必要としないという意味だ。人は本当に寝ていてもいい。</strong></p>
@@ -675,7 +675,7 @@
             data-src="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif"
             data-srcset="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif, /posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif 1.5x, /posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif 2x"
             data-sizes="auto"
-            alt="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif" width="100%" height="951" />
+            alt="/posts/2026/programming-guide-for-the-new-era-2026/subagents-vs-agent-teams-light.avif" width="100%" />
     </a><figcaption class="image-caption">Subagents は主 Agent にだけ結果を返し、互いには会話しない。一方、agent teams ではメンバーがタスクリストを共有し、作業を引き受け、互いに直接コミュニケーションする。</figcaption>
     </figure>
 <p>ただ、この機能は複数の「Teammate」を立ち上げ、しかもその「Teammate」同士が互いに会話もできるため、Token 消費が非常に激しい。そのわりに、現時点では Agent Teams が実運用で本当にうまく使われている場面をまだあまり見ていないので、<del>Anthropic が Token をもっと売るために考えた、実用性の低い華やかな機能なのではないかと言いたくもなる</del>。もちろん、これを単に実験的な機能として受け止め、今後この仕組みを使って本当に価値あるプロダクトを作る人が現れるのを期待してもよい。</p>
@@ -717,27 +717,27 @@
 <p>すでに Claude Code / Codex CLI / Gemini CLI のような CLI ツールを使い始めている人、あるいは深く使っている人にとっては、上の内容は比較的浅く、十分に網羅的ではないかもしれない。それでも、これから入門する大多数の人にとっては、十分すぎるくらいの資料にはなっているはずだ。</p>
 <p>学習が進んできたら、さらに多くの公式ドキュメント、ネット上の資料、フォーラムなども読んで、自分が AI をより上手に扱う力を深めていくことを勧めたい。</p>
 <p>最後に、楽しい Token 焼きを！</p>
-<h1 id="7-おすすめの参考資料">7. おすすめの参考資料 <a href="#7-%e3%81%8a%e3%81%99%e3%81%99%e3%82%81%e3%81%ae%e5%8f%82%e8%80%83%e8%b3%87%e6%96%99">¶</a></h1><h2 id="71-おすすめclaude-code-ベストプラクティス">7.1 （おすすめ）Claude Code ベストプラクティス: <a href="#71-%e3%81%8a%e3%81%99%e3%81%99%e3%82%81claude-code-%e3%83%99%e3%82%b9%e3%83%88%e3%83%97%e3%83%a9%e3%82%af%e3%83%86%e3%82%a3%e3%82%b9">¶</a></h2><a class="lightgallery" href="Claude-Code-Best-Practice.en.png" title="Claude-Code-Best-Practice.en.png" data-thumbnail="Claude-Code-Best-Practice.en.png">
+<h1 id="7-おすすめの参考資料">7. おすすめの参考資料 <a href="#7-%e3%81%8a%e3%81%99%e3%81%99%e3%82%81%e3%81%ae%e5%8f%82%e8%80%83%e8%b3%87%e6%96%99">¶</a></h1><h2 id="71-おすすめclaude-code-ベストプラクティス">7.1 （おすすめ）Claude Code ベストプラクティス: <a href="#71-%e3%81%8a%e3%81%99%e3%81%99%e3%82%81claude-code-%e3%83%99%e3%82%b9%e3%83%88%e3%83%97%e3%83%a9%e3%82%af%e3%83%86%e3%82%a3%e3%82%b9">¶</a></h2><a class="lightgallery" href="/ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png" title="/ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png" data-thumbnail="/ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="Claude-Code-Best-Practice.en.png"
-            data-srcset="Claude-Code-Best-Practice.en.png, Claude-Code-Best-Practice.en.png 1.5x, Claude-Code-Best-Practice.en.png 2x"
+            data-src="/ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png"
+            data-srcset="/ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png, /ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png 1.5x, /ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png 2x"
             data-sizes="auto"
-            alt="Claude-Code-Best-Practice.en.png" width="60%" />
+            alt="/ja/posts/2026/programming-guide-for-the-new-era-2026/Claude-Code-Best-Practice.ja.png" width="60%" />
     </a>
 <p>Claude Code が以前に公開した公式ベストプラクティスガイド。さまざまなコードベース、言語、環境の中で Anthropic 社内チームが実際に有効だと確認した使い方がまとめられている。内容の多くは Codex にも当てはまる。</p>
 <ul>
 <li><a href="https://code.claude.com/docs/ja/best-practices" target="_blank" rel="noopener noreffer ">https://code.claude.com/docs/ja/best-practices</a></li>
 </ul>
-<h2 id="72-claude-code-のソースコード級解説">7.2 Claude Code のソースコード級解説 <a href="#72-claude-code-%e3%81%ae%e3%82%bd%e3%83%bc%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%89%e7%b4%9a%e8%a7%a3%e8%aa%ac">¶</a></h2><a class="lightgallery" href="Learn-Claude-Code.en.png" title="Learn-Claude-Code.en.png" data-thumbnail="Learn-Claude-Code.en.png">
+<h2 id="72-claude-code-のソースコード級解説">7.2 Claude Code のソースコード級解説 <a href="#72-claude-code-%e3%81%ae%e3%82%bd%e3%83%bc%e3%82%b9%e3%82%b3%e3%83%bc%e3%83%89%e7%b4%9a%e8%a7%a3%e8%aa%ac">¶</a></h2><a class="lightgallery" href="/ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png" title="/ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png" data-thumbnail="/ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
-            data-src="Learn-Claude-Code.en.png"
-            data-srcset="Learn-Claude-Code.en.png, Learn-Claude-Code.en.png 1.5x, Learn-Claude-Code.en.png 2x"
+            data-src="/ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png"
+            data-srcset="/ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png, /ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png 1.5x, /ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png 2x"
             data-sizes="auto"
-            alt="Learn-Claude-Code.en.png" width="60%" />
+            alt="/ja/posts/2026/programming-guide-for-the-new-era-2026/Learn-Claude-Code.ja.png" width="60%" />
     </a>
 <p>以前に誤って公開されてしまった Claude Code のソースコードをもとに、大規模モデルを使って作られた解説サイト:</p>
 <ul>

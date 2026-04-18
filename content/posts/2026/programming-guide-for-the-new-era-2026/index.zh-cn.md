@@ -58,9 +58,9 @@ license: ""
 然而，当我从 2026 年 3 月用上 **Codex 搭配 GPT-5.4** 开始，我**又一次产生了认知颠覆**。某种意义上说，这次冲击甚至比我第一次用 Claude Code 时还要更直接，因为 **Codex 让我第一次如此具体地感受到：我的很多工作，已经真的可以被一个足够聪明的 Agent 完全接手了**。有些过去我至少需要审阅一下的代码，现在已经可以完全不看了。（后来发现，其中有一部分原因是 Codex 的安全审查机制比 Claude Code 更宽松，很多事情不需要你确认就帮你做了。）
 
 
-{{< image src="CC-Gemini-Codex.png" width="40%" >}}
+{{< image src="CC-Gemini-Codex.png" width="50%" >}}
 
-{{< image src="TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="40%" caption="我喜欢称之为“御三家“，因为它们和精灵宝可梦中的 3 只初始宝可梦很像" >}}
+{{< image src="TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="50%" caption="我喜欢称之为“御三家“，因为它们和精灵宝可梦中的 3 只初始宝可梦很像" >}}
 
 那段时间里，我甚至因此短暂地产生过大概一周左右的焦虑和恐惧。这是非常直接的一种感受：**AI实在是太聪明了，它很可能能够替代我。** 它聪明到你会开始重新审视很多默认前提，例如“程序员真正不可替代的部分到底是什么”，“未来软件工程的核心劳动会不会整体迁移”，“人类在工作流中的位置会不会越来越像一个负责授权、验收和按下回车键的人”。
 
@@ -84,9 +84,9 @@ license: ""
 
 这时你和工具之间的关系，已经不再只是问答关系，而更像任务委托关系。
 
-{{< image src="Reddit-WhatIsVibeCoding-Question.png" width="50%" caption="" >}}
+{{< image src="Reddit-WhatIsVibeCoding-Question.png" width="60%" >}}
 
-{{< image src="Reddit-WhatIsVibeCoding-Answer.png" width="45%" caption="Reddit 论坛上的网友对 Vibe Coding 的定义，非常精确。" >}}
+{{< image src="Reddit-WhatIsVibeCoding-Answer.png" width="65%" caption="Reddit 论坛上的网友对 Vibe Coding 的定义，十分精准。" >}}
 
 很多用 IDE 的人可能会问，为什么要使用 CLI ？他们可能还在把这个问题理解成 “VSCode vs Vim” 的选择。而实际上，AI 时代的 IDE 与 CLI，已经是两种完全不同的协作哲学了：
 

@@ -92,6 +92,9 @@
 - LoveIt 的 `image` shortcode 和 markdown 图片渲染会正确走 `.Page.Resources`，优先使用这套机制
 - 英文页面生成后，图片 URL 往往会落到 `/posts/...`，而不一定是 `/en/posts/...`；这在本仓库里是正常现象
 - 不要假设 Hugo 会把同一组 page bundle 图片复制到中英文两个输出目录
+- 即使两篇文章都使用同样的 `{{< image src="..." >}}` 写法，不同 page bundle 的最终解析结果也可能不一致；不要因为另一篇多语言文章显示正常，就假设当前文章也一定安全
+- 如果英文页 / 日文页的最终 HTML 里仍然出现裸相对路径（例如 `cursor.png` 而不是 `/posts/.../cursor.png`），并且实际资源只生成在主语言 bundle 路径下，那么外文稿中应优先把这类“共用图片”直接改成稳定的绝对路径 `/posts/...`
+- 对语言专属图片，仍优先使用各自语言目录下的绝对路径，例如英文图走 `/en/posts/.../*.en.png`，日文图走 `/ja/posts/.../*.ja.png`
 
 ### 日文站点与多语言本地化经验
 
@@ -149,7 +152,12 @@
 - 先看生成产物，不要只看 markdown 源文件：
   - `docs/posts/...`
   - `docs/en/posts/...`
+- `docs/ja/posts/...`
 - 直接检查最终 HTML 中的 `href` / `data-src`
+- 如果英文页 / 日文页里同一篇文章同时出现两种情况：
+  - 一部分图片是 `/posts/...` 或 `/en/posts/...` / `/ja/posts/...`
+  - 另一部分图片仍是裸文件名相对路径
+  则优先怀疑是该 page bundle 的资源解析不稳定，而不是浏览器缓存问题
 - 任何图片相关修改后，都重新执行 `hugo --destination docs`
 
 ### 本环境下 git 操作经验
