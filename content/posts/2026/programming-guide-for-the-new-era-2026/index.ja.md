@@ -60,7 +60,7 @@ license: ""
 
 {{< image src="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" width="50%" >}}
 
-{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="50%" caption="私はこれを「御三家」と呼ぶのが好きだ。ポケモンの最初の 3 匹を思わせるからだ。" >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="54%" caption="私はこれを「御三家」と呼ぶのが好きだ。ポケモンの最初の 3 匹を思わせるからだ。" >}}
 
 その時期、私は 1 週間ほど、かなり強い不安と恐怖に襲われた時期すらあった。感覚としてはとても直接的だった。**AI はあまりにも賢く、もしかすると本当に私を置き換えてしまうかもしれない。** そう感じるほど賢いがゆえに、人は「プログラマの仕事の中で本当に代替不能な部分はどこなのか」「将来、ソフトウェア工学の中心的な労働は全体として別の場所へ移るのではないか」「ワークフローの中で人間の役割は、承認し、検収し、Enter を押す人に近づいていくのではないか」といった前提を、改めて見直し始めることになる。
 

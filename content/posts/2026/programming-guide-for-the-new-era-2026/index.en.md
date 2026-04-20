@@ -60,7 +60,7 @@ However, once I started using **Codex with GPT-5.4** in March 2026, I **experien
 
 {{< image src="/posts/2026/programming-guide-for-the-new-era-2026/CC-Gemini-Codex.png" width="50%" >}}
 
-{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="50%" caption="I like to call them the 'starter trio,' because they remind me of the three starter Pokemon." >}}
+{{< image src="/posts/2026/programming-guide-for-the-new-era-2026/TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="54%" caption="I like to call them the 'starter trio,' because they remind me of the three starter Pokemon." >}}
 
 For about a week during that period, I even went through a brief stretch of anxiety and fear. The feeling was extremely direct: **AI is simply too smart, and it may very well replace me.** It is smart enough that you begin to re-examine many default assumptions, such as “what part of a programmer's work is truly irreplaceable,” “whether the core labor of software engineering as a whole will migrate elsewhere in the future,” and “whether the human role in the workflow will increasingly become someone who mainly authorizes, accepts results, and presses Enter.”
 

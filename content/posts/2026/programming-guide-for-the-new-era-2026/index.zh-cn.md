@@ -60,7 +60,7 @@ license: ""
 
 {{< image src="CC-Gemini-Codex.png" width="50%" >}}
 
-{{< image src="TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="50%" caption="我喜欢称之为“御三家“，因为它们和精灵宝可梦中的 3 只初始宝可梦很像" >}}
+{{< image src="TheStarter3_2_Nero_AI_Image_Upscaler_Anime_Face.jpeg" width="54%" caption="我喜欢称之为“御三家“，因为它们和精灵宝可梦中的 3 只初始宝可梦很像" >}}
 
 那段时间里，我甚至因此短暂地产生过大概一周左右的焦虑和恐惧。这是非常直接的一种感受：**AI实在是太聪明了，它很可能能够替代我。** 它聪明到你会开始重新审视很多默认前提，例如“程序员真正不可替代的部分到底是什么”，“未来软件工程的核心劳动会不会整体迁移”，“人类在工作流中的位置会不会越来越像一个负责授权、验收和按下回车键的人”。
 
