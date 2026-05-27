@@ -1,8 +1,8 @@
 ---
-title: "I Vibed a VS Code Extension for Listening to Audio and Analyzing Spectrograms"
+title: "Building AudioLens: A VS Code Extension for Audio Preview and Spectrogram Analysis"
 subtitle: "Supports common audio formats, including raw PCM"
 date: 2026-05-27T19:25:24+08:00
-lastmod: 2026-05-27T19:25:24+08:00
+lastmod: 2026-05-27T23:40:30+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://github.com/SimZhou"

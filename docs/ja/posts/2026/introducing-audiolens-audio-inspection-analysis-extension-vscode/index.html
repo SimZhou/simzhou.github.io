@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した - Simonの夢宇宙</title><meta name="description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><meta name="keywords" content="AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding"><meta name="author" content="SimZhou"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">
+        <title>AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能 - Simonの夢宇宙</title><meta name="description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><meta name="keywords" content="AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding"><meta name="author" content="SimZhou"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">
 <meta property="og:site_name" content="Simonの夢宇宙">
-<meta property="og:title" content="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した">
+<meta property="og:title" content="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能">
 <meta property="og:description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><meta property="og:locale" content="ja"><meta property="og:image" content="https://simzhou.com/images/earth.jpg"><meta property="og:image:width" content="1495"><meta property="og:image:height" content="1484"><meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した">
+<meta name="twitter:title" content="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能">
 <meta name="twitter:description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。">
 
 <meta name="application-name" content="Simonの夢宇宙">
@@ -21,7 +21,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した",
+        "headline": "AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能",
         "inLanguage": "ja",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -32,7 +32,7 @@
                             "width":  1495 ,
                             "height":  1484 
                         }],"genre": "posts","keywords": "AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding","wordcount":  1618 ,
-        "url": "https:\/\/simzhou.com\/ja\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/","datePublished": "2026-05-27T19:25:24+08:00","dateModified": "2026-05-27T19:25:24+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/simzhou.com\/ja\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/","datePublished": "2026-05-27T19:25:24+08:00","dateModified": "2026-05-27T23:40:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Simon Zhou","logo": {
                     "@type": "ImageObject",
@@ -61,7 +61,7 @@
           },{
             "@type": "ListItem",
             "position":  3 ,
-            "name": "VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した",
+            "name": "AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能",
             "item": "https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/"
           }]
     }
@@ -160,10 +160,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目次</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した</h1><h2 class="single-subtitle">raw PCM を含む複数の音声形式に対応</h2><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能</h1><h2 class="single-subtitle">raw PCM を含む複数の音声形式に対応</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/SimZhou" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>SimZhou</a></span>&nbsp;<span class="post-category">カテゴリー <a href="/ja/categories/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/"><i class="far fa-folder" aria-hidden="true"></i>プロジェクト</a>&nbsp;<a href="/ja/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-05-27">2026-05-27</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;1618 語&nbsp;
-                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;4 分&nbsp;<span id="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" class="leancloud_visitors" data-flag-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した">
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;4 分&nbsp;<span id="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" class="leancloud_visitors" data-flag-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能">
                         <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;ビュー
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -259,7 +259,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した" data-hashtags="AudioLens,VS Code,音声アルゴリズム,音声解析,VibeCoding"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-hashtag="AudioLens"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した" data-description="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fintroducing-audiolens-audio-inspection-analysis-extension-vscode%2f&amp;text=VS%20Code%20%e3%81%a7%e9%9f%b3%e5%a3%b0%e3%82%92%e8%81%b4%e3%81%8d%e3%80%81%e3%82%b9%e3%83%9a%e3%82%af%e3%83%88%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%82%92%e8%a7%a3%e6%9e%90%e3%81%a7%e3%81%8d%e3%82%8b%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%82%92%20Vibe%20%e3%81%97%e3%81%9f" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能" data-hashtags="AudioLens,VS Code,音声アルゴリズム,音声解析,VibeCoding"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-hashtag="AudioLens"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能" data-description="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fintroducing-audiolens-audio-inspection-analysis-extension-vscode%2f&amp;text=AudioLens%20%e3%82%92%e4%bd%9c%e3%82%8b%ef%bc%9a%e9%9f%b3%e5%a3%b0%e3%83%97%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc%e3%81%a8%e3%82%b9%e3%83%9a%e3%82%af%e3%83%88%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%20VS%20Code%20%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>

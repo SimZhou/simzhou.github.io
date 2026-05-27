@@ -1,8 +1,8 @@
 ---
-title: "VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"
+title: "AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"
 subtitle: "raw PCM を含む複数の音声形式に対応"
 date: 2026-05-27T19:25:24+08:00
-lastmod: 2026-05-27T19:25:24+08:00
+lastmod: 2026-05-27T23:40:30+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://github.com/SimZhou"
