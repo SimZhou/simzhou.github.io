@@ -1,6 +1,107 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://simzhou.com/en/categories/ai/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/categories/ai/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/categories/ai/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/categories/ai/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/tags/audio-analysis/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/tags/audiolens/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/tags/audiolens/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/tags/audiolens/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/tags/audiolens/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/categories/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/categories/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/categories/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/categories/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/posts/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/posts/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/posts/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/categories/projects/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/categories/projects/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/categories/projects/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/tags/speech-algorithms/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/tags/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/tags/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/tags/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/tags/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/tags/vibecoding/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/tags/vibecoding/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/tags/vibecoding/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/tags/vibecoding/" />
+  </url>
+  <url>
+    <loc>https://simzhou.com/en/tags/vs-code/</loc>
+    <lastmod>2026-05-27T19:25:24&#43;08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/tags/vs-code/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/tags/vs-code/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/tags/vs-code/" />
+  </url>
+  <url>
     <loc>https://simzhou.com/en/posts/2026/programming-guide-for-the-new-era-2026/</loc>
     <lastmod>2026-04-17T20:09:00&#43;08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -10,15 +111,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/2026/programming-guide-for-the-new-era-2026/" />
   </url>
   <url>
-    <loc>https://simzhou.com/en/categories/ai/</loc>
-    <lastmod>2026-04-17T20:09:00&#43;08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/categories/ai/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/categories/ai/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/categories/ai/" />
-  </url>
-  <url>
     <loc>https://simzhou.com/en/tags/ai/</loc>
     <lastmod>2026-04-17T20:09:00&#43;08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -26,15 +118,6 @@
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/tags/ai/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/tags/ai/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/tags/ai/" />
-  </url>
-  <url>
-    <loc>https://simzhou.com/en/categories/</loc>
-    <lastmod>2026-04-17T20:09:00&#43;08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/categories/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/categories/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/categories/" />
   </url>
   <url>
     <loc>https://simzhou.com/en/tags/claude-code/</loc>
@@ -73,42 +156,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/tags/llm/" />
   </url>
   <url>
-    <loc>https://simzhou.com/en/posts/</loc>
-    <lastmod>2026-04-17T20:09:00&#43;08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/posts/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/posts/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/" />
-  </url>
-  <url>
-    <loc>https://simzhou.com/en/</loc>
-    <lastmod>2026-04-17T20:09:00&#43;08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/" />
-  </url>
-  <url>
-    <loc>https://simzhou.com/en/tags/</loc>
-    <lastmod>2026-04-17T20:09:00&#43;08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/tags/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/tags/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/tags/" />
-  </url>
-  <url>
-    <loc>https://simzhou.com/en/tags/vibecoding/</loc>
-    <lastmod>2026-04-17T20:09:00&#43;08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/tags/vibecoding/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/tags/vibecoding/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/tags/vibecoding/" />
-  </url>
-  <url>
     <loc>https://simzhou.com/en/tags/agent/</loc>
     <lastmod>2026-03-18T12:35:00&#43;08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -131,14 +178,6 @@
     <lastmod>2026-03-18T12:35:00&#43;08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://simzhou.com/en/categories/projects/</loc>
-    <lastmod>2026-03-18T12:35:00&#43;08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/categories/projects/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://simzhou.com/en/categories/projects/" />
   </url>
   <url>
     <loc>https://simzhou.com/en/tags/riichi-mahjong/</loc>

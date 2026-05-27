@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件 - Simon的梦宇宙</title><meta name="description" content="AudioLens 是一个运行在 VS Code 里的音频查看与分析扩展，面向语音、音频算法、机器学习和数据标注工作流。"><meta name="keywords" content="AudioLens, VS Code, 语音算法, 音频分析, VibeCoding"><meta name="author" content="SimZhou"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">
+<meta property="og:site_name" content="Simon的梦宇宙">
+<meta property="og:title" content="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件">
+<meta property="og:description" content="AudioLens 是一个运行在 VS Code 里的音频查看与分析扩展，面向语音、音频算法、机器学习和数据标注工作流。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://simzhou.com/images/earth.jpg"><meta property="og:image:width" content="1495"><meta property="og:image:height" content="1484"><meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件">
+<meta name="twitter:description" content="AudioLens 是一个运行在 VS Code 里的音频查看与分析扩展，面向语音、音频算法、机器学习和数据标注工作流。">
+
+<meta name="application-name" content="Simon的梦宇宙">
+<meta name="apple-mobile-web-app-title" content="Simon的梦宇宙">
+<meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" /><link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" /><link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" /><link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" /><link rel="alternate" hreflang="x-default" href="https://simzhou.com/" /><link rel="prev" href="https://simzhou.com/posts/2026/programming-guide-for-the-new-era-2026/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/simzhou.com\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                            "width":  1495 ,
+                            "height":  1484 
+                        }],"genre": "posts","keywords": "AudioLens, VS Code, 语音算法, 音频分析, VibeCoding","wordcount":  1135 ,
+        "url": "https:\/\/simzhou.com\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/","datePublished": "2026-05-27T19:25:24+08:00","dateModified": "2026-05-27T19:25:24+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Simon Zhou","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                    "width":  1495 ,
+                    "height":  1484 
+                }},"author": {
+                "@type": "Person",
+                "name": "SimZhou"
+            },"description": "AudioLens 是一个运行在 VS Code 里的音频查看与分析扩展，面向语音、音频算法、机器学习和数据标注工作流。"
+    }
+    </script><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Simon的梦宇宙",
+            "item": "https://simzhou.com/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "文章",
+            "item": "https://simzhou.com/posts/"
+          },{
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件",
+            "item": "https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/"
+          }]
+    }
+    </script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?8410d61b6138746461857e5ba600200a";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'light';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Simon的梦宇宙"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simon的梦宇宙</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fa fa-heart'></i> 文章 </a><a class="menu-item" href="/categories/"><i class='fas fa-th-list'></i> 分类 </a><a class="menu-item" href="/gallery/"><i class='fas fa-images'></i> 相册 </a><a class="menu-item" href="/404.html"><i class='fas fa-book'></i> 笔记本 </a><a class="menu-item" href="/about/"><i class='fas fa-question-circle'></i> 关于我 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                        
+                        <i class="fas fa-language"></i>
+                        
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" selected>中文</option><option value="/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">English</option><option value="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">日本語</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Simon的梦宇宙"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simon的梦宇宙</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title=""><i class='fa fa-heart'></i>文章</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-th-list'></i>分类</a><a class="menu-item" href="/gallery/" title=""><i class='fas fa-images'></i>相册</a><a class="menu-item" href="/404.html" title=""><i class='fas fa-book'></i>笔记本</a><a class="menu-item" href="/about/" title=""><i class='fas fa-question-circle'></i>关于我</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" selected>中文</option><option value="/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">English</option><option value="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">日本語</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件</h1><h2 class="single-subtitle">支持多种音频格式，包括 raw PCM</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/SimZhou" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>SimZhou</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/projects/"><i class="far fa-folder" aria-hidden="true"></i>Projects</a>&nbsp;<a href="/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-05-27">2026-05-27</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1135 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" class="leancloud_visitors" data-flag-title="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件">
+                        <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#初衷">初衷</a></li>
+        <li><a href="#audiolens-功能介绍">AudioLens 功能介绍</a></li>
+        <li><a href="#vibe-coding-过程">Vibe Coding 过程</a></li>
+        <li><a href="#后话">后话</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><!-- <p class="post-note">封面配图：AudioLens运行界面</p> -->
+<p>最近我 Vibe 了一个可以直接在 VS Code 中读取、试听和分析音频的插件，名字叫 <strong>AudioLens</strong>。</p>
+<p>在若干个语音算法交流群里分享了一下，反响不错。</p>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.zh-CN.png" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.zh-CN.png" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.zh-CN.png" data-sub-html="<h2>AudioLens 商店界面</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.zh-CN.png"
+            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.zh-CN.png, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.zh-CN.png 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.zh-CN.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.zh-CN.png" width="100%" height="334" />
+    </a><figcaption class="image-caption">AudioLens 商店界面</figcaption>
+    </figure>
+<h2 id="初衷">初衷 <a href="#%e5%88%9d%e8%a1%b7">¶</a></h2><p>语音算法工程师平时主要在两个工作界面之间来回切换：</p>
+<ul>
+<li>代码编辑器：例如 VS Code</li>
+<li>音频分析软件：例如 Audition、Audacity</li>
+</ul>
+<p>痛点需求是：</p>
+<ul>
+<li>写代码的时候，主要在代码编辑器里工作；分析音频的时候，又要切到另一个软件里去。</li>
+<li><strong>如果代码跑在远程服务器上，那就更麻烦了，还得先把音频下载下来再听……</strong></li>
+</ul>
+<p>有没有现成方案呢？其实是有的。VS Code 插件商店里有一个叫做 audio-preview 的插件，下载量 200K，我自己也用了好多年。</p>
+<p>但是奈何，界面丑，功能少，Bug 多，2024 年最后一次维护后，作者似乎也不再更新了……</p>
+<p>于是，一怒之下，咱自己 Vibe 一个吧，<del>正好也测试一下 Codex 的能力</del>！</p>
+<h2 id="audiolens-功能介绍">AudioLens 功能介绍 <a href="#audiolens-%e5%8a%9f%e8%83%bd%e4%bb%8b%e7%bb%8d">¶</a></h2><figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.zh-CN.png" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.zh-CN.png" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.zh-CN.png" data-sub-html="<h2>AudioLens 多通道主界面</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.zh-CN.png"
+            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.zh-CN.png, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.zh-CN.png 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.zh-CN.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.zh-CN.png" width="100%" height="2100" />
+    </a><figcaption class="image-caption">AudioLens 多通道主界面</figcaption>
+    </figure>
+<p>由于我自己就在做语音算法，因此需求我很清楚。这个插件把我觉得该有的功能基本都做进去了，包括：</p>
+<ul>
+<li><strong>多通道音频播放</strong>：多通道音频读取、选区播放、独奏播放、指定通道静音等</li>
+<li><strong>多种视图</strong>：波形图、语谱图，以及两类视图的缩放和平移</li>
+<li><strong>音频分析</strong>：直接框选一段音频，立刻弹出分析结果，例如 RMS dB、频率分析等</li>
+<li><strong>多格式支持</strong>：支持常见音频格式，例如 <code>wav</code>、<code>mp3</code>、<code>flac</code>、<code>ogg</code>、<code>opus</code>、<code>m4a</code>、<code>aac</code></li>
+<li><strong>RAW 支持</strong>：支持 PCM / RAW 原始数据，并且可以记忆 PCM 的通道数、采样率等参数，方便打开同类音频</li>
+<li><strong>语谱图调整</strong>：支持调整 FFT 窗长、窗类型、零填充因子、频率刻度、配色等参数</li>
+<li><strong>Remote SSH 支持</strong>：可以直接打开远程机器上的音频进行分析，无需下载到本地</li>
+<li><strong>多语言支持</strong>：目前支持 17 种语言</li>
+</ul>
+<p>其它废话就不多说了，有兴趣的朋友可以到 <a href="https://github.com/SimZhou/vscode-audiolens/blob/main/README.zh-CN.md#%E5%8A%9F%E8%83%BD%E6%BC%94%E7%A4%BA" target="_blank" rel="noopener noreffer ">GitHub</a> 上看功能演示，也可以直接去 <a href="https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens" target="_blank" rel="noopener noreffer ">VS Code 扩展商店</a> 下载体验。</p>
+<h2 id="vibe-coding-过程">Vibe Coding 过程 <a href="#vibe-coding-%e8%bf%87%e7%a8%8b">¶</a></h2><p>Vibe Coding 的过程基本上就是不断地把自己的需求输出给 Codex，</p>
+<p>大方向上，我有这么 2 个诉求：</p>
+<ol>
+<li>整体代码以简单、干净、模块化为宗旨，不做过度抽象</li>
+<li>核心耗时函数（例如 FFT、频谱图计算等）为了保证速度，用 Rust 实现</li>
+</ol>
+<p>其它的过程，基本上就是在打磨功能和细节：</p>
+<ul>
+<li>安装并测试它编译好的离线 VSIX</li>
+<li>告诉 Codex，界面要怎么改，功能要怎么改……</li>
+</ul>
+<p>这两者的循环。</p>
+<p>期间也收集了很多周围人的需求。</p>
+<p>整个过程断断续续，实打实让它干活的时间，估计也就 1 天。</p>
+<p><del>说实话，当了一回架构师 + 产品经理，且有 Codex 这样的得力助手，这感觉真的很爽。</del></p>
+<h2 id="后话">后话 <a href="#%e5%90%8e%e8%af%9d">¶</a></h2><p>我始终觉得，Vibe Coding 时代，人的 Taste 很重要。而这次写这个插件的过程，也更加让我笃定了这一点。</p>
+<p><strong>因为大模型虽然很厉害，但确实不能说很有审美。</strong></p>
+<p>它可以把你的需求完成得又快又好，但是具体界面长什么样才算好，这个按钮放哪里，框框放多宽，那个 UI 怎么设计，UX 是否合理，这些问题，它其实完全没有感知（<del>没有世界模型</del>）。</p>
+<p>但是，东西做出来终究还是要给人来用的。</p>
+<p>因此，Taste 可能就成了人类暂时的护城河。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2026-05-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件" data-hashtags="AudioLens,VS Code,语音算法,音频分析,VibeCoding"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-hashtag="AudioLens"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件" data-description="AudioLens 是一个运行在 VS Code 里的音频查看与分析扩展，面向语音、音频算法、机器学习和数据标注工作流。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fposts%2f2026%2fintroducing-audiolens-audio-inspection-analysis-extension-vscode%2f&amp;text=Vibe%20%e4%ba%86%e4%b8%80%e4%b8%aa%e5%8f%af%e4%bb%a5%e7%9b%b4%e6%8e%a5%e5%9c%a8%20VS%20Code%20%e9%87%8c%e5%90%ac%e9%9f%b3%e9%a2%91%e3%80%81%e5%88%86%e6%9e%90%e9%a2%91%e8%b0%b1%e7%9a%84%e6%8f%92%e4%bb%b6" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/audiolens/">AudioLens</a>,&nbsp;<a href="/tags/vs-code/">VS Code</a>,&nbsp;<a href="/tags/%E8%AF%AD%E9%9F%B3%E7%AE%97%E6%B3%95/">语音算法</a>,&nbsp;<a href="/tags/%E9%9F%B3%E9%A2%91%E5%88%86%E6%9E%90/">音频分析</a>,&nbsp;<a href="/tags/vibecoding/">VibeCoding</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2026/programming-guide-for-the-new-era-2026/" class="prev" rel="prev" title="面向新时代的编程指南 - 2026"><i class="fas fa-angle-left" aria-hidden="true"></i>面向新时代的编程指南 - 2026</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.161.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">如无特殊说明，本站内容遵循<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>创作共享协议，转载请注明出处</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{"valine":{"appId":"lug1GaEEqYeOlGnUCyg1yT0k-gzGzoHsz","appKey":"TnhoSJWNWDKTrEOX5zd3CkgQ","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@15.1.2/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

@@ -4,7 +4,17 @@
         <link>https://simzhou.com/categories/ai/</link>
         <description>AI - 分类 - Simon的梦宇宙</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
-            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 17 Apr 2026 20:09:00 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/categories/ai/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 May 2026 19:25:24 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/categories/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>Vibe 了一个可以直接在 VS Code 里听音频、分析频谱的插件</title>
+    <link>https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/</link>
+    <pubDate>Wed, 27 May 2026 19:25:24 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/</guid>
+    <description><![CDATA[<!-- <p class="post-note">封面配图：AudioLens运行界面</p> -->
+<p>最近我 Vibe 了一个可以直接在 VS Code 中读取、试听和分析音频的插件，名字叫 <strong>AudioLens</strong>。</p>
+<p>在若干个语音算法交流群里分享了一下，反响不错。</p>]]></description>
+</item>
+<item>
     <title>面向新时代的编程指南 - 2026</title>
     <link>https://simzhou.com/posts/2026/programming-guide-for-the-new-era-2026/</link>
     <pubDate>Fri, 17 Apr 2026 20:09:00 &#43;0800</pubDate>

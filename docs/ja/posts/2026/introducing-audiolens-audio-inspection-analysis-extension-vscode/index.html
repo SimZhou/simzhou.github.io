@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した - Simonの夢宇宙</title><meta name="description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><meta name="keywords" content="AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding"><meta name="author" content="SimZhou"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">
+<meta property="og:site_name" content="Simonの夢宇宙">
+<meta property="og:title" content="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した">
+<meta property="og:description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><meta property="og:locale" content="ja"><meta property="og:image" content="https://simzhou.com/images/earth.jpg"><meta property="og:image:width" content="1495"><meta property="og:image:height" content="1484"><meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した">
+<meta name="twitter:description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。">
+
+<meta name="application-name" content="Simonの夢宇宙">
+<meta name="apple-mobile-web-app-title" content="Simonの夢宇宙">
+<meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" /><link rel="alternate" hreflang="zh-cn" href="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" /><link rel="alternate" hreflang="en" href="https://simzhou.com/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" /><link rel="alternate" hreflang="ja" href="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" /><link rel="alternate" hreflang="x-default" href="https://simzhou.com/" /><link rel="prev" href="https://simzhou.com/ja/posts/2026/programming-guide-for-the-new-era-2026/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/simzhou.com\/ja\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                            "width":  1495 ,
+                            "height":  1484 
+                        }],"genre": "posts","keywords": "AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding","wordcount":  1618 ,
+        "url": "https:\/\/simzhou.com\/ja\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/","datePublished": "2026-05-27T19:25:24+08:00","dateModified": "2026-05-27T19:25:24+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Simon Zhou","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/simzhou.com\/images\/earth.jpg",
+                    "width":  1495 ,
+                    "height":  1484 
+                }},"author": {
+                "@type": "Person",
+                "name": "SimZhou"
+            },"description": "AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"
+    }
+    </script><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Simonの夢宇宙",
+            "item": "https://simzhou.com/ja/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "投稿",
+            "item": "https://simzhou.com/ja/posts/"
+          },{
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した",
+            "item": "https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/"
+          }]
+    }
+    </script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?8410d61b6138746461857e5ba600200a";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'light';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/ja/" title="Simonの夢宇宙"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simonの夢宇宙</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/ja/posts/"><i class='fa fa-heart'></i> 記事 </a><a class="menu-item" href="/ja/categories/"><i class='fas fa-th-list'></i> カテゴリ </a><a class="menu-item" href="/ja/gallery/"><i class='fas fa-images'></i> ギャラリー </a><a class="menu-item" href="/ja/404.html"><i class='fas fa-book'></i> ノート </a><a class="menu-item" href="/ja/about/"><i class='fas fa-question-circle'></i> 自己紹介 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="言語を選択">
+                        
+                        <i class="fas fa-language"></i>
+                        
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">中文</option><option value="/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">English</option><option value="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" selected>日本語</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="タイトルと内容を検索..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="検索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="クリア">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマの切り替え">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/ja/" title="Simonの夢宇宙"><span class="header-title-pre"><i class='fas fa-user-astronaut'></i> </span>Simonの夢宇宙</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="タイトルと内容を検索..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="検索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="クリア">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        キャンセル
+                    </a>
+                </div><a class="menu-item" href="/ja/posts/" title=""><i class='fa fa-heart'></i>記事</a><a class="menu-item" href="/ja/categories/" title=""><i class='fas fa-th-list'></i>カテゴリ</a><a class="menu-item" href="/ja/gallery/" title=""><i class='fas fa-images'></i>ギャラリー</a><a class="menu-item" href="/ja/404.html" title=""><i class='fas fa-book'></i>ノート</a><a class="menu-item" href="/ja/about/" title=""><i class='fas fa-question-circle'></i>自己紹介</a><a href="javascript:void(0);" class="menu-item theme-switch" title="テーマの切り替え">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="言語を選択">日本語<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">中文</option><option value="/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">English</option><option value="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" selected>日本語</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目次</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した</h1><h2 class="single-subtitle">raw PCM を含む複数の音声形式に対応</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/SimZhou" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>SimZhou</a></span>&nbsp;<span class="post-category">カテゴリー <a href="/ja/categories/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/"><i class="far fa-folder" aria-hidden="true"></i>プロジェクト</a>&nbsp;<a href="/ja/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-05-27">2026-05-27</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;1618 語&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;4 分&nbsp;<span id="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" class="leancloud_visitors" data-flag-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した">
+                        <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;ビュー
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目次</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#きっかけ">きっかけ</a></li>
+        <li><a href="#audiolens-の機能紹介">AudioLens の機能紹介</a></li>
+        <li><a href="#vibe-coding-の過程">Vibe Coding の過程</a></li>
+        <li><a href="#後書き">後書き</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><!-- <p class="post-note">カバー画像: VS Code で動作する AudioLens</p> -->
+<p>最近、VS Code の中で音声を読み込み、再生し、解析できる拡張機能を Vibe した。名前は <strong>AudioLens</strong>。</p>
+<p>いくつかの音声アルゴリズム系のグループで共有してみたところ、反応はなかなか良かった。</p>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png" data-sub-html="<h2>AudioLens の Marketplace ページ</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png"
+            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png" width="100%" height="324" />
+    </a><figcaption class="image-caption">AudioLens の Marketplace ページ</figcaption>
+    </figure>
+<h2 id="きっかけ">きっかけ <a href="#%e3%81%8d%e3%81%a3%e3%81%8b%e3%81%91">¶</a></h2><p>音声アルゴリズムのエンジニアは、普段おもに 2 つの作業画面を行き来している。</p>
+<ul>
+<li>コードエディタ: たとえば VS Code</li>
+<li>音声解析ソフト: たとえば Audition や Audacity</li>
+</ul>
+<p>そこで困ることはシンプルだ。</p>
+<ul>
+<li>コードを書くときは主にエディタで作業するが、音声を解析するときには別のソフトに切り替える必要がある。</li>
+<li><strong>もしコードがリモートサーバー上で動いているなら、さらに面倒になる。音声をいったんダウンロードしてから聴かなければならないことが多い。</strong></li>
+</ul>
+<p>既存の解決策はないのか。実はある。VS Code Marketplace には audio-preview という拡張機能があり、ダウンロード数は 200K ほどある。私自身も何年も使っていた。</p>
+<p>ただ、UI は粗く、機能は少なく、Bug も多い。最後の更新は 2024 年で、作者ももう保守していないように見える。</p>
+<p>そこで、腹を立てた勢いで、自分で 1 つ Vibe することにした。<del>ついでに Codex の能力も試せるし。</del></p>
+<h2 id="audiolens-の機能紹介">AudioLens の機能紹介 <a href="#audiolens-%e3%81%ae%e6%a9%9f%e8%83%bd%e7%b4%b9%e4%bb%8b">¶</a></h2><figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.ja-JP.png" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.ja-JP.png" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.ja-JP.png" data-sub-html="<h2>AudioLens のマルチチャンネルメイン画面</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.ja-JP.png"
+            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.ja-JP.png, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.ja-JP.png 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.ja-JP.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/Main-Screen-multichannel.ja-JP.png" width="100%" height="2100" />
+    </a><figcaption class="image-caption">AudioLens のマルチチャンネルメイン画面</figcaption>
+    </figure>
+<p>私は自分でも音声アルゴリズムの仕事をしているので、欲しい機能はかなりはっきりしていた。この拡張機能には、自分が必要だと思う機能をだいたい入れている。</p>
+<ul>
+<li><strong>マルチチャンネル音声の再生</strong>: マルチチャンネル音声の読み込み、選択範囲再生、ソロ再生、指定チャンネルのミュートなど</li>
+<li><strong>複数の表示モード</strong>: 波形、スペクトログラム、そして両方のズームとパン</li>
+<li><strong>音声解析</strong>: 範囲を選択すると、RMS dB や周波数解析などの結果がすぐに表示される</li>
+<li><strong>複数形式のサポート</strong>: <code>wav</code>、<code>mp3</code>、<code>flac</code>、<code>ogg</code>、<code>opus</code>、<code>m4a</code>、<code>aac</code> などの一般的な音声形式に対応</li>
+<li><strong>RAW サポート</strong>: PCM / RAW の生データに対応し、チャンネル数やサンプルレートなどの PCM 設定を記憶できるため、同種の音声を開きやすい</li>
+<li><strong>スペクトログラム設定</strong>: FFT サイズ、窓関数、ゼロパディング倍率、周波数スケール、配色などを調整可能</li>
+<li><strong>Remote SSH サポート</strong>: リモートマシン上の音声をローカルにダウンロードせず、そのまま開いて解析できる</li>
+<li><strong>多言語対応</strong>: 現在 17 言語に対応</li>
+</ul>
+<p>宣伝文句はこのくらいにしておく。興味があれば <a href="https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md#%E3%83%87%E3%83%A2" target="_blank" rel="noopener noreffer ">GitHub</a> で機能デモを見ることもできるし、<a href="https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens" target="_blank" rel="noopener noreffer ">VS Code Marketplace</a> から直接インストールして試すこともできる。</p>
+<h2 id="vibe-coding-の過程">Vibe Coding の過程 <a href="#vibe-coding-%e3%81%ae%e9%81%8e%e7%a8%8b">¶</a></h2><p>Vibe Coding の過程は、基本的には自分の要求を Codex に出し続けることだった。</p>
+<p>大きな方針として、要求は 2 つあった。</p>
+<ol>
+<li>コード全体はシンプルでクリーン、かつモジュール化された状態を保ち、過度に抽象化しないこと</li>
+<li>FFT やスペクトログラム計算のような重いコア関数は、速度を確保するために Rust で実装すること</li>
+</ol>
+<p>それ以外の作業は、ほとんど機能と細部の磨き込みだった。</p>
+<ul>
+<li>Codex がビルドしたオフライン VSIX をインストールしてテストする</li>
+<li>UI をどう変えるか、機能をどう変えるかを Codex に伝える</li>
+</ul>
+<p>この 2 つを繰り返す。</p>
+<p>その間、周囲の人たちからもかなり多くの要望を集めた。</p>
+<p>全体としては断続的な作業だったが、実際に Codex に働いてもらった時間は、おそらく 1 日くらいだったと思う。</p>
+<p><del>正直なところ、アーキテクト兼プロダクトマネージャーになり、Codex という頼れる助手を持つ感覚はかなり気持ちよかった。</del></p>
+<h2 id="後書き">後書き <a href="#%e5%be%8c%e6%9b%b8%e3%81%8d">¶</a></h2><p>私はずっと、Vibe Coding の時代には人間の Taste がとても重要になると思っている。今回この拡張機能を作って、その考えはさらに強くなった。</p>
+<p><strong>なぜなら、大規模言語モデル（LLM）はとても強力だが、審美眼があるとは言いにくいからだ。</strong></p>
+<p>要求を速く、うまく実現することはできる。しかし、具体的にどんな画面なら良いのか、このボタンはどこに置くべきか、パネルの幅はどれくらいがよいのか、UI をどう設計すべきか、UX が自然かどうか。こうした問題については、実のところほとんど感知できていない（<del>世界モデルがない</del>）。</p>
+<p>しかし、作ったものは結局、人間が使うものだ。</p>
+<p>だから Taste は、人類にとって一時的な堀になるのかもしれない。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新日 2026-05-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した" data-hashtags="AudioLens,VS Code,音声アルゴリズム,音声解析,VibeCoding"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-hashtag="AudioLens"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した" data-description="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fintroducing-audiolens-audio-inspection-analysis-extension-vscode%2f&amp;text=VS%20Code%20%e3%81%a7%e9%9f%b3%e5%a3%b0%e3%82%92%e8%81%b4%e3%81%8d%e3%80%81%e3%82%b9%e3%83%9a%e3%82%af%e3%83%88%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%82%92%e8%a7%a3%e6%9e%90%e3%81%a7%e3%81%8d%e3%82%8b%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd%e3%82%92%20Vibe%20%e3%81%97%e3%81%9f" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/ja/tags/audiolens/">AudioLens</a>,&nbsp;<a href="/ja/tags/vs-code/">VS Code</a>,&nbsp;<a href="/ja/tags/%E9%9F%B3%E5%A3%B0%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/">音声アルゴリズム</a>,&nbsp;<a href="/ja/tags/%E9%9F%B3%E5%A3%B0%E8%A7%A3%E6%9E%90/">音声解析</a>,&nbsp;<a href="/ja/tags/vibecoding/">VibeCoding</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">戻る</a></span>&nbsp;|&nbsp;<span><a href="/ja/">ホーム</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ja/posts/2026/programming-guide-for-the-new-era-2026/" class="prev" rel="prev" title="新時代のためのプログラミングガイド - 2026"><i class="fas fa-angle-left" aria-hidden="true"></i>新時代のためのプログラミングガイド - 2026</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.161.1">Hugo</a> | テーマ - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/ja/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">特に明記がない限り、このブログの内容は<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>ライセンスの下で公開しています</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="ページのトップへ">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="コメントを見る">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.TinySegmenter.min.js"></script><script src="/lib/lunr/lunr.ja.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{"valine":{"appId":"lug1GaEEqYeOlGnUCyg1yT0k-gzGzoHsz","appKey":"TnhoSJWNWDKTrEOX5zd3CkgQ","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@15.1.2/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"ja","pageSize":10,"placeholder":"コメント ...","recordIP":true,"visitor":true}},"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/ja/index.json","lunrLanguageCode":"ja","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"見つかりませんでした","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

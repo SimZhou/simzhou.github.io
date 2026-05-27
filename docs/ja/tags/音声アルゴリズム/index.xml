@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>音声アルゴリズム - タグ - Simonの夢宇宙</title>
+        <link>https://simzhou.com/ja/tags/%E9%9F%B3%E5%A3%B0%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/</link>
+        <description>音声アルゴリズム - タグ - Simonの夢宇宙</description>
+        <generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 May 2026 19:25:24 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/ja/tags/%E9%9F%B3%E5%A3%B0%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>VS Code で音声を聴き、スペクトログラムを解析できる拡張機能を Vibe した</title>
+    <link>https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/</link>
+    <pubDate>Wed, 27 May 2026 19:25:24 &#43;0800</pubDate>
+    <author>yihua.zhou@outlook.com (Simon Zhou)</author>
+    <guid>https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/</guid>
+    <description><![CDATA[<!-- <p class="post-note">カバー画像: VS Code で動作する AudioLens</p> -->
+<p>最近、VS Code の中で音声を読み込み、再生し、解析できる拡張機能を Vibe した。名前は <strong>AudioLens</strong>。</p>
+<p>いくつかの音声アルゴリズム系のグループで共有してみたところ、反応はなかなか良かった。</p>]]></description>
+</item>
+</channel>
+</rss>
