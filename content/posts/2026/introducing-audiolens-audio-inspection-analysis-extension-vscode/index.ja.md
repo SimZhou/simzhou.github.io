@@ -14,8 +14,8 @@ categories: ["プロジェクト", "AI"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-# featuredImage: "Main-Screen-multichannel.ja-JP.png"
-featuredImagePreview: "Main-Screen-multichannel.ja-JP.png"
+# featuredImage: "assets/Main-Screen-multichannel.ja-JP.q65.webp"
+featuredImagePreview: "assets/Main-Screen-multichannel.ja-JP.q65.webp"
 
 toc:
   enable: true
@@ -53,7 +53,7 @@ license: ""
 そこで、腹を立てた勢いで、自分で 1 つ Vibe することにした。~~ついでに Codex の能力も試せるし。~~
 
 ## AudioLens の機能紹介
-{{< image src="Main-Screen-multichannel.ja-JP.png" caption="AudioLens のマルチチャンネルメイン画面" width="100%" >}}
+{{< image src="assets/Main-Screen-multichannel.ja-JP.q65.webp" caption="AudioLens のマルチチャンネルメイン画面" width="100%" >}}
 
 私は自分でも音声アルゴリズムの仕事をしているので、欲しい機能はかなりはっきりしていた。この拡張機能には、自分が必要だと思う機能をだいたい入れている。
 

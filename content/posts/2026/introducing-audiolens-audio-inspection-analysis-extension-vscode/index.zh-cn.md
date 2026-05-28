@@ -14,8 +14,8 @@ categories: ["Projects", "AI"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-# featuredImage: "Main-Screen-multichannel.zh-CN.png"
-featuredImagePreview: "Main-Screen-multichannel.zh-CN.png"
+# featuredImage: "assets/Main-Screen-multichannel.zh-CN.q65.webp"
+featuredImagePreview: "assets/Main-Screen-multichannel.zh-CN.q65.webp"
 
 toc:
   enable: true
@@ -53,7 +53,7 @@ license: ""
 于是，一怒之下，咱自己 Vibe 一个吧，~~正好也测试一下 Codex 的能力~~！
 
 ## AudioLens 功能介绍
-{{< image src="Main-Screen-multichannel.zh-CN.png" caption="AudioLens 多通道主界面" width="100%" >}}
+{{< image src="assets/Main-Screen-multichannel.zh-CN.q65.webp" caption="AudioLens 多通道主界面" width="100%" >}}
 
 由于我自己就在做语音算法，因此需求我很清楚。这个插件把我觉得该有的功能基本都做进去了，包括：
 

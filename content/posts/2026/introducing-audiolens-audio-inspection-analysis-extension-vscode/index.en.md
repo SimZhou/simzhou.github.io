@@ -14,8 +14,8 @@ categories: ["Projects", "AI"]
 hiddenFromHomePage: false
 hiddenFromSearch: false
 
-# featuredImage: "Main-Screen-multichannel.en-US.png"
-featuredImagePreview: "Main-Screen-multichannel.en-US.png"
+# featuredImage: "assets/Main-Screen-multichannel.en-US.q65.webp"
+featuredImagePreview: "assets/Main-Screen-multichannel.en-US.q65.webp"
 
 toc:
   enable: true
@@ -53,7 +53,7 @@ But the UI is rough, the feature set is limited, and there are quite a few bugs.
 So, out of frustration, I decided to vibe one myself, ~~and also test what Codex can do~~.
 
 ## What AudioLens Does
-{{< image src="Main-Screen-multichannel.en-US.png" caption="AudioLens multi-channel main screen" width="100%" >}}
+{{< image src="assets/Main-Screen-multichannel.en-US.q65.webp" caption="AudioLens multi-channel main screen" width="100%" >}}
 
 Since I work on speech algorithms myself, I know the requirements pretty well. I basically put in the features I felt such a tool should have:
 
