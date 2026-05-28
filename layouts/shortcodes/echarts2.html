@@ -1,11 +1,54 @@
-<div id="echarts{{ .Get `height` }}" style="width: 100%;height: {{.Get `height`}}px;margin: 0 auto"></div>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('echarts{{ .Get `height` }}'));
-    // 指定图表的配置项和数据
-    var option = eval('('+{{ .Inner }}+')');
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
+{{- $height := .Get "height" | default "400" -}}
+{{- $id := printf "echarts2-%d" .Ordinal -}}
+<div id="{{ $id }}" style="width: 100%; height: {{ $height }}px; margin: 0 auto"></div>
+{{- if not (.Page.Scratch.Get "echarts2-loaded") -}}
+{{- .Page.Scratch.Set "echarts2-loaded" true -}}
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts-gl@2.0.9/dist/echarts-gl.min.js"></script>
+{{- end -}}
+<script>
+(function () {
+  var container = document.getElementById('{{ $id }}');
+  if (!container) {
+    return;
+  }
+
+  var option = {{ .Inner | safeJS }};
+  var chart;
+
+  function render() {
+    if (chart) {
+      return;
+    }
+    chart = echarts.init(container, null, { renderer: 'canvas' });
+    chart.setOption(option);
+
+    if (window.ResizeObserver) {
+      var resizeObserver = new ResizeObserver(function () {
+        chart.resize();
+      });
+      resizeObserver.observe(container);
+      window.addEventListener('pagehide', function () {
+        resizeObserver.disconnect();
+        chart.dispose();
+      }, { once: true });
+    } else {
+      window.addEventListener('resize', function () {
+        chart.resize();
+      });
+    }
+  }
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        observer.disconnect();
+        render();
+      }
+    }, { rootMargin: '200px 0px' });
+    observer.observe(container);
+  } else {
+    render();
+  }
+})();
 </script>
