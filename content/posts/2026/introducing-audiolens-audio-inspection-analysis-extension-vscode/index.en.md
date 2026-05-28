@@ -30,6 +30,8 @@ Recently I vibed a VS Code extension that can read, play, and analyze audio dire
 
 I shared it in a few speech algorithm engineering groups, and the feedback was pretty good.
 
+Project links: [GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.md) / [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens)
+
 <!--more-->
 
 {{< image src="AudioLens.shop_preview.en-US.png" caption="AudioLens Marketplace page" width="100%" >}}
@@ -66,7 +68,15 @@ Since I work on speech algorithms myself, I know the requirements pretty well. I
 - **Remote SSH support**: open and analyze audio files directly on a remote machine without downloading them locally
 - **Localization**: currently supports 17 languages
 
-That is enough marketing copy for now. If you are interested, you can check the feature demos on [GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.md#feature-demos), or install it directly from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens).
+Here are a few GIF demos, so you can get a direct feel for the interaction.
+
+{{< image src="assets/1.multi-channel_tracks_and_multi-view.en-US.gif" caption="Multi-channel tracks and multiple views" width="100%" >}}
+
+{{< image src="assets/2.selection_playback_and_analysis.en-US.gif" caption="Selection playback and audio analysis" width="100%" >}}
+
+{{< image src="assets/3.pcm_raw_parameterized_loading.en-US.gif" caption="PCM / RAW parameterized loading" width="100%" >}}
+
+There is also a question-mark button in the top-right corner with more detailed usage help, if you want to explore further.
 
 ## The Vibe Coding Process
 

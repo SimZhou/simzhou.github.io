@@ -30,6 +30,8 @@ license: ""
 
 いくつかの音声アルゴリズム系のグループで共有してみたところ、反応はなかなか良かった。
 
+プロジェクトリンク: [GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md) / [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens)
+
 <!--more-->
 
 {{< image src="AudioLens.shop_preview.en-US.png" caption="AudioLens の Marketplace ページ" width="100%" >}}
@@ -66,7 +68,15 @@ license: ""
 - **Remote SSH サポート**: リモートマシン上の音声をローカルにダウンロードせず、そのまま開いて解析できる
 - **多言語対応**: 現在 17 言語に対応
 
-宣伝文句はこのくらいにしておく。興味があれば [GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md#%E3%83%87%E3%83%A2) で機能デモを見ることもできるし、[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens) から直接インストールして試すこともできる。
+いくつか GIF デモを置いておくので、実際の操作感をそのまま見てもらえると思う。
+
+{{< image src="assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" caption="マルチチャンネルトラックと複数ビュー" width="100%" >}}
+
+{{< image src="assets/2.selection_playback_and_analysis.ja-JP.gif" caption="選択範囲再生と音声解析" width="100%" >}}
+
+{{< image src="assets/3.pcm_raw_parameterized_loading.ja-JP.gif" caption="PCM / RAW のパラメータ指定読み込み" width="100%" >}}
+
+画面右上にはクエスチョンマークのボタンもあり、より詳しい使い方のヘルプが入っているので、気になったらそこから探索できる。
 
 ## Vibe Coding の過程
 

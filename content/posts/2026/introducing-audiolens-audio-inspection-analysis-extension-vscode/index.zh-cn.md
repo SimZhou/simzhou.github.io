@@ -30,6 +30,8 @@ license: ""
 
 在若干个语音算法交流群里分享了一下，反响不错。
 
+项目入口：[GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.zh-CN.md) / [VS Code 扩展商店](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens)
+
 <!--more-->
 
 {{< image src="AudioLens.shop_preview.zh-CN.png" caption="AudioLens 商店界面" width="100%" >}}
@@ -66,7 +68,15 @@ license: ""
 - **Remote SSH 支持**：可以直接打开远程机器上的音频进行分析，无需下载到本地
 - **多语言支持**：目前支持 17 种语言
 
-其它废话就不多说了，有兴趣的朋友可以到 [GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.zh-CN.md#%E5%8A%9F%E8%83%BD%E6%BC%94%E7%A4%BA) 上看功能演示，也可以直接去 [VS Code 扩展商店](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens) 下载体验。
+下面放几段动图，读者可以直接感受一下它的交互方式。
+
+{{< image src="assets/1.multi-channel_tracks_and_multi-view.zh-CN.gif" caption="多通道轨道与多视图切换" width="100%" >}}
+
+{{< image src="assets/2.selection_playback_and_analysis.zh-CN.gif" caption="选区播放与音频分析" width="100%" >}}
+
+{{< image src="assets/3.pcm_raw_parameterized_loading.zh-CN.gif" caption="PCM / RAW 参数化加载" width="100%" >}}
+
+另外，界面右上角有一个问号按钮，里面还有更完整的使用帮助，感兴趣的话可以自己点进去探索一下。
 
 ## Vibe Coding 过程
 
