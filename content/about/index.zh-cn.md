@@ -6,7 +6,7 @@ lastmod: 2020-06-28T11:06:43+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://simzhou.com/about/"
-description: ""
+description: "Simon / 周易华的个人介绍：语音 AI、NLP、端侧模型、AI 辅助编程、机器学习可视化和开发者工具。"
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -24,26 +24,30 @@ license: ""
 
 <!--more-->
 
-​    
+你好，我是 Simon / 周易华。
 
-你好呀，茫茫人海之中你能看到我的博客，这是一种多么的幸运！
+我是一名关注语音 AI、NLP 和端侧模型部署的机器学习工程师。近几年的工作主要围绕关键词唤醒、低功耗端侧 AI、模型效果优化，以及训练、评估和数据仿真流程的自动化建设。
 
-我是Simon，是一个技术爱好者，希望我的博客能对你有所帮助。
+除了工作中的语音算法和端侧小模型，我也持续关注大语言模型、Agent 工作流、AI 辅助编程、机器学习可视化、开发者工具，以及前后端和各类软件框架。我喜欢从完整系统的角度理解技术：模型、数据、工具链、界面、部署方式，以及人的使用习惯，如何共同影响最终体验。
 
-### 我是...
+### 我关注的方向
 
-- 一个梦想家
-- 一个技术宅
-- 不喜欢记名字，比起事物的名称更喜欢理解其作用与联系，[费曼学习法](https://baike.baidu.com/item/费曼学习法/50895393?fr=aladdin)的践行者
-- 爱好音乐，游戏，跑步
+- **语音 AI 与端侧模型**：关键词检测、声纹验证、声音事件检测、模型优化与部署约束
+- **NLP 与大语言模型**：文本分类、知识检索、对话系统、LLM 应用和 Agent 工作流
+- **AI 辅助研发**：Coding Agent、自动化工具、开发者工作流和新一代编程方式
+- **可视化与工具系统**：机器学习可视化、音频分析工具、前后端技术和效率工具
 
-### 建博客的目的
+### 代表项目与文章
 
-- [x] 分享想法
-- [x] 记录生活
-- [x] 展示自己
-- [x] 2020年，互联网信息过载的年代，我选择为信息的爆炸出一份力（开个玩笑）
-- [x] 提醒自己，不忘初心 (2021.04.15)
+- **[AudioLens]({{< relref "/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/index.zh-cn.md" >}})**：面向语音算法、音频处理和机器学习工程师的 VS Code 音频检查与频谱分析插件
+- **[AI 辅助编程相关笔记]({{< relref "/posts/2026/programming-guide-for-the-new-era-2026/index.zh-cn.md" >}})**：关于 Codex、Claude Code、Gemini CLI 和 Agent Coding 工作流的实践与思考
+- **[机器学习可视化文章]({{< relref "/posts/2021/cross-entropy-loss-visualized/index.zh-cn.md" >}})**：用可视化方式解释机器学习概念和模型行为
+
+### 个人侧面
+
+工作之外，我喜欢音乐、游戏和跑步。也会经常看一些科学相关的内容，尤其关注 AI 正在怎样改变科学研究的方式。我也喜欢理解不同系统背后的运行逻辑。
+
+这个博客会继续记录我的技术实践、工具折腾、学习笔记和一些生活观察。
 
 <!-- ### 我的项目
 

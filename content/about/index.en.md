@@ -6,7 +6,7 @@ lastmod: 2020-06-28T11:06:43+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://simzhou.com/about/"
-description: ""
+description: "About Simon Zhou: speech AI, NLP, edge-device models, AI-assisted programming, machine learning visualization, and developer tools."
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -24,26 +24,30 @@ license: ""
 
 <!--more-->
 
-​    
+Hi, I’m Simon Zhou.
 
-Hello there. Out of all the people in the world, the fact that you came across my blog feels like quite a lucky coincidence.
+I am a Machine Learning Engineer focused on speech AI, NLP systems, and edge-device model deployment. My recent work has centered on keyword spotting, low-power edge AI, model performance optimization, and automated workflows for training, evaluation, and data simulation.
 
-I am Simon, a technology enthusiast, and I hope this blog can be of some help to you.
+Beyond speech algorithms and resource-constrained models, I am also interested in large language models, agent workflows, AI-assisted programming, machine learning visualization, developer tools, frontend/backend technologies, and software frameworks. I like understanding technology as a complete system: how models, data, toolchains, interfaces, deployment, and human workflows shape the final experience.
 
-### I Am...
+### What I Work On
 
-- A dreamer
-- A tech geek
-- Someone who dislikes memorizing names and prefers understanding how things work and how they connect, and a practitioner of the [Feynman Technique](https://golden.com/wiki/Feynman_Technique)
-- A fan of music, games, and running
+- **Speech AI and edge models**: keyword spotting, speaker verification, sound event detection, model optimization, and deployment constraints
+- **NLP and LLMs**: text classification, knowledge retrieval, dialogue systems, LLM applications, and agent workflows
+- **AI-assisted development**: coding agents, automation tools, developer workflows, and new ways of building software
+- **Visualization and tooling**: ML visualization, audio analysis tools, frontend/backend technologies, and productivity tools
 
-### Why I Built This Blog
+### Selected Work
 
-- [x] To share ideas
-- [x] To record my life
-- [x] To present myself
-- [x] In 2020, in an era of information overload on the internet, I chose to contribute a little more to the explosion of information. Just kidding.
-- [x] To remind myself not to forget why I started. (2021.04.15)
+- **[AudioLens]({{< relref "/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/index.en.md" >}})**: a VS Code extension for audio inspection and spectrogram analysis, built for speech, audio, and ML engineers
+- **[AI-assisted programming articles]({{< relref "/posts/2026/programming-guide-for-the-new-era-2026/index.en.md" >}})**: notes on Codex, Claude Code, Gemini CLI, and agent-based coding workflows
+- **[Machine learning visualization]({{< relref "/posts/2021/cross-entropy-loss-visualized/index.en.md" >}})**: articles that explain ML concepts through visual and interactive examples
+
+### Personal Side
+
+Outside of work, I enjoy music, games, and running. I also spend time following science, especially how AI is starting to change the way scientific research is done. I like understanding how different systems work and how their parts connect.
+
+This blog is where I keep technical notes, tool experiments, learning records, and occasional personal observations.
 
 <!-- ### My Projects
 
