@@ -204,8 +204,8 @@ publishDir = "docs"
     weight = 1
     title = "Simon的梦宇宙"   # 浏览器标签栏的标题
     # 网站语言, 仅在这里 CN 大写
-    languageCode = "zh-CN"
-    languageName = "中文"
+    locale = "zh-CN"
+    label = "中文"
     # 是否包括中日韩文字
     hasCJKLanguage = true
     # 版权描述，仅仅用于 SEO
@@ -290,7 +290,7 @@ publishDir = "docs"
           # Gravatar 邮箱，用于优先在主页显示的头像
           gravatarEmail = ""
           # 主页显示头像的 URL
-          avatarURL = "/images/earth.jpg"
+          avatarURL = "/images/earth.avatar-360.webp"
           # 主页显示的网站标题 (支持 HTML 格式)
           title = ""
           # 主页显示的网站副标题
@@ -312,8 +312,8 @@ publishDir = "docs"
   [languages.en]
     weight = 2
     title = "Simon's Dream Universe"
-    languageCode = "en"
-    languageName = "English"
+    locale = "en"
+    label = "English"
     # copyright description used only for seo schema
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     [[languages.en.menu.main]]
@@ -393,7 +393,7 @@ publishDir = "docs"
           # Gravatar 邮箱，用于优先在主页显示的头像
           gravatarEmail = ""
           # 主页显示头像的 URL
-          avatarURL = "/images/earth.jpg"
+          avatarURL = "/images/earth.avatar-360.webp"
           # 主页显示的网站标题 (支持 HTML 格式)
           title = ""
           # 主页显示的网站副标题
@@ -415,8 +415,8 @@ publishDir = "docs"
   [languages.ja]
     weight = 3
     title = "Simonの夢宇宙"
-    languageCode = "ja"
-    languageName = "日本語"
+    locale = "ja"
+    label = "日本語"
     hasCJKLanguage = true
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     [[languages.ja.menu.main]]
@@ -475,7 +475,7 @@ publishDir = "docs"
         [languages.ja.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "/images/earth.jpg"
+          avatarURL = "/images/earth.avatar-360.webp"
           title = ""
           subtitle = "たとえ世界が火を帯びた風と刃のような雨を運んできても、私は前へ進み続ける。"
           typeit = true

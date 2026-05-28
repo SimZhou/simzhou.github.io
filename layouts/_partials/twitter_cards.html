@@ -9,7 +9,34 @@
 {{- else if eq .Kind "taxonomy" -}}
   {{- $title = T .Data.Plural | default .Title -}}
 {{- end -}}
-<meta name="twitter:card" content="summary">
+{{- $images := $params.seo.images | default slice -}}
+{{- if not $images -}}
+  {{- with .Params.featuredImagePreview -}}
+    {{- $images = slice . -}}
+  {{- else -}}
+    {{- with .Params.featuredImage -}}
+      {{- $images = slice . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $images -}}
+  {{- with .Resources.GetMatch "featured-image-preview" -}}
+    {{- $images = slice "featured-image-preview" -}}
+  {{- end -}}
+  {{- with .Resources.GetMatch "featured-image" -}}
+    {{- $images = slice "featured-image" -}}
+  {{- end -}}
+{{- end -}}
+{{- with .Site.Params.seo.image -}}
+  {{- $images = $images | default (slice .) -}}
+{{- end -}}
+<meta name="twitter:card" content="{{ if $images }}summary_large_image{{ else }}summary{{ end }}">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
-
+{{- with index $images 0 -}}
+  {{- with dict "Path" . "Resources" $.Resources | partial "function/resource.html" -}}
+<meta name="twitter:image" content="{{ .Permalink }}">
+  {{- else -}}
+<meta name="twitter:image" content="{{ . | absURL }}">
+  {{- end -}}
+{{- end -}}

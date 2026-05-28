@@ -7,11 +7,9 @@
         <title>L1 &amp; L2 正则化是长什么样子的？ - Simon的梦宇宙</title><meta name="description" content="这篇文章想写很久了，最近终于解决了在博客中插入Echarts的问题，于是终于把它写完了。这篇文章主要是尝试对L1和L2正则化做了可视化，使用交叉熵损失函数使用基础损失函数。由于在其它地方也没有看到过类似的东西，所以觉得写一篇出来还是有点意义的。 3D可视化的图像可以帮助对损失函数，正则化的理解。并且也能直观地解释一些问题，比如为什么L1正则化会导致稀疏模型，会产生特征选择的效果。"><meta name="keywords" content="机器学习, 深度学习, 可视化, 正则化"><meta name="author" content="Simon"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/posts/2021/cross-entropy-loss-visualized/">
 <meta property="og:site_name" content="Simon的梦宇宙">
 <meta property="og:title" content="L1 &amp; L2 正则化是长什么样子的？">
-<meta property="og:description" content="这篇文章想写很久了，最近终于解决了在博客中插入Echarts的问题，于是终于把它写完了。这篇文章主要是尝试对L1和L2正则化做了可视化，使用交叉熵损失函数使用基础损失函数。由于在其它地方也没有看到过类似的东西，所以觉得写一篇出来还是有点意义的。 3D可视化的图像可以帮助对损失函数，正则化的理解。并且也能直观地解释一些问题，比如为什么L1正则化会导致稀疏模型，会产生特征选择的效果。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://simzhou.com/images/earth.jpg"><meta property="og:image:width" content="1495"><meta property="og:image:height" content="1484"><meta name="twitter:card" content="summary">
+<meta property="og:description" content="这篇文章想写很久了，最近终于解决了在博客中插入Echarts的问题，于是终于把它写完了。这篇文章主要是尝试对L1和L2正则化做了可视化，使用交叉熵损失函数使用基础损失函数。由于在其它地方也没有看到过类似的东西，所以觉得写一篇出来还是有点意义的。 3D可视化的图像可以帮助对损失函数，正则化的理解。并且也能直观地解释一些问题，比如为什么L1正则化会导致稀疏模型，会产生特征选择的效果。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://simzhou.com/posts/2021/cross-entropy-loss-visualized/cover.png"><meta property="og:image:width" content="1884"><meta property="og:image:height" content="662"><meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="L1 &amp; L2 正则化是长什么样子的？">
-<meta name="twitter:description" content="这篇文章想写很久了，最近终于解决了在博客中插入Echarts的问题，于是终于把它写完了。这篇文章主要是尝试对L1和L2正则化做了可视化，使用交叉熵损失函数使用基础损失函数。由于在其它地方也没有看到过类似的东西，所以觉得写一篇出来还是有点意义的。 3D可视化的图像可以帮助对损失函数，正则化的理解。并且也能直观地解释一些问题，比如为什么L1正则化会导致稀疏模型，会产生特征选择的效果。">
-
-<meta name="application-name" content="Simon的梦宇宙">
+<meta name="twitter:description" content="这篇文章想写很久了，最近终于解决了在博客中插入Echarts的问题，于是终于把它写完了。这篇文章主要是尝试对L1和L2正则化做了可视化，使用交叉熵损失函数使用基础损失函数。由于在其它地方也没有看到过类似的东西，所以觉得写一篇出来还是有点意义的。 3D可视化的图像可以帮助对损失函数，正则化的理解。并且也能直观地解释一些问题，比如为什么L1正则化会导致稀疏模型，会产生特征选择的效果。"><meta name="twitter:image" content="https://simzhou.com/posts/2021/cross-entropy-loss-visualized/cover.png"><meta name="application-name" content="Simon的梦宇宙">
 <meta name="apple-mobile-web-app-title" content="Simon的梦宇宙">
 <meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,9 +26,9 @@
             "@id": "https:\/\/simzhou.com\/posts\/2021\/cross-entropy-loss-visualized\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "https:\/\/simzhou.com\/images\/earth.jpg",
-                            "width":  1495 ,
-                            "height":  1484 
+                            "url": "https:\/\/simzhou.com\/posts\/2021\/cross-entropy-loss-visualized\/cover.png",
+                            "width":  1884 ,
+                            "height":  662 
                         }],"genre": "posts","keywords": "机器学习, 深度学习, 可视化, 正则化","wordcount":  1702 ,
         "url": "https:\/\/simzhou.com\/posts\/2021\/cross-entropy-loss-visualized\/","datePublished": "2021-04-15T15:07:46+08:00","dateModified": "2021-04-15T15:07:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
@@ -422,7 +420,7 @@ $$=-p\beta_1x-(1-p)\beta_2x+log(e^{\beta_1x}+e^{\beta_2x})$$
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.161.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">如无特殊说明，本站内容遵循<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>创作共享协议，转载请注明出处</span></div>
         </div>
     </footer></div>

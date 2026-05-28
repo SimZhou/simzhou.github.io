@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/Users/yihua.zhou/Codes/simzhou.github.io",
+	"sourceRoot": "/Users/yihua.zhou/MyCodes/simzhou.github.io",
 	"sources": [
 		"themes/loveit/assets/css/style.scss",
 		"themes/loveit/assets/lib/modern-normalize/modern-normalize.css",

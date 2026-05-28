@@ -13,10 +13,19 @@
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
-{{- with .Site.LanguageCode -}}
+{{- with .Site.Language.Locale -}}
 <meta property="og:locale" content="{{ replace . "-" "_" }}">
 {{- end -}}
 {{- $images := $params.seo.images | default slice -}}
+{{- if not $images -}}
+  {{- with .Params.featuredImagePreview -}}
+    {{- $images = slice . -}}
+  {{- else -}}
+    {{- with .Params.featuredImage -}}
+      {{- $images = slice . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- if not $images -}}
   {{- with .Resources.GetMatch "featured-image-preview" -}}
     {{- $images = slice "featured-image-preview" -}}
@@ -37,4 +46,3 @@
 <meta property="og:image" content="{{ . | absURL }}">
   {{- end -}}
 {{- end -}}
-
