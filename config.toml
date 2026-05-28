@@ -57,6 +57,7 @@ publishDir = "docs"
   [params.social]
     email = "yihua.zhou@outlook.com"
     github = "SimZhou"
+    x = "simzhouyh"
     # bilibili = "338402"
     # Steam = "astro2boy"
   [params.search]

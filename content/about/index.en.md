@@ -71,4 +71,6 @@ Mail: {{<link "mailto:yihua.zhou@outlook.com" "yihua.zhou@outlook.com">}}
 
 Github: [@simzhou](https://github.com/simzhou)
 
+X: [@simzhouyh](https://x.com/simzhouyh)
+
 LinkedIn: [@yihua-zhou](https://www.linkedin.com/in/yihua-zhou/)
