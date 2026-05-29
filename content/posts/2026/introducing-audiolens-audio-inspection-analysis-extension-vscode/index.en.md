@@ -68,7 +68,7 @@ Since I work on speech algorithms myself, I know the requirements pretty well. I
 - **Remote SSH support**: open and analyze audio files directly on a remote machine without downloading them locally
 - **Localization**: currently supports 17 languages
 
-Here are a few GIF demos, so you can get a direct feel for the interaction.
+Here are a few GIF demos, so everyone can get a direct feel for the interaction.
 
 {{< image src="assets/1.multi-channel_tracks_and_multi-view.en-US.gif" caption="Multi-channel tracks and multiple views" width="100%" >}}
 

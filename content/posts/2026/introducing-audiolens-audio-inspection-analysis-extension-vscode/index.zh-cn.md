@@ -68,7 +68,7 @@ license: ""
 - **Remote SSH 支持**：可以直接打开远程机器上的音频进行分析，无需下载到本地
 - **多语言支持**：目前支持 17 种语言
 
-下面放几段动图，读者可以直接感受一下它的交互方式。
+下面放几段动图，大家可以直接感受一下它的交互方式。
 
 {{< image src="assets/1.multi-channel_tracks_and_multi-view.zh-CN.gif" caption="多通道轨道与多视图切换" width="100%" >}}
 
