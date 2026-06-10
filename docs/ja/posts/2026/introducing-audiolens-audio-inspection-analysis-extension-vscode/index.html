@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能 - Simonの夢宇宙</title><meta name="description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><meta name="keywords" content="AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding"><meta name="author" content="SimZhou"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">
+        <title>AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能 - Simonの夢宇宙</title><meta name="description" content="AudioLens は VS Code、Cursor、Trae の中で Audacity / Audition に近い体験を提供する、音声再生・確認・軽量解析用の拡張機能です。"><meta name="keywords" content="AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding"><meta name="author" content="SimZhou"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta property="og:url" content="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">
 <meta property="og:site_name" content="Simonの夢宇宙">
-<meta property="og:title" content="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能">
-<meta property="og:description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><meta property="og:locale" content="ja"><meta property="og:image" content="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp"><meta property="og:image:width" content="3576"><meta property="og:image:height" content="2100"><meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能">
-<meta name="twitter:description" content="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><meta name="twitter:image" content="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp"><meta name="application-name" content="Simonの夢宇宙">
+<meta property="og:title" content="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能">
+<meta property="og:description" content="AudioLens は VS Code、Cursor、Trae の中で Audacity / Audition に近い体験を提供する、音声再生・確認・軽量解析用の拡張機能です。"><meta property="og:locale" content="ja"><meta property="og:image" content="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp"><meta property="og:image:width" content="3576"><meta property="og:image:height" content="2100"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能">
+<meta name="twitter:description" content="AudioLens は VS Code、Cursor、Trae の中で Audacity / Audition に近い体験を提供する、音声再生・確認・軽量解析用の拡張機能です。"><meta name="twitter:image" content="https://simzhou.com/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp"><meta name="application-name" content="Simonの夢宇宙">
 <meta name="apple-mobile-web-app-title" content="Simonの夢宇宙">
 <meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,7 +19,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能",
+        "headline": "AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能",
         "inLanguage": "ja",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -29,8 +29,8 @@
                             "url": "https:\/\/simzhou.com\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/assets\/Main-Screen-multichannel.ja-JP.q65.webp",
                             "width":  3576 ,
                             "height":  2100 
-                        }],"genre": "posts","keywords": "AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding","wordcount":  1711 ,
-        "url": "https:\/\/simzhou.com\/ja\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/","datePublished": "2026-05-27T19:25:24+08:00","dateModified": "2026-05-27T23:40:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "AudioLens, VS Code, 音声アルゴリズム, 音声解析, VibeCoding","wordcount":  3244 ,
+        "url": "https:\/\/simzhou.com\/ja\/posts\/2026\/introducing-audiolens-audio-inspection-analysis-extension-vscode\/","datePublished": "2026-06-09T21:00:00+08:00","dateModified": "2026-06-09T21:00:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Simon Zhou","logo": {
                     "@type": "ImageObject",
@@ -40,7 +40,7 @@
                 }},"author": {
                 "@type": "Person",
                 "name": "SimZhou"
-            },"description": "AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"
+            },"description": "AudioLens は VS Code、Cursor、Trae の中で Audacity / Audition に近い体験を提供する、音声再生・確認・軽量解析用の拡張機能です。"
     }
     </script><script type="application/ld+json">
     {
@@ -59,7 +59,7 @@
           },{
             "@type": "ListItem",
             "position":  3 ,
-            "name": "AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能",
+            "name": "AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能",
             "item": "https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/"
           }]
     }
@@ -158,10 +158,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目次</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能</h1><h2 class="single-subtitle">raw PCM を含む複数の音声形式に対応</h2><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能</h1><h2 class="single-subtitle">音声ファイルの再生、確認、解析のために</h2><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/SimZhou" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>SimZhou</a></span>&nbsp;<span class="post-category">カテゴリー <a href="/ja/categories/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/"><i class="far fa-folder" aria-hidden="true"></i>プロジェクト</a>&nbsp;<a href="/ja/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-05-27">2026-05-27</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;1711 語&nbsp;
-                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;4 分&nbsp;<span id="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" class="leancloud_visitors" data-flag-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能">
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-06-09">2026-06-09</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;3244 語&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;7 分&nbsp;<span id="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" class="leancloud_visitors" data-flag-title="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能">
                         <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;ビュー
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -173,42 +173,31 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#きっかけ">きっかけ</a></li>
-        <li><a href="#audiolens-の機能紹介">AudioLens の機能紹介</a></li>
-        <li><a href="#vibe-coding-の過程">Vibe Coding の過程</a></li>
-        <li><a href="#後書き">後書き</a></li>
+        <li><a href="#1-簡単な紹介">1. 簡単な紹介</a></li>
+        <li><a href="#2-機能紹介">2. 機能紹介</a>
+          <ul>
+            <li><a href="#21-波形とスペクトログラムの表示">2.1 波形とスペクトログラムの表示</a></li>
+            <li><a href="#22-選択範囲の再生解析エクスポート">2.2 選択範囲の再生、解析、エクスポート</a></li>
+            <li><a href="#23-raw-pcm--raw-ファイルのパラメータ指定読み込み">2.3 Raw PCM / RAW ファイルのパラメータ指定読み込み</a></li>
+            <li><a href="#24-音声ファイルヘッダー情報の確認">2.4 音声ファイルヘッダー情報の確認</a></li>
+            <li><a href="#25-任意のテキストから音声パスを開く">2.5 任意のテキストから音声パスを開く</a></li>
+            <li><a href="#26-kaldi-wav-ark-の直接読み込み">2.6 Kaldi WAV Ark の直接読み込み</a></li>
+            <li><a href="#27-リモート-ssh-対応">2.7 リモート SSH 対応</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-インストール方法">3. インストール方法</a></li>
+        <li><a href="#4-今後追加したい機能">4. 今後追加したい機能</a></li>
+        <li><a href="#最後に">最後に</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><!-- <p class="post-note">カバー画像: VS Code で動作する AudioLens</p> -->
-<p>最近、VS Code の中で音声を読み込み、再生し、解析できる拡張機能を Vibe した。名前は <strong>AudioLens</strong>。</p>
-<p>いくつかの音声アルゴリズム系のグループで共有してみたところ、反応はなかなか良かった。</p>
-<p>プロジェクトリンク: <a href="https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md" target="_blank" rel="noopener noreffer ">GitHub</a> / <a href="https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens" target="_blank" rel="noopener noreffer ">VS Code Marketplace</a></p>
-<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png" data-sub-html="<h2>AudioLens の Marketplace ページ</h2>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png"
-            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png 2x"
-            data-sizes="auto"
-            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/AudioLens.shop_preview.en-US.png" width="100%" height="324" />
-    </a><figcaption class="image-caption">AudioLens の Marketplace ページ</figcaption>
-    </figure>
-<h2 id="きっかけ">きっかけ <a href="#%e3%81%8d%e3%81%a3%e3%81%8b%e3%81%91">¶</a></h2><p>音声アルゴリズムのエンジニアは、普段おもに 2 つの作業画面を行き来している。</p>
-<ul>
-<li>コードエディタ: たとえば VS Code</li>
-<li>音声解析ソフト: たとえば Audition や Audacity</li>
-</ul>
-<p>そこで困ることはシンプルだ。</p>
-<ul>
-<li>コードを書くときは主にエディタで作業するが、音声を解析するときには別のソフトに切り替える必要がある。</li>
-<li><strong>もしコードがリモートサーバー上で動いているなら、さらに面倒になる。音声をいったんダウンロードしてから聴かなければならないことが多い。</strong></li>
-</ul>
-<p>既存の解決策はないのか。実はある。VS Code Marketplace には audio-preview という拡張機能があり、ダウンロード数は 200K ほどある。私自身も何年も使っていた。</p>
-<p>ただ、UI は粗く、機能は少なく、Bug も多い。最後の更新は 2024 年で、作者ももう保守していないように見える。</p>
-<p>そこで、腹を立てた勢いで、自分で 1 つ Vibe することにした。<del>ついでに Codex の能力も試せるし。</del></p>
-<h2 id="audiolens-の機能紹介">AudioLens の機能紹介 <a href="#audiolens-%e3%81%ae%e6%a9%9f%e8%83%bd%e7%b4%b9%e4%bb%8b">¶</a></h2><figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp" data-sub-html="<h2>AudioLens のマルチチャンネルメイン画面</h2>">
+            </div><div class="content" id="content"><p>この記事では <strong>AudioLens</strong> を紹介します。AudioLens は、VS Code / Cursor / Trae の中で Audacity / Audition に近い使い心地を実現し、音声ファイルの再生、解析、確認を行うための新しい拡張機能です。</p>
+<p>音声、音響イベント検出、音声アルゴリズム、信号処理、機械学習、音声データセット処理に関わる人にとって、日常のワークフローにはよくある痛点があります。</p>
+<p><em>コードはエディタの中にあり、データリストもエディタの中にあり、ログもエディタの中にあります。しかし、音声を聴く、波形を見る、スペクトルを確認するとなると、プレイヤー、Audacity、ファイルマネージャーなど別のツールに切り替えなければなりません。Remote SSH で作業している場合はさらに面倒で、SFTP などを使って音声をいったんローカルにコピーしてから開く必要があります。</em></p>
+<p>AudioLens が解決したいのはまさにこの問題です。<strong>音声エンジニアリングに関する確認、再生、軽量解析を、できるだけエディタの中で完結させること。</strong></p>
+<p>プロジェクトリンク：<a href="https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md" target="_blank" rel="noopener noreffer ">GitHub</a> / <a href="https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens" target="_blank" rel="noopener noreffer ">VS Code Marketplace</a> / <a href="https://open-vsx.org/extension/simzhou/audiolens" target="_blank" rel="noopener noreffer ">Open VSX Marketplace</a></p>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp" data-sub-html="<h2>AudioLens のマルチチャンネルメイン画面</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -218,19 +207,30 @@
             alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp" width="100%" height="2100" />
     </a><figcaption class="image-caption">AudioLens のマルチチャンネルメイン画面</figcaption>
     </figure>
-<p>私は自分でも音声アルゴリズムの仕事をしているので、欲しい機能はかなりはっきりしていた。この拡張機能には、自分が必要だと思う機能をだいたい入れている。</p>
+<h2 id="1-簡単な紹介">1. 簡単な紹介 <a href="#1-%e7%b0%a1%e5%8d%98%e3%81%aa%e7%b4%b9%e4%bb%8b">¶</a></h2><p>AudioLens は、音声エンジニアリング、音声アルゴリズム、音響イベント検出、信号処理、音声データの調査に向いた VS Code の音声確認・解析拡張機能です。</p>
+<p>こうした場面では、音声ファイルはコード、設定、データリスト、書き起こしテキスト、モデル出力、実験ログと一緒に置かれていることがよくあります。エンジニアが知りたいのは、たとえば次のようなことです。</p>
 <ul>
-<li><strong>マルチチャンネル音声の再生</strong>: マルチチャンネル音声の読み込み、選択範囲再生、ソロ再生、指定チャンネルのミュートなど</li>
-<li><strong>複数の表示モード</strong>: 波形、スペクトログラム、そして両方のズームとパン</li>
-<li><strong>音声解析</strong>: 範囲を選択すると、RMS dB や周波数解析などの結果がすぐに表示される</li>
-<li><strong>複数形式のサポート</strong>: <code>wav</code>、<code>mp3</code>、<code>flac</code>、<code>ogg</code>、<code>opus</code>、<code>m4a</code>、<code>aac</code> などの一般的な音声形式に対応</li>
-<li><strong>RAW サポート</strong>: PCM / RAW の生データに対応し、チャンネル数やサンプルレートなどの PCM 設定を記憶できるため、同種の音声を開きやすい</li>
-<li><strong>スペクトログラム設定</strong>: FFT サイズ、窓関数、ゼロパディング倍率、周波数スケール、配色などを調整可能</li>
-<li><strong>Remote SSH サポート</strong>: リモートマシン上の音声をローカルにダウンロードせず、そのまま開いて解析できる</li>
-<li><strong>多言語対応</strong>: 現在 17 言語に対応</li>
+<li>音声サンプルに無音、途中切れ、ポップノイズ、クリッピングはないか？</li>
+<li>マルチチャンネル音声の各チャンネルは正常か？</li>
+<li>ある選択範囲の RMS、ピーク、主周波数、帯域エネルギーはどの程度か？</li>
+<li><code>.pcm</code> / <code>.raw</code> ファイルを指定パラメータで直接開けるか？</li>
+<li>Kaldi の <code>wav.ark:offset</code> をもっと手軽に確認できるか？</li>
+<li>Remote SSH 上のデータセットを、ローカルにコピーせずに抜き取り確認できるか？</li>
+<li>データリスト、ログ、書き起こしテキスト内の音声パスを直接開けるか？</li>
 </ul>
-<p>いくつか GIF デモを置いておくので、実際の操作感をそのまま感じてもらえると思う。</p>
-<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" data-sub-html="<h2>マルチチャンネルトラックと複数ビュー</h2>">
+<p>AudioLens の設計目標は、<strong>VS Code / Cursor / Trae から離れずに音声サンプルをすばやく確認すること</strong>です。</p>
+<h2 id="2-機能紹介">2. 機能紹介 <a href="#2-%e6%a9%9f%e8%83%bd%e7%b4%b9%e4%bb%8b">¶</a></h2><p>AudioLens は一般的な音声形式をサポートしています。</p>
+<ul>
+<li>WAV</li>
+<li>MP3</li>
+<li>FLAC</li>
+<li>Ogg / Opus</li>
+<li>M4A / AAC</li>
+<li>PCM / RAW</li>
+<li>Kaldi WAV Ark エントリ</li>
+</ul>
+<h3 id="21-波形とスペクトログラムの表示">2.1 波形とスペクトログラムの表示 <a href="#21-%e6%b3%a2%e5%bd%a2%e3%81%a8%e3%82%b9%e3%83%9a%e3%82%af%e3%83%88%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%81%ae%e8%a1%a8%e7%a4%ba">¶</a></h3><p>音声を開くと、波形とスペクトログラムをそのまま確認できます。</p>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" data-sub-html="<h2>マルチチャンネル音声トラックと複数ビューのデモ</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -238,9 +238,32 @@
             data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif 2x"
             data-sizes="auto"
             alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" width="100%" height="692" />
-    </a><figcaption class="image-caption">マルチチャンネルトラックと複数ビュー</figcaption>
+    </a><figcaption class="image-caption">マルチチャンネル音声トラックと複数ビューのデモ</figcaption>
     </figure>
-<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif" data-sub-html="<h2>選択範囲再生と音声解析</h2>">
+<p>各チャンネルには個別に設定できます。</p>
+<ul>
+<li>波形、スペクトログラム、または組み合わせ表示</li>
+<li>ミュート / ソロ</li>
+</ul>
+<p>また、右上の設定から、FFT 点数、窓関数、周波数範囲、カラーパレット、輝度範囲など、スペクトログラムの各種パラメータを調整できます。</p>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/config_menu.ja-JP.png" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/config_menu.ja-JP.png" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/config_menu.ja-JP.png" data-sub-html="<h2>スペクトログラム設定</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/config_menu.ja-JP.png"
+            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/config_menu.ja-JP.png, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/config_menu.ja-JP.png 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/config_menu.ja-JP.png 2x"
+            data-sizes="auto"
+            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/config_menu.ja-JP.png" width="32%" height="915" />
+    </a><figcaption class="image-caption">スペクトログラム設定</figcaption>
+    </figure>
+<h3 id="22-選択範囲の再生解析エクスポート">2.2 選択範囲の再生、解析、エクスポート <a href="#22-%e9%81%b8%e6%8a%9e%e7%af%84%e5%9b%b2%e3%81%ae%e5%86%8d%e7%94%9f%e8%a7%a3%e6%9e%90%e3%82%a8%e3%82%af%e3%82%b9%e3%83%9d%e3%83%bc%e3%83%88">¶</a></h3><p>波形またはスペクトログラム上でドラッグすると、時間範囲を選択できます。</p>
+<p>選択範囲を作成すると、次のことができます。</p>
+<ul>
+<li>選択した部分だけを再生する</li>
+<li>選択範囲の解析指標を見る</li>
+<li>右クリックして選択範囲を WAV としてエクスポートする</li>
+</ul>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif" data-sub-html="<h2>選択範囲の再生と解析のデモ</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -248,9 +271,25 @@
             data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif 2x"
             data-sizes="auto"
             alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/2.selection_playback_and_analysis.ja-JP.gif" width="100%" height="692" />
-    </a><figcaption class="image-caption">選択範囲再生と音声解析</figcaption>
+    </a><figcaption class="image-caption">選択範囲の再生と解析のデモ</figcaption>
     </figure>
-<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif" data-sub-html="<h2>PCM / RAW のパラメータ指定読み込み</h2>">
+<p>現在、選択範囲の解析には次の内容が含まれます。</p>
+<ul>
+<li>開始時刻、終了時刻、長さ</li>
+<li>RMS レベル</li>
+<li>ピークレベル</li>
+<li>主周波数</li>
+<li>ピーク平均比</li>
+<li>クリッピング率</li>
+<li>ノイズフロア推定</li>
+<li>スペクトル重心</li>
+<li>ゼロ交差率</li>
+<li>帯域エネルギー分布</li>
+</ul>
+<p>これらの指標があると、日常的な調査がかなり速くなります。たとえば学習サンプル、イベント検出サンプル、収録結果を確認するときに、異常な部分を直接選択し、レベル、ノイズフロア、帯域分布が期待通りかどうかをすばやく判断できます。</p>
+<h3 id="23-raw-pcm--raw-ファイルのパラメータ指定読み込み">2.3 Raw PCM / RAW ファイルのパラメータ指定読み込み <a href="#23-raw-pcm--raw-%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e3%83%91%e3%83%a9%e3%83%a1%e3%83%bc%e3%82%bf%e6%8c%87%e5%ae%9a%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf">¶</a></h3><p><code>.pcm</code> / <code>.raw</code> ファイルは生データです。ファイル自体には、サンプルレート、チャンネル数、ビット深度、浮動小数点か整数か、エンディアン、開始オフセットといった情報が記録されていません。</p>
+<p>AudioLens では、<code>.pcm</code> / <code>.raw</code> の音声を明示的にパラメータ指定して読み込めます。</p>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif" data-sub-html="<h2>PCM と RAW のパラメータ指定読み込みデモ</h2>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -258,38 +297,91 @@
             data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif 2x"
             data-sizes="auto"
             alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/3.pcm_raw_parameterized_loading.ja-JP.gif" width="100%" height="692" />
-    </a><figcaption class="image-caption">PCM / RAW のパラメータ指定読み込み</figcaption>
+    </a><figcaption class="image-caption">PCM と RAW のパラメータ指定読み込みデモ</figcaption>
     </figure>
-<p>画面右上にはクエスチョンマークのボタンもあり、より詳しい使い方のヘルプが入っているので、気になったらそこから探索できる。</p>
-<h2 id="vibe-coding-の過程">Vibe Coding の過程 <a href="#vibe-coding-%e3%81%ae%e9%81%8e%e7%a8%8b">¶</a></h2><p>Vibe Coding の過程は、基本的には自分の要求を Codex に出し続けることだった。</p>
-<p>大きな方針として、要求は 2 つあった。</p>
-<ol>
-<li>コード全体はシンプルでクリーン、かつモジュール化された状態を保ち、過度に抽象化しないこと</li>
-<li>FFT やスペクトログラム計算のような重いコア関数は、速度を確保するために Rust で実装すること</li>
-</ol>
-<p>それ以外の作業は、ほとんど機能と細部の磨き込みだった。</p>
+<p>これらのパラメータはデフォルト値として保存でき、次回以降 PCM / RAW ファイルを開くときにも再利用できます。</p>
+<h3 id="24-音声ファイルヘッダー情報の確認">2.4 音声ファイルヘッダー情報の確認 <a href="#24-%e9%9f%b3%e5%a3%b0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%83%98%e3%83%83%e3%83%80%e3%83%bc%e6%83%85%e5%a0%b1%e3%81%ae%e7%a2%ba%e8%aa%8d">¶</a></h3><p>AudioLens では、音声ファイルの構造化されたヘッダー情報を直接確認できます。</p>
+<p>現在サポートしている形式は次の通りです。</p>
 <ul>
-<li>Codex がビルドしたオフライン VSIX をインストールしてテストする</li>
-<li>UI をどう変えるか、機能をどう変えるかを Codex に伝える</li>
+<li>WAV / RIFF</li>
+<li>FLAC</li>
+<li>Ogg</li>
+<li>MP4 / M4A</li>
+<li>AAC / ADTS</li>
+<li>MP3 / MPEG frame</li>
 </ul>
-<p>この 2 つを繰り返す。</p>
-<p>その間、周囲の人たちからもかなり多くの要望を集めた。</p>
-<p>全体としては断続的な作業だったが、実際に Codex に働いてもらった時間は、おそらく 1 日くらいだったと思う。</p>
-<p><del>正直なところ、アーキテクト兼プロダクトマネージャーになり、Codex という頼れる助手を持つ感覚はかなり気持ちよかった。</del></p>
-<h2 id="後書き">後書き <a href="#%e5%be%8c%e6%9b%b8%e3%81%8d">¶</a></h2><p>私はずっと、Vibe Coding の時代には人間の Taste がとても重要になると思っている。今回この拡張機能を作って、その考えはさらに強くなった。</p>
-<p><strong>なぜなら、大規模言語モデル（LLM）はとても強力だが、審美眼があるとは言いにくいからだ。</strong></p>
-<p>要求を速く、うまく実現することはできる。しかし、具体的にどんな画面なら良いのか、このボタンはどこに置くべきか、パネルの幅はどれくらいがよいのか、UI をどう設計すべきか、UX が自然かどうか。こうした問題については、実のところほとんど感知できていない（<del>世界モデルがない</del>）。</p>
-<p>しかし、作ったものは結局、人間が使うものだ。</p>
-<p>だから Taste は、人類にとって一時的な堀になるのかもしれない。</p></div><div class="post-footer" id="post-footer">
+<p>この機能は、「再生はできるが、ツールチェーンで読むと問題が出る」ようなファイルを調べるときに向いています。たとえば WAV が標準的な 44 バイト PCM ヘッダーか、追加 chunk を含んでいるか、<code>fmt</code> chunk に拡張フィールドがあるかを確認できます。</p>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif" data-sub-html="<h2>音声ヘッダー情報確認のデモ</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif"
+            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif 2x"
+            data-sizes="auto"
+            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif" width="100%" height="528" />
+    </a><figcaption class="image-caption">音声ヘッダー情報確認のデモ</figcaption>
+    </figure>
+<h3 id="25-任意のテキストから音声パスを開く">2.5 任意のテキストから音声パスを開く <a href="#25-%e4%bb%bb%e6%84%8f%e3%81%ae%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88%e3%81%8b%e3%82%89%e9%9f%b3%e5%a3%b0%e3%83%91%e3%82%b9%e3%82%92%e9%96%8b%e3%81%8f">¶</a></h3><p>音声データセットを扱うとき、多くの音声パスは <code>wav.scp</code>、<code>wavlist</code> のようなデータリスト、JSON、ログ、モデル出力の中に埋め込まれています。</p>
+<p>AudioLens は通常のテキストファイル内の音声パスを認識できます。パスにマウスを重ねると、「AudioLens で開く」リンクから直接開けます。</p>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/5.open_audio_paths_from_any_file.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/5.open_audio_paths_from_any_file.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/5.open_audio_paths_from_any_file.ja-JP.gif" data-sub-html="<h2>任意のファイルから音声パスを開くデモ</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/5.open_audio_paths_from_any_file.ja-JP.gif"
+            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/5.open_audio_paths_from_any_file.ja-JP.gif, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/5.open_audio_paths_from_any_file.ja-JP.gif 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/5.open_audio_paths_from_any_file.ja-JP.gif 2x"
+            data-sizes="auto"
+            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/5.open_audio_paths_from_any_file.ja-JP.gif" width="100%" height="708" />
+    </a><figcaption class="image-caption">任意のファイルから音声パスを開くデモ</figcaption>
+    </figure>
+<p>この機能は何度か最適化されています。現在は大きなファイル全体に対して本文中リンクを一括生成するのではなく、必要なときに現在行または選択範囲だけを解析します。</p>
+<p>そのため、大きな JSON、ログ、大規模なデータリストでも動作を軽く保てます。</p>
+<h3 id="26-kaldi-wav-ark-の直接読み込み">2.6 Kaldi WAV Ark の直接読み込み <a href="#26-kaldi-wav-ark-%e3%81%ae%e7%9b%b4%e6%8e%a5%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf">¶</a></h3><p>Kaldi エコシステムを使っている場合、<code>wav.ark:offset</code> はよく使われる音声インデックス形式です。</p>
+<p>AudioLens は 2 つの開き方をサポートしています。</p>
+<ol>
+<li>コマンドパレットの <code>AudioLens: Open Kaldi WAV Ark Audio</code> から <code>/path/to/wav.ark:offset</code> を入力する</li>
+<li>別の拡張機能 Kaldi Reader と組み合わせると、テキスト内の <code>/path/to/wav.ark:offset</code> から AudioLens で直接開ける</li>
+</ol>
+<figure><a class="lightgallery" href="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/6.open_kaldi_wav_ark_directly.ja-JP.gif" title="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/6.open_kaldi_wav_ark_directly.ja-JP.gif" data-thumbnail="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/6.open_kaldi_wav_ark_directly.ja-JP.gif" data-sub-html="<h2>Kaldi WAV Ark を直接開くデモ</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/6.open_kaldi_wav_ark_directly.ja-JP.gif"
+            data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/6.open_kaldi_wav_ark_directly.ja-JP.gif, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/6.open_kaldi_wav_ark_directly.ja-JP.gif 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/6.open_kaldi_wav_ark_directly.ja-JP.gif 2x"
+            data-sizes="auto"
+            alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/6.open_kaldi_wav_ark_directly.ja-JP.gif" width="100%" height="762" />
+    </a><figcaption class="image-caption">Kaldi WAV Ark を直接開くデモ</figcaption>
+    </figure>
+<p>AudioLens は ark ファイル全体を読み込みません。offset の位置が <code>RIFF/WAVE</code> であることを確認し、対応する WAV ファイルだけを読み込みます。</p>
+<p>Kaldi Reader Extension：<a href="https://github.com/SimZhou/vscode-kaldi-reader/blob/main/README.ja.md" target="_blank" rel="noopener noreffer ">GitHub</a> / <a href="https://marketplace.visualstudio.com/items?itemName=simzhou.kaldi-reader" target="_blank" rel="noopener noreffer ">VS Code Marketplace</a> / <a href="https://open-vsx.org/extension/simzhou/kaldi-reader" target="_blank" rel="noopener noreffer ">Open VSX Marketplace</a></p>
+<h3 id="27-リモート-ssh-対応">2.7 リモート SSH 対応 <a href="#27-%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88-ssh-%e5%af%be%e5%bf%9c">¶</a></h3><p>多くの音声データセットは、リモートの学習マシン、実験機、データサーバー上にあります。</p>
+<p>AudioLens は Remote SSH 環境で、リモートワークスペース内の音声を直接読み取り、ローカルの VS Code Webview で表示・再生します。</p>
+<p>そのため、遠隔地のサンプルを SFTP などでローカルにダウンロードせず、そのまま抜き取り確認できます。</p>
+<h2 id="3-インストール方法">3. インストール方法 <a href="#3-%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95">¶</a></h2><ul>
+<li>VS Code ユーザー：拡張機能マーケットプレイスで <code>AudioLens</code> と検索、または <a href="https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens" target="_blank" rel="noopener noreffer ">VS Code Marketplace</a> からダウンロード</li>
+<li>Cursor、VSCodium、Trae、その他 Open VSX ユーザー：<a href="https://open-vsx.org/extension/simzhou/audiolens" target="_blank" rel="noopener noreffer ">Open VSX Marketplace</a> からダウンロード</li>
+<li>オフラインインストール：<a href="https://github.com/SimZhou/vscode-audiolens/releases" target="_blank" rel="noopener noreffer ">GitHub Releases</a> から VSIX パッケージをダウンロード</li>
+</ul>
+<h2 id="4-今後追加したい機能">4. 今後追加したい機能 <a href="#4-%e4%bb%8a%e5%be%8c%e8%bf%bd%e5%8a%a0%e3%81%97%e3%81%9f%e3%81%84%e6%a9%9f%e8%83%bd">¶</a></h2><p>今後もいくつかの機能を強化していく予定です。</p>
+<ol>
+<li>
+<p>機能面では、特定のチャンネルや選択範囲に対してハイパス / ローパスフィルタ、ゲイン調整、位相反転などの簡単な音声処理操作を実装し、処理後の結果を新しい音声ファイルとして保存できるようにする予定です。また、マルチチャンネル表示の使い勝手も引き続き改善し、各チャンネルの表示高さ / 幅を調整できるようにして、注目したいチャンネルを見やすくしたいと考えています。</p>
+</li>
+<li>
+<p>性能面では、現在のスペクトログラム計算と描画は日常利用には十分ですが、より高解像度で複雑なインタラクションを行う場合、GPU レンダリングにはまだ改善余地があります。そのため、今後 WebGL / GPU によるスペクトログラム描画も検討します。</p>
+</li>
+</ol>
+<h2 id="最後に">最後に <a href="#%e6%9c%80%e5%be%8c%e3%81%ab">¶</a></h2><p>AudioLens は、音声エンジニアリング、音声アルゴリズム、音響イベント検出、信号処理、音声データ調査に向けた VS Code 音声確認・解析拡張機能です。設計の出発点は、「このサンプルはいったいどんな状態なのかを一目で確認する」作業を、より速く、より自然にすることでした。</p>
+<p>日常的に VS Code、Cursor、Trae の中で音声データを扱うなら、AudioLens は軽量で実用的な音声解析の入口になります。</p>
+<p>より詳しい機能や今後の更新を確認したい場合は、<a href="https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md" target="_blank" rel="noopener noreffer ">AudioLens の GitHub プロジェクト</a> を見てください。</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新日 2026-05-27</span>
+                <span>更新日 2026-06-09</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能" data-via="simzhouyh" data-hashtags="AudioLens,VS Code,音声アルゴリズム,音声解析,VibeCoding"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-hashtag="AudioLens"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能" data-description="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fintroducing-audiolens-audio-inspection-analysis-extension-vscode%2f&amp;text=AudioLens%20%e3%82%92%e4%bd%9c%e3%82%8b%ef%bc%9a%e9%9f%b3%e5%a3%b0%e3%83%97%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc%e3%81%a8%e3%82%b9%e3%83%9a%e3%82%af%e3%83%88%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e8%a7%a3%e6%9e%90%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%20VS%20Code%20%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="共有先 X" data-sharer="x" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能" data-via="simzhouyh" data-hashtags="AudioLens,VS Code,音声アルゴリズム,音声解析,VibeCoding"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Threads" data-sharer="threads" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Facebook" data-sharer="facebook" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-hashtag="AudioLens"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Hacker News" data-sharer="hackernews" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Line" data-sharer="line" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 微博" data-sharer="weibo" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="共有先 Diaspora" data-sharer="diaspora" data-url="https://simzhou.com/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/" data-title="AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能" data-description="AudioLens は VS Code、Cursor、Trae の中で Audacity / Audition に近い体験を提供する、音声再生・確認・軽量解析用の拡張機能です。"><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fsimzhou.com%2fja%2fposts%2f2026%2fintroducing-audiolens-audio-inspection-analysis-extension-vscode%2f&amp;text=AudioLens%20%e3%81%ae%e7%b4%b9%e4%bb%8b%ef%bc%9aVS%20Code%20%e3%82%92%e9%9f%b3%e5%a3%b0%e8%a7%a3%e6%9e%90%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%86%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ab%e3%81%99%e3%82%8b%e6%8b%a1%e5%bc%b5%e6%a9%9f%e8%83%bd" target="_blank" title="共有先 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -307,7 +399,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.161.1">Hugo</a> | テーマ - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.162.1">Hugo</a> | テーマ - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/ja/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">特に明記がない限り、このブログの内容は<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>ライセンスの下で公開しています</span></div>
         </div>
     </footer></div>

@@ -4,15 +4,16 @@
         <link>https://simzhou.com/en/tags/vibecoding/</link>
         <description>VibeCoding - Tag - Simon&#39;s Dream Universe</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>yihua.zhou@outlook.com (Simon Zhou)</managingEditor>
-            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 May 2026 19:25:24 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/en/tags/vibecoding/" rel="self" type="application/rss+xml" /><item>
-    <title>Building AudioLens: A VS Code Extension for Audio Preview and Spectrogram Analysis</title>
+            <webMaster>yihua.zhou@outlook.com (Simon Zhou)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 09 Jun 2026 21:00:00 &#43;0800</lastBuildDate><atom:link href="https://simzhou.com/en/tags/vibecoding/" rel="self" type="application/rss+xml" /><item>
+    <title>Introducing AudioLens: A Plugin That Turns VS Code into an Audio Analysis Workstation</title>
     <link>https://simzhou.com/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/</link>
-    <pubDate>Wed, 27 May 2026 19:25:24 &#43;0800</pubDate>
+    <pubDate>Tue, 09 Jun 2026 21:00:00 &#43;0800</pubDate>
     <author>yihua.zhou@outlook.com (Simon Zhou)</author>
     <guid>https://simzhou.com/en/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/</guid>
-    <description><![CDATA[<!-- <p class="post-note">Cover image: AudioLens running inside VS Code</p> -->
-<p>Recently I vibed a VS Code extension that can read, play, and analyze audio directly inside VS Code. It is called <strong>AudioLens</strong>.</p>
-<p>I shared it in a few speech algorithm engineering groups, and the feedback was pretty good.</p>]]></description>
+    <description><![CDATA[<p>This post introduces <strong>AudioLens</strong>, a new extension that tries to bring the best parts of the Audacity / Audition experience into VS Code / Cursor / Trae for playing, analyzing, and inspecting audio files.</p>
+<p>For people working on speech, sound event detection, audio algorithms, signal processing, machine learning, or audio dataset processing, one pain point shows up again and again:</p>
+<p><em>The code is in the editor, the data manifest is in the editor, and the logs are in the editor. But once you need to listen to an audio file, inspect its waveform, or check its spectrum, you have to switch to a player, Audacity, a file manager, or another tool. If you are working through Remote SSH, it gets even more cumbersome because you often need to copy the audio to your local machine through SFTP or similar tools before opening it.</em></p>
+<p>AudioLens is built to solve exactly this problem: <strong>keep audio engineering inspection, playback, and lightweight analysis inside the editor as much as possible.</strong></p>]]></description>
 </item>
 <item>
     <title>A Programming Guide for the New Era - 2026</title>

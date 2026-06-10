@@ -39,7 +39,7 @@ license: ""
 
 ### 代表的なプロジェクトと記事
 
-- **[AudioLens]({{< relref "/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/index.ja.md" >}})**：音声アルゴリズム、音声処理、機械学習に関わるエンジニア向けの VS Code 音声検査・スペクトログラム分析拡張機能
+- **[AudioLens]({{< relref "/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/index.ja.md" >}})**：音声アルゴリズム、音声処理、機械学習に関わるエンジニア向けの VS Code 音声再生・確認・軽量解析拡張機能
 - **[AI 支援プログラミングに関する記事]({{< relref "/posts/2026/programming-guide-for-the-new-era-2026/index.ja.md" >}})**：Codex、Claude Code、Gemini CLI、Agent Coding ワークフローについての実践と思考
 - **[機械学習の可視化記事]({{< relref "/posts/2021/cross-entropy-loss-visualized/index.ja.md" >}})**：機械学習の概念やモデルの振る舞いを、可視化を通して説明する記事
 

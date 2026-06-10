@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-	<meta name="generator" content="Hugo 0.161.1">
+	<meta name="generator" content="Hugo 0.162.1">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -138,12 +138,13 @@
         data-srcset="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp 1.5x, /posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp 2x"
         data-sizes="auto"
         alt="/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/assets/Main-Screen-multichannel.ja-JP.q65.webp"
-        title="AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。" width="3576" height="2100" /></a>
+        title="AudioLens は VS Code、Cursor、Trae の中で Audacity / Audition に近い体験を提供する、音声再生・確認・軽量解析用の拡張機能です。" width="3576" height="2100" /></a>
         </div><h2 class="single-title" itemprop="name headline">
-        <a href="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能</a>
-    </h2><div class="post-meta"><span class="post-author"><a href="https://github.com/SimZhou" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>SimZhou</a></span>&nbsp;<span class="post-publish">公開日 <time datetime="2026-05-27">2026-05-27</time></span>&nbsp;<span class="post-category">カテゴリー <a href="/ja/categories/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/"><i class="far fa-folder" aria-hidden="true"></i>プロジェクト</a>&nbsp;<a href="/ja/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div><div class="content"><!-- <p class="post-note">カバー画像: VS Code で動作する AudioLens</p> -->
-<p>最近、VS Code の中で音声を読み込み、再生し、解析できる拡張機能を Vibe した。名前は <strong>AudioLens</strong>。</p>
-<p>いくつかの音声アルゴリズム系のグループで共有してみたところ、反応はなかなか良かった。</p></div><div class="post-footer">
+        <a href="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能</a>
+    </h2><div class="post-meta"><span class="post-author"><a href="https://github.com/SimZhou" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>SimZhou</a></span>&nbsp;<span class="post-publish">公開日 <time datetime="2026-06-09">2026-06-09</time></span>&nbsp;<span class="post-category">カテゴリー <a href="/ja/categories/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/"><i class="far fa-folder" aria-hidden="true"></i>プロジェクト</a>&nbsp;<a href="/ja/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div><div class="content"><p>この記事では <strong>AudioLens</strong> を紹介します。AudioLens は、VS Code / Cursor / Trae の中で Audacity / Audition に近い使い心地を実現し、音声ファイルの再生、解析、確認を行うための新しい拡張機能です。</p>
+<p>音声、音響イベント検出、音声アルゴリズム、信号処理、機械学習、音声データセット処理に関わる人にとって、日常のワークフローにはよくある痛点があります。</p>
+<p><em>コードはエディタの中にあり、データリストもエディタの中にあり、ログもエディタの中にあります。しかし、音声を聴く、波形を見る、スペクトルを確認するとなると、プレイヤー、Audacity、ファイルマネージャーなど別のツールに切り替えなければなりません。Remote SSH で作業している場合はさらに面倒で、SFTP などを使って音声をいったんローカルにコピーしてから開く必要があります。</em></p>
+<p>AudioLens が解決したいのはまさにこの問題です。<strong>音声エンジニアリングに関する確認、再生、軽量解析を、できるだけエディタの中で完結させること。</strong></p></div><div class="post-footer">
         <a href="/ja/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/">続きを読む</a><div class="post-tags">
                 <i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/ja/tags/audiolens/">AudioLens</a>,&nbsp;<a href="/ja/tags/vs-code/">VS Code</a>,&nbsp;<a href="/ja/tags/%E9%9F%B3%E5%A3%B0%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/">音声アルゴリズム</a>,&nbsp;<a href="/ja/tags/%E9%9F%B3%E5%A3%B0%E8%A7%A3%E6%9E%90/">音声解析</a>,&nbsp;<a href="/ja/tags/vibecoding/">VibeCoding</a></div></div>
 </article>
@@ -238,7 +239,7 @@
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.161.1">Hugo</a> | テーマ - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.162.1">Hugo</a> | テーマ - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/ja/" target="_blank">Simon Zhou</a></span>&nbsp;|&nbsp;<span class="license">特に明記がない限り、このブログの内容は<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> CC BY-NC 4.0 </a>ライセンスの下で公開しています</span></div>
         </div>
     </footer></div>

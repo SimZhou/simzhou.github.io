@@ -39,7 +39,7 @@ Beyond speech algorithms and resource-constrained models, I am also interested i
 
 ### Selected Work
 
-- **[AudioLens]({{< relref "/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/index.en.md" >}})**: a VS Code extension for audio inspection and spectrogram analysis, built for speech, audio, and ML engineers
+- **[AudioLens]({{< relref "/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/index.en.md" >}})**: a VS Code extension for audio playback, inspection, and lightweight analysis, built for speech, audio, and ML engineers
 - **[AI-assisted programming articles]({{< relref "/posts/2026/programming-guide-for-the-new-era-2026/index.en.md" >}})**: notes on Codex, Claude Code, Gemini CLI, and agent-based coding workflows
 - **[Machine learning visualization]({{< relref "/posts/2021/cross-entropy-loss-visualized/index.en.md" >}})**: articles that explain ML concepts through visual and interactive examples
 

@@ -1,12 +1,12 @@
 ---
-title: "Building AudioLens: A VS Code Extension for Audio Preview and Spectrogram Analysis"
-subtitle: "Supports common audio formats, including raw PCM"
-date: 2026-05-27T19:25:24+08:00
-lastmod: 2026-05-27T23:40:30+08:00
+title: "Introducing AudioLens: A Plugin That Turns VS Code into an Audio Analysis Workstation"
+subtitle: "For playing, inspecting, and analyzing audio files"
+date: 2026-06-09T21:00:00+08:00
+lastmod: 2026-06-09T21:00:00+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://github.com/SimZhou"
-description: "AudioLens is an audio inspection and analysis extension for VS Code, built for speech, audio algorithms, machine learning, and data annotation workflows."
+description: "AudioLens is an audio playback, inspection, and lightweight analysis extension that brings an Audacity / Audition-like workflow into VS Code, Cursor, and Trae."
 
 tags: ["AudioLens", "VS Code", "Speech Algorithms", "Audio Analysis", "VibeCoding"]
 categories: ["Projects", "AI"]
@@ -24,90 +24,171 @@ math:
 lightgallery: true
 license: ""
 ---
-<!-- <p class="post-note">Cover image: AudioLens running inside VS Code</p> -->
 
-Recently I vibed a VS Code extension that can read, play, and analyze audio directly inside VS Code. It is called **AudioLens**.
+This post introduces **AudioLens**, a new extension that tries to bring the best parts of the Audacity / Audition experience into VS Code / Cursor / Trae for playing, analyzing, and inspecting audio files.
 
-I shared it in a few speech algorithm engineering groups, and the feedback was pretty good.
+For people working on speech, sound event detection, audio algorithms, signal processing, machine learning, or audio dataset processing, one pain point shows up again and again:
 
-Project links: [GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.md) / [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens)
+*The code is in the editor, the data manifest is in the editor, and the logs are in the editor. But once you need to listen to an audio file, inspect its waveform, or check its spectrum, you have to switch to a player, Audacity, a file manager, or another tool. If you are working through Remote SSH, it gets even more cumbersome because you often need to copy the audio to your local machine through SFTP or similar tools before opening it.*
+
+AudioLens is built to solve exactly this problem: **keep audio engineering inspection, playback, and lightweight analysis inside the editor as much as possible.**
 
 <!--more-->
 
-{{< image src="AudioLens.shop_preview.en-US.png" caption="AudioLens Marketplace page" width="100%" >}}
+Project links: [GitHub](https://github.com/SimZhou/vscode-audiolens) / [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens) / [Open VSX Marketplace](https://open-vsx.org/extension/simzhou/audiolens)
 
-## Motivation
-
-Speech algorithm engineers usually switch back and forth between two main work surfaces:
-
-- A code editor, such as VS Code
-- An audio analysis tool, such as Audition or Audacity
-
-The pain point is straightforward:
-
-- When writing code, you mainly work in the editor; when analyzing audio, you have to switch to another app.
-- **If the code runs on a remote server, it gets even more annoying: you often have to download the audio first before you can listen to it.**
-
-Is there already a solution? Kind of. There is an extension called audio-preview in the VS Code Marketplace. It has around 200K downloads, and I used it myself for years.
-
-But the UI is rough, the feature set is limited, and there are quite a few bugs. Its last update was in 2024, and the author seems to have stopped maintaining it.
-
-So, out of frustration, I decided to vibe one myself, ~~and also test what Codex can do~~.
-
-## What AudioLens Does
 {{< image src="assets/Main-Screen-multichannel.en-US.q65.webp" caption="AudioLens multi-channel main screen" width="100%" >}}
 
-Since I work on speech algorithms myself, I know the requirements pretty well. I basically put in the features I felt such a tool should have:
+## 1. Quick Overview
 
-- **Multi-channel audio playback**: read multi-channel audio, play selected regions, solo channels, mute selected channels, and so on
-- **Multiple views**: waveform, spectrogram, plus zooming and panning for both views
-- **Audio analysis**: select a region and immediately get analysis results, such as RMS dB and frequency analysis
-- **Multiple format support**: common audio formats such as `wav`, `mp3`, `flac`, `ogg`, `opus`, `m4a`, and `aac`
-- **RAW support**: PCM / RAW audio data, with remembered PCM settings such as channel count and sample rate for opening similar files more easily
-- **Spectrogram controls**: FFT size, window type, zero-padding factor, frequency scale, palette, and other parameters
-- **Remote SSH support**: open and analyze audio files directly on a remote machine without downloading them locally
-- **Localization**: currently supports 17 languages
+AudioLens is a VS Code audio inspection and analysis extension designed for audio engineering, speech algorithms, sound event detection, signal processing, and audio data debugging.
 
-Here are a few GIF demos, so everyone can get a direct feel for the interaction.
+In these workflows, audio files often live next to code, configs, data lists, transcripts, model outputs, and experiment logs. Engineers usually care about questions like:
 
-{{< image src="assets/1.multi-channel_tracks_and_multi-view.en-US.gif" caption="Multi-channel tracks and multiple views" width="100%" >}}
+- Does this audio sample contain silence, truncation, pops, or clipping?
+- Is every channel in a multi-channel file normal?
+- What are the approximate RMS, peak level, dominant frequency, and band energy for a selected region?
+- Can `.pcm` / `.raw` files be opened directly with specified parameters?
+- Can Kaldi `wav.ark:offset` entries be inspected more conveniently?
+- Can samples on a Remote SSH dataset be spot-checked without copying them locally?
+- Can audio paths inside data lists, logs, or transcripts be opened directly?
 
-{{< image src="assets/2.selection_playback_and_analysis.en-US.gif" caption="Selection playback and audio analysis" width="100%" >}}
+AudioLens has a clear design goal: **quickly inspect audio samples without leaving VS Code / Cursor / Trae.**
 
-{{< image src="assets/3.pcm_raw_parameterized_loading.en-US.gif" caption="PCM / RAW parameterized loading" width="100%" >}}
+## 2. Feature Overview
 
-There is also a question-mark button in the top-right corner with more detailed usage help, if you want to explore further.
+AudioLens supports common audio formats, including:
 
-## The Vibe Coding Process
+- WAV
+- MP3
+- FLAC
+- Ogg / Opus
+- M4A / AAC
+- PCM / RAW
+- Kaldi WAV Ark entries
 
-The Vibe Coding process was basically a loop of continuously giving my requirements to Codex.
+### 2.1 Waveform and Spectrogram Views
 
-At a high level, I had two main requirements:
+After opening an audio file, you can inspect its waveform and spectrogram directly:
 
-1. Keep the overall code simple, clean, and modular, without over-abstracting it
-2. Implement the core expensive functions, such as FFT and spectrogram computation, in Rust for performance
+{{< image src="assets/1.multi-channel_tracks_and_multi-view.en-US.gif" caption="Multi-channel tracks and multi-view demo" width="100%" >}}
 
-The rest was mostly feature and detail polishing:
+Each channel can be configured independently:
 
-- Install and test the offline VSIX it built
-- Tell Codex how the UI should change and how the features should change
+- Waveform, spectrogram, or combined view
+- Mute / solo
 
-Then repeat that loop.
+The settings menu in the top-right corner also lets you tune spectrogram parameters such as FFT size, window function, frequency range, color palette, and brightness range:
 
-I also collected quite a few requests from people around me during the process.
+{{< image src="assets/config_menu.en-US.png" caption="Spectrogram settings" width="32%" >}}
 
-The whole thing happened in fragments, but the actual time spent letting it work was probably only about one day.
+### 2.2 Region Playback, Region Analysis, and Region Export
 
-~~Honestly, getting to act as architect + product manager while having Codex as a capable assistant felt pretty great.~~
+You can drag on the waveform or spectrogram to create a time selection.
 
-## Afterword
+Once a region is selected, you can:
 
-I have always felt that in the Vibe Coding era, human taste matters a lot. Building this extension made me even more convinced of that.
+- Play only the selected segment
+- Inspect analysis metrics for the selection
+- Right-click and export the region as WAV
 
-**Because LLMs are very powerful, but it is hard to say that they have good taste.**
+{{< image src="assets/2.selection_playback_and_analysis.en-US.gif" caption="Selection playback and analysis demo" width="100%" >}}
 
-They can complete your requirements quickly and well. But what a good interface should look like, where a button should go, how wide a panel should be, how the UI should be designed, and whether the UX feels reasonable: for these things, they basically have no real perception (~~no world model~~).
+Current selection analysis includes:
 
-But in the end, the thing you build is still meant to be used by humans.
+- Start time, end time, and duration
+- RMS level
+- Peak level
+- Dominant frequency
+- Peak-to-average ratio
+- Clipping ratio
+- Noise floor estimate
+- Spectral centroid
+- Zero-crossing rate
+- Band energy distribution
 
-So taste may become humanity's temporary moat.
+These metrics make everyday debugging faster. For example, when checking training samples, event-detection samples, or recording results, you can select an abnormal region and quickly judge whether its level, noise floor, and band distribution look reasonable.
+
+### 2.3 Parameterized Loading for Raw PCM / RAW Files
+
+`.pcm` / `.raw` files contain raw data. The file itself does not record sample rate, channel count, bit depth, floating-point or integer format, endian order, or start offset.
+
+AudioLens can read `.pcm` / `.raw` audio with explicitly configured parameters:
+
+{{< image src="assets/3.pcm_raw_parameterized_loading.en-US.gif" caption="PCM and RAW parameterized loading demo" width="100%" >}}
+
+These parameters can also be saved as defaults and reused when opening PCM / RAW files later.
+
+### 2.4 Audio Header Inspection
+
+AudioLens can directly inspect structured audio file header information.
+
+It currently supports:
+
+- WAV / RIFF
+- FLAC
+- Ogg
+- MP4 / M4A
+- AAC / ADTS
+- MP3 / MPEG frame
+
+This is useful for debugging files that “can be played” but cause problems in a toolchain. For example, you can check whether a WAV file has a standard 44-byte PCM header, whether it contains extra chunks, or whether the `fmt` chunk has extension fields.
+
+{{< image src="assets/4.Inspect_Audio_Headers_in_One_Click.en-US.gif" caption="Audio header inspection demo" width="100%" >}}
+
+### 2.5 Open Audio Paths from Any Text File
+
+When working with audio datasets, audio paths are often embedded in manifests such as `wav.scp` or `wavlist`, as well as JSON files, logs, or model outputs.
+
+AudioLens can recognize audio paths in normal text files. Hover over a path, then click “Open in AudioLens” to open it directly.
+
+{{< image src="assets/5.open_audio_paths_from_any_file.en-US.gif" caption="Open audio paths from any file demo" width="100%" >}}
+
+This feature has gone through several rounds of optimization. It no longer generates inline links for an entire large file upfront. Instead, it parses the current line or selection on demand.
+
+As a result, large JSON files, logs, and manifests can still stay responsive.
+
+### 2.6 Direct Kaldi WAV Ark Loading
+
+If your workflow still uses the Kaldi ecosystem, `wav.ark:offset` is a common way to index audio.
+
+AudioLens supports two ways to open these entries:
+
+1. Use `AudioLens: Open Kaldi WAV Ark Audio` from the command palette, then enter `/path/to/wav.ark:offset`
+2. If used together with another extension, Kaldi Reader, you can jump from `/path/to/wav.ark:offset` in text and open it directly with AudioLens.
+
+{{< image src="assets/6.open_kaldi_wav_ark_directly.en-US.gif" caption="Direct Kaldi WAV Ark opening demo" width="100%" >}}
+
+AudioLens does not load the entire ark file. It verifies that the offset points to `RIFF/WAVE`, then reads only the corresponding WAV file.
+
+Kaldi Reader Extension: [GitHub](https://github.com/SimZhou/vscode-kaldi-reader) / [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.kaldi-reader) / [Open VSX Marketplace](https://open-vsx.org/extension/simzhou/kaldi-reader)
+
+### 2.7 Remote SSH
+
+Many audio datasets live on remote training machines, experiment machines, or data servers.
+
+In Remote SSH workflows, AudioLens reads audio files directly from the remote workspace and displays and plays them in a local VS Code Webview.
+
+This means remote samples can be spot-checked directly, without downloading them through SFTP or similar tools.
+
+## 3. Installation
+
+- VS Code users: search for `AudioLens` in the extension marketplace, or download it from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens)
+- Cursor, VSCodium, Trae, and other Open VSX users: download it from [Open VSX Marketplace](https://open-vsx.org/extension/simzhou/audiolens)
+- Offline installation: download the VSIX package from [GitHub Releases](https://github.com/SimZhou/vscode-audiolens/releases)
+
+## 4. What Comes Next
+
+I plan to keep improving a few areas.
+
+1. Feature-wise, I plan to add simple audio processing operations, such as applying high-pass / low-pass filters, gain adjustment, or phase inversion to a selected channel or region, then saving the processed result as a new audio file. I also want to keep improving multi-channel display ergonomics, such as making channel height / width adjustable so important channels are easier to inspect.
+
+2. Performance-wise, the current spectrogram computation and rendering are already good enough for everyday use. But under higher resolutions and more complex interactions, GPU rendering still has room for improvement, so WebGL / GPU-based spectrogram rendering is worth exploring later.
+
+## Closing Thoughts
+
+AudioLens is a VS Code audio inspection and analysis extension for audio engineering, speech algorithms, sound event detection, signal processing, and audio data debugging. Its original purpose is to make “take a quick look at what this sample actually is” faster and smoother.
+
+If you often work with audio data in VS Code, Cursor, or Trae, AudioLens can serve as a lightweight and practical entry point for audio analysis.
+
+If you want to learn more, report issues, or follow future updates, you can visit the [AudioLens GitHub project](https://github.com/SimZhou/vscode-audiolens).

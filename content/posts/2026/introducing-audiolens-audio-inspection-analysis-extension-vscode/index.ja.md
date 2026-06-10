@@ -1,12 +1,12 @@
 ---
-title: "AudioLens を作る：音声プレビューとスペクトログラム解析のための VS Code 拡張機能"
-subtitle: "raw PCM を含む複数の音声形式に対応"
-date: 2026-05-27T19:25:24+08:00
-lastmod: 2026-05-27T23:40:30+08:00
+title: "AudioLens の紹介：VS Code を音声解析ワークステーションにする拡張機能"
+subtitle: "音声ファイルの再生、確認、解析のために"
+date: 2026-06-09T21:00:00+08:00
+lastmod: 2026-06-09T21:00:00+08:00
 draft: false
 author: "SimZhou"
 authorLink: "https://github.com/SimZhou"
-description: "AudioLens は VS Code 上で動く音声確認・解析用の拡張機能で、音声アルゴリズム、機械学習、データアノテーションのワークフロー向けに作られています。"
+description: "AudioLens は VS Code、Cursor、Trae の中で Audacity / Audition に近い体験を提供する、音声再生・確認・軽量解析用の拡張機能です。"
 
 tags: ["AudioLens", "VS Code", "音声アルゴリズム", "音声解析", "VibeCoding"]
 categories: ["プロジェクト", "AI"]
@@ -24,90 +24,171 @@ math:
 lightgallery: true
 license: ""
 ---
-<!-- <p class="post-note">カバー画像: VS Code で動作する AudioLens</p> -->
 
-最近、VS Code の中で音声を読み込み、再生し、解析できる拡張機能を Vibe した。名前は **AudioLens**。
+この記事では **AudioLens** を紹介します。AudioLens は、VS Code / Cursor / Trae の中で Audacity / Audition に近い使い心地を実現し、音声ファイルの再生、解析、確認を行うための新しい拡張機能です。
 
-いくつかの音声アルゴリズム系のグループで共有してみたところ、反応はなかなか良かった。
+音声、音響イベント検出、音声アルゴリズム、信号処理、機械学習、音声データセット処理に関わる人にとって、日常のワークフローにはよくある痛点があります。
 
-プロジェクトリンク: [GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md) / [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens)
+*コードはエディタの中にあり、データリストもエディタの中にあり、ログもエディタの中にあります。しかし、音声を聴く、波形を見る、スペクトルを確認するとなると、プレイヤー、Audacity、ファイルマネージャーなど別のツールに切り替えなければなりません。Remote SSH で作業している場合はさらに面倒で、SFTP などを使って音声をいったんローカルにコピーしてから開く必要があります。*
+
+AudioLens が解決したいのはまさにこの問題です。**音声エンジニアリングに関する確認、再生、軽量解析を、できるだけエディタの中で完結させること。**
 
 <!--more-->
 
-{{< image src="AudioLens.shop_preview.en-US.png" caption="AudioLens の Marketplace ページ" width="100%" >}}
+プロジェクトリンク：[GitHub](https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md) / [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens) / [Open VSX Marketplace](https://open-vsx.org/extension/simzhou/audiolens)
 
-## きっかけ
-
-音声アルゴリズムのエンジニアは、普段おもに 2 つの作業画面を行き来している。
-
-- コードエディタ: たとえば VS Code
-- 音声解析ソフト: たとえば Audition や Audacity
-
-そこで困ることはシンプルだ。
-
-- コードを書くときは主にエディタで作業するが、音声を解析するときには別のソフトに切り替える必要がある。
-- **もしコードがリモートサーバー上で動いているなら、さらに面倒になる。音声をいったんダウンロードしてから聴かなければならないことが多い。**
-
-既存の解決策はないのか。実はある。VS Code Marketplace には audio-preview という拡張機能があり、ダウンロード数は 200K ほどある。私自身も何年も使っていた。
-
-ただ、UI は粗く、機能は少なく、Bug も多い。最後の更新は 2024 年で、作者ももう保守していないように見える。
-
-そこで、腹を立てた勢いで、自分で 1 つ Vibe することにした。~~ついでに Codex の能力も試せるし。~~
-
-## AudioLens の機能紹介
 {{< image src="assets/Main-Screen-multichannel.ja-JP.q65.webp" caption="AudioLens のマルチチャンネルメイン画面" width="100%" >}}
 
-私は自分でも音声アルゴリズムの仕事をしているので、欲しい機能はかなりはっきりしていた。この拡張機能には、自分が必要だと思う機能をだいたい入れている。
+## 1. 簡単な紹介
 
-- **マルチチャンネル音声の再生**: マルチチャンネル音声の読み込み、選択範囲再生、ソロ再生、指定チャンネルのミュートなど
-- **複数の表示モード**: 波形、スペクトログラム、そして両方のズームとパン
-- **音声解析**: 範囲を選択すると、RMS dB や周波数解析などの結果がすぐに表示される
-- **複数形式のサポート**: `wav`、`mp3`、`flac`、`ogg`、`opus`、`m4a`、`aac` などの一般的な音声形式に対応
-- **RAW サポート**: PCM / RAW の生データに対応し、チャンネル数やサンプルレートなどの PCM 設定を記憶できるため、同種の音声を開きやすい
-- **スペクトログラム設定**: FFT サイズ、窓関数、ゼロパディング倍率、周波数スケール、配色などを調整可能
-- **Remote SSH サポート**: リモートマシン上の音声をローカルにダウンロードせず、そのまま開いて解析できる
-- **多言語対応**: 現在 17 言語に対応
+AudioLens は、音声エンジニアリング、音声アルゴリズム、音響イベント検出、信号処理、音声データの調査に向いた VS Code の音声確認・解析拡張機能です。
 
-いくつか GIF デモを置いておくので、実際の操作感をそのまま感じてもらえると思う。
+こうした場面では、音声ファイルはコード、設定、データリスト、書き起こしテキスト、モデル出力、実験ログと一緒に置かれていることがよくあります。エンジニアが知りたいのは、たとえば次のようなことです。
 
-{{< image src="assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" caption="マルチチャンネルトラックと複数ビュー" width="100%" >}}
+- 音声サンプルに無音、途中切れ、ポップノイズ、クリッピングはないか？
+- マルチチャンネル音声の各チャンネルは正常か？
+- ある選択範囲の RMS、ピーク、主周波数、帯域エネルギーはどの程度か？
+- `.pcm` / `.raw` ファイルを指定パラメータで直接開けるか？
+- Kaldi の `wav.ark:offset` をもっと手軽に確認できるか？
+- Remote SSH 上のデータセットを、ローカルにコピーせずに抜き取り確認できるか？
+- データリスト、ログ、書き起こしテキスト内の音声パスを直接開けるか？
 
-{{< image src="assets/2.selection_playback_and_analysis.ja-JP.gif" caption="選択範囲再生と音声解析" width="100%" >}}
+AudioLens の設計目標は、**VS Code / Cursor / Trae から離れずに音声サンプルをすばやく確認すること**です。
 
-{{< image src="assets/3.pcm_raw_parameterized_loading.ja-JP.gif" caption="PCM / RAW のパラメータ指定読み込み" width="100%" >}}
+## 2. 機能紹介
 
-画面右上にはクエスチョンマークのボタンもあり、より詳しい使い方のヘルプが入っているので、気になったらそこから探索できる。
+AudioLens は一般的な音声形式をサポートしています。
 
-## Vibe Coding の過程
+- WAV
+- MP3
+- FLAC
+- Ogg / Opus
+- M4A / AAC
+- PCM / RAW
+- Kaldi WAV Ark エントリ
 
-Vibe Coding の過程は、基本的には自分の要求を Codex に出し続けることだった。
+### 2.1 波形とスペクトログラムの表示
 
-大きな方針として、要求は 2 つあった。
+音声を開くと、波形とスペクトログラムをそのまま確認できます。
 
-1. コード全体はシンプルでクリーン、かつモジュール化された状態を保ち、過度に抽象化しないこと
-2. FFT やスペクトログラム計算のような重いコア関数は、速度を確保するために Rust で実装すること
+{{< image src="assets/1.multi-channel_tracks_and_multi-view.ja-JP.gif" caption="マルチチャンネル音声トラックと複数ビューのデモ" width="100%" >}}
 
-それ以外の作業は、ほとんど機能と細部の磨き込みだった。
+各チャンネルには個別に設定できます。
 
-- Codex がビルドしたオフライン VSIX をインストールしてテストする
-- UI をどう変えるか、機能をどう変えるかを Codex に伝える
+- 波形、スペクトログラム、または組み合わせ表示
+- ミュート / ソロ
 
-この 2 つを繰り返す。
+また、右上の設定から、FFT 点数、窓関数、周波数範囲、カラーパレット、輝度範囲など、スペクトログラムの各種パラメータを調整できます。
 
-その間、周囲の人たちからもかなり多くの要望を集めた。
+{{< image src="assets/config_menu.ja-JP.png" caption="スペクトログラム設定" width="32%" >}}
 
-全体としては断続的な作業だったが、実際に Codex に働いてもらった時間は、おそらく 1 日くらいだったと思う。
+### 2.2 選択範囲の再生、解析、エクスポート
 
-~~正直なところ、アーキテクト兼プロダクトマネージャーになり、Codex という頼れる助手を持つ感覚はかなり気持ちよかった。~~
+波形またはスペクトログラム上でドラッグすると、時間範囲を選択できます。
 
-## 後書き
+選択範囲を作成すると、次のことができます。
 
-私はずっと、Vibe Coding の時代には人間の Taste がとても重要になると思っている。今回この拡張機能を作って、その考えはさらに強くなった。
+- 選択した部分だけを再生する
+- 選択範囲の解析指標を見る
+- 右クリックして選択範囲を WAV としてエクスポートする
 
-**なぜなら、大規模言語モデル（LLM）はとても強力だが、審美眼があるとは言いにくいからだ。**
+{{< image src="assets/2.selection_playback_and_analysis.ja-JP.gif" caption="選択範囲の再生と解析のデモ" width="100%" >}}
 
-要求を速く、うまく実現することはできる。しかし、具体的にどんな画面なら良いのか、このボタンはどこに置くべきか、パネルの幅はどれくらいがよいのか、UI をどう設計すべきか、UX が自然かどうか。こうした問題については、実のところほとんど感知できていない（~~世界モデルがない~~）。
+現在、選択範囲の解析には次の内容が含まれます。
 
-しかし、作ったものは結局、人間が使うものだ。
+- 開始時刻、終了時刻、長さ
+- RMS レベル
+- ピークレベル
+- 主周波数
+- ピーク平均比
+- クリッピング率
+- ノイズフロア推定
+- スペクトル重心
+- ゼロ交差率
+- 帯域エネルギー分布
 
-だから Taste は、人類にとって一時的な堀になるのかもしれない。
+これらの指標があると、日常的な調査がかなり速くなります。たとえば学習サンプル、イベント検出サンプル、収録結果を確認するときに、異常な部分を直接選択し、レベル、ノイズフロア、帯域分布が期待通りかどうかをすばやく判断できます。
+
+### 2.3 Raw PCM / RAW ファイルのパラメータ指定読み込み
+
+`.pcm` / `.raw` ファイルは生データです。ファイル自体には、サンプルレート、チャンネル数、ビット深度、浮動小数点か整数か、エンディアン、開始オフセットといった情報が記録されていません。
+
+AudioLens では、`.pcm` / `.raw` の音声を明示的にパラメータ指定して読み込めます。
+
+{{< image src="assets/3.pcm_raw_parameterized_loading.ja-JP.gif" caption="PCM と RAW のパラメータ指定読み込みデモ" width="100%" >}}
+
+これらのパラメータはデフォルト値として保存でき、次回以降 PCM / RAW ファイルを開くときにも再利用できます。
+
+### 2.4 音声ファイルヘッダー情報の確認
+
+AudioLens では、音声ファイルの構造化されたヘッダー情報を直接確認できます。
+
+現在サポートしている形式は次の通りです。
+
+- WAV / RIFF
+- FLAC
+- Ogg
+- MP4 / M4A
+- AAC / ADTS
+- MP3 / MPEG frame
+
+この機能は、「再生はできるが、ツールチェーンで読むと問題が出る」ようなファイルを調べるときに向いています。たとえば WAV が標準的な 44 バイト PCM ヘッダーか、追加 chunk を含んでいるか、`fmt` chunk に拡張フィールドがあるかを確認できます。
+
+{{< image src="assets/4.Inspect_Audio_Headers_in_One_Click.ja-JP.gif" caption="音声ヘッダー情報確認のデモ" width="100%" >}}
+
+### 2.5 任意のテキストから音声パスを開く
+
+音声データセットを扱うとき、多くの音声パスは `wav.scp`、`wavlist` のようなデータリスト、JSON、ログ、モデル出力の中に埋め込まれています。
+
+AudioLens は通常のテキストファイル内の音声パスを認識できます。パスにマウスを重ねると、「AudioLens で開く」リンクから直接開けます。
+
+{{< image src="assets/5.open_audio_paths_from_any_file.ja-JP.gif" caption="任意のファイルから音声パスを開くデモ" width="100%" >}}
+
+この機能は何度か最適化されています。現在は大きなファイル全体に対して本文中リンクを一括生成するのではなく、必要なときに現在行または選択範囲だけを解析します。
+
+そのため、大きな JSON、ログ、大規模なデータリストでも動作を軽く保てます。
+
+### 2.6 Kaldi WAV Ark の直接読み込み
+
+Kaldi エコシステムを使っている場合、`wav.ark:offset` はよく使われる音声インデックス形式です。
+
+AudioLens は 2 つの開き方をサポートしています。
+
+1. コマンドパレットの `AudioLens: Open Kaldi WAV Ark Audio` から `/path/to/wav.ark:offset` を入力する
+2. 別の拡張機能 Kaldi Reader と組み合わせると、テキスト内の `/path/to/wav.ark:offset` から AudioLens で直接開ける
+
+{{< image src="assets/6.open_kaldi_wav_ark_directly.ja-JP.gif" caption="Kaldi WAV Ark を直接開くデモ" width="100%" >}}
+
+AudioLens は ark ファイル全体を読み込みません。offset の位置が `RIFF/WAVE` であることを確認し、対応する WAV ファイルだけを読み込みます。
+
+Kaldi Reader Extension：[GitHub](https://github.com/SimZhou/vscode-kaldi-reader/blob/main/README.ja.md) / [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.kaldi-reader) / [Open VSX Marketplace](https://open-vsx.org/extension/simzhou/kaldi-reader)
+
+### 2.7 リモート SSH 対応
+
+多くの音声データセットは、リモートの学習マシン、実験機、データサーバー上にあります。
+
+AudioLens は Remote SSH 環境で、リモートワークスペース内の音声を直接読み取り、ローカルの VS Code Webview で表示・再生します。
+
+そのため、遠隔地のサンプルを SFTP などでローカルにダウンロードせず、そのまま抜き取り確認できます。
+
+## 3. インストール方法
+
+- VS Code ユーザー：拡張機能マーケットプレイスで `AudioLens` と検索、または [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=simzhou.audiolens) からダウンロード
+- Cursor、VSCodium、Trae、その他 Open VSX ユーザー：[Open VSX Marketplace](https://open-vsx.org/extension/simzhou/audiolens) からダウンロード
+- オフラインインストール：[GitHub Releases](https://github.com/SimZhou/vscode-audiolens/releases) から VSIX パッケージをダウンロード
+
+## 4. 今後追加したい機能
+
+今後もいくつかの機能を強化していく予定です。
+
+1. 機能面では、特定のチャンネルや選択範囲に対してハイパス / ローパスフィルタ、ゲイン調整、位相反転などの簡単な音声処理操作を実装し、処理後の結果を新しい音声ファイルとして保存できるようにする予定です。また、マルチチャンネル表示の使い勝手も引き続き改善し、各チャンネルの表示高さ / 幅を調整できるようにして、注目したいチャンネルを見やすくしたいと考えています。
+
+2. 性能面では、現在のスペクトログラム計算と描画は日常利用には十分ですが、より高解像度で複雑なインタラクションを行う場合、GPU レンダリングにはまだ改善余地があります。そのため、今後 WebGL / GPU によるスペクトログラム描画も検討します。
+
+## 最後に
+
+AudioLens は、音声エンジニアリング、音声アルゴリズム、音響イベント検出、信号処理、音声データ調査に向けた VS Code 音声確認・解析拡張機能です。設計の出発点は、「このサンプルはいったいどんな状態なのかを一目で確認する」作業を、より速く、より自然にすることでした。
+
+日常的に VS Code、Cursor、Trae の中で音声データを扱うなら、AudioLens は軽量で実用的な音声解析の入口になります。
+
+より詳しい機能や今後の更新を確認したい場合は、[AudioLens の GitHub プロジェクト](https://github.com/SimZhou/vscode-audiolens/blob/main/README.ja.md) を見てください。

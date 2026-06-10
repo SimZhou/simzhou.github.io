@@ -39,7 +39,7 @@ license: ""
 
 ### 代表项目与文章
 
-- **[AudioLens]({{< relref "/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/index.zh-cn.md" >}})**：面向语音算法、音频处理和机器学习工程师的 VS Code 音频检查与频谱分析插件
+- **[AudioLens]({{< relref "/posts/2026/introducing-audiolens-audio-inspection-analysis-extension-vscode/index.zh-cn.md" >}})**：面向语音算法、音频处理和机器学习工程师的 VS Code 音频播放、检查与轻量分析插件
 - **[AI 辅助编程相关笔记]({{< relref "/posts/2026/programming-guide-for-the-new-era-2026/index.zh-cn.md" >}})**：关于 Codex、Claude Code、Gemini CLI 和 Agent Coding 工作流的实践与思考
 - **[机器学习可视化文章]({{< relref "/posts/2021/cross-entropy-loss-visualized/index.zh-cn.md" >}})**：用可视化方式解释机器学习概念和模型行为
 
