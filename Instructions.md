@@ -10,7 +10,7 @@
 
 - 主站框架：[Hugo](https://github.com/gohugoio/hugo) [[文档](https://gohugo.io/)]
 - 主题：[LoveIt](https://github.com/dillonzq/loveit) [[文档](https://hugoloveit.com/)]
-- 辅助内容站点：VuePress 1
+- 辅助内容站点：VuePress 2
 - GitHub Pages 发布目录：`docs/`
 
 常用目录说明：
@@ -32,12 +32,11 @@
 本项目日常维护通常需要以下工具：
 
 - Hugo extended
-- Node.js
-- Yarn
-- VuePress 1
+- Node.js（含 npm）
+- VuePress 2
 
 主站构建依赖 Hugo。
-如果需要构建 VuePress 部分，则还需要 Node.js/Yarn。
+如果需要构建 VuePress 部分，则还需要 Node.js/npm。
 
 # 三、常用命令
 
@@ -75,6 +74,14 @@ hugo --destination docs
 
 构建完成后，静态文件会输出到 `docs/` 目录。
 
+正式发布前如果需要重新生成 sitemap，建议显式使用正式域名：
+
+```bash
+hugo --destination docs --baseURL https://simzhou.com/
+```
+
+不要把带有 `http://localhost:1313` 的 `docs/sitemap.xml` 提交到仓库。
+
 ## 3. 本地查看构建后的静态文件
 
 ```bash
@@ -86,16 +93,16 @@ python -m http.server --directory docs
 仓库中还保留了以下脚本：
 
 ```bash
-yarn dev
-yarn build
-yarn devNotebook
+npm run dev
+npm run build
+npm run devNotebook
 ```
 
 其中：
 
-- `yarn dev`：运行 Hugo 本地开发服务
-- `yarn build`：执行站点构建流程
-- `yarn devNotebook`：运行 VuePress 本地服务
+- `npm run dev`：运行 Hugo 本地开发服务
+- `npm run build`：执行站点构建流程
+- `npm run devNotebook`：运行 VuePress 本地服务
 
 # 四、Shortcodes 速查
 
@@ -219,6 +226,7 @@ content/posts/2026/my-new-post/
 
 - `index.zh-cn.md`：中文正文
 - `index.en.md`：英文正文（如果有）
+- `index.ja.md`：日文正文（如果有）
 - 文章配图、封面图、附件等资源文件
 
 推荐做法：
@@ -243,6 +251,9 @@ content/posts/2026/my-new-post/
 
 - 同目录资源适合在文章中直接引用
 - 封面图也通常与文章正文放在同一个目录下
+- 文章大图或 UI 截图优先考虑 WebP；如果画质可接受，可以用较低质量参数换取更小体积
+- 不要提交未在文章中引用的大 GIF、测试图、`.DS_Store` 或 `.textClipping`
+- 如果文章平台限制 GIF 帧数，先用 `ffprobe` 检查 `nb_frames`；超过 300 帧时，可以保持原尺寸、降低到约 9fps 后再用 `gifsicle -O3 --lossy=80` 做体积优化
 - 如果是正文配图，优先使用 LoveIt 的 `image` shortcode，例如：
 
 ```markdown
@@ -295,6 +306,7 @@ hugo --destination docs
 
 - `content/gallery/index.zh-cn.md`
 - `content/gallery/index.en.md`
+- `content/gallery/index.ja.md`
 
 适用于修改相册页标题、subtitle、多语言内容等。
 
@@ -320,6 +332,7 @@ content/gallery/my-album/
 
 - `content/about/index.zh-cn.md`
 - `content/about/index.en.md`
+- `content/about/index.ja.md`
 
 ## 2. 首页展示内容
 
