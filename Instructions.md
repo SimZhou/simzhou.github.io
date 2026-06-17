@@ -351,7 +351,7 @@ content/gallery/my-album/
 - `index.zh-cn.md`
 - `index.en.md`
 
-# 九、如何修改导航、站点参数和基础配置
+# 十、如何修改导航、站点参数和基础配置
 
 主配置文件是：
 
@@ -371,7 +371,7 @@ config.toml
 
 如果需要修改站点菜单，一般修改 `languages.zh-cn.menu.main` 和 `languages.en.menu.main` 下的内容。
 
-# 十、如何修改模板和样式
+# 十一、如何修改模板和样式
 
 ## 1. 模板
 
@@ -408,7 +408,7 @@ assets/css/
 - `assets/css/_custom.scss`
 - `assets/css/_override.scss`
 
-# 十一、静态文件与额外资源
+# 十二、静态文件与额外资源
 
 如果某些文件需要原样出现在最终网站根目录，可以放在：
 
@@ -424,7 +424,7 @@ static/
 
 这些文件在构建时会直接复制到 `docs/`。
 
-# 十二、维护时的注意事项
+# 十三、维护时的注意事项
 
 1. 修改模板、主题、Hugo 版本后，一定要重新构建 `docs/`
 2. 不要只看本地编译通过，还要检查实际页面效果
@@ -432,30 +432,3 @@ static/
 4. GitHub Pages 发布目录是 `docs/`，因此发布前必须确认 `docs/` 已更新
 5. 如果是结构性改动，建议使用分支进行发布验证
 
-# 十三、推荐的日常更新流程
-
-对于普通文章或页面内容更新，推荐流程如下：
-
-1. 修改内容文件
-2. 执行：
-
-```bash
-hugo --destination docs
-```
-
-3. 本地检查页面
-4. 提交代码：
-
-```bash
-git add .
-git commit -m "Update content"
-git push
-```
-
-对于模板、主题或站点结构更新，推荐流程如下：
-
-1. 新建分支
-2. 修改模板或配置
-3. 执行构建
-4. 将分支作为 GitHub Pages 临时发布源验证
-5. 验证通过后合并回主分支
